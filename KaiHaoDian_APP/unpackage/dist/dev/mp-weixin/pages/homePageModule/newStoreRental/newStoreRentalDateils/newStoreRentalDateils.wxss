@@ -1,0 +1,405 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.status_bar {
+  height: 25px;
+  width: 100%;
+}
+.top_view {
+  height: 25px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+.content {
+  width: 750rpx;
+}
+page {
+  background: #fff;
+}
+._swiper {
+  width: 750rpx;
+  height: 340rpx;
+  font-size: 0;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+._author_info {
+  width: 750rpx;
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 10rpx 0 62rpx;
+  font-size: 28rpx;
+}
+._author_info > image {
+    width: 110rpx;
+    height: 110rpx;
+    border: 2rpx solid #ccc;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+._author_info > ._info_describe {
+    padding-top: 10rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    color: #2f2f2f;
+}
+._author_info > ._info_describe > ._info_time {
+      color: #585858;
+      font-size: 24rpx;
+      margin-top: 20rpx;
+}
+._author_info > ._info_describe > ._autograph {
+      width: 540rpx;
+      line-height: 40rpx;
+      margin-top: 28rpx;
+      font-size: 30rpx;
+      color: #000;
+}
+._author_info > ._info_describe > ._autograph > text {
+        width: 92rpx;
+        display: inline-block;
+        background: #f3f3f3;
+        font-size: 24rpx;
+        text-align: center;
+        margin-left: 8rpx;
+        border-radius: 10rpx;
+        color: #585858;
+        border: 2rpx solid #f3f3f3;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+}
+._price_acreage {
+  width: 750rpx;
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  font-size: 26rpx;
+  text-align: center;
+  margin-bottom: 82rpx;
+}
+._price_acreage > ._cell_info > ._cell_number {
+    margin-top: 30rpx;
+    color: #e18628;
+    font-size: 28rpx;
+    font-weight: bold;
+}
+._price_acreage > ._cell_info > ._cell_number > text {
+      color: #999;
+      font-size: 22rpx;
+      margin-left: 6rpx;
+}
+._represent {
+  width: 750rpx;
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+._represent ._goods {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    font-size: 28rpx;
+}
+._represent ._goods > ._goods_title {
+      width: 140rpx;
+      margin-right: 10rpx;
+      margin-bottom: 30rpx;
+      color: #585858;
+}
+._represent ._goods > ._goods_describe {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+}
+._represent ._goods > ._goods_describe > ._message_info {
+        width: 112rpx;
+        height: 40rpx;
+        line-height: 40rpx;
+        text-align: center;
+        font-size: 24rpx;
+        background: #f3f3f3;
+        color: #585858;
+        margin-bottom: 18rpx;
+        border: 2rpx solid #f3f3f3;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        margin-right: 10rpx;
+}
+._represent ._goods ._area {
+      width: 540rpx;
+}
+._represent > ._goods:nth-of-type(2) {
+  margin-right: 56rpx;
+}
+._represent > ._goods:nth-of-type(3) > ._goods_describe {
+  width: 520rpx;
+}
+._goods_recommendations {
+  width: 750rpx;
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 30rpx;
+  margin: 32rpx 0;
+}
+._goods_recommendations > text {
+    display: inline-block;
+    height: 38rpx;
+    line-height: 38rpx;
+    border-left: 6rpx solid #307ffa;
+    padding-left: 10rpx;
+}
+._describe_shop_info {
+  width: 750rpx;
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 28rpx;
+  margin: 38rpx 0 40rpx;
+}
+._select_icon {
+  width: 750rpx;
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-bottom: 6rpx;
+  font-size: 30rpx;
+}
+._select_icon > ._service_cell {
+    width: 138rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-align: center;
+    padding: 40rpx 0;
+    color: #b0b0b0;
+    font-size: 28rpx;
+}
+._select_icon > ._service_cell image {
+      width: 50rpx;
+      height: 50rpx;
+}
+._select_icon ._color3285ff {
+    color: #3285ff;
+}
+._select_icon > ._service_cell:nth-of-type(5n) {
+  margin-right: 0;
+}
+._open_store_button {
+  width: 472rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 30rpx;
+  color: #fff;
+  background: #307ffa;
+  text-align: center;
+  border-radius: 10rpx;
+  margin: 0 auto 40rpx;
+}
+._open_store_button > text {
+    font-size: 24rpx;
+}
+._leave_word {
+  width: 750rpx;
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 48rpx;
+  font-size: 28rpx;
+}
+._leave_word > ._right {
+    color: #585858;
+}
+._leave_word_info {
+  width: 750rpx;
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 28rpx;
+}
+._leave_word_info ._author {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+}
+._leave_word_info ._author image {
+      width: 96rpx;
+      height: 96rpx;
+      border: 2rpx solid #ccc;
+      border-radius: 50%;
+}
+._leave_word_info ._author ._author_name {
+      line-height: 96rpx;
+      margin-left: 12rpx;
+      color: #585858;
+      font-size: 26rpx;
+}
+._leave_word_info ._question_ask {
+    margin: 16rpx 0 22rpx 110rpx;
+}
+._leave_word_info ._question_ask ._question {
+      color: #2f2f2f;
+      font-size: 28rpx;
+}
+._leave_word_info ._question_ask ._time_specific {
+      font-size: 24rpx;
+      margin-top: 22rpx;
+      color: #585858;
+}
+._leave_word_info > ._reply {
+    margin-left: 110rpx;
+}
+._segmentation {
+  width: 750rpx;
+  height: 2rpx;
+  background: #dadada;
+  margin: 56rpx 0 40rpx;
+}
+._position_btn {
+  width: 750rpx;
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 86rpx;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  bottom: 0rpx;
+  background: #fff;
+  font-size: 28rpx;
+}
+._position_btn > ._input {
+    width: 476rpx;
+    height: 62rpx;
+    margin-top: 14rpx;
+    border: 2rpx solid #2f2f2f;
+    border-radius: 30rpx;
+    padding-left: 22rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-right: 46rpx;
+}
+._position_btn > ._position_icon {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    font-size: 70rpx;
+    margin-top: 10rpx;
+}
+._position_btn > ._position_icon > ._telephone {
+      color: #307ffa;
+      margin-right: 50rpx;
+}
+._position_btn > ._position_icon > ._arrow {
+      color: #ec8b3c;
+}
+

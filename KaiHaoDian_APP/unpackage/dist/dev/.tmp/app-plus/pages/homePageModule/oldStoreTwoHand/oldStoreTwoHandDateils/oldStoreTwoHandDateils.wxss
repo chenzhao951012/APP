@@ -1,0 +1,472 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.status_bar {
+  height: var(--status-bar-height);
+  width: 100%;
+}
+.top_view {
+  height: var(--status-bar-height);
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+.content {
+  width: 750rpx;
+}
+.content {
+  background-color: #eeeeee;
+}
+.nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 30rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #fff;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.nav .navback {
+    width: 20%;
+    font-size: 28rpx;
+}
+.nav .navtitle {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    font-size: 32rpx;
+    font-weight: 600;
+    text-align: center;
+}
+.nav .Navicon {
+    width: 20%;
+}
+.nav .Navicon text {
+      font-size: 40rpx;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      padding: 0 20rpx;
+}
+.nav .Navicon text:nth-child(1) {
+      color: #ffbd38;
+}
+.nav .Navicon text:nth-child(2) {
+      color: #656565;
+      padding-right: 0;
+}
+.nav .ShareBox {
+    position: absolute;
+    background-color: #eeeeee;
+    right: 0;
+    top: 90rpx;
+}
+.nav .ShareBox view {
+      padding: 0rpx 20rpx;
+      font-size: 28rpx;
+      color: #000;
+      border-bottom: 2rpx solid #bfbfbf;
+      height: 70rpx;
+      line-height: 70rpx;
+}
+.nav .ShareBox view text {
+        padding: 0 10rpx;
+}
+.section {
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #fff;
+  margin-top: 20rpx;
+  border-radius: 20rpx 20rpx 0 0;
+  margin-bottom: 80rpx;
+}
+.section .Pl {
+    padding-right: 10rpx;
+}
+.section .Conment .UserBox {
+    padding: 40rpx 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    border-bottom: 2rpx solid #eeeeee;
+}
+.section .Conment .UserBox .ImgBox {
+      width: 80rpx;
+      height: 80rpx;
+}
+.section .Conment .UserBox .ImgBox ._img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+}
+.section .Conment .UserBox .UserConment {
+      padding-left: 20rpx;
+}
+.section .Conment .UserBox .UserConment .name {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        font-size: 28rpx;
+        color: #000;
+        font-weight: 600;
+        line-height: 1.5;
+}
+.section .Conment .UserBox .UserConment .name .RenBox {
+          margin-left: 20rpx;
+          width: 20rpx;
+          height: 20rpx;
+}
+.section .Conment .UserBox .UserConment .name .RenBox ._img {
+            width: 100%;
+            height: 100%;
+}
+.section .Conment .UserBox .UserConment .time {
+        padding: 5rpx 0;
+        font-size: 24rpx;
+        color: #000;
+}
+.section .Conment .UserBox .UserConment .time text {
+          padding-left: 20rpx;
+}
+.section .Conment .UserBox .redom {
+      font-size: 28rpx;
+      font-weight: 600;
+      color: #686868;
+      position: absolute;
+      right: 0;
+      top: 50rpx;
+}
+.section .Conment .introduce {
+    padding: 40rpx 0;
+}
+.section .Conment .introduce .title {
+      font-size: 26rpx;
+      color: #000;
+      font-weight: 400;
+      letter-spacing: 5rpx;
+}
+.section .Conment .introduce .introduceBottom {
+      margin-top: 20rpx;
+}
+.section .Conment .introduce .introduceBottom text {
+        font-size: 28rpx;
+        color: #febe3a;
+}
+.section .Conment .introduce .introduceBottom text:nth-child(1) {
+        font-size: 26rpx;
+        color: #676767;
+        font-weight: 600;
+}
+.section .Conment .introduce .introduceBottom text:nth-child(1) text {
+          color: #febe3a;
+          font-weight: 600;
+          padding-left: 20rpx;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+}
+.section .Conment .introduce .introduceBottom text:nth-child(2) {
+        display: inline-block;
+        border: 1px solid #f1f1f1;
+        border-radius: 25px;
+        margin-left: 40rpx;
+        padding: 2rpx 20rpx;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+}
+.section .Conment .Banner .BannerList {
+    width: 687rpx;
+    height: 796rpx;
+    margin-bottom: 10rpx;
+}
+.section .Conment .Banner .BannerList ._img {
+      width: 100%;
+      height: 100%;
+      border-radius: 20rpx;
+}
+.section .Conment .comment {
+    padding: 10rpx 0 20rpx 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.section .Conment .comment .commentTitle {
+      margin: 20rpx 0 40rpx 0;
+      font-size: 32rpx;
+      font-weight: 600;
+      letter-spacing: 5rpx;
+}
+.section .Conment .comment .CommentImg {
+      width: 100%;
+      height: 400rpx;
+}
+.section .Conment .comment .CommentImg ._img {
+        width: 100%;
+        height: 100%;
+}
+.section .Conment .comment .commentBox {
+      padding: 30rpx 30rpx;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+}
+.section .Conment .comment .commentList {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      border-radius: 20rpx;
+      padding: 0rpx 27rpx;
+      -webkit-box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
+              box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
+}
+.section .Conment .comment .commentListTop {
+      position: relative;
+      padding: 40rpx 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+}
+.section .Conment .comment .commentListTop .icons {
+        color: #259bfe;
+        padding-left: 10rpx;
+}
+.section .Conment .comment .commentListTop .position {
+        font-size: 28rpx;
+        color: #747474;
+        line-height: 2;
+        font-weight: 600;
+}
+.section .Conment .comment .commentListTop .userMassage {
+        padding-left: 30rpx;
+}
+.section .Conment .comment .commentListTop .company {
+        font-size: 24rpx;
+        color: #989898;
+        font-weight: lighter;
+}
+.section .Conment .comment .commentListTop .userImg {
+        width: 100rpx;
+        height: 100rpx;
+}
+.section .Conment .comment .commentListTop .userImg ._img {
+          width: 100rpx;
+          height: 100rpx;
+          border-radius: 50%;
+}
+.section .Conment .comment .commentContent {
+      margin-top: 30rpx;
+      font-size: 28rpx;
+      letter-spacing: 5rpx;
+      color: #000;
+}
+.section .Conment .comment .icond3 {
+      color: #6b6b6b;
+}
+.section .Conment .comment .icond {
+      color: #6b6b6b;
+      font-weight: 600;
+      position: absolute;
+      right: 12rpx;
+      top: 50rpx;
+}
+.section .Conment .comment .icond2 {
+      color: #ffd082;
+}
+.section .Conment .comment .commentNumber {
+      color: #666666;
+      font-size: 28rpx;
+      padding-left: 20rpx;
+}
+.section .Conment .comment .introduction {
+      border-bottom: 2rpx solid #d2d2d2;
+}
+.section .Conment .comment .iconecodes {
+      position: absolute;
+      right: -218rpx;
+      top: -6rpx;
+      font-size: 28rpx;
+      color: #686868;
+      font-weight: 600;
+}
+.section .Conment .comment .iconecoded {
+      font-size: 60rpx;
+      color: #ffbd38;
+      position: absolute;
+      right: -208rpx;
+      top: 46rpx;
+}
+.section .Conment .comment .bottonBottom {
+      width: 100%;
+      height: 98rpx;
+      background-color: #ffbd38;
+      position: fixed;
+      bottom: 0;
+      padding: 15rpx 20rpx;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+}
+.section .Conment .comment .ComentInput {
+      width: 488rpx;
+      height: 70rpx;
+      border-radius: 40rpx;
+      background-color: #fff;
+}
+.section .Conment .comment .ComentInput ._input {
+        padding-top: 10rpx;
+        padding-left: 40rpx;
+        font-size: 14px;
+}
+.section .Conment .comment .LIst {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+}
+.section .Conment .comment .ComentImgList {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+}
+.section .Conment .comment .ComentImgList ._img {
+        width: 65rpx;
+        height: 65rpx;
+        margin: 6rpx 0rpx 6rpx 40rpx;
+}
+.section .Conment .comment .ComentImgList2 {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      padding-left: 60rpx;
+}
+.section .Conment .comment .ComentImgList2 ._img {
+        margin-top: -12rpx;
+        width: 100rpx;
+        height: 100rpx;
+}
+.section .Conment .comment .subreply {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      color: #ffc760;
+      font-size: 28rpx;
+      padding: 20rpx 0;
+      font-weight: lighter;
+}
+.section .Conment .comment .introduction:last-child {
+  border: 0;
+}
+.bottonBottom {
+  width: 750rpx;
+  height: 98rpx;
+  background-color: #ffbd38;
+  position: fixed;
+  bottom: 0;
+  padding: 15rpx 20rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 100;
+}
+.ComentInput {
+  width: 488rpx;
+  height: 70rpx;
+  border-radius: 40rpx;
+  background-color: #fff;
+}
+.ComentInput ._input {
+    padding-top: 10rpx;
+    padding-left: 40rpx;
+    font-size: 14px;
+}
+.LIst {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.ComentImgList {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.ComentImgList ._img {
+    width: 65rpx;
+    height: 65rpx;
+    margin: 6rpx 0rpx 6rpx 40rpx;
+}
+.ComentImgList2 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 60rpx;
+}
+.ComentImgList2 ._img {
+    margin-top: -12rpx;
+    width: 100rpx;
+    height: 100rpx;
+}
+.subreply {
+  color: #ffc760;
+  font-size: 28rpx;
+  padding: 20rpx 0;
+  font-weight: lighter;
+}
+.CommentImg {
+  width: 100%;
+  height: 400rpx;
+}
+.CommentImg ._img {
+    width: 100%;
+    height: 100%;
+}
+.commenttitle {
+  padding: 20rpx 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 32rpx;
+}
+

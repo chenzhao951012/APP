@@ -1,0 +1,14 @@
+{
+  "scrollIndicator": "none",
+  "titleNView": {
+    "titleText": "",
+    "buttons": [
+      {
+        "text": "搜索",
+        "fontSize": "14",
+        "color": "#999",
+        "fontSrc": "/static/iconfont.ttf"
+      }
+    ]
+  }
+}

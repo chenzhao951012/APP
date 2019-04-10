@@ -1,0 +1,2 @@
+<import src="./partnerOpenStore.vue.wxml" />
+    <template is="f33ffa58" data="{{ ...$root['0'], $root }}"/>

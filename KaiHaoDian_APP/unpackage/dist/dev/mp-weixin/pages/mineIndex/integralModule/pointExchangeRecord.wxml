@@ -1,0 +1,2 @@
+<import src="./pointExchangeRecord.vue.wxml" />
+    <template is="65e716f7" data="{{ ...$root['0'], $root }}"/>

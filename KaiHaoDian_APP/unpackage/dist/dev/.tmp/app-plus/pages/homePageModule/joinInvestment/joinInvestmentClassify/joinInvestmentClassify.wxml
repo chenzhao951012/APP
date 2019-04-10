@@ -1,0 +1,2 @@
+<import src="./joinInvestmentClassify.vue.wxml" />
+    <template is="28bb7a10" data="{{ ...$root['0'], $root }}"/>

@@ -1,0 +1,274 @@
+@mixin box_sizing {
+	width: 750upx;
+	padding: 0 30upx;
+	box-sizing: border-box;
+}
+
+page {
+	height: 100%;
+	background: #fff;
+}
+
+.content {
+	overflow: hidden;
+}
+._contactsCell {
+	width: 690upx;
+	height:150upx;
+	box-sizing: border-box;
+	padding: 0 30upx;
+	overflow: hidden;
+	white-space: nowrap;
+	._contacts {
+		border-radius: 8upx;
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 0;
+		text-align: center;
+		image {
+			width:120upx;
+			height:120upx;
+			margin: 10upx;
+			border:2upx solid #aaa;
+			box-sizing: border-box;
+		}
+	}
+}
+.addCover {
+	border-radius: 50%;
+	width: 180upx;
+	height: 180upx;
+	text-align: center;
+	font-size: 32upx;
+	color: #666;
+	margin: 66upx auto 60upx;
+	box-sizing: border-box;
+	background:#307ffa;
+	color: #f7f7f7;
+	padding: {
+		top: 50upx;
+	}
+	._top {
+		color: #f7f7f7;
+		font-size: 48upx;
+	}
+}
+
+.modify_cover{
+	width:750upx;
+	height:420upx;
+	position: relative;
+	font-size: 32upx;
+	box-sizing: border-box;
+	>image:nth-of-type(1){
+		width:750upx;
+		height:420upx;
+	}
+	>image:nth-of-type(2){
+		box-sizing: border-box;
+		width:750upx;
+		height:70upx;
+		position:absolute;
+		left:0;
+		bottom:0;
+	}
+}
+
+.infoFill {
+	@include box_sizing;
+	display: flex;
+	height: 96upx;
+	line-height:96upx;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 22upx;
+	color: #1b1e26;
+	line-height: 52upx;
+	._left {
+		width: 130upx;
+		font-size: 30upx;
+	}
+	._right {
+		width: 560upx;
+	}
+}
+
+.infoFill:nth-of-type(2n-1){
+	background:#f7f7f7;
+}
+
+.infoFill:nth-of-type(6){
+	margin-bottom: 112upx;
+}
+
+._title_parnters{
+	@include box-sizing;
+	padding: 0 30upx 30upx;
+	// height:330upx;
+	background:#f7f7f7;
+	.infoFill_cell {
+		font-size:30upx;
+		._left{
+			height:96upx;
+			line-height:96upx;
+		}
+		._right {
+			font-size:22upx;
+			height:164upx;
+		}
+	}
+	.choosePicture {
+		display:flex;
+		justify-content: space-between;
+		font-size: 22upx;
+		margin-top:40upx;
+		.iconfont {
+			width:32upx;
+			height:28upx;
+			line-height:28upx;
+			text-align: center;
+			font-size: 38upx;
+			color:rgb(71,126,242);
+		}
+		._right{
+			color:#585858;
+		}
+	}
+}
+
+.service {
+	@include box_sizing;
+	.service_title {
+		height:96upx;
+		line-height:96upx;
+		font-size: 30upx;
+		color: #1b1e26;
+	}
+	.service_list {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-wrap: wrap;
+		.service_cell {
+			width:138upx;
+			text-align: center;
+			font-size: 24upx;
+			color: #666;
+			margin: {
+				top: 20upx;
+			}
+			image{
+				width:34upx;
+				height:34upx;
+			}
+		}
+		
+	}
+}
+._color3285ff{
+	color: #3285ff;
+}
+.confirm {
+	@include box_sizing;
+	font-size: 24upx;
+	display: flex;
+	justify-content:flex-start;
+	align-items:center;
+	margin:{
+		top: 30upx;
+	}
+	.iconfont {
+		font-size:40upx;
+		margin-right:20upx;	
+	}
+	.iconfonts{
+		color: deepskyblue;
+		font-size:40upx;
+		margin-right:20upx;	
+	}
+}
+.publishButton{
+	width:564upx;
+	height: 72upx;
+	line-height: 72upx;
+	text-align: center;
+	font-size: 30upx;
+	color: #585858;
+	background: #ebebeb;
+	border-radius: 10upx;
+	margin:  54upx auto 140upx;
+}
+
+.publishButtons{
+	width:564upx;
+	height: 72upx;
+	line-height: 72upx;
+	text-align: center;
+	font-size: 30upx;
+	color: #fff;
+	background: #307ffa;
+	border-radius: 10upx;
+	margin:  54upx auto 140upx;
+}
+/*mask*/
+
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+/*content*/
+
+.drawer_box {
+  width: 650rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 99999;
+  background: #fafafa;
+  margin: -150px 50rpx 0 50rpx;
+  border-radius: 3px;
+}
+
+.drawer_title {
+  color: #666;
+  padding: 10px;
+  padding-top: 25px;
+  font: 20px "microsoft yahei";
+  text-align: center;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.drawer_content {
+  padding-left: 32px;
+  padding-right: 32px;
+  height: 250px;
+  overflow-y: scroll; /*超出父盒子高度可滚动*/
+}
+
+.btn_ok {
+  padding: 10px;
+  font: 20px "microsoft yahei";
+  text-align: center;
+  border-top: 1px solid #e8e8ea;
+  color: #3cc51f;
+  float: left;
+  margin-left: 16%;
+}
+
+.btn_no {
+  padding: 10px;
+  font: 20px "microsoft yahei";
+  text-align: center;
+  border-top: 1px solid #e8e8ea;
+  color: #3cc51f;
+  float: right;
+ }

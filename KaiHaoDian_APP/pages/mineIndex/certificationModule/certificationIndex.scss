@@ -1,0 +1,62 @@
+.contents{
+	background-color: #fff;
+	min-height: 1240upx;
+}
+._contacts{
+	background-color: #fff;
+	padding: 0 30upx;
+	box-sizing: border-box;
+	
+}
+.BottomImg{
+	margin: 60upx 0;
+	width: 100%;
+		height: 80upx;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+._contacts_personal_enterprise{
+
+	background:white;
+	text-align: center;
+	box-sizing:border-box;
+	border:2upx solid #eeeeee;
+	border-radius: 20upx;
+	border-bottom: 0;
+}
+
+._contacts_image{
+	width:120upx;
+	height:120upx;
+	margin-top:72upx;
+	margin-bottom:40upx;
+	box-sizing:border-box;
+
+	
+}
+._contacts_personal{
+	letter-spacing: 8upx;
+	height:40upx;
+	font-size:32upx;
+	color:#333333;
+	margin:0 auto;
+	font-weight: 600;
+}
+image{
+	width:100%;
+	height: 100%;
+
+	}
+	page{
+		background-color: #f3f3f3;
+	}
+	.Choose{
+		margin-top: 20upx;
+		background-color: #fff;
+		padding: 60upx 30upx;
+		box-sizing: border-box;
+		font-size: 24upx;
+		color: #666666;
+	}

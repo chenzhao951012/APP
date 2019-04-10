@@ -1,0 +1,10 @@
+<import src="/components/mpvue-picker/mpvuePicker.vue.wxml" />
+<import src="/components/mpvue-citypicker/mpvueCityPicker.vue.wxml" />
+<import src="/components/commentModule/commentModule.vue.wxml" />
+
+<template name="605eba8c-default-605eba8c-0">确定</template>
+
+<template name="0d329060-default-0d329060-0">确定</template>
+
+<template name="fa36bfa4-default-fa36bfa4-0">确定</template>
+

@@ -1,0 +1,744 @@
+@mixin box-sizing {
+	width:750upx;
+	padding:0 30upx;
+	box-sizing:border-box;
+}
+
+@mixin display-flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+page{
+	background:#eeeeee;
+}
+.questiondetailedness{
+	width: 750upx;
+	margin-top: 20upx;
+	background-color: #fff;
+	padding-top: 20upx;
+	box-sizing: border-box;
+	border-radius: 20upx 20upx 0 0;
+	position: relative;
+	
+}
+.content{
+	padding-bottom:90upx;
+	background-color: #fff;
+	// height: 100%;
+	min-height: 1100upx;
+}
+._top_question{
+	padding:10upx 30upx;
+	width: 80%;
+	box-sizing: border-box;
+	font-size:28upx;
+	color:#000;
+	line-height: 2;
+	 text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+._userInfo{
+	@include box-sizing;
+	@include display-flex;
+	font-size:26upx;
+	margin:20upx 0;
+	>._left{
+		@include display-flex;
+		._left_name{
+		
+			font-size: 28upx;
+			font-weight: 600;
+		}
+		>image{
+			width:68upx;
+			height:68upx;
+			border:2upx solid #ccc;
+			border-radius: 50%;
+			margin-right:14upx;
+		}
+		>._left_info{
+			
+			._company{
+				display: flex;
+				font-size: 24upx;
+				color: #c1c1c1;
+				margin-top: 5upx;
+				text{
+					color: #279dff;
+					padding-left: 5upx;
+					margin-top: 5upx;
+				}
+			}
+		}
+	}
+	>._right{
+		text-align: center;
+		>._follow{
+			width:102upx;
+			height:40upx;
+			line-height:40upx;
+			background:#548ef2;
+			color:#fff;
+			text-align:center;
+			margin:10upx auto 8upx;
+			border-radius: 10upx;
+		}
+		>._contacts_gz_state {
+			width:104upx;
+			height:60upx;
+			line-height:60upx;
+			background:#ffbd38;
+			color:#fff;
+			text-align:center;
+			
+			border-radius: 10upx;
+		}
+		>._contacts_gz_state2 {
+			background: #8a8a8a;
+			color: #fff;
+		}
+		>._right_concerns{
+			color:#8a8a8a;
+			font-size:22upx;
+		}
+	}
+}
+
+._center_content{
+	@include box-sizing;
+	font-size:28upx;
+	letter-spacing: 5upx;
+	color: #000000;
+
+}
+
+._leave_word{
+	@include box-sizing;
+	margin:68upx 0 48upx;
+	@include display-flex;
+	font-size:28upx;
+}
+
+._leave_word_info{
+	@include box-sizing;
+	font-size:28upx;
+	._author{
+		@include display-flex;
+		justify-content: flex-start;
+		image{
+			width:96upx;
+			height:96upx;
+			border:2upx solid #ccc;
+			border-radius: 50%;
+		}
+		._author_name{
+			line-height:96upx;
+			margin-left:12upx;
+			color:#585858;
+			font-size:26upx;
+		}
+	}
+	._question_ask{
+		margin:16upx 0 22upx 110upx;
+		._question{
+			color:#2f2f2f;
+			font-size:28upx;
+		}
+		._time_specific{
+			font-size:24upx;
+			margin-top:22upx;
+			color:#585858;
+		}
+	}
+	
+	>._reply{
+		margin-left:110upx;
+	}
+}
+
+._segmentation{
+	width:750upx;
+	height:2upx;
+	background:#dadada;
+	margin:56upx 0 40upx;
+}
+
+._related_recommendations{
+	@include box-sizing;
+	font-size:30upx;
+	margin:56upx 0 32upx;
+	>text{
+		display:inline-block;
+		height:38upx;
+		line-height:38upx;
+		border-left: 6upx solid #307ffa;
+		padding-left:10upx;
+	}
+}
+
+._recommendations_content{
+	// @include box-sizing;
+	margin:0 auto;
+	width:690upx;
+	box-sizing: border-box;
+	font-size:28upx;
+	padding: 20upx 0;
+	// margin-bottom:40upx;
+	border-top: 2upx solid #eee;
+	>._questions{
+		width:690upx;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	>._describe_substance{
+		overflow : hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		margin:18upx 0;
+		font-size:26upx;
+		color:#585858;
+	}
+	>.left_icon{
+		width:690upx;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		overflow: hidden;
+	}
+	>._comment_time{
+		@include display-flex;
+		font-size:24upx;
+		color:#777777;
+	}
+}
+._write_comments{
+	@include box-sizing;
+	background:#fff;
+	position:fixed;
+	bottom:0;
+	left:0;
+	padding-bottom:14upx;
+	._comment_input{
+		height:72upx;
+		font-size:28upx;
+		border:2upx solid #2f2f2f;
+		border-radius: 10upx;
+		>view{
+			display:inline-block;
+			font-size:40upx;
+			margin-top:10upx;
+		}
+		>input{
+			display:inline-block;
+			margin-left:10upx;
+			vertical-align: middle;
+		}
+	}
+}
+
+@mixin verMiddle {
+	display: inline-block;
+	vertical-align: middle;
+}
+@mixin widthHidden {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+@mixin box_sizing {
+	box-sizing: border-box;
+}
+
+.comment_box{
+	width: 750upx;
+	height: 100upx;
+	background: lightblue;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 99;
+}
+// 评论
+.commentParent {
+	// padding-bottom: 100upx;
+	// 评论title
+	.comment_title {
+		
+		padding: 0 30upx;
+		@include box_sizing;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 2upx solid #eee;
+		view {
+			line-height: 80upx;
+			font-size: 28upx;
+			color: #666;
+		}
+		view:last-child {
+			font-size: 26upx;
+		}
+	}
+	// 评论区
+	.conment_content {
+		padding: 0upx 30upx;
+		@include box_sizing;
+	
+		// 一级评论
+		> .conment_one {
+			border-bottom: 2upx solid #eee;
+				padding: 20upx 0;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				position: relative;
+			> ._title {
+				display: flex;
+				
+				align-items: center;
+				._portrait,
+				._portrait image {
+					width: 68upx;
+					height: 68upx;
+					font-size: 0;
+					border-radius: 50%;
+					background: #eee9e9;
+				}
+				._userAndCompany {
+				padding-left: 20upx;
+					._name {
+						font-size: 28upx;
+						color: #989898;
+						// line-height:;
+						margin-top: 4upx;
+						font-weight: 600;
+					}
+					._company {
+						font-size: 24upx;
+						color: #999;
+						
+						view {
+							display: inline-block;
+							vertical-align: middle;
+						}
+						view:first-child {
+							max-width: 540upx;
+							@include widthHidden;
+						}
+						.iconfont {
+							color: #289cff;
+							margin-left: 10upx;
+						}
+					}
+				}
+			}
+			> ._content {
+				font-size: 26upx;
+				color: #000000;
+				letter-spacing: 5upx;
+				line-height: 2;
+				margin: {
+					top: 10upx;
+					left: 13%;
+				}
+			}
+			> ._operation_border {
+				border-bottom: 2upx solid #eee;
+			}
+			> ._operation {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				font-size: 0;
+				._time {
+					font-size: 24upx;
+					color: #999;
+					line-height: 44upx;
+				}
+				.commentAndPraise {
+					> view:first-child {
+						margin: {
+							right: 20upx;
+						}
+					}
+					> view {
+						@include verMiddle;
+						line-height: 44upx;
+						font-size: 24upx;
+					}
+				}
+			}
+			// 二级评论
+			> .conment_two {
+				border-bottom: 2upx solid #eee;
+				width: 670upx;
+				padding: {
+					top: 10upx;
+				}
+				margin: {
+					left: 28upx;
+				}
+				@include box_sizing;
+				> ._title {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					._portrait,
+					._portrait image {
+						width: 60upx;
+						height: 60upx;
+						font-size: 0;
+						border-radius: 50%;
+						background: #3285ff;
+					}
+					._userAndCompany {
+						width: 588upx;
+						._name {
+							font-size: 26upx;
+							color: #989898;
+							line-height: 34upx;
+						}
+						._company {
+							font-size: 22upx;
+							color: #999;
+							line-height: 34upx;
+							view {
+								display: inline-block;
+								vertical-align: middle;
+							}
+							view:first-child {
+								max-width: 548upx;
+								@include widthHidden;
+							}
+							.iconfont {
+								color: #ff8100;
+								margin-left: 10upx;
+							}
+						}
+					}
+				}
+				> ._content {
+					font-size: 22upx;
+					color: #666;
+					letter-spacing: 2upx;
+					margin: {
+						top: 10upx;
+					}
+				}
+				> ._operation {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					font-size: 0;
+					._time {
+						font-size: 20upx;
+						color: #999;
+						line-height: 44upx;
+					}
+					.commentAndPraise {
+						> view:first-child {
+							margin: {
+								right: 20upx;
+							}
+						}
+						> view {
+							@include verMiddle;
+							line-height: 44upx;
+							font-size: 20upx;
+						}
+					}
+				}
+			}
+			> .conment_two:last-child {
+				border: 0;
+			}
+		}
+// 		>.conment_one:last-child{
+// 			border: 0;
+// 		}
+	}
+}
+// 留言
+._comment{
+	@include box-sizing;
+	>._leave_word{
+		@include display-flex;
+		margin-bottom:120upx;
+		font-size:28upx;
+		color:#2f2f2f;
+		>._right{
+			font-size:26upx;
+			color:#585858;
+			>text{
+				margin-left:14upx;
+			}
+		}
+	}
+	>._pinglun{
+		text-align:center;
+		font-size:24upx;
+		color:#aeaeae;
+		>.iconfont{
+			font-size:200upx;
+		}
+	}
+}
+// 服务类型
+.typestitle{
+	position: absolute;
+		right: 30upx;
+	color: white;
+	font-size: 12px;
+	background-color: #60bc74;
+	padding: 5upx 30upx;
+top:40upx;
+	border-radius:20upx  0px  0px 20upx;
+}
+.typestitle2{
+	position: absolute;
+		right: 30upx;
+	color: white;
+	font-size: 12px;
+	background-color: #d85cfc;
+	padding: 5upx 30upx;
+	top:40upx;
+	border-radius:20upx  0px  0px 20upx;
+}
+.typestitle3{
+	position: absolute;
+		right: 30upx;
+	color: white;
+	font-size: 12px;
+	background-color: #5c6ffc;
+	padding: 5upx 30upx;
+	top:40upx;
+	border-radius:20upx  0px  0px 20upx;
+}
+.typestitle4{
+	position: absolute;
+	right: 30upx;
+	color: white;
+	font-size: 12px;
+	background-color: #34a5ec;
+	padding: 5upx 30upx;
+	top:40upx;
+	border-radius:20upx  0px  0px 20upx;
+}
+.typestitle5{
+	position: absolute;
+		right: 30upx;
+	color: white;
+	font-size: 12px;
+	background-color: #fcbe5c;
+	padding: 5upx 30upx;
+	top:40upx;
+	border-radius:20upx  0px  0px 20upx;
+}
+.typestitle6{
+	position: absolute;
+	right: 30upx;
+	color: white;
+	font-size: 12px;
+	background-color: #5c6ffc;
+	padding: 5upx 30upx;
+	top:40upx;
+	border-radius:20upx  0px  0px 20upx;
+
+}
+.typestitle7{
+	position: absolute;
+		right: 30upx;
+	color: white;
+	font-size: 12px;
+	background-color: #cf3648;
+	padding: 5upx 30upx;
+	top:40upx;
+	border-radius:20upx  0px  0px 20upx;
+}
+
+
+.ImgBoxs{
+	
+	width: 100%;
+	white-space: nowrap;
+margin-bottom: 10upx;
+	 overflow-x: hidden; 
+	
+}
+.ImgBoxs image{
+	
+	margin-right:20upx;
+	 margin-top: 4upx;
+	margin-bottom: 10upx;
+	width: 216upx;
+	height:162upx;
+}
+//信息评论
+.questionInfo{
+	display: flex;
+	justify-content: space-between;
+	border-top:1px solid #e5e5e5;
+	 border-bottom:1px solid #e5e5e5; 
+	 line-height: 70upx;
+	 font-size: 24upx;
+	 view{
+		 letter-spacing: 5upx;
+		 color: #8c8c8c;
+		 text{
+			 font-size: 28upx;
+			 letter-spacing: 0;
+			 padding-left: 5upx;
+		 }
+	 }
+}
+//问题
+.questionsListBox{
+	display: flex;
+	justify-content: space-between;
+	margin: 40upx 0;
+	.questionsList-left{
+		color: #999999;
+		font-size: 24upx;
+		line-height: 2;
+	}
+	.questionsList-right{
+		display: flex;
+		.line{
+			
+			color: #dadada;
+			margin: 0 10upx;
+			font-size: 28upx;
+		}
+		.r-one{
+			img{
+				width: 30upx;
+				height: 30upx;
+				padding-right: 10upx;
+				vertical-align: middle;
+			}
+			text{
+				font-size: 24upx;
+				color: #666666;
+			}
+		}
+		.r-two{
+			text{
+				font-size: 24upx;
+				color: #666666;
+			}
+			img{
+				width: 40upx;
+				height: 40upx;
+				padding-right: 6upx;
+				vertical-align: middle;
+			}
+		
+		}
+	}
+	
+}
+.praise{
+	position: absolute;
+	right: 0;
+	top: 20upx;
+	font-size: 28upx;
+	
+	font-weight: 600;
+	.iconfont{
+		color: #666666;
+		.IsCorlor{
+			color: #666666;
+		padding-left: 10upx;
+		}
+		.IsCorlor2{
+			color: #ffbd38;
+		padding-left: 10upx;
+		}
+	}
+}
+.bottonBottom{
+				width: 750upx;
+				height: 98upx;
+				background-color: #ffbd38;
+				position: fixed;
+				bottom: 0;
+				padding: 15upx 20upx;
+				box-sizing: border-box;
+				display: flex;
+				z-index: 100;
+				
+			}
+		.ComentInput{
+			width: 488upx;
+			height: 70upx;
+			border-radius: 40upx;
+			background-color: #fff;
+			input{
+				padding-top: 10upx;
+				padding-left: 40upx;
+				font-size: 14px;
+			}
+			
+		}
+		.LIst{
+			display: flex;
+		}
+		.ComentImgList{
+			display: flex;
+			justify-content: space-between;
+			img{
+				width: 65upx;
+				height: 65upx;
+				margin: 6upx 0upx 6upx 40upx;
+			}
+		}
+	.ComentImgList2{
+		box-sizing: border-box;
+		font-size: 28upx;
+		color: #ffffff;
+		line-height: 70upx;
+		margin-left: 20upx;
+		border-radius: 50upx;
+		letter-spacing: 2upx;
+		padding: {
+			left: 40upx;
+			right:40upx;
+		}
+		background-color: #eca83b;
+			img{
+				margin-top: -12upx;
+				width: 100upx;
+				 height: 100upx;
+			}
+	}
+		.subreply{
+			color: #ffc760;
+			font-size: 28upx;
+			padding: 20upx 0;
+			font-weight:lighter;
+		}
+		.CommentImg{
+			width: 100%;
+			height: 400upx;
+			
+			img{
+				width: 100%;
+				height: 100%;
+			}
+			}
+			.subreply{
+				color: #ffc760;
+				font-size: 28upx;
+				padding: 20upx 0;
+				font-weight:lighter;
+			}

@@ -1,0 +1,1 @@
+<template name="a257bf82"><view class="_view a257bf82"><image src="{{imgUrl}}" mode style="width: 100%;height:5780rpx" class="_image a257bf82"></image><view class="_view a257bf82 botoomBox"><button type="primary" bindtouchend="handleProxy" data-eventid="{{'a257bf82-0'}}" data-comkey="{{$k}}" class="_button a257bf82">拨打电话,联系我们</button></view></view></template>

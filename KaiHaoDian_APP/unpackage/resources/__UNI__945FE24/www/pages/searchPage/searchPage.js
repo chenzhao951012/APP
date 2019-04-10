@@ -1,0 +1,13 @@
+
+      !(function(){
+        var uniAppViewReadyCallback = function(){
+          setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"status_bar { height: var(--status-bar-height); width: 100%; }\n.",[1],"top_view { height: var(--status-bar-height); width: 100%; position: fixed; top: 0; }\n.",[1],"content { width: ",[0,750],"; }\n.",[1],"history_cell_active { background: #999; }\n.",[1],"textHidden { overflow: hidden; -o-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; }\n.",[1],"history { width: ",[0,750],"; padding: 0 ",[0,30],"; -webkit-box-sizing: border-box; box-sizing: border-box; }\n.",[1],"history_title { line-height: ",[0,88],"; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }\n.",[1],"history_title wx-text { display: inline-block; vertical-align: middle; font-size: ",[0,24],"; color: #666; }\n.",[1],"history_title wx-text:last-child { font-size: ",[0,30],"; }\n.",[1],"history_content { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }\n.",[1],"history_cell { margin-bottom: ",[0,20],"; max-width: ",[0,220],"; line-height: ",[0,44],"; text-align: center; font-size: ",[0,24],"; padding: 0 ",[0,10],"; -webkit-box-sizing: border-box; box-sizing: border-box; background: #eee; border-radius: ",[0,16],"; margin-right: ",[0,10],"; color: #666; }\n.",[1],"history_null { text-align: center; padding-top: ",[0,360],"; -webkit-box-sizing: border-box; box-sizing: border-box; }\n.",[1],"history_null wx-view:first-child { font-size: ",[0,200],"; color: #eeeeee; }\n.",[1],"history_null wx-view:last-child { font-size: ",[0,32],"; color: #999999; margin-top: ",[0,20],"; }\n",],undefined,{path:"./pages/searchPage/searchPage.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/searchPage/searchPage.wxml') } }));
+        }
+        if(window.__uniAppViewReady__){
+          uniAppViewReadyCallback()
+        }else{
+          document.addEventListener('uniAppViewReady',uniAppViewReadyCallback)
+        }
+      })();
+      

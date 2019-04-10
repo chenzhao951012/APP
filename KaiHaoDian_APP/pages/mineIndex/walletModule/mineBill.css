@@ -1,0 +1,61 @@
+/* 公共样式 */
+.allContent{
+	font-size:24upx;
+}
+._display_flex{
+	display:flex;
+	justify-content: space-between;
+}
+._every_queue{
+	margin:20upx 0;
+}
+._bill_specific_time{
+	font-size: 24upx;
+	font-weight: 600;
+	color: #333333;
+	letter-spacing: 5upx;
+	margin-bottom: 10upx;
+	padding: 0 30upx;
+	box-sizing: border-box;
+}
+._bill_specific_time text{
+	color: #333333;
+	padding-left: 10upx;
+}
+.LinBox{
+	height: 20upx;
+	width: 100%;
+	background-color: #f3f3f3;
+}
+.particulars{
+	padding: 30upx 80upx 30upx 40upx;
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	border-bottom: 2upx solid #d2d2d2;
+}
+.particularsRight text{
+	font-size: 28upx;
+	color: #333333;
+	font-weight: 600;
+	line-height: 3;
+}
+.particularsLeft{
+	font-size: 28upx;
+	color: #333333;
+	font-weight: 600;
+}
+.time{
+	line-height: 2;
+	font-size: 24upx;
+	color: #b8b8b8;
+	padding-right: 20upx;
+	letter-spacing: 5upx;
+	font-weight: 100;
+}
+.niknanme text{
+	padding: 0 8upx;
+}
+.niknanme{
+	margin-bottom: 10upx;
+}

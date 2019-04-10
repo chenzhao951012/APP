@@ -1,0 +1,40 @@
+.conenct{
+	width: 750upx;
+	background:#f3f3f3;
+	
+	height: 1248upx;
+}
+.header{
+	padding: 20upx 24upx;
+	display: flex;
+	background-color: white;
+}
+.number{
+	margin-top: 6upx;
+	font-size: 14px;
+}
+input{
+	font-size: 14px;
+	margin-left: 14upx;
+}
+.section{
+	width:690rpx;
+	box-sizing:border-box;
+	padding:32rpx;
+	margin:128rpx auto;
+	
+	background:#e8e8e8;
+
+}
+.sectiontitle{
+	text-align:center;
+	font-size: 14px;
+	line-height: 2;
+	
+}
+.sectiontitlehint{
+	font-size: 12px;
+}
+.submitBox{
+	padding: 0 60upx;
+}

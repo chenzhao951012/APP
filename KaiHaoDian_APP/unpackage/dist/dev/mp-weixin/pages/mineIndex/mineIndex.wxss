@@ -1,0 +1,170 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.status_bar {
+  height: 25px;
+  width: 100%;
+}
+.top_view {
+  height: 25px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+.content {
+  width: 750rpx;
+}
+._cut_off_rule {
+  -webkit-box-shadow: 0 6rpx 10rpx rgba(100, 100, 100, 0.14);
+          box-shadow: 0 6rpx 10rpx rgba(100, 100, 100, 0.14);
+  opacity: 1;
+  margin-bottom: 42rpx;
+}
+._personal_file {
+  width: 138rpx;
+  height: 34rpx;
+  font-size: 35rpx;
+  line-height: 34rpx;
+  text-align: left;
+  margin: 36rpx 30rpx 86rpx;
+  color: #000;
+}
+._header_card {
+  width: 750rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 74rpx;
+}
+._header_card image {
+    width: 198rpx;
+    height: 198rpx;
+    margin-right: 30rpx;
+    border: 2rpx solid #CCCCCC;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+._header_card ._card_right {
+    font-size: 32rpx;
+}
+._header_card ._card_right ._card_info {
+      width: 96rpx;
+      height: 40rpx;
+      line-heihgt: 40rpx;
+      margin-bottom: 18rpx;
+}
+._header_card ._card_right ._card_company {
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+         text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 390rpx;
+      heihgt: 40rpx;
+      line-height: 40rpx;
+      margin-bottom: 56rpx;
+      font-size: 30rpx;
+}
+._header_card ._card_right ._generate_business {
+      width: 250rpx;
+      height: 40rpx;
+      font-size: 28rpx;
+      line-height: 40rpx;
+      display: inline-block;
+      color: #585858;
+}
+._header_card ._card_right ._unauthorized {
+      width: 94rpx;
+      height: 34rpx;
+      line-height: 34rpx;
+      color: #fff;
+      font-size: 26rpx;
+      text-align: center;
+      background-color: #f3ad65;
+      display: inline-block;
+      border-radius: 10rpx;
+}
+._mine_menu {
+  width: 750rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 56rpx 62rpx 46rpx;
+  font-size: 30rpx;
+  text-align: center;
+  color: #2f2f2f;
+}
+._mine_menu ._mine_focus {
+    color: #585858;
+    font-size: 28rpx;
+}
+._mine_menu_center {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 84rpx;
+  padding: 0;
+  margin: 0 30rpx;
+  font-size: 28rpx;
+  line-height: 84rpx;
+  border-bottom: 2rpx solid rgba(100, 100, 100, 0.2);
+  color: #333;
+}
+._mine_menu_center ._arrow {
+    margin-right: 12rpx;
+    color: #999;
+}
+._arrow:nth-child(2n) {
+  margin-right: 0;
+  margin-left: 12rpx;
+}
+

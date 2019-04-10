@@ -1,0 +1,35 @@
+/* 公共样式 */
+._all_content{
+	margin: 0 30upx;
+	font-size:28upx;
+}
+._display_flex{
+	display:flex;
+	justify-content: space-between;
+}
+/* 钱数量 */
+._money_number{
+	font-size:40upx;
+	text-align:center;
+	margin:130upx 280upx 106upx 262upx;
+}
+.left_toApplyFor{
+	width:296upx;
+	line-height:40upx;
+	text-align:center;
+}
+.top_toApplyFor_text{
+	margin-bottom:20upx;
+}
+._toChange_button{
+	width:502upx;
+	height:80upx;
+	line-height:80upx;
+	text-align:center;
+	background:#DBDBDB;
+	border: 2upx solid #DBDBDB;
+	border-radius: 20upx;
+	position:fixed;
+	left:98upx;
+	bottom:54upx;
+}

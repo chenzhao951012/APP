@@ -1,0 +1,239 @@
+@mixin box-sizing {
+	width: 750upx;
+	padding: 0 30upx;
+	box-sizing: border-box;
+}
+
+@mixin display-flex {
+	display:flex;
+	justify-content: space-between;
+}
+
+page {
+	height: 100%;
+	background: #fff;
+}
+
+// 招聘列表
+._infoFill{
+	@include box-sizing;
+	@include display-flex;
+	font-size:28upx;
+	height:96upx;
+	line-height:96upx;
+	input{
+		line-height:60upx;
+		text-align:right;
+		font-size:28upx;
+		margin-top:20upx;
+	}
+}
+
+._infoFill:nth-of-type(2n-1){
+	background:#f7f7f7;
+}
+._infoFill:nth-of-type(3){
+	>._right{
+		width:420upx;
+	}
+}
+
+._assort_store{
+	@include box-sizing;
+	font-size:28upx;
+	._assort_title{
+		margin: 56upx 0 50upx;
+	}
+	._select_icon{
+		@include display-flex;
+		justify-content: start;
+		flex-wrap: wrap;
+		text-align:center;
+		color: gray;
+		._service_cell{
+			width:138upx;
+			margin-bottom:36upx;
+			font-size:28upx;
+			>.iconfont{
+				font-size:34upx;
+			}
+		}
+		._color3285ff{
+			color: #3285ff;
+		}
+	}
+}
+
+.intelligent_matching{
+	width:338upx;
+	height:72upx;
+	line-height:72upx;
+	background:#548ef2;
+	text-align:center;
+	margin: 70upx auto 86upx;
+	color:#fff;
+	border-radius: 10upx;
+	font-size:32upx;
+}
+.peitao_r {
+  display: inline-block;
+  width: 650upx;
+  margin: 0 0 40upx 20upx;
+}
+.choose {
+  min-height: 100upx;
+}
+.nav-list {
+  margin-top: 10upx;
+}
+.nav-list .navigator {
+  display: inline-block;
+  height: 100upx;
+  width: 108upx;
+  text-align: center;
+margin-top: 20upx;
+}
+
+.nav-list>view {
+  display: inline-block;
+  font-size: 30upx;
+  width: 90upx;
+  height: 90upx;
+  line-height: 30upx;
+  text-align: center;
+}
+
+.nav-list image {
+  margin: 10upx auto 20upx;
+  width: 46upx;
+  height: 46upx;
+  display: block;
+}
+
+.nav-list text {
+  font-size: 26upx;
+  color: #000;
+}
+
+#JQQD_text {
+  color: #c8c8c8;
+}
+
+.paddingTop {
+  padding-top: 10upx;
+}
+
+.beizhu {
+  max-width: 446upx;
+  height: 170upx;
+}
+
+checkbox[hidden] {
+  display: none !important;
+}
+.Minmoney{
+		width: 40%;
+		height: 60upx;
+		background-color:#ffff;
+		border-radius:20upx;
+		 margin-top: 20upx;
+		 uni-input{
+		 			 margin-top: 0;
+		 			 width: 100%;
+		 			 height: 100%;
+					 text-align: center;
+		 }
+	}
+	.Maxmoney{
+		width: 40%;
+		height: 60upx;
+		background-color:#ffff;
+		border-radius:20upx;
+		 margin-top: 20upx;
+		 // margin-left: 40upx;
+		 uni-input{
+			 margin-top: 0;
+			 width: 100%;
+			 height: 100%;
+			  text-align: center;
+		 }
+		
+	}
+	.transfer_list {
+  clear: both;
+  position: relative;
+  display: block;
+  height: 205upx;
+  width: 750upx;
+  border-bottom: 1upx solid #eaeaea;
+}
+
+.transfer_list_img {
+  width: 80upx;
+  height: 80upx;
+  position: absolute;
+  right: 0;
+  top: -14%;
+}
+
+.transfer_list_nav {
+  display: block;
+  height: 175upx;
+  width: 690upx;
+  margin: 30upx auto 0;
+}
+
+._list_Z {
+  display: inline-block;
+  width: 220upx;
+  height: 170upx;
+  text-align: center;
+  float: left;
+  position: relative;
+}
+
+.list-img {
+  width: 220upx;
+  height: 170upx;
+  margin: 0 auto;
+  border: 1px solid #e5e5e5;
+}
+
+._list_Y {
+  width: 450upx;
+  display: inline-block;
+  float: left;
+  padding-left: 20upx;
+  height: 170upx;
+}
+
+._list_Y_text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 32upx;
+  height: 53upx;
+  line-height: 53upx;
+  display: block;
+  color: #273848;
+}
+
+.tall {
+  display: inline-block;
+  width: 65upx;
+  height: 65upx;
+  position: absolute;
+  right: 40upx;
+  bottom: 30upx;
+}
+
+.transfer {
+  border-top: 20upx solid #f0f2f5;
+  width: 750upx;
+  background: white;
+}
+
+.itemh {
+  position: absolute;
+  left: 20%;
+}

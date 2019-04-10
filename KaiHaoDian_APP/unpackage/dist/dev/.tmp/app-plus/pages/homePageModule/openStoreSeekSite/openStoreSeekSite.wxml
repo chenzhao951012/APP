@@ -1,0 +1,2 @@
+<import src="./openStoreSeekSite.vue.wxml" />
+    <template is="29ef55bc" data="{{ ...$root['0'], $root }}"/>

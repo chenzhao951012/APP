@@ -1,0 +1,100 @@
+.aboutus{
+	width: 750upx;
+}
+.LogoBox{
+	height: 450upx;
+	width: 100%;
+	background-color: #f9f7f8;
+	display: flex;
+	justify-content: space-around;
+	
+}
+.LogoBox img{
+	width: 100%;
+	height: 100%;
+}
+.infobox{
+	width:100%;
+height:100%;
+padding:30upx 30upx 0upx 30upx;
+box-sizing:border-box;
+
+}
+.titleBox{
+height:88upx;
+color:#333333;
+font-size:24upx;
+letter-spacing:1px;
+line-height:44upx;
+font-weight:700;
+
+}
+.introduceBox{
+	height:202upx;
+font-size:24upx;
+font-weight:400;
+color: #989898;
+line-height:48upx;
+letter-spacing:1px;
+margin-top:20upx;
+margin-bottom:32upx;
+
+}
+.Companyinfo{
+	display: flex;
+	justify-content: space-between;
+	border-top:2upx solid #EEEEEE;
+	height:88upx;
+	box-sizing:border-box;
+	color:#666666;
+	font-size:26upx;
+	line-height:88upx;
+}
+.bottomBox{
+	color:#999999;
+font-size:20upx;
+letter-spacing:1upx;
+height:28upx;
+line-height:28upx;
+position:absolute;
+left:50%;
+bottom:32upx;
+transform:translateX(-50%);
+
+}
+.Imgbox{
+	width:190upx;
+	height:190upx;
+	margin-top: 80upx;
+}
+.titles{
+		font-size: 24upx;
+		line-height: 2;
+		color: #bcbcbc;
+		text-align: center;
+	}
+	.connent{
+		height: 100upx;
+		width: 750upx;
+		padding: 0 30upx;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-between;
+		font-size: 24upx;
+		line-height: 100upx;
+		border-bottom: 2upx solid  #eeeeee;
+		color: #333333;
+		font-weight: 600;
+	}
+	.connent:nth-child(3){
+		border-bottom: 0;
+	}
+	.versions{
+		color: #dddddd;
+		font-weight: 100;
+	}
+		.lins{
+		height: 20upx;
+		width: 750upx;
+		background-color: #f3f3f3;
+	}

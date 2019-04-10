@@ -1,0 +1,2 @@
+<import src="./newStoreRental.vue.wxml" />
+    <template is="7423b694" data="{{ ...$root['0'], $root }}"/>

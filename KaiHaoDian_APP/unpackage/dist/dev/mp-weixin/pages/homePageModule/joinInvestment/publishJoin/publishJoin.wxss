@@ -1,0 +1,338 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.status_bar {
+  height: 25px;
+  width: 100%;
+}
+.top_view {
+  height: 25px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+.content {
+  width: 750rpx;
+}
+page {
+  height: 100%;
+  background: #fff;
+}
+.content {
+  overflow: hidden;
+}
+._contactsCell {
+  width: 690rpx;
+  height: 150rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 30rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+._contactsCell ._contacts {
+    border-radius: 8rpx;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    text-align: center;
+}
+._contactsCell ._contacts image {
+      width: 120rpx;
+      height: 120rpx;
+      margin: 10rpx;
+      border: 2rpx solid #aaa;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+}
+.addCover {
+  border-radius: 50%;
+  width: 180rpx;
+  height: 180rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #666;
+  margin: 66rpx auto 60rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #307ffa;
+  color: #f7f7f7;
+  padding-top: 50rpx;
+}
+.addCover ._top {
+    color: #f7f7f7;
+    font-size: 48rpx;
+}
+.modify_cover {
+  width: 750rpx;
+  height: 420rpx;
+  position: relative;
+  font-size: 32rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.modify_cover > image:nth-of-type(1) {
+    width: 750rpx;
+    height: 420rpx;
+}
+.modify_cover > image:nth-of-type(2) {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 750rpx;
+    height: 70rpx;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.infoFill {
+  width: 750rpx;
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 96rpx;
+  line-height: 96rpx;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 22rpx;
+  color: #1b1e26;
+  line-height: 52rpx;
+}
+.infoFill ._left {
+    width: 130rpx;
+    font-size: 30rpx;
+}
+.infoFill ._right {
+    width: 560rpx;
+}
+.infoFill:nth-of-type(2n-1) {
+  background: #f7f7f7;
+}
+.infoFill:nth-of-type(6) {
+  margin-bottom: 112rpx;
+}
+._title_parnters {
+  width: 750rpx;
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 30rpx 30rpx;
+  background: #f7f7f7;
+}
+._title_parnters .infoFill_cell {
+    font-size: 30rpx;
+}
+._title_parnters .infoFill_cell ._left {
+      height: 96rpx;
+      line-height: 96rpx;
+}
+._title_parnters .infoFill_cell ._right {
+      font-size: 22rpx;
+      height: 164rpx;
+}
+._title_parnters .choosePicture {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 22rpx;
+    margin-top: 40rpx;
+}
+._title_parnters .choosePicture .iconfont {
+      width: 32rpx;
+      height: 28rpx;
+      line-height: 28rpx;
+      text-align: center;
+      font-size: 38rpx;
+      color: #477ef2;
+}
+._title_parnters .choosePicture ._right {
+      color: #585858;
+}
+.service {
+  width: 750rpx;
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.service .service_title {
+    height: 96rpx;
+    line-height: 96rpx;
+    font-size: 30rpx;
+    color: #1b1e26;
+}
+.service .service_list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+}
+.service .service_list .service_cell {
+      width: 138rpx;
+      text-align: center;
+      font-size: 24rpx;
+      color: #666;
+      margin-top: 20rpx;
+}
+.service .service_list .service_cell image {
+        width: 34rpx;
+        height: 34rpx;
+}
+._color3285ff {
+  color: #3285ff;
+}
+.confirm {
+  width: 750rpx;
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 24rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30rpx;
+}
+.confirm .iconfont {
+    font-size: 40rpx;
+    margin-right: 20rpx;
+}
+.confirm .iconfonts {
+    color: deepskyblue;
+    font-size: 40rpx;
+    margin-right: 20rpx;
+}
+.publishButton {
+  width: 564rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #585858;
+  background: #ebebeb;
+  border-radius: 10rpx;
+  margin: 54rpx auto 140rpx;
+}
+.publishButtons {
+  width: 564rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #fff;
+  background: #307ffa;
+  border-radius: 10rpx;
+  margin: 54rpx auto 140rpx;
+}
+/*mask*/
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+}
+/*content*/
+.drawer_box {
+  width: 650rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 99999;
+  background: #fafafa;
+  margin: -150px 50rpx 0 50rpx;
+  border-radius: 3px;
+}
+.drawer_title {
+  color: #666;
+  padding: 10px;
+  padding-top: 25px;
+  font: 20px "microsoft yahei";
+  text-align: center;
+  border-bottom: 1px solid #dbdbdb;
+}
+.drawer_content {
+  padding-left: 32px;
+  padding-right: 32px;
+  height: 250px;
+  overflow-y: scroll;
+  /*超出父盒子高度可滚动*/
+}
+.btn_ok {
+  padding: 10px;
+  font: 20px "microsoft yahei";
+  text-align: center;
+  border-top: 1px solid #e8e8ea;
+  color: #3cc51f;
+  float: left;
+  margin-left: 16%;
+}
+.btn_no {
+  padding: 10px;
+  font: 20px "microsoft yahei";
+  text-align: center;
+  border-top: 1px solid #e8e8ea;
+  color: #3cc51f;
+  float: right;
+}
+

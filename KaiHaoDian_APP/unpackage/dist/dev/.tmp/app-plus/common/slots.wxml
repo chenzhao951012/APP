@@ -1,0 +1,24 @@
+<import src="/components/mpvue-picker/mpvuePicker.vue.wxml" />
+<import src="/components/mpvue-citypicker/mpvueCityPicker.vue.wxml" />
+<import src="/components/stzhang-tab/stzhang-tab.vue.wxml" />
+<import src="/components/SwiperNav.vue.wxml" />
+<import src="/components/noComment/noComment.vue.wxml" />
+
+<template name="4a87b58b-default-4a87b58b-0">确定</template>
+
+<template name="29ef55bc-default-29ef55bc-0">确定</template>
+
+<template name="c40dc700-default-c40dc700-0">确定</template>
+
+<template name="0d329060-default-0d329060-0">确定</template>
+
+<template name="fa36bfa4-default-fa36bfa4-0">确定</template>
+
+<template name="5254da22-default-5254da22-0">确定</template>
+
+<template name="41d4034f-default-41d4034f-0">确定</template>
+
+<template name="331a643b-default-331a643b-0">确定</template>
+
+<template name="699f2bb1-default-699f2bb1-0">确定</template>
+

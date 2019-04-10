@@ -1,0 +1,144 @@
+@mixin box-sizing {
+	width: 750upx;
+	padding: 0 30upx;
+	box-sizing: border-box;
+}
+
+@mixin display-flex {
+	display:flex;
+	justify-content: space-between;
+}
+
+page {
+	height: 100%;
+	background: #fff;
+}
+
+// 标题
+._title_parnters{
+	@include box-sizing;
+	font-size:22upx;
+	background:#f7f7f7;
+	height:252upx;
+	overflow: hidden;
+	._title_top{
+		height:96upx;
+		line-height:96upx;
+		font-size:30upx;
+	}
+	input{
+		margin-bottom:46upx;
+	}
+	._title_bottom{
+		text-align:right;
+		color:#b0b0b0;
+	}
+}
+
+// 招聘列表
+._infoFill{
+	@include box-sizing;
+	@include display-flex;
+	font-size:28upx;
+	height:96upx;
+	line-height:96upx;
+	input{
+		line-height:60upx;
+		text-align:right;
+		font-size:28upx;
+		margin-top:20upx;
+	}
+}
+
+._infoFill:nth-of-type(2n-1){
+	background:#f7f7f7;
+}
+
+._title_instructions{
+	@include box-sizing;
+	background:#f7f7f7;
+	padding-bottom: 30upx;
+	._title_top{
+		font-size:28upx;
+		height:96upx;
+		line-height:96upx;
+	}
+	>textarea{
+		height:174upx;
+		font-size:22upx;
+	}
+}
+
+._confirm {
+	@include box_sizing;
+	margin:108upx 0 52upx;
+	font-size: 28upx;
+	display: flex;
+	justify-content:flex-start;
+	align-items:center;
+	color:#585858;
+	._confirm_icon {
+		width: 40upx;
+		height: 40upx;
+		border: 2upx solid rgb(88,88,88);
+		border-radius: 50%;
+		margin-right:20upx;	
+	}
+}
+
+._position_button{
+	@include box-sizing;
+	@include display-flex;
+	font-size:30upx;
+	color:white;
+	margin:{
+		top:64upx;
+		bottom:98upx;
+	}
+	._left_button{
+		width:288upx;
+		height:72upx;
+		line-height:72upx;
+		border:2upx solid #BBBBBB;
+		text-align:center;
+		border-radius: 10upx;
+		background:#307ffa;
+	}
+	._right_button{
+		width:288upx;
+		height:72upx;
+		line-height:72upx;
+		border:2upx solid #BBBBBB;
+		text-align:center;
+		border-radius: 10upx;
+		background:#ed7f4e;
+	}
+}
+.Minmoney{
+		width: 30%;
+		height: 60upx;
+		background-color:#f7f7f7;
+		border-radius:20upx;
+		 margin-top: 20upx;
+		 uni-input{
+		 			 margin-top: 0;
+		 			 width: 100%;
+		 			 height: 100%;
+					 text-align: center;
+		 }
+	}
+	.Maxmoney{
+		width: 30%;
+		height: 60upx;
+		background-color:#f7f7f7;
+		border-radius:20upx;
+		 margin-top: 20upx;
+		 // margin-left: 40upx;
+		 uni-input{
+			 margin-top: 0;
+			 width: 100%;
+			 height: 100%;
+			  text-align: center;
+		 }
+		
+	}

@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "我的钱包",
+  "titleNView": {
+    "buttons": [
+      {
+        "text": "账单",
+        "fontSize": "14"
+      }
+    ]
+  }
+}

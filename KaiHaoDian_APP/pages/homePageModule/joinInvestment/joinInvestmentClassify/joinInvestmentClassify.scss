@@ -1,0 +1,205 @@
+// 文本超出省略号
+@mixin overflow_Es {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.top_tab{
+	background: #fff;
+	width: 750upx;
+	height: 88upx;
+	box-sizing: border-box;
+	padding: 0 30upx;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 2upx 4upx rgba(155,155,155,0.2);
+	._tab{
+		width: 300upx;
+		text-align: center;
+		>view:first-child{
+			font-size: 30upx;
+			color: #333;
+			line-height: 60upx;
+			letter-spacing: 4upx;
+		}
+		>view:last-child{
+			margin: 0 auto;
+			width: 80upx;
+			height: 8upx;
+			border-radius: 10upx;
+			background: transparent;
+		}
+		>._activeColor{
+			color: #3285ff !important;
+		}
+		>._lineCss{
+			background: #3285ff !important;
+		}
+	}
+}
+.topMask{
+	width: 750upx;
+	height: calc(100% - 88upx);
+	position: fixed;
+	top: 88upx;
+	left: 0;
+	z-index: 98;
+	._top{
+		width: 750upx;
+		height: 500upx;
+		background: #fff;
+		._swiper,._swiper_item,._scroll{
+			height: 500upx;
+		}
+		._swiper_item{
+			overflow: hidden;
+			._scroll{
+				._scroll_cell{
+					width: 750upx;
+					box-sizing: border-box;
+					padding: 0 30upx;
+					line-height: 80upx;
+					font-size: 28upx;
+					color: #666;
+				}
+				._scroll_cell:nth-child(2n){
+					background: #f6f6f6;
+				}
+			}
+		}
+	}
+	._mask{
+		width: 750upx;
+		height: calc(100% - 500upx);
+		background: rgba(35,35,35,0.5);
+	}
+}
+
+.tj_projectList {
+	width: 750upx;
+	box-sizing: border-box;
+	padding: 30upx 0 30upx;
+	background: #f6f6f6;
+}
+
+.project_cell {
+	width: 690upx;
+	background: #fff;
+	border-radius: 16upx;
+	box-shadow: 0 2upx 20upx rgba(155, 155, 155, 0.3);
+	margin: 0 auto;
+	margin: {
+		top: 30upx;
+	}
+	.cell_top,
+	.cell_top > image {
+		width: 690upx;
+		height: 300upx;
+		font-size: 0;
+	}
+	.cell_top {
+		position: relative;
+		image {
+			background: lightpink;
+			border-radius: 16upx;
+		}
+		.cell_top_bottom {
+			width: 690upx;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background: rgba(255, 255, 255, 0.7);
+			>view {
+				line-height: 60upx;
+				color: #666;
+				font-size: 26upx;
+				padding: {
+					left: 20upx;
+				}
+			}
+			>view:last-child {
+				padding: {
+					left: 0;
+					right: 20upx;
+				}
+				.iconfont {
+					margin-right: 10upx;
+				}
+			}
+		}
+	}
+	.cell_bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		._left{
+			width: 500upx;
+			box-sizing: border-box;
+			>view{
+				padding:{
+					left: 20upx;
+				}
+			}
+			._name{
+				width: 480upx;
+				line-height: 50upx;
+				font-size: 30upx;
+				color: #333;
+				@include overflow_Es;
+			}
+			._age{
+				font-size: 26upx;
+				color: #999;
+				display: flex;
+				align-items: center;
+				text{
+					max-width: 230upx;
+					line-height: 50upx;
+					display: inline-block;
+					@include overflow_Es;
+				}
+				text:first-child{
+					margin-right: 20upx;
+				}
+			}
+		}
+		._lineCss{
+			height: 60upx;
+			border-left: 2upx solid #999;
+		}
+		._priceParent{
+			width: 180upx;
+			text-align: center;
+			>view{
+				line-height: 50upx;
+			}
+			._priceTop{
+				font-size: 30upx;
+				color: #333;
+			}
+			._price{
+				font-size: 26upx;
+				color: #ff8100;
+			}
+		}
+	}
+}
+.project_cell:first-child{
+	margin-top: 0;
+}
+.addMore{
+	width: 750upx;
+	text-align: center;
+	line-height: 60upx;
+	font-size: 30upx;
+	color: #666;
+	background: #f6f6f6;
+}

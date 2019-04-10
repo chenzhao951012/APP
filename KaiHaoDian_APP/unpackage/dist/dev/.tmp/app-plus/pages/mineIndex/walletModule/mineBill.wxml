@@ -1,0 +1,2 @@
+<import src="./mineBill.vue.wxml" />
+    <template is="e635f10c" data="{{ ...$root['0'], $root }}"/>

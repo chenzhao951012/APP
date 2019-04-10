@@ -1,0 +1,194 @@
+/* 公共样式 */
+._display_flex{
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-pack:justify;
+	-webkit-justify-content:space-between;
+	    -ms-flex-pack:justify;
+	        justify-content:space-between;
+}
+/* 问题 */
+._Cell_title_ {
+	font-size:0;
+	margin: 24rpx 30rpx 16rpx;
+}
+._Cell_title_ view {
+	vertical-align: middle;
+}
+._Cell_title_left_ {
+	width:554rpx;
+	height:44rpx;
+	line-height:44rpx;
+	font-size:32rpx;
+	text-align:left;
+	margin: 6rpx 0;
+}
+._cell_focus_on_{
+	width:102rpx;
+	height:52rpx;
+	border: 2rpx solid rgba(187,187,187,1);
+	border-radius:20rpx;
+	text-align:center;
+	line-height:52rpx;
+	color:#101010;
+	font-size:28rpx;
+}
+/* 聊聊 */
+.have_a_chat{
+	width:56rpx;
+	height:40rpx;
+	margin:0 0 28rpx 30rpx;
+	font-size:28rpx;
+	color:#101010;
+}
+/* 发布具体时间及关注量 */
+._time_focus{
+	margin:0 30rpx 100rpx;
+}
+._specific_time{
+	width:56rpx;
+	height:40rpx;
+	font-size:28rpx;
+}
+._number_add{
+	width:68rpx;
+	height:40rpx;
+	color:#101010;
+	margin-right:30rpx;
+}
+/* 具体用户评论及关注和点赞 */
+._describe_content{
+	margin:0 30rpx 38rpx;
+}
+._top_information{
+	margin-bottom:26rpx;
+}
+._user_image_info{
+	width:64rpx;
+	height:64rpx;
+	border:2rpx solid #BBBBBB;
+	border-radius: 50%;
+	margin-right:20rpx;
+	vertical-align: middle;
+}
+.right_user_information{
+	margin-right:250rpx;
+}
+._user_name_info{
+	width:56rpx;
+	height:40rpx;
+	font-size:28rpx;
+	color:#101010;
+	margin-right:42rpx;
+}
+._user_company_info{
+	width:252rpx;
+	height:40rpx;
+	font-size:28rpx;
+}
+._textarea{
+	width:100%;
+	height: 200rpx;
+	line-height:40rpx;
+	margin-bottom:22rpx;
+	font-size:28rpx;
+	text-align:left;
+}
+._bottom_information{
+	font-size:28rpx;
+}
+.right_Review_praise{
+	color:#101010;
+	font-size:28rpx;
+}
+.left_specific_time{
+	width:152rpx;
+	height:40rpx;
+	font-size:28rpx;
+	line-height:40rpx;
+}
+._left_comments{
+	width:18rpx;
+	height:40rpx;
+}
+._right_give_like{
+	color:#101010;
+	font-size:28rpx;
+}
+/* 相关推荐 */
+._recommend_title{
+	width:128rpx;
+	height:44rpx;
+	font-size:32rpx;
+	line-height:44rpx;
+	margin:54rpx 0 8rpx 30rpx;
+}
+._related_recommend{
+	margin: 0 30rpx 120rpx;
+}
+._recommend_question{
+	width:364rpx;
+	height:40rpx;
+	font-size:28rpx;
+	color:#101010;
+	line-height:40rpx;
+}
+._recommend_answer{
+	font-size:24rpx;
+	line-height:34rpx;
+	margin-bottom:12rpx;
+}
+._bottom_comments{
+	font-size:24rpx;
+}
+._comments_number{
+	width:44rpx;
+	height:34rpx;
+	line-height:34rpx;
+}
+/* 发表框及按钮 */
+._comment_related{
+	position:fixed;
+	left:30rpx;
+	rigth:30rpx;
+	bottom:0;
+	background:white;
+}
+._comment_box{
+	width:492rpx;
+	height:80rpx;
+	border:1rpx solid #BBBBBB;
+	border-radius: 20rpx;
+	margin-right:20rpx;
+	-webkit-box-sizing:border-box;
+	        box-sizing:border-box;
+	text-align: left;
+	letter-spacing: initial;
+}
+._published_button{
+	width:176rpx;
+	height:80rpx;
+	border-radius: 20rpx;
+	background:#DBDBDB;
+	border:1rpx solid #FFFFFF;
+	line-height:80rpx;
+	text-align:center;
+	font-size:28rpx;
+	-webkit-box-sizing:border-box;
+	        box-sizing:border-box;
+}
+._input_box{
+	width:100%;
+	height:40rpx;
+	margin-bottom:26rpx;
+}
+._user_comments{
+	width:112rpx;
+	height:40rpx;
+	margin:0 0 32rpx 30rpx;
+	font-size:28rpx;
+	margin-top:-46rpx;
+}
+

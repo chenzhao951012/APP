@@ -1,0 +1,83 @@
+/* 公共样式 */
+._all_content{
+	padding-top:40upx;
+	margin: 0 30upx;
+	font-size:28upx;
+	
+}
+._display_flex{
+	display:flex;
+	justify-content: space-between;
+}
+/* 关注详情 */
+._focus_on_info{
+	font-size:28upx;
+	border-bottom: 1rpx solid #ececec;
+	padding-bottom: 40upx;
+	margin-bottom: 20upx;
+}
+._focus_image{
+	width:100upx;
+	height:100upx;
+	border-radius: 50%;
+	border:2upx solid #BBBBBB;
+	margin-right:10upx;
+	vertical-align: middle;
+}
+._focus_name{
+	color: #333333;
+	font-weight: 600;
+	height:40upx;
+	margin-bottom:20upx;
+}
+._focus_button{
+	width: 120upx;
+	height:58upx;
+	line-height:58upx;
+	background-color: #ffbc39;
+    color: white;
+	border-radius: 20upx;
+	text-align:center;
+	margin: 20upx 0;
+	font-size: 24upx;
+}
+._focus_button2{
+	width:160upx;
+	height:58upx;
+	line-height:58upx;
+   border:2upx solid #d2d2d2;
+    color: #333333;
+	border-radius: 10upx;
+	text-align:center;
+	margin: 20upx 0;
+	font-size: 24upx;
+	font-weight: 600;
+}
+._focus_button2 ._arrow{
+	padding-right: 10upx;
+}
+._focus_contacts{
+	width: 320upx;
+	overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+font-size: 24upx;
+color: #989898;
+}
+.emptyBox{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	height: 1000upx;
+}
+.magssageBox{
+	text-align: center;
+	margin-top: 40upx;
+	color: #585858;
+	font-size: 14px;
+}
+.lines{
+		height: 20upx;
+		width: 750upx;
+		background-color: #f3f3f3;
+	}

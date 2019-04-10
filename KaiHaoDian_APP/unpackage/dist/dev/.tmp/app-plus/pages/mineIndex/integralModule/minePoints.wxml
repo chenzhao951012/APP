@@ -1,0 +1,2 @@
+<import src="./minePoints.vue.wxml" />
+    <template is="1542c4c3" data="{{ ...$root['0'], $root }}"/>

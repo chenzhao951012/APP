@@ -1,0 +1,2 @@
+<import src="./oldStoreTwoHand.vue.wxml" />
+    <template is="7e21f0f8" data="{{ ...$root['0'], $root }}"/>

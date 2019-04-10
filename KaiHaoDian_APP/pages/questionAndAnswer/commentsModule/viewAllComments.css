@@ -1,0 +1,175 @@
+/* 公共样式 */
+._display_flex{
+	display:flex;
+	justify-content:space-between;
+}
+/* 问题 */
+._Cell_title_ {
+	font-size:0;
+	margin: 24upx 30upx 16upx;
+}
+
+._Cell_title_ view {
+	vertical-align: middle;
+}
+
+._Cell_title_left_ {
+	width:554upx;
+	height:44upx;
+	line-height:44upx;
+	font-size:32upx;
+	text-align:left;
+	margin: 6upx 0;
+}
+._cell_focus_on_{
+	width:102upx;
+	height:52upx;
+	border: 2upx solid rgba(187,187,187,1);
+	border-radius:20upx;
+	text-align:center;
+	line-height:52upx;
+	color:#101010;
+	font-size:28upx;
+}
+/* 聊聊 */
+.have_a_chat{
+	width:56upx;
+	height:40upx;
+	margin:0 0 28upx 30upx;
+	font-size:28upx;
+	color:#101010;
+}
+/* 发布具体时间及关注量 */
+._time_focus{
+	margin:0 30upx 100upx;
+}
+._specific_time{
+	width:56upx;
+	height:40upx;
+	font-size:28upx;
+}
+._number_add{
+	width:68upx;
+	height:40upx;
+	color:#101010;
+	margin-right:30upx;
+}
+/* 具体用户评论及关注和点赞 */
+._describe_content{
+	margin:0 30upx 38upx;
+}
+._top_information{
+	margin-bottom:26upx;
+}
+._user_image_info{
+	width:64upx;
+	height:64upx;
+	border:2upx solid #BBBBBB;
+	border-radius: 50%;
+	margin-right:20upx;
+	vertical-align: middle;
+}
+.right_user_information{
+	margin-right:250upx;
+}
+._user_name_info{
+	width:56upx;
+	height:40upx;
+	font-size:28upx;
+	color:#101010;
+	margin-right:42upx;
+}
+._user_company_info{
+	width:252upx;
+	height:40upx;
+	font-size:28upx;
+}
+._textarea{
+	width:100%;
+	height: 200upx;
+	line-height:40upx;
+	margin-bottom:22upx;
+	font-size:28upx;
+	text-align:left;
+}
+._bottom_information{
+	font-size:28upx;
+}
+.right_Review_praise{
+	color:#101010;
+	font-size:28upx;
+}
+.left_specific_time{
+	width:152upx;
+	height:40upx;
+	font-size:28upx;
+	line-height:40upx;
+}
+._left_comments{
+	width:18upx;
+	height:40upx;
+}
+._right_give_like{
+	color:#101010;
+	font-size:28upx;
+}
+/* 相关推荐 */
+._recommend_title{
+	width:128upx;
+	height:44upx;
+	font-size:32upx;
+	line-height:44upx;
+	margin:54upx 0 8upx 30upx;
+}
+._related_recommend{
+	margin: 0 30upx 120upx;
+}
+._recommend_question{
+	width:364upx;
+	height:40upx;
+	font-size:28upx;
+	color:#101010;
+	line-height:40upx;
+}
+._recommend_answer{
+	font-size:24upx;
+	line-height:34upx;
+	margin-bottom:12upx;
+}
+._bottom_comments{
+	font-size:24upx;
+}
+._comments_number{
+	width:44upx;
+	height:34upx;
+	line-height:34upx;
+}
+/* 发表框及按钮 */
+._comment_related{
+	position:fixed;
+	left:30upx;
+	rigth:30upx;
+	bottom:0;
+	background:white;
+}
+._comment_box{
+	width:492upx;
+	height:80upx;
+	border:1upx solid #BBBBBB;
+	border-radius: 20upx;
+	margin-right:20upx;
+	box-sizing:border-box;
+	text-align: left;
+	letter-spacing: initial;
+}
+._published_button{
+	width:176upx;
+	height:80upx;
+	border-radius: 20upx;
+	background:#DBDBDB;
+	border:1upx solid #FFFFFF;
+	line-height:80upx;
+	text-align:center;
+	font-size:28upx;
+	box-sizing:border-box;
+}

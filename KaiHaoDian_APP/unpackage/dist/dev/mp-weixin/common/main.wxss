@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 1009550 */
+  src: url('https://at.alicdn.com/t/font_1009550_h0xt1ws71zf.eot');
+  src: url('https://at.alicdn.com/t/font_1009550_h0xt1ws71zf.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1009550_h0xt1ws71zf.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1009550_h0xt1ws71zf.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1009550_h0xt1ws71zf.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1009550_h0xt1ws71zf.svg#iconfont') format('svg');
+}
+.iconfont{
+	font-family: iconfont;
+}
+.iconLocation {
+	font-size: 56rpx;
+	color: #666;
+	font-family: iconfont;
+}
+.iconSearch{
+	font-size: 30rpx;
+	color: #666;
+	font-family: iconfont;
+}
+.iconLook{
+	font-size: 28rpx;
+	color: #3285ff;
+	font-family: iconfont;
+}
+._iconRight{
+	font-size: 28rpx;
+	color: #999;
+	font-family: iconfont;
+	margin-left: 20rpx;
+}
+.icon_gz_state{
+	font-size: 24rpx;
+	color: #666;
+	font-family: iconfont;
+}
+.icon_comment{
+	font-size: 24rpx;
+	color: #666;
+	font-family: iconfont;
+}
+.icon_heat{
+	font-size: 28rpx;
+	color: #ff8247;
+	font-family: iconfont;
+}
+.icon_comments{
+	font-size:48rpx;
+	color:#000;
+	font-family:iconfont;
+}
+.icon_under_arrow{
+	font-size:30rpx;
+	color:#000;
+	font-family:iconfont;
+}
+.icon_give_like{
+	font-size: 34rpx;
+	color: #666;
+	font-family: iconfont;
+}
+.icon_camera{
+	font-size:40rpx;
+	color:darkgray;
+	font-family: iconfont;
+}
+/*每个页面公共css */
+

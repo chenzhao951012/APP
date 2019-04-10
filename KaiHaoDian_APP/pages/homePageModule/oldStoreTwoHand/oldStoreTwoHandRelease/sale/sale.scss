@@ -1,0 +1,155 @@
+@mixin box-sizing {
+	width: 750upx;
+	padding: 0 30upx;
+	box-sizing: border-box;
+}
+
+@mixin display-flex {
+	display:flex;
+	justify-content: space-between;
+}
+
+page {
+	height: 100%;
+	background: #fff;
+}
+
+.content{
+	
+}
+
+._infoFill {
+	@include box_sizing;
+	@include display_flex;
+	height:96upx;
+	line-height:96upx;
+	font-size:28upx;
+	color:rgb(27,30,38);
+	input{
+		line-height:60upx;
+		text-align:right;
+		font-size:28upx;
+		margin-top:20upx;
+	}
+}
+
+._infoFill:nth-child(2n-1){
+	background:rgb(247,247,247);
+}
+
+._title_parnters::after{
+	display:block;
+	content:"";
+	clear:both;
+}
+
+._title_parnters{
+	box-sizing:border-box;
+	font-size:28upx;
+	height:500upx;
+	._top_caption{
+		box-sizing:border-box;
+		padding: 0 30upx;
+		border-bottom:2upx solid rgb(229,229,229);
+		height:96upx;
+		padding:{
+			top:20upx;
+		}
+		._title_caption{
+			display:inline-block;
+			margin-right:36upx;
+		}
+		input{
+			display:inline-block;
+			vertical-align: middle;
+		}
+	}
+}
+
+._title_instructions{
+	margin:42upx 0 36upx;
+	padding:0 30upx;
+	._title_top{
+		margin-bottom:24upx;
+	}
+	textarea{
+		height:174upx;
+		font-size:28upx;
+	}
+}
+
+._add_photo{
+	padding: 0 30upx;
+	font-size:28upx;
+	color:#101010;
+	position:relative;
+	._photo_icon{
+		width:32upx;
+		height:28upx;
+		line-height:28upx;
+		font-size:34upx;
+		text-align:center;
+		align-items: center;
+		color:rgb(71,126,242);
+	}
+	._photo_title{
+		color:#585858;
+		position:absolute;
+		right:30upx;
+		bottom:0;
+	}
+}
+
+._confirm {
+	@include box_sizing;
+	margin:108upx 0 52upx;
+	font-size: 28upx;
+	display: flex;
+	justify-content:flex-start;
+	align-items:center;
+	color:#585858;
+	._confirm_icon {
+		width: 40upx;
+		height: 40upx;
+		border: 2upx solid rgb(88,88,88);
+		border-radius: 50%;
+		margin-right:20upx;	
+	}
+}
+
+._position_button{
+	@include box-sizing;
+	@include display-flex;
+	font-size:30upx;
+	color:white;
+	margin:{
+		top:64upx;
+		bottom:98upx;
+	}
+	._left_button{
+		width:288upx;
+		height:72upx;
+		line-height:72upx;
+		border:2upx solid #BBBBBB;
+		text-align:center;
+		border-radius: 10upx;
+		background:#307ffa;
+	}
+	._right_button{
+		width:288upx;
+		height:72upx;
+		line-height:72upx;
+		border:2upx solid #BBBBBB;
+		text-align:center;
+		border-radius: 10upx;
+		background:#ed7f4e;
+	}
+}
+.ImgBox{
+	width: 100upx;
+	height: 100upx;
+	image{
+		width: 100%;
+		height: 100%;
+	}
+}

@@ -1,0 +1,807 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.status_bar {
+  height: var(--status-bar-height);
+  width: 100%;
+}
+.top_view {
+  height: var(--status-bar-height);
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+.content {
+  width: 750rpx;
+}
+.balltas {
+  width: 60rpx;
+  height: 20rpx;
+  background-color: #eeeeee;
+  border-radius: 20rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+.balltas.active {
+  width: 60rpx;
+  height: 20rpx;
+  background-color: #ffbd38;
+  border-radius: 20rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+page {
+  background: #fff;
+}
+.userBox {
+  position: relative;
+}
+._swiper {
+  width: 750rpx;
+  height: 530rpx;
+  font-size: 0;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.banner {
+  position: relative;
+}
+.swiperbutton {
+  position: absolute;
+  bottom: 160rpx;
+  left: 36%;
+}
+._author_info {
+  width: 750rpx;
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 10rpx 0 62rpx;
+  font-size: 28rpx;
+}
+._author_info > image {
+    width: 110rpx;
+    height: 110rpx;
+    border: 2rpx solid #ccc;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+._author_info > ._info_describe {
+    padding-top: 10rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    color: #2f2f2f;
+}
+._author_info > ._info_describe > ._info_time {
+      color: #585858;
+      font-size: 24rpx;
+      margin-top: 20rpx;
+}
+._author_info > ._info_describe > ._autograph {
+      width: 540rpx;
+      line-height: 40rpx;
+      margin-top: 28rpx;
+      font-size: 30rpx;
+      color: #000;
+}
+._author_info > ._info_describe > ._autograph > text {
+        display: inline-block;
+        width: 92rpx;
+        background: #f3f3f3;
+        font-size: 24rpx;
+        text-align: center;
+        margin-left: 8rpx;
+        border-radius: 10rpx;
+        color: #585858;
+        border: 2rpx solid #f3f3f3;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+}
+._price_acreage {
+  width: 750rpx;
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 26rpx;
+  text-align: center;
+  margin-bottom: 82rpx;
+}
+._price_acreage > ._cell_info > ._cell_number {
+    margin-top: 30rpx;
+    color: #e18628;
+    font-size: 28rpx;
+    font-weight: bold;
+}
+._price_acreage > ._cell_info > ._cell_number > text {
+      color: #999;
+      font-size: 22rpx;
+      margin-left: 6rpx;
+}
+._represent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+._represent ._goods {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    font-size: 28rpx;
+}
+._represent ._goods > ._goods_title {
+      width: 140rpx;
+      margin-right: 10rpx;
+      margin-bottom: 30rpx;
+      color: #585858;
+}
+._represent ._goods ._area {
+      width: 540rpx;
+}
+._represent > ._goods:nth-of-type(2) {
+  margin-right: 56rpx;
+}
+._goods_recommendations {
+  width: 750rpx;
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 30rpx;
+  margin: 32rpx 0;
+}
+._goods_recommendations > text {
+    display: inline-block;
+    height: 38rpx;
+    line-height: 38rpx;
+    border-left: 6rpx solid #307ffa;
+    padding-left: 10rpx;
+}
+._describe_shop_info {
+  width: 750rpx;
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 28rpx;
+  margin: 38rpx 0 40rpx;
+}
+._select_icon {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-bottom: 6rpx;
+  font-size: 30rpx;
+}
+._select_icon > ._service_cell {
+    width: 126rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-align: center;
+    padding: 40rpx 0;
+    color: #b0b0b0;
+    font-size: 28rpx;
+}
+._select_icon > ._service_cell image {
+      width: 50rpx;
+      height: 50rpx;
+}
+._select_icon ._color3285ff {
+    color: #3285ff;
+}
+._select_icon > ._service_cell:nth-of-type(5n) {
+  margin-right: 0;
+}
+._open_store_button {
+  width: 472rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 30rpx;
+  color: #fff;
+  background: #307ffa;
+  text-align: center;
+  border-radius: 10rpx;
+  margin: 0 auto 40rpx;
+}
+._open_store_button > text {
+    font-size: 24rpx;
+}
+._leave_word {
+  width: 750rpx;
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 48rpx;
+  font-size: 28rpx;
+}
+._leave_word > ._right {
+    color: #585858;
+}
+._leave_word_info {
+  width: 750rpx;
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 28rpx;
+}
+._leave_word_info ._author {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+}
+._leave_word_info ._author image {
+      width: 96rpx;
+      height: 96rpx;
+      border: 2rpx solid #ccc;
+      border-radius: 50%;
+}
+._leave_word_info ._author ._author_name {
+      line-height: 96rpx;
+      margin-left: 12rpx;
+      color: #585858;
+      font-size: 26rpx;
+}
+._leave_word_info ._question_ask {
+    margin: 16rpx 0 22rpx 110rpx;
+}
+._leave_word_info ._question_ask ._question {
+      color: #2f2f2f;
+      font-size: 28rpx;
+}
+._leave_word_info ._question_ask ._time_specific {
+      font-size: 24rpx;
+      margin-top: 22rpx;
+      color: #585858;
+}
+._leave_word_info > ._reply {
+    margin-left: 110rpx;
+}
+._segmentation {
+  width: 750rpx;
+  height: 2rpx;
+  background: #dadada;
+  margin: 56rpx 0 40rpx;
+}
+._position_btn {
+  width: 750rpx;
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 86rpx;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  bottom: 0rpx;
+  background: #fff;
+  font-size: 28rpx;
+}
+._position_btn > ._input {
+    width: 476rpx;
+    height: 62rpx;
+    margin-top: 14rpx;
+    border: 2rpx solid #2f2f2f;
+    border-radius: 30rpx;
+    padding-left: 22rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-right: 46rpx;
+}
+._position_btn > ._position_icon {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    font-size: 70rpx;
+    margin-top: 10rpx;
+}
+._position_btn > ._position_icon > ._telephone {
+      color: #307ffa;
+      margin-right: 50rpx;
+}
+._position_btn > ._position_icon > ._arrow {
+      color: #ec8b3c;
+}
+.UserInfo {
+  width: 92%;
+  padding: 0 30rpx;
+  position: absolute;
+  top: 400rpx;
+  z-index: 20;
+}
+.UserInfo .Massage-top {
+    width: 100%;
+}
+.UserInfo .Massage-top .UserHeader {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      padding: 0 30rpx;
+      width: 100%;
+      padding-bottom: 40rpx;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      -webkit-box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
+              box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
+}
+.UserInfo .Massage-top .UserHeader .question {
+        font-size: 28rpx;
+        font-weight: 600;
+        letter-spacing: 5rpx;
+        padding: 44rpx 0;
+        color: #000000;
+}
+.UserInfo .Massage-top .UserHeader .userMassage {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+}
+.UserInfo .Massage-top .UserHeader .userMassage .userMassage-Left ._img {
+          width: 100rpx;
+          height: 100rpx;
+          border-radius: 50%;
+}
+.UserInfo .Massage-top .UserHeader .userMassage .userMassage-Right {
+          margin-left: 20rpx;
+          width: 100%;
+}
+.UserInfo .Massage-top .UserHeader .userMassage .userMassage-Right .R-top {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            width: 100%;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+}
+.UserInfo .Massage-top .UserHeader .userMassage .userMassage-Right .R-top .R-name {
+              font-size: 30rpx;
+              font-weight: 600;
+              letter-spacing: 5rpx;
+}
+.UserInfo .Massage-top .UserHeader .userMassage .userMassage-Right .R-top .R-number {
+              font-size: 28rpx;
+              color: #686868;
+}
+.UserInfo .Massage-top .UserHeader .userMassage .userMassage-Right .R-top .R-number .iconecodes {
+                padding-right: 10rpx;
+                font-weight: 600;
+                font-size: 32rpx;
+}
+.UserInfo .Massage-top .UserHeader .userMassage .userMassage-Right .R-bottom {
+            position: relative;
+            padding: 10rpx 0;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+}
+.UserInfo .Massage-top .UserHeader .userMassage .userMassage-Right .R-bottom .iconfontes {
+              position: absolute;
+              right: 0;
+}
+.UserInfo .Massage-top .UserHeader .userMassage .userMassage-Right .R-bottom .R-induce {
+              display: inline-block;
+              font-size: 28rpx;
+              color: #808080;
+              overflow: hidden;
+              -o-text-overflow: ellipsis;
+                 text-overflow: ellipsis;
+              white-space: nowrap;
+}
+.UserInfo .Massage-top .UserHeader .userMassage .userMassage-Right .R-bottom .iconed {
+              display: inline-block;
+              color: #299dff;
+              padding-left: 10rpx;
+              font-size: 28rpx;
+              margin-top: 6rpx;
+}
+.UserInfo .Massage-top .UserHeader .userMassage .userMassage-Right .R-bottom .iconfontes {
+              font-weight: 600;
+              font-size: 60rpx;
+              color: #ffecc7;
+}
+.UserInfo .Massage-top .UserHeader .shopInfo {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 20rpx;
+        text-align: center;
+        padding-bottom: 20rpx;
+        border-radius: 10rpx;
+        -webkit-box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
+                box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
+}
+.UserInfo .Massage-top .UserHeader .shopInfo .infoTitle {
+          font-size: 28rpx;
+          font-weight: 600;
+          padding: 20rpx 40rpx;
+}
+.UserInfo .Massage-top .UserHeader .shopInfo .InfoNumber {
+          font-size: 28rpx;
+          padding: 10rpx 0;
+          color: #787878;
+          border-right: 1px solid #a0a0a0;
+}
+.UserInfo .Massage-top .UserHeader .shopInfo .InfoNumber text {
+            font-weight: 600;
+            color: #ffbd3a;
+}
+.UserInfo .Massage-top .UserHeader .industry {
+        padding: 40rpx 20rpx;
+        border-bottom: 1px solid #eeeeee;
+}
+.UserInfo .Massage-top .UserHeader .industryList {
+        font-size: 28rpx;
+        color: #6b6b6b;
+}
+.UserInfo .Massage-top .UserHeader .industryList view {
+          padding: 20rpx 0;
+}
+.UserInfo .Massage-top .UserHeader .industryList text {
+          color: #000000;
+          padding-left: 15rpx;
+          font-weight: 600;
+}
+.UserInfo .Massage-top .UserHeader .industryLiSt {
+        padding: 20rpx 0;
+        font-size: 28rpx;
+        color: #6b6b6b;
+}
+.UserInfo .Massage-top .UserHeader .industryLiSt text {
+          color: #000000;
+          padding-left: 15rpx;
+          font-weight: 600;
+          line-height: 2;
+}
+.UserInfo .Massage-top .UserHeader ._caller {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #eeeeee;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        margin-top: 30rpx;
+}
+.UserInfo .Massage-top .UserHeader ._caller .visitor {
+          font-size: 26rpx;
+          color: #858585;
+          padding-right: 20rpx;
+}
+.UserInfo .Massage-top .UserHeader ._caller ._L {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+}
+.UserInfo .Massage-top .UserHeader ._caller ._L image {
+            width: 70rpx;
+            height: 70rpx;
+            font-size: 0;
+            border-radius: 50%;
+            background: #eee9e9;
+            margin-right: 20rpx;
+}
+.UserInfo .Massage-top .UserHeader ._caller ._L ._more {
+            color: #666;
+            text-align: center;
+            line-height: 50rpx;
+            font-size: 28rpx;
+}
+.UserInfo .Massage-top .UserHeader ._caller ._R {
+          text-align: right;
+          font-size: 24rpx;
+          color: #666;
+}
+.UserInfo .Massage-top .UserHeader ._caller ._R text {
+            display: inline-block;
+            vertical-align: middle;
+}
+.UserInfo .Massage-top .UserHeader ._caller ._R .iconfont {
+            margin-left: 10rpx;
+            font-size: 38rpx;
+}
+.Massage-Bottom {
+  margin-top: 40rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 30rpx;
+  width: 100%;
+  padding-bottom: 40rpx;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
+          box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
+}
+.Massage-Bottom .B-induce {
+    padding-bottom: 24rpx;
+    border-bottom: 2rpx solid #eeeeee;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.Massage-Bottom .B-title {
+    padding: 25rpx 0;
+    padding-bottom: 0;
+    text-align: center;
+    font-size: 30rpx;
+    font-weight: 600;
+    letter-spacing: 5rpx;
+}
+.Massage-Bottom .B-info {
+    font-size: 24rpx;
+    letter-spacing: 5rpx;
+    color: #9b9b9b;
+    text-indent: 60rpx;
+    line-height: 2;
+    margin-top: 20rpx;
+    text-align: center;
+}
+.commentBox {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 40rpx 0rpx;
+  margin-bottom: 100rpx;
+}
+.commentList {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 20rpx;
+  padding: 0rpx 27rpx;
+  -webkit-box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
+          box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
+}
+.commentListTop {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  padding: 40rpx 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.commentListTop .icons {
+    color: #259bfe;
+    padding-left: 10rpx;
+}
+.commentListTop .position {
+    font-size: 28rpx;
+    color: #747474;
+    line-height: 2;
+    font-weight: 600;
+}
+.commentListTop .userMassage {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 30rpx;
+}
+.commentListTop .company {
+    font-size: 24rpx;
+    color: #989898;
+    font-weight: lighter;
+}
+.commentListTop .userImg {
+    width: 100rpx;
+    height: 100rpx;
+}
+.commentListTop .userImg ._img {
+      width: 100rpx;
+      height: 100rpx;
+      border-radius: 50%;
+}
+.commentContent {
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  letter-spacing: 5rpx;
+  color: #000;
+}
+.icond {
+  position: absolute;
+  right: 12rpx;
+  top: 50rpx;
+}
+.commentNumber {
+  color: #666666;
+  font-size: 28rpx;
+  padding-left: 20rpx;
+}
+.introduction {
+  border-bottom: 2rpx solid #d2d2d2;
+}
+.iconecodes {
+  position: absolute;
+  right: 112rpx;
+  top: 168rpx;
+  font-size: 28rpx;
+  color: #686868;
+  font-weight: 600;
+}
+.iconecoded {
+  font-size: 60rpx;
+  color: #ffbd38;
+  position: absolute;
+  right: -208rpx;
+  top: 46rpx;
+}
+.bottonBottom {
+  width: 750rpx;
+  height: 98rpx;
+  background-color: #ffbd38;
+  position: fixed;
+  bottom: 0;
+  padding: 15rpx 20rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 100;
+}
+.ComentInput {
+  width: 488rpx;
+  height: 70rpx;
+  border-radius: 40rpx;
+  background-color: #fff;
+}
+.ComentInput ._input {
+    padding-top: 10rpx;
+    padding-left: 40rpx;
+    font-size: 14px;
+}
+.LIst {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.ComentImgList {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.ComentImgList ._img {
+    width: 65rpx;
+    height: 65rpx;
+    margin: 6rpx 0rpx 6rpx 40rpx;
+}
+.ComentImgList2 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 60rpx;
+}
+.ComentImgList2 ._img {
+    margin-top: -12rpx;
+    width: 100rpx;
+    height: 100rpx;
+}
+.subreply {
+  color: #ffc760;
+  font-size: 28rpx;
+  padding: 20rpx 0;
+  font-weight: lighter;
+}
+.CommentImg {
+  width: 100%;
+  height: 400rpx;
+}
+.CommentImg ._img {
+    width: 100%;
+    height: 100%;
+}
+.commenttitle {
+  padding: 20rpx 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 32rpx;
+}
+

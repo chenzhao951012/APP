@@ -1,0 +1,27 @@
+.assistbox{
+	width:690upx;
+	height:380upx;
+	background:white;
+	margin:auto;
+	margin-top:20upx;
+	box-shadow: 0 0 10px #eeeeee;
+	border-radius: 10upx;
+}
+.assisttextarea{
+	padding-top: 30upx;
+	height: 100%;
+	width: 100%;
+	padding-left: 24upx;
+	font-size: 14px;
+	box-sizing: border-box;
+	color: #333333;
+}
+.buttons{
+	padding: 200upx 60upx;
+	box-sizing: border-box;
+	
+}
+.submient{
+	border-radius: 10upx ;
+	background-color: #ffbd38;
+}

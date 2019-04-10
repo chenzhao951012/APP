@@ -1,0 +1,226 @@
+@mixin box-sizing{
+	width:750upx;
+	box-sizing:border-box;
+	padding:0 30upx;
+}
+
+@mixin display-flex{
+	display:flex;
+	justify-content: space-between;
+}
+
+@mixin textHidden {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+._cut_off_rule{
+	box-shadow: 0 6upx 10upx rgba(100,100,100,0.14);
+	opacity: 1;
+	margin-bottom:42upx;
+	position: absolute;
+	width:92%;
+	
+	z-index: 20;
+	top: 80upx;
+	left: 30upx;
+	background: url(../../static/userBanner.png) no-repeat;
+	
+	background-size: 100% 160upx;
+	background-color: #fff;
+	border-radius: 20upx;
+}
+
+._personal_file{
+	width:138upx;
+	height:34upx;
+	font-size:35upx;
+	line-height:34upx;
+	text-align:left;
+	margin: 36upx 30upx 86upx;
+	color:#000;
+}
+
+._header_card{
+	width: 100%;
+		
+
+	box-sizing:border-box;
+	justify-content: flex-start;
+	margin-bottom:30upx;
+	image{
+		width:100upx;
+		height:100upx;
+		border-radius: 50%;
+		margin-top: 44upx;
+		margin-left: 43%;
+	}
+	
+	._card_right{
+		font-size:28upx;
+		
+		._card_info{
+			margin-top: 10upx;
+			
+			text-align: center;
+			height:40upx;
+			line-heihgt:40upx;
+			font-size: 28upx;
+			font-weight: 600;
+			color: #333333;
+			letter-spacing: 5upx;
+		}
+		
+		._card_company{
+			@include textHidden;
+	
+			text-align: center;
+			line-height:40upx;
+			color: #c2c2c2;
+			font-size:24upx;
+		}
+		
+		._generate_business{
+			width:250upx;
+			height:40upx;
+			font-size:28upx;
+			line-height:40upx;
+			display:inline-block;
+			color:rgb(88,88,88);
+		}
+		
+		._unauthorized{
+			width:94upx;
+			height:34upx;
+			line-height:34upx;
+			color:#fff;
+			font-size:26upx;
+			text-align:center;
+			background-color:rgb(243,173,101);
+			display:inline-block;
+			border-radius: 10upx;
+		}
+	}
+}
+
+._mine_menu{
+	width: 100%;
+	font-size:28upx;
+	text-align:center;
+	color:#333333;
+	padding: 0 30upx;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-around;
+	._mine_focus{
+		color:#333333;
+		font-size: 28upx;
+		line-height: 2;
+	}
+}
+
+._mine_menu_center{
+	@include display-flex;
+	box-sizing: border-box;
+	height:100upx;
+	padding:0;
+	margin:0 30upx;
+	font-size:28upx;
+	line-height:100upx;
+	border-bottom:2upx solid rgba(100,100,100,0.2);
+	color:#333;
+	._arrow{
+		margin-right:12upx;
+		color:#fdbd37;
+		font-size: 28upx;
+		font-weight: 600;
+	}
+}
+._arrow:nth-child(2n){
+	margin-right:0; 
+	margin-left:12upx;
+}
+.renzheng{
+	background-color: #999999;
+	width:94upx;
+	height:34upx;
+	line-height:34upx;
+	color:#fff;
+	font-size:26upx;
+	text-align:center;
+	display:inline-block;
+	border-radius: 10upx;
+}
+.renzhen2{
+	background-color: skyblue;
+	width:94upx;
+	height:34upx;
+	line-height:34upx;
+	color:#fff;
+	font-size:26upx;
+	text-align:center;
+	display:inline-block;
+	border-radius: 10upx;
+}
+
+.connent{
+	position: relative;
+	
+}
+.connet{
+	height:380upx;
+	background: url(../../static/banners.jpg) no-repeat;
+	-webkit-background-size: 100% 380upx;
+	background-size: 100% 380upx;
+	border-radius:0 0 50upx 50upx; 
+
+}
+.authentication{
+	padding: 0 80upx;
+	margin-top: 40upx;
+	font-size: 24upx;
+	color: #333333;
+	display: flex;
+justify-content: space-between;
+	margin-bottom: 40upx;
+	box-sizing: border-box;
+}
+.schedule{
+	
+
+	width: 70%;
+	margin-top: -6upx;
+}
+.massageBox{
+	position: absolute;
+	width:92%;
+	// box-shadow: 0 6upx 10upx rgba(100,100,100,0.14);
+	
+	z-index: 20;
+	top: 630upx;
+	left: 30upx;
+	border-radius: 5upx;
+	background-color: #fff;
+	margin-bottom: 150upx;
+}
+page{
+	background-color: #f3f3f3;
+	height: 100%;
+}
+.lines{
+	width: 100%;
+	background-color: #f3f3f3;
+	height: 20upx;
+}
+ ._mine_menu_center ._arrows{
+	font-size: 40upx;
+	margin-left: -5upx;
+	vertical-align: middle;
+}
+._mine_menu_right ._arrow{
+	color: #999999;
+}
+._mine_number{
+	color: #ffbc3a;
+}

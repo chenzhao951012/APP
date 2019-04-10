@@ -1,0 +1,659 @@
+// 公共样式
+@mixin box-sizing{
+	width:750upx;
+	padding:0 30upx;
+	box-sizing:border-box;
+}
+
+@mixin display-flex{
+	display:flex;
+	justify-content: space-between;
+}
+
+@mixin flex-start{
+	display:flex;
+	justify-content: flex-start;
+}
+
+page{
+	background:#fff;
+}
+.userBox{
+position: relative;
+}
+// 顶部图片
+._swiper {
+	width: 750upx;
+	height:530upx;
+	font-size: 0;
+	background: #fff;
+	box-sizing: border-box;
+}
+.banner{
+	position: relative;
+}
+.swiperbutton{
+	position: absolute;
+	bottom: 160upx;
+	left: 36%;
+}
+// 用户信息
+._author_info{
+	@include box-sizing;
+	@include flex-start;
+	margin:10upx 0 62upx;
+	font-size:28upx;
+	>image{
+		width:110upx;
+		height:110upx;
+		border:2upx solid #ccc;
+		border-radius: 50%;
+		margin-right:20upx;
+	}
+	>._info_describe{
+		padding-top:10upx;
+		box-sizing: border-box;
+		color:#2f2f2f;
+		>._info_time{
+			color:#585858;
+			font-size:24upx;
+			margin-top:20upx;
+		}
+		>._autograph{
+			width:540upx;
+			line-height:40upx;
+			margin-top:28upx;
+			font-size:30upx;
+			color:#000;
+			>text{
+				display:inline-block;
+				width:92upx;
+				background:#f3f3f3;
+				font-size:24upx;
+				text-align:center;
+				margin-left:8upx;
+				border-radius: 10upx;
+				color:#585858;
+				border:2upx solid #f3f3f3;
+				box-sizing: border-box;
+			}
+		}
+	}
+}
+
+._price_acreage{
+	@include box-sizing;
+	@include display-flex;
+	font-size:26upx;
+	text-align:center;
+	margin-bottom:82upx;
+	>._cell_info{
+		>._cell_number{
+			margin-top:30upx;
+			color:#e18628;
+			font-size:28upx;
+			font-weight:bold;
+			>text{
+				color:#999;
+				font-size:22upx;
+				margin-left:6upx;
+			}
+		}
+	}
+}
+
+._represent{
+	
+	@include display-flex;
+	flex-wrap:wrap;
+	._goods{
+		@include flex-start;
+		font-size:28upx;
+		>._goods_title{
+			width:140upx;
+			margin-right:10upx;
+			margin-bottom:30upx;
+			color:#585858;
+		}
+		._area{
+			width:540upx;
+		}
+	}
+}
+
+._represent>._goods:nth-of-type(2){
+	margin-right:56upx;
+}
+
+// 商品描述
+._goods_recommendations{
+	@include box-sizing;
+	font-size:30upx;
+	margin:32upx 0;
+	>text{
+		display:inline-block;
+		height:38upx;
+		line-height:38upx;
+		border-left: 6upx solid #307ffa;
+		padding-left:10upx;
+	}
+}
+
+._describe_shop_info{
+	@include box-sizing;
+	font-size:28upx;
+	margin:38upx 0 40upx;
+}
+
+._select_icon{
+	width:100%;
+	
+	box-sizing:border-box;
+	@include flex-start;
+	flex-wrap: wrap;
+	margin-bottom: 6upx;
+	font-size:30upx;
+	>._service_cell{
+		width:126upx;
+		box-sizing: border-box;
+		text-align:center;
+		padding:40upx 0;
+		color:rgb(176,176,176);
+		font-size:28upx;
+		image{
+			width:50upx;
+			height:50upx;
+		}
+	}
+	._color3285ff{
+		color: #3285ff;
+	}
+}
+
+._select_icon>._service_cell:nth-of-type(5n){
+	margin-right:0;
+}
+._open_store_button{
+	width:472upx;
+	height:72upx;
+	line-height: 72upx;
+	font-size:30upx;
+	color:#fff;
+	background:#307ffa;
+	text-align:center;
+	border-radius: 10upx;
+	margin: 0 auto 40upx;
+	>text{
+		font-size:24upx;
+	}
+}
+
+// 留言
+._leave_word{
+	@include box-sizing;
+	@include display-flex;
+	margin-bottom:48upx;
+	font-size:28upx;
+	>._right{
+		color:#585858;
+	}
+}
+
+._leave_word_info{
+	@include box-sizing;
+	font-size:28upx;
+	._author{
+		@include flex-start;
+		image{
+			width:96upx;
+			height:96upx;
+			border:2upx solid #ccc;
+			border-radius: 50%;
+		}
+		._author_name{
+			line-height:96upx;
+			margin-left:12upx;
+			color:#585858;
+			font-size:26upx;
+		}
+	}
+	._question_ask{
+		margin:16upx 0 22upx 110upx;
+		._question{
+			color:#2f2f2f;
+			font-size:28upx;
+		}
+		._time_specific{
+			font-size:24upx;
+			margin-top:22upx;
+			color:#585858;
+		}
+	}
+	
+	>._reply{
+		margin-left:110upx;
+	}
+}
+
+._segmentation{
+	width:750upx;
+	height:2upx;
+	background:#dadada;
+	margin:56upx 0 40upx;
+}
+
+// 定位输入框
+._position_btn{
+	@include box-sizing;
+	@include display-flex;
+	height:86upx;
+	box-sizing: border-box;
+	position:fixed;
+	left:0;
+	bottom:0upx;
+	background:#fff;
+	font-size:28upx;
+	>input{
+		width:476upx;
+		height:62upx;
+		margin-top:14upx;
+		border:2upx solid #2f2f2f;
+		border-radius: 30upx;
+		padding-left:22upx;
+		box-sizing:border-box;
+		margin-right:46upx;
+	}
+	>._position_icon{
+		@include flex-start;
+		font-size:70upx;
+		margin-top:10upx;
+		>._telephone{
+			color:#307ffa;
+			margin-right:50upx;
+		}
+		>._arrow{
+			color:#ec8b3c;
+		}
+	}
+}
+.UserInfo{
+	box-sizing: border-box;
+	width:100%;
+	padding: 0 30upx;
+	position: absolute;
+	top: 400upx;
+	z-index: 20;
+
+	.Massage-top{
+			width:100%;
+		.UserHeader{
+			box-sizing: border-box;
+			padding: 0 30upx;
+			width: 100%;
+				padding-bottom: 40upx;
+			background-color: rgba(255, 255, 255, 0.9);
+			border-radius: 10px;
+		    box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
+			.question{
+				font-size: 28upx;
+				font-weight: 600;
+				letter-spacing: 5upx;
+				padding: 44upx 0;
+				color: #000000;
+			}
+			.userMassage{
+				display: flex;
+				.userMassage-Left{
+					img{
+						width: 100upx;
+						height: 100upx;
+						border-radius: 50%;
+					}
+				}
+				.userMassage-Right{
+					margin-left: 20upx;
+					width: 100%;
+					.R-top{
+						display: flex;
+						width: 100%;
+						justify-content: space-between;
+						.R-name{
+							font-size: 30upx;
+							font-weight: 600;
+							letter-spacing: 5upx;
+						}
+						.R-number{
+							font-size: 28upx;
+							color: #686868;
+							.iconecodes{
+								padding-right: 10upx;
+								font-weight: 600;
+								font-size: 32upx;
+							}
+						}
+					
+						
+					}
+					.R-bottom{
+						position: relative;
+						padding: 10upx 0;
+						display: flex;
+						justify-content: space-between;
+						.iconfontes{
+							position: absolute;
+							right: 0;
+						}
+						.R-induce{
+							display: inline-block;
+							width: 250upx;
+							font-size: 28upx;
+							color: #808080;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							white-space: nowrap;
+						}
+						.iconed{
+							display: inline-block;
+							color: #299dff;
+							padding-left: 10upx;
+							font-size: 28upx;
+							margin-top: 6upx;
+						}
+						.iconfontes{
+							font-weight: 600;
+							font-size: 60upx;
+							color: #ffecc7;
+						}
+					}
+				}
+			}
+			.shopInfo{
+				// padding: 10upx 40upx;
+				display: flex;
+				margin-top: 20upx;
+				text-align: center;
+			padding-bottom: 20upx;
+			border-radius: 10upx;
+			box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
+				.infoTitle{
+					font-size: 28upx;
+					font-weight: 600;
+					padding: 20upx 40upx;
+				}
+				
+				.InfoNumber{
+					font-size: 28upx;
+					padding: 10upx 0;
+					color: #787878;
+					border-right: 1px solid #a0a0a0;
+					text{
+						font-weight: 600;
+						color: #ffbd3a ;
+					}
+				}
+			}
+			.industry{
+					padding: 40upx 20upx;
+					border-bottom: 1px solid #eeeeee;
+			}
+			.industryList{
+				
+				font-size: 28upx;
+				color: #6b6b6b;
+				view{
+					padding: 20upx 0;
+				}
+				text{
+					color: #000000;
+					padding-left: 15upx;
+					font-weight: 600;
+					
+				}
+			}
+			.industryLiSt{
+				
+				padding: 20upx 0;
+				font-size: 28upx;
+				color: #6b6b6b;
+				text{
+					color: #000000;
+					padding-left: 15upx;
+					font-weight: 600;
+					line-height: 2;
+				}
+			}
+			._caller {
+				display: flex;
+				padding-bottom: 15px;
+			border-bottom: 1px solid #eeeeee;
+				align-items: center;
+				margin-top: 30upx;
+				> view {
+					
+				}
+					.visitor{
+					font-size: 26upx;
+					
+					color: #858585;
+					padding-right: 20upx;
+				
+				}
+				._L {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					image {
+						width: 70upx;
+						height: 70upx;
+						font-size: 0;
+						border-radius: 50%;
+						background: #eee9e9;
+						margin-right: 20upx;
+					}
+					._more {
+						color: #666;
+						text-align: center;
+						line-height: 50upx;
+						font-size: 28upx;
+					}
+				}
+				._R {
+					text-align: right;
+					font-size: 24upx;
+					color: #666;
+					text {
+						display: inline-block;
+						vertical-align: middle;
+					}
+					.iconfont {
+						margin-left: 10upx;
+						font-size: 38upx;
+					}
+				}
+			}
+		}
+	}
+}
+.Massage-Bottom{
+	
+	margin-top: 40upx;
+	box-sizing: border-box;
+	padding: 0 30upx;
+	width: 100%;
+		padding-bottom: 40upx;
+	background-color: rgba(255, 255, 255, 1);
+	border-radius: 10px;
+	box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
+	.B-induce{
+		padding-bottom: 24upx;
+		border-bottom:2upx solid #eeeeee ;
+		box-sizing: border-box;
+	}
+	.B-title{
+		padding: 25upx 0;
+		padding-bottom: 0;
+		text-align: center;
+		font-size: 30upx;
+		font-weight: 600;
+		letter-spacing: 5upx;
+	}
+	.B-info{
+		font-size: 24upx;
+		letter-spacing: 5upx;
+		color: #9b9b9b;
+		text-indent: 60upx;
+		line-height: 2;
+		margin-top: 20upx;
+		text-align: center;
+	}
+}
+//评论
+.commentBox{
+			padding: 40upx 0upx;
+			margin-bottom: 100upx;
+			box-sizing: border-box;
+		}
+		.commentList{
+			box-sizing: border-box;
+			 border-radius: 20upx;
+			padding:0upx 27upx;
+			box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
+		}
+		.commentListTop{
+			box-sizing: border-box;
+			position: relative;
+			padding: 40upx 0;
+			.icons{
+				color: #259bfe;
+				padding-left: 10upx;
+			}
+			.position{
+				font-size: 28upx;
+				color: #747474;
+				line-height: 2;
+				font-weight: 600;
+			}
+			.userMassage{
+				box-sizing: border-box;
+				padding-left: 30upx;
+			}
+			.company{
+				font-size: 24upx;
+				color: #989898;
+				font-weight: lighter;
+			}
+			display: flex;
+			.userImg{
+				width: 100upx;
+				height: 100upx;
+				
+				 img{
+					width: 100upx;
+					height: 100upx;
+					 border-radius:50%;
+				 }
+			}
+		}
+		.commentContent{
+			margin-top: 30upx;
+			font-size: 28upx;
+			letter-spacing: 5upx;
+			color: #000;
+			
+		}
+		.icond{
+			position: absolute;
+			right: 12upx;
+			top: 50upx;
+		}
+		.commentNumber{
+			color: #666666;
+			font-size: 28upx;
+			padding-left: 20upx;
+		}
+		.introduction{
+			border-bottom:2upx solid #d2d2d2; 
+		}
+		.iconecodes{
+			position: absolute;
+			right: 112upx;
+			top: 128upx;
+			font-size: 28upx;
+			color: #686868;
+			font-weight: 600;
+		}
+		.iconecoded{
+			font-size: 60upx;
+			color: #ffbd38;
+			position: absolute;
+			right: -208upx;
+			top: 46upx;	
+			
+			}
+			.bottonBottom{
+				width: 750upx;
+				height: 98upx;
+				background-color: #ffbd38;
+				position: fixed;
+				bottom: 0;
+				padding: 15upx 20upx;
+				box-sizing: border-box;
+				display: flex;
+				z-index: 100;
+				
+			}
+		.ComentInput{
+			width: 488upx;
+			height: 70upx;
+			border-radius: 40upx;
+			background-color: #fff;
+			input{
+				padding-top: 10upx;
+				padding-left: 40upx;
+				font-size: 14px;
+			}
+			
+		}
+		.LIst{
+			display: flex;
+		}
+		.ComentImgList{
+			display: flex;
+			justify-content: space-between;
+			img{
+				width: 65upx;
+				height: 65upx;
+				margin: 6upx 0upx 6upx 40upx;
+			}
+		}
+	.ComentImgList2{
+		box-sizing: border-box;
+		
+		padding-left: 60upx;
+			img{
+				margin-top: -12upx;
+				width: 100upx;
+				 height: 100upx;
+			}
+	}
+		.subreply{
+			color: #ffc760;
+			font-size: 28upx;
+			padding: 20upx 0;
+			font-weight:lighter;
+		}
+		.CommentImg{
+			width: 100%;
+			height: 400upx;
+			
+			img{
+				width: 100%;
+				height: 100%;
+			}
+			}
+			.commenttitle{
+				padding: 20upx 0;
+				text-align: center;
+				font-weight: 600;
+				font-size: 32upx;
+			}

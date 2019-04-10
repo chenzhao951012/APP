@@ -1,0 +1,2 @@
+<import src="./publishJoin.vue.wxml" />
+    <template is="605eba8c" data="{{ ...$root['0'], $root }}"/>

@@ -1,0 +1,124 @@
+<template>
+	<view class="content">
+		<view class="lines">
+			
+		</view>
+		<view class="_all_content" v-if="exhibition">
+			<view class="_focus_on_info _display_flex" v-for="(item,index) in attentionList" :key="index">
+				<view class="left_focus _display_flex" @touchend="gouserInfo(item.uid)">
+					<image class="_focus_image" :src="item.portrait"></image>
+					<view class="_focus_message"> 
+						<view class="_focus_name">{{item.name}}&nbsp;·&nbsp;{{item.position}}</view>
+						<view class="" style="display: flex;">
+							<view class="_focus_contacts">{{item.company}}</view><text class="_arrow iconfont" style="color:#2b9dfe;margin-top: 5upx;margin-left: 20upx;">&#xe730;</text>
+						</view>
+						
+					</view>
+				</view>
+				<view class="_focus_button" @touchend="guanzhu(index)">	<text class="iconfont">&#xe67f;</text>已关注</view>
+			</view>
+		</view>
+		<view class="emptyBox" v-if="exhibition2">
+			<view class="">
+				<img src="http://39.104.48.81:8088/shop_file/images/wu.png" alt="" style="width:300upx;height:290upx;">
+				<view class="magssageBox">这里空空如也</view>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+	import shoppublic from '@/common/shoppublic';
+	export default {
+		data() {
+			return {
+				exhibition:true,
+				exhibition2:false,
+				token:14651,
+				// 测试数据
+				attentionList:[],
+				state:0,
+			};
+		},
+		onLoad(option) {
+			console.log(option.id)
+			var _this=this
+			this.findFansList(option.id)
+			setTimeout(()=>{
+				if(_this.attentionList==null){
+					console.log(12)
+					_this.exhibition=false
+					_this.exhibition2=true
+				}else{
+					
+					_this.exhibition=true
+					_this.exhibition2=false
+				}
+			},300)
+		},
+		methods:{
+			//去我的粉丝
+		
+					//取消关注
+			guanzhu(index) {
+					
+					var _this = this;
+				
+					var attentionList = this.attentionList;//关注列表
+					
+					// 点完赞之后的请求
+					wx.request({
+					  url: shoppublic.getUrl() + '/attention/addAttention',
+					  data: {
+						type: "1",
+						token:_this.token,
+						pkid:attentionList[index].uid
+					  },
+					  success: function (res) {
+						attentionList.splice(index, 1)
+						
+						  _this.attentionList=attentionList
+					
+					   
+					 
+					  },
+					  fail: function (res) {
+					  }
+					});
+
+				  },
+			//去往详情
+			gouserInfo(id){
+				 uni.navigateTo({
+					  url: '../../index/userDateils/userDateils?id='+id,
+					})
+				console.log(id)
+			},
+			//关注列表获取
+			  findFansList(id) {
+					var _this = this;
+					wx.request({
+					  url: shoppublic.getUrl() + '/personalcenter/findAttentionList',
+					  data: {
+						token: id,
+					  },  
+					  success: function (res) {
+						console.log(res)
+	
+						  _this.attentionList=res.data.responseBody,
+						  _this.state=res.data.status
+						
+						
+					  },
+					  fail: function (res) {
+					  }
+					});
+				  },
+		}
+	}
+</script>
+
+<style lang="scss">
+	// 引入样式
+	@import "mineAttention.css";
+</style>

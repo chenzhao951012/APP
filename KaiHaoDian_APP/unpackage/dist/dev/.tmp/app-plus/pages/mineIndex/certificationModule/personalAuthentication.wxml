@@ -1,0 +1,2 @@
+<import src="./personalAuthentication.vue.wxml" />
+    <template is="4a87b58b" data="{{ ...$root['0'], $root }}"/>

@@ -1,0 +1,51 @@
+.UserBox{
+	width: 750upx;
+	.lins{
+		height: 20upx;
+		width: 750upx;
+		background-color: #f3f3f3;
+	}
+	.user{
+		width: 750upx;
+		height: 100upx;
+		line-height: 100upx;
+		border-bottom: 2upx solid #eeeeee;
+		padding: 0 30upx;
+		box-sizing: border-box;
+		.usertop{
+			display: flex;
+			justify-content: space-between;
+			font-size: 28upx;
+			color: #333333;
+			font-weight: 600;
+			view{
+				image{
+					width: 80upx;
+					height: 80upx;
+					border-radius: 50%;
+					margin-top: 10upx;
+				}
+			}
+		}
+	
+}
+
+	.user2{
+			padding: 0 26upx 0 30upx;
+			box-sizing: border-box;
+		}
+		
+	}
+
+.bottom{
+	padding: 60upx 0;
+	width: 750upx;
+	box-sizing: border-box;
+	button{
+		width: 80%;
+		font-size: 28upx;
+		background-color: #ffbd38;
+		height: 80upx;
+		line-height: 80upx;
+	}
+	}

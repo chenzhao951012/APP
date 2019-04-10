@@ -1,0 +1,2 @@
+<import src="./storeMakeOverDateils.vue.wxml" />
+    <template is="e6f1e830" data="{{ ...$root['0'], $root }}"/>

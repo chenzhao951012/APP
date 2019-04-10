@@ -1,0 +1,86 @@
+/* 公共样式 */
+.all_content{
+	margin: 76rpx 30rpx 0;
+	font-size:28rpx;
+}
+._display_flex{
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+._top_content{
+	/* margin:80upx 30upx 0; */
+}
+._micro_letter{
+	width:112rpx;
+	height:40rpx;
+	margin-right:68rpx;
+	display: inline-block;
+	/* border:2upx solid; */
+	vertical-align: top;
+}
+._micro_letter_content{
+	display: inline-block;
+}
+._micro_letter_image{
+	width:86rpx;
+	height:86rpx;
+	border:2rpx solid #BBBBBB;
+	border-radius: 50%;
+	margin-right:26rpx;
+	/* vertical-align: middle; */
+}
+._micro_letter_info{
+	height:102rpx;
+	display:inline-block;
+}
+._micro_letter_name{
+	width:168rpx;
+	height:40rpx;
+	margin-bottom:22rpx;
+}
+._arrive_time{
+	width:186rpx;
+	height:40rpx;
+}
+/* 提现金额 */
+._withdrawal_amount{
+	/* width:112upx; */
+	height: 40rpx;
+	margin:138rpx 0 40rpx;
+}
+._money_amount{
+	heihgt:56rpx;
+	font-size:40rpx;
+	line-height:56rpx;
+	margin-bottom:24rpx;
+}
+._input{
+	/* width:120upx; */
+	margin-left:20rpx;
+	display:inline-block;
+	vertical-align: middle;
+	/* border-bottom:1upx solid #DBDBDB; */
+}
+._change_balance{
+	margin-bottom:80rpx;
+}
+._all_withdrawal{
+	color:#1B83BD;
+}
+._withDrawal_button{
+	width:502rpx;
+	height:80rpx;
+	background:#DBDBDB;
+	border: 2rpx solid #DBDBDB;
+	border-radius: 20rpx;
+	line-height:80rpx;
+	text-align:center;
+	margin:0 auto;
+}
+

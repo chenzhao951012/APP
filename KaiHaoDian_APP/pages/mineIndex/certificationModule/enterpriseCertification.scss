@@ -1,0 +1,153 @@
+/* 公共样式 */
+@mixin box-sizing {
+	width: 750upx;
+	padding: 0 30upx;
+	box-sizing: border-box;
+}
+
+@mixin display-flex{
+	display:flex;
+	justify-content: space-between;
+}
+
+/* 企业名称 企业座机 验证码 详细地址*/
+._menu_list{
+	@include box-sizing;
+	@include display_flex;
+	height:120upx;
+	line-height:120upx;
+	font-size:24upx;
+	border-bottom: 2upx solid #eeeeee;
+	.Upimg{
+		
+		img{
+			margin: {
+				top: 8upx;
+			}
+			width: 160upx;
+			height: 100upx;
+		}
+	}
+	.UpimgList{
+		img{
+			width: 40upx;
+			height: 40upx;
+		}
+	}
+	._menu_name{
+		color: #333333;
+		font-weight: 600;
+	}
+	input{
+		line-height:60upx;
+		text-align:right;
+		font-size:24upx;
+		margin-top:26upx;
+		color: #333333;
+	}
+	._left_phono{
+		display:inline-block;
+	}
+	._left_input{
+		margin-left: 20upx;
+		text-align: left;
+		display:inline-block;
+		vertical-align: top; 
+	}
+	._menu_content{
+		min-width:42upx;
+		height:40upx;
+	
+		color:#989898;
+	}
+	._select_list{
+		font-size: 24upx;
+		height:40upx;
+		color:#989898;
+	}
+	._get_verification_code{
+		width:140upx;
+		height:40upx;
+		color:#0A82CE;
+	}
+}
+
+
+._main_business_info{
+	@include box-sizing;
+	height:372upx;
+	font-size:28upx;
+	._main_business{
+		height:96upx;
+		line-height:96upx;
+	}
+	
+	
+}
+
+._material_selection{
+	@include box-sizing;
+	color: "#1b1e26";
+	font-size:30upx;
+	height:510upx;
+	margin-bottom: 50upx;
+	background:rgb(247,247,247);
+	overflow: hidden;
+	._title{
+		margin-top:34upx;
+	}
+	._material_cell{
+		text-align: center;
+		>._cell_icon{
+			width:80upx;
+			height:80upx;
+			line-height:80upx;
+			font-size:60upx;
+			background:#548ef2;
+			color:#FFFFFF;
+			border-radius: 50%;
+			margin:128upx auto 30upx;
+		}
+		>._cell_title{
+			font-size: 22upx;
+			color:#585858;
+		}
+	}
+}
+._prompt{
+	@include box-sizing;
+	color:#b0b0b0;
+	font-size:22upx;
+	margin:26upx 0 116upx;
+}
+
+._submit_audit{
+	width:640upx;
+	height:72upx;
+	line-height:72upx;
+	background:#548ef2;
+	color:#FFFFFF;
+	font-size:32upx;
+	margin:0 auto;
+	text-align:center;
+	margin-bottom:122upx;
+	border-radius: 10upx;
+}
+.ImgBox{
+	margin-top: 30upx;
+	display:flex;
+	justify-content: space-around;
+	width: 100%;
+	height: 370upx;
+	
+	img{
+		width: 370upx;
+		height: 370upx;
+		border-radius:20upx; 
+	}
+}
+.comenpy{
+	font-size: 24upx;
+	font-weight: 600;
+	color: #333333;
+}

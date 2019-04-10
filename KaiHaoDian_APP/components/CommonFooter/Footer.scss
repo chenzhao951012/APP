@@ -1,0 +1,35 @@
+.callAndShare{
+  width: 750rpx;
+  height: 98rpx;
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  /* padding: 0rpx 30rpx; */
+  font-size: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #F6F6F6;
+}
+.callAndShare_Left image{
+  width: 430rpx;
+  height: 74rpx;
+}
+.callAndShare_Right image{
+  width: 84rpx;
+  height: 94rpx;
+}
+.callAndShare_Right button{
+  width: 84rpx;
+  height: 94rpx;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  background: none;
+}
+.callAndShare_Center image{
+  width: 84rpx;
+  height: 94rpx;
+}

@@ -1,0 +1,25 @@
+/* 公共样式 */
+.allContent{
+	margin: 0 30rpx;
+	font-size:24rpx;
+}
+._display_flex{
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+._every_queue{
+	margin:20rpx 0;
+}
+._bill_specific_time,
+._bill_money_number{
+	display:inline-block;
+	width:220rpx;
+	height:34rpx;
+}
+

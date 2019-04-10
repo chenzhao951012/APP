@@ -1,0 +1,735 @@
+{
+    "pages" : [
+        //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+        {
+            "path" : "pages/index/index", //主页
+            "style" : {
+                "enablePullDownRefresh" : true,
+                "app-plus" : {
+                    "scrollIndicator" : "none",
+                    "titleNView" : {
+                        "titleText" : "开好店" //不要设置标题
+                    }
+                }
+            }
+        },
+        {
+            "path" : "pages/questionAndAnswer/questionAndAnswer", //问答
+            "style" : {
+                "app-plus" : {
+                    "scrollIndicator" : "none",
+                    "titleNView" : {
+                        "titleText" : "问答"
+                      
+                    }
+                }
+            }
+        },
+        {
+            "path" : "pages/questionAndAnswer/questionAndAnswerDetails/questionAndAnswerDetails",
+            "style" : {
+                "app-plus" : {
+                    "scrollIndicator" : "none",
+                    "titleNView" : {
+                        "titleText" : "" //不要设置标题
+                     
+                    }
+                }
+            }
+        },
+		//登录
+		 {
+		    "path" : "pages/Login/Login", //合伙开店
+		    "style" : {
+		        "navigationBarTitleText" : "登录"
+		    }
+		},
+			//注册
+		 {
+		    "path" : "pages/register/register", //合伙开店
+		    "style" : {
+		        "navigationBarTitleText" : "注册"
+		    }
+		},
+        // 用户详情页
+        {
+            "path" : "pages/index/userDateils/userDateils",
+            "style" : {
+                "navigationBarTitleText" : "用户详情",
+                "app-plus" : {
+                    "scrollIndicator" : "none"
+                    
+                }
+            }
+        },
+        {
+            "path" : "pages/publish/publish",
+            "style" : {
+                "navigationBarTitleText" : "发布" //设置页面标题文字
+            }
+        },
+        {
+            "path" : "pages/contacts/contacts",
+            "style" : {
+                "navigationBarTitleText" : "人脉", //设置页面标题文字
+                "enablePullDownRefresh" : true
+            }
+        },
+        {
+            "path" : "pages/mineIndex/mineIndex",
+            "style" : {
+                "navigationBarTitleText" : "我的" //设置页面标题文字
+            }
+        },
+		
+        {
+            "path" : "pages/searchPage/searchPage",
+            "style" : {
+                "app-plus": {
+                    "titleNView": false //禁用原生导航栏
+                }
+            }
+        },
+        {
+            "path" : "pages/searchContent/searchContent",
+            "style" : {}
+        },
+        {
+            "path" : "pages/homePageModule/joinInvestment/joinInvestment", //招商加盟
+            "style" : {
+                "navigationBarTitleText" : "招商加盟"
+            }
+        },
+        {
+            "path" : "pages/homePageModule/joinInvestment/publishJoin/publishJoin", //招商加盟发布
+            "style" : {
+                "navigationBarTitleText" : "招商加盟发布"
+            }
+        },
+        {
+            "path" : "pages/homePageModule/joinInvestment/joinInvestmentClassify/joinInvestmentClassify", //招商加盟分类
+            "style" : {
+                "navigationBarTitleText" : "招商加盟分类"
+            }
+        },   {
+            "path" : "pages/homePageModule/joinInvestment/reply/reply", //
+            "style" : {
+                "navigationBarTitleText" : "回复"
+            }
+        },
+		 {
+		    "path" : "pages/homePageModule/storeMakeOver/reply/reply", //
+		    "style" : {
+		        "navigationBarTitleText" : "回复"
+		    }
+		},
+		 {
+		    "path" : "pages/homePageModule/partnerOpenStore/reply/reply", //
+		    "style" : {
+		        "navigationBarTitleText" : "回复"
+		    }
+		},
+        {
+            "path" : "pages/homePageModule/joinInvestment/joinInvestmentDetails/joinInvestmentDetails", //招商加盟详情页
+            "style" : {
+                "navigationBarTitleText" : "招商详情",
+                "app-plus" : {
+                    "scrollIndicator" : "none",
+                    "titleNView" : {
+                     
+                    }
+                }
+            }
+        },
+        {
+            "path" : "pages/homePageModule/joinInvestment/joinInvestmentDetails/mineVisitor",
+            "style" : {
+                "navigationBarTitleText" : "我的访客" //设置页面标题文字
+            }
+        },
+		
+        {
+            "path" : "pages/homePageModule/partnerOpenStore/partnerOpenStore", //合伙开店
+            "style" : {
+                "navigationBarTitleText" : "合伙开店"
+            }
+        },
+        {
+            "path" : "pages/homePageModule/partnerOpenStore/partnerOpenStoreDateils/partnerOpenStoreDateils", //合伙开店详情
+            "style" : {
+                "navigationBarTitleText" : "合伙开店详情"
+            }
+        },
+        {
+            "path" : "pages/homePageModule/partnerOpenStore/partnershipStoreRelease/partnershipStoreRelease", //合伙开店发布
+            "style" : {
+                "navigationBarTitleText" : "合伙开店发布"
+            }
+        },
+        {
+            "path" : "pages/homePageModule/storeMakeOver/storeMakeOver", //旺铺转让
+            "style" : {
+                "navigationBarTitleText" : "旺铺转让"
+            }
+        },
+        {
+            "path" : "pages/homePageModule/storeMakeOver/storeMakeOverDateils/storeMakeOverDateils", //旺铺转让详情
+            "style" : {
+               "app-plus" : {
+                   "scrollIndicator" : "none",
+                   "titleNView" : {
+                       "titleText" : "旺铺详情",
+                       "buttons" : [
+                           {
+                               "text" : "\ue72b",
+							   
+                               "fontSrc" : "/static/iconfont.ttf",
+                               "fontSize" : "20"
+                           }
+                       ]
+                   }
+               }
+            }
+        },
+        {
+            "path" : "pages/homePageModule/storeMakeOver/locationRelease/locationRelease", //旺铺转让发布
+            "style" : {
+                "navigationBarTitleText" : "旺铺转让发布"
+            }
+        },
+        {
+            "path" : "pages/homePageModule/newStoreRental/newStoreRental", //新铺租售
+            "style" : {
+                "navigationBarTitleText" : "新铺租售"
+            }
+        },
+        {
+            "path" : "pages/homePageModule/newStoreRental/newStoreRentalDateils/newStoreRentalDateils", //新铺租售
+            "style" : {
+                "navigationBarTitleText" : "新铺租售详情"
+            }
+        },
+		  {
+		    "path" : "pages/homePageModule/newStoreRental/reply/reply", //新铺租售回复
+		    "style" : {
+		        "navigationBarTitleText" : "回复"
+		    }
+		},
+        {
+            "path" : "pages/homePageModule/newStoreRental/newShopRentalRelease/newShopRentalRelease", //新铺租售发布
+            "style" : {
+                "navigationBarTitleText" : "新铺租售发布"
+            }
+        },
+        {
+            "path" : "pages/homePageModule/recruitAndSeek/recruitAndSeek", //招聘求职
+            "style" : {
+				 "navigationBarTitleText" : "招聘求职"
+            }
+        },
+        // 					"titleNView":{
+        // 						"titleText":"招聘求职"
+        // 					}
+        {
+            "path" : "pages/homePageModule/recruitAndSeek/recruitAndSeekDateils/recruitAndSeekDateils", //招聘求职
+           "style": {
+                "app-plus": {
+                    "titleNView": false //禁用原生导航栏
+                }
+            }
+        },
+        {
+            "path" : "pages/homePageModule/recruitAndSeek/recruitAndSeekRelease/candidate/candidate", //招聘求职发布
+            "style" : {
+                "navigationBarTitleText" : "招聘求职发布",
+                "app-plus" : {
+                    "titleNView" : {
+                        "buttons" : [
+                            {
+                                "text" : "招聘",
+                                "fontSize" : "14",
+                                "color" : "#548ef2"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "path" : "pages/homePageModule/recruitAndSeek/recruitAndSeekRelease/recruit/recruit", //招聘求职发布
+            "style" : {
+                "navigationBarTitleText" : "招聘求职发布",
+                "app-plus" : {
+                    "titleNView" : {
+                        "buttons" : [
+                            {
+                                "text" : "求职",
+                                "fontSize" : "14",
+                                "color" : "#548ef2"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "path" : "pages/homePageModule/oldStoreTwoHand/oldStoreTwoHand", //老店二手
+            "style" : {
+                "navigationBarTitleText" : "老店二手"
+            }
+        },
+		 {
+		    "path" : "pages/homePageModule/oldStoreTwoHand/reply/reply", //老店二手
+		    "style" : {
+		        "navigationBarTitleText" : "回复"
+		    }
+		},
+	
+        {
+            "path" : "pages/homePageModule/oldStoreTwoHand/oldStoreTwoHandDateils/oldStoreTwoHandDateils", //二手物品详情
+           "style": {
+                "app-plus": {
+                    "titleNView": false //禁用原生导航栏
+                }
+            }
+        },
+		  {
+		    "path" : "pages/questionAndAnswer/reply/reply",
+		    "style" : {
+		        "navigationBarTitleText" : "回复" //设置页面标题文字
+		    }
+		},
+        {
+            "path" : "pages/homePageModule/oldStoreTwoHand/oldStoreTwoHandRelease/askToBuy/askToBuy", //老店二手发布
+            "style" : {
+                "navigationBarTitleText" : "二手转让发布",
+                "app-plus" : {
+                    "titleNView" : {
+                        "buttons" : [
+                            {
+                                "text" : "求购",
+                                "fontSize" : "14",
+                                "color" : "#548ef2"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "path" : "pages/homePageModule/oldStoreTwoHand/oldStoreTwoHandRelease/sale/sale", //二手转让发布
+            "style" : {
+                "navigationBarTitleText" : "二手转让发布",
+                "app-plus" : {
+                    "titleNView" : {
+                        "buttons" : [
+                            {
+                                "text" : "出售",
+                                "fontSize" : "14",
+                                "color" : "#548ef2"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "path" : "pages/homePageModule/openStoreSeekSite/openStoreSeekSite", //开店寻址
+            "style" : {
+                "navigationBarTitleText" : "开店寻址"
+            }
+        },
+			 {
+		    "path" : "pages/publish/publishDateils/partner/partner/partner",//发布详情
+		    "style" : {
+		        "navigationBarTitleText" : "城市合伙人招募"
+		    }
+		},
+		 {
+		    "path" : "pages/publish/publishDateils/informationpublish/information/information",//发布详情
+		    "style" : {
+		        "navigationBarTitleText" : "供应商招募"
+		    }
+		},
+        /*------------------------------------------添加评论相关页面  Start------------------------------------------*/
+        {
+            // 更多评论mineComments
+            "path" : "pages/questionAndAnswer/commentsModule/viewAllComments",
+            "style" : {
+                "navigationBarTitleText" : "评论" //设置页面标题文字
+            }
+        },
+        {
+            // 我的评论knowledge
+            "path" : "pages/questionAndAnswer/commentsModule/mineComments",
+            "style" : {
+                "navigationBarTitleText" : "评论" //设置页面标题文字
+            }
+        },
+        {
+            // 发布问答
+            "path" : "pages/questionAndAnswer/knowledgeModule/knowledge",
+            "style" : {
+                "navigationBarTitleText" : "发布问答" //设置页面标题文字
+            }
+        },
+        {
+            // 发布问答
+            "path" : "pages/questionAndAnswer/ideaModule/idea",
+            "style" : {
+                "navigationBarTitleText" : "发布问答" //设置页面标题文字
+            }
+        },
+        /*------------------------------------------添加评论相关页面  End-----------------------------------------------*/
+        {
+            "path" : "pages/publish/publish",
+            "style" : {
+                "navigationBarTitleText" : "发布" //设置页面标题文字
+            }
+        },
+        {
+            "path" : "pages/contacts/contacts",
+            "style" : {
+                "navigationBarTitleText" : "人脉", //设置页面标题文字
+                "enablePullDownRefresh" : true
+            }
+        },
+        {
+            "path" : "pages/mineIndex/mineIndex",
+            "style" : {
+                "navigationBarTitleText" : "我的" //设置页面标题文字
+            }
+        },
+        /*------------------------------------------添加我的相关页面  Start------------------------------------------*/
+        {
+            // 我的关注
+            "path" : "pages/mineIndex/focusModule/mineAttention",
+            "style" : {
+                "navigationBarTitleText" : "我的关注" //设置页面标题文字
+            }
+        },
+        {
+            // 我的粉丝mineAskQuestions
+            "path" : "pages/mineIndex/FansModule/mineFans",
+            "style" : {
+                "navigationBarTitleText" : "我的粉丝" //设置页面标题文字
+            }
+        },
+        {
+            // 我的提问mineBill
+            "path" : "pages/mineIndex/askQuestionsModule/mineAskQuestions",
+            "style" : {
+                "navigationBarTitleText" : "我的提问" //设置页面标题文字
+            }
+        },
+		  {
+		    // 我的提问mineBill
+		    "path" : "pages/mineIndex/service/service",
+		    "style" : {
+		        "navigationBarTitleText" : "联系客服" //设置页面标题文字
+		    }
+		},
+        {
+            // 我的钱包
+            "path" : "pages/mineIndex/walletModule/mineWallet",
+            "style" : {
+                "navigationBarTitleText" : "我的钱包", //设置页面标题文字
+                "app-plus" : {
+                    "titleNView" : {
+                        "buttons" : [
+                            {
+                                "text" : "明细",
+                                "fontSize" : "14"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            // 我的账单
+            "path" : "pages/mineIndex/walletModule/mineBill",
+            "style" : {
+                "navigationBarTitleText" : "账单" //设置页面标题文字
+            }
+        },
+        {
+            // 我的账单
+            "path" : "pages/mineIndex/walletModule/MarginBalance",
+            "style" : {
+                "navigationBarTitleText" : "保证金余额" //设置页面标题文字
+            }
+        },
+        {
+            // 提现
+            "path" : "pages/mineIndex/walletModule/mineWithdrawal",
+            "style" : {
+                "navigationBarTitleText" : "提现" //设置页面标题文字
+            }
+        },
+        {
+            // 我的发布
+            "path" : "pages/mineIndex/releaseModule/mineRelease",
+            "style" : {
+                "navigationBarTitleText" : "我的发布", //设置页面标题文字
+				 "app-plus": {
+				     "bounce": "none", //关闭窗口回弹效果
+				     "titleNView": {
+				         "buttons": [ //原生标题栏按钮配置,
+				             {
+				                 "text": "编辑",
+																   "fontSize":"28upx",
+																	"width":"72upx",
+																   "fontWeight":"bold",
+																   "color":"#fdbd39"
+																	
+															   }
+				         ]
+				     }
+				 }
+            }
+        },
+		   {
+		    // 申请交换列表
+		    "path" : "pages/mineIndex/exchangePhone/exchangePhone",
+		    "style" : {
+		        "navigationBarTitleText" : "申请交换列表" //设置页面标题文字
+		    }
+		},
+		   {
+		    // 用户反馈
+		    "path" : "pages/mineIndex/help/help/help",
+		    "style" : {
+		        "navigationBarTitleText" : "帮助反馈" //设置页面标题文字
+		    }
+		},
+        {
+            // 我的签到
+            "path" : "pages/mineIndex/integralModule/minePoints",
+            "style" : {
+                "navigationBarTitleText" : "签到送大礼" //设置页面标题文字
+            }
+        },
+		    {
+		    // 礼物详情
+		    "path" : "pages/mineIndex/integralModule/Giftdetails/Giftdetails",
+		    "style" : {
+		        "navigationBarTitleText" : "礼物详情" //设置页面标题文字
+		    }
+		},
+		    {
+		    // 信息填写
+		    "path" : "pages/mineIndex/integralModule/information/information/information",
+		    "style" : {
+		        "navigationBarTitleText" : "信息填写" //设置页面标题文字
+		    }
+		},
+        {
+            // 我的签到
+            "path" : "pages/mineIndex/integralModule/pointExchangeRecord",
+            "style" : {
+                "navigationBarTitleText" : "积分兑换记录" //设置页面标题文字
+            }
+        },
+		 {
+		    // 关于我们
+		    "path" : "pages/mineIndex/AboutUs/AboutUs",
+		    "style" : {
+		        "navigationBarTitleText" : "关于我们" //设置页面标题文字
+		    }
+		},
+        {
+            // 个人/企业认证
+            "path" : "pages/mineIndex/certificationModule/certificationIndex",
+            "style" : {
+                "navigationBarTitleText" : "认证" 
+			
+            }
+        },
+        {
+            // 企业认证
+            "path" : "pages/mineIndex/certificationModule/enterpriseCertification",
+            "style" : {
+                "navigationBarTitleText" : "企业认证", //设置页面标题文字
+				 "app-plus": {
+				      "bounce": "none", //关闭窗口回弹效果
+				      "titleNView": {
+				          "buttons": [ //原生标题栏按钮配置,
+				              {
+				                  "text": "完成",
+												   "fontSize":"28upx",
+													"width":"72upx",
+												   "fontWeight":"bold",
+												   "color":"#fdbd39"
+													
+											   }
+				          ]
+				      }
+				  }//设置页面标题文字//设置页面标题文字
+				
+            }
+        },
+        {
+            // 个人认证
+            "path" : "pages/mineIndex/certificationModule/personalAuthentication",
+            "style" : {
+                "navigationBarTitleText" : "个人认证" ,
+				 "app-plus": {
+				       "bounce": "none", //关闭窗口回弹效果
+				       "titleNView": {
+				           "buttons": [ //原生标题栏按钮配置,
+				               {
+				                   "text": "完成",
+								   "fontSize":"28upx",
+									"width":"72upx",
+								   "fontWeight":"bold",
+								   "color":"#fdbd39"
+									
+							   }
+				           ]
+				       }
+				   }//设置页面标题文字//设置页面标题文字
+            }
+        },
+        {
+            "path" : "pages/publish/publishDateils/informationpublish/information/information",
+            "style" : {}
+        },
+        {
+            "path" : "pages/publish/publishDateils/partner/partner/partner",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/mineIndex/integralModule/Giftdetails/Giftdetails",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/mineIndex/integralModule/information/information/information",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/mineIndex/exchangePhone/exchangePhone",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/mineIndex/help/help/help",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/mineIndex/service/service",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/mineIndex/AboutUs/AboutUs",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/homePageModule/joinInvestment/reply/reply",
+            "style" : {}
+        }
+       
+        ,{
+            "path" : "pages/mineIndex/settingUp/settingUp",
+            "style" : {
+				"navigationBarTitleText" : "设置"
+			}
+        }
+        ,{
+            "path" : "pages/mineIndex/Myorder/Myorder",
+            "style" : {
+				"navigationBarTitleText" : "我的订单"
+			}
+        }
+        ,{
+            "path" : "pages/mineIndex/Myorder/evaluate/evaluate",
+            "style" : {
+				"navigationBarTitleText" : "",
+				 "app-plus": {
+				      "bounce": "none", //关闭窗口回弹效果
+				      "titleNView": {
+				          "buttons": [ //原生标题栏按钮配置,
+				              {
+				                  "text": "提交",
+												   "fontSize":"28upx",
+													"width":"72upx",
+												   "fontWeight":"bold",
+												   "color":"#fdbd39"
+													
+											   }
+				          ]
+				      }
+				  }
+			}
+        }
+        ,{
+            "path" : "pages/mineIndex/Myorder/unfinishedOrd/unfinishedOrd",
+            "style" : {
+				"navigationBarTitleText" : ""
+			}
+        }
+        ,{
+            "path" : "pages/mineIndex/Myorder/accomplish/accomplish",
+            "style" : {}
+        }
+    ],
+    /*------------------------------------------添加认证相关页面  End------------------------------------------*/
+    "globalStyle" : {
+        "navigationBarTextStyle" : "black",
+        "navigationBarTitleText" : "开好店",
+        "navigationBarBackgroundColor" : "#fff",
+        "backgroundColor" : "#fff",
+        "backgroundTextStyle" : "dark",
+        "onReachBottomDistance" : 50,
+        "scrollIndicator" : "none"
+    },
+    "tabBar" : {
+        //tabBar配置与微信小程序配置相同
+        "color" : "#7A7E83",
+        "selectedColor" : "#ffbd38",
+        "borderStyle" : "black",
+        "backgroundColor" : "#fff",
+        "list" : [
+            {
+                "pagePath" : "pages/index/index",
+                "text" : "首页",
+                "iconPath" : "./static/index.png",
+                "selectedIconPath" : "./static/index2.png"
+            },
+            {
+                "pagePath" : "pages/questionAndAnswer/questionAndAnswer",
+                "text" : "问答",
+                "iconPath" : "./static/questions2.png",
+                "selectedIconPath" : "./static/questions.png"
+            },
+            {
+                "pagePath" : "pages/publish/publish",
+                "text" : "发布",
+                "iconPath" : "./static/publish.png",
+                "selectedIconPath" : "./static/publish2.png"
+            },
+            {
+                "pagePath" : "pages/contacts/contacts",
+                "text" : "人脉",
+                "iconPath" : "./static/connection.png",
+                "selectedIconPath" : "./static/connection2.png"
+            },
+            {
+                "pagePath" : "pages/mineIndex/mineIndex",
+                "text" : "我的",
+                "iconPath" : "./static/myself.png",
+                "selectedIconPath" : "./static/myself2.png"
+            }
+        ]
+    }
+}
+// 	"condition" : { //模式配置，仅开发期间生效
+// 		"current": 0, //当前激活的模式(list 的索引项)
+// 		"list": [
+// 			{
+// 				"name": "合伙开店列表", //模式名称
+// 				"path": "pages/homePageModule/partnerOpenStore/partnerOpenStore", //启动页面，必选
+// 				"query": "" //启动参数，在页面的onLoad函数里面得到
+// 			}
+// 		]
+// 	}
+

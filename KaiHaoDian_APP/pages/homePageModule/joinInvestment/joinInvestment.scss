@@ -1,0 +1,283 @@
+// 文本超出省略号
+@mixin overflow_Es {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+// 发布按钮
+.position_button {
+	width: 90upx;
+	height: 90upx;
+	line-height: 90upx;
+	text-align: center;
+	font-size: 26upx;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 200upx;
+	right: 30upx;
+	background: #3285ff;
+	color: #fff;
+	z-index: 66;
+}
+.banner {
+	position: relative;
+	background: #f6f6f6;
+	padding: {
+		// bottom: 20upx;
+	}
+	._search {
+		width: 620upx;
+		height: 70upx;
+		box-sizing: border-box;
+		padding: 10upx 30upx;
+		position: absolute;
+		left: calc(50% - 310upx);
+		bottom: 5upx;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background: #fff;
+		border-radius: 50upx;
+		box-shadow: 0 2upx 20upx rgba(35, 35, 35, 0.2);
+		> input {
+			width: 510upx;
+			outline: none;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			border: 0;
+			background: none;
+			font-size: 24upx;
+			color: #666;
+			line-height: 50upx;
+		}
+		> .iconfont {
+			width: 50upx;
+			text-align: right;
+			line-height: 50upx;
+			font-size: 30upx;
+			color: #666;
+		}
+	}
+	._swiper {
+		width: 750upx;
+		height: 320upx;
+		font-size: 0;
+		._swiper_item {
+			width: 690upx !important;
+			padding: 20upx 20upx;
+			margin: 0 20upx;
+			box-sizing: border-box;
+			._swiper_item_img {
+				width: 670upx;
+				height: 280upx;
+				margin: 0 auto;
+				border-radius: 16upx;
+			}
+		}
+	}
+}
+.classifyAll {
+	width: 750upx;
+	box-sizing: border-box;
+	padding: 30upx 30upx 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #f6f6f6;
+	flex-wrap: wrap;
+	.classify,
+	.classify image {
+		width:334upx;
+		height: 190upx;
+		font-size: 0;
+		border-radius: 16upx;
+		background: #eee9e9;
+	}
+	.classify{
+		margin: {
+			bottom: 22upx;
+		}
+	}
+	
+}
+.tj_projectList {
+	width: 750upx;
+	box-sizing: border-box;
+	padding: 0 0 30upx;
+	margin-top: 10upx;
+	background: #fbfcff;
+	.tj_title {
+		box-sizing: border-box;
+		padding: 20upx 30upx 0 30upx;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 32upx;
+		font-weight: 600;
+		color: #181818;
+		line-height: 50upx;
+	}
+}
+
+.project_cell {
+	width: 690upx;
+	background: #fff;
+	border-radius: 16upx;
+	// box-shadow: 0 2upx 20upx rgba(155, 155, 155, 0.3);
+	margin: 0 auto;
+	margin: {
+		top: 30upx;
+	}
+	.cell_top,
+	.cell_top > image {
+		width: 690upx;
+		height: 394upx;
+		font-size: 0;
+	}
+	.cell_top {
+		position: relative;
+		image {
+			background: lightblue;
+			border-radius: 10upx;
+		}
+		.cell_top_bottom {
+			width: 690upx;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background: rgba(20, 23, 16, 0.4);
+		
+			>view {
+				text-indent: 22upx;
+				line-height: 80upx;
+				color: #fff;
+				font-size: 32upx;
+				font-weight: 600;
+				letter-spacing:5upx;
+				padding: {
+					left: 20upx;
+				}
+			}
+			>view:last-child {
+				padding: {
+					left: 0;
+					right: 20upx;
+				}
+				.iconfont {
+					margin-right: 10upx;
+				}
+			}
+		}
+	}
+	.cell_bottom {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20upx 0;
+		border: 1px solid #e9e9e9;
+		border-top: 0;
+		border-radius: 0 0 20upx 20upx ;
+		._left{
+			width: 500upx;
+			box-sizing: border-box;
+			>view{
+				padding:{
+					left: 20upx;
+				}
+			}
+			._name{
+				width: 450upx;
+				line-height: 50upx;
+				font-size: 30upx;
+				color: #333;
+				@include overflow_Es;
+			}
+			._age{
+				font-size: 26upx;
+				color: #999;
+				display: flex;
+				align-items: center;
+				text{
+					max-width: 230upx;
+					line-height: 50upx;
+					display: inline-block;
+					@include overflow_Es;
+				}
+				text:first-child{
+					margin-right: 20upx;
+				}
+			}
+		}
+		._lineCss{
+			padding: 10upx 20upx;
+			font-size: 28upx;
+			color: #191919;
+			border: 1px solid #e5e5e5;
+			margin-right: 30upx;
+			border-radius: 100upx;
+			position: absolute;
+			right: 10upx;
+		}
+		._priceParent{
+			width: 180upx;
+			text-align: center;
+			>view{
+				line-height: 50upx;
+			}
+			._priceTop{
+				font-size: 30upx;
+				color: #333;
+			}
+			._price{
+				font-size: 26upx;
+				color: #ff8100;
+			}
+		}
+	}
+}
+.balltas{
+	width: 60upx;
+	height: 20upx;
+	background-color:#eeeeee;
+	border-radius:20upx;
+	 float: left;
+	 margin-right: 20upx;
+	
+}
+.balltas2{
+	width: 60upx;
+	height: 20upx;
+	background-color:red;
+	border-radius:20upx;
+	 float: left;
+	 margin-right: 20upx;
+	
+}
+.swiperbutton{
+	position: absolute;
+	bottom: 40upx;
+	left: 28%;
+}
+.tese{
+	color: #a7a7a7;
+	font-size: 28upx;
+	letter-spacing:5upx;
+}
+.times{
+	padding-left: 10upx;
+	font-size: 28upx;
+	color: #000000;
+	letter-spacing:5upx;
+	font-weight: 500;
+}
+.times2{
+	letter-spacing:5upx;
+	padding-left: 40upx;
+	font-weight: 500;
+}
+

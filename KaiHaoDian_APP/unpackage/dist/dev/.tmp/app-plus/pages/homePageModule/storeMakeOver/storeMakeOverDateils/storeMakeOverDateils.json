@@ -1,0 +1,13 @@
+{
+  "scrollIndicator": "none",
+  "titleNView": {
+    "titleText": "旺铺详情",
+    "buttons": [
+      {
+        "text": "",
+        "fontSrc": "/static/iconfont.ttf",
+        "fontSize": "20"
+      }
+    ]
+  }
+}

@@ -1,0 +1,427 @@
+// 公共样式
+@mixin box-sizing{
+	width:750upx;
+	padding:0 30upx;
+	box-sizing:border-box;
+}
+
+@mixin display-flex{
+	display:flex;
+	justify-content: space-between;
+}
+
+@mixin flex-start{
+	display:flex;
+	justify-content: flex-start;
+}
+
+.content{
+    background-color: #eeeeee;
+}
+// 导航
+.nav{
+		
+		display:flex;
+	padding: 0 30upx;
+		height: 88upx;
+		line-height: 88upx;
+		background-color: #fff;
+		position: relative;
+		box-sizing: border-box;
+		.navback{
+			width: 20%;
+			font-size: 28upx;
+		}
+		.navtitle{
+			flex: 1;
+			font-size: 32upx;
+			font-weight: 600;
+			text-align: center;
+		}
+		.Navicon{
+			
+			width: 20%;
+			
+			text{
+				font-size: 40upx;
+				box-sizing: border-box;
+				padding: 0 20upx;
+			}
+			text:nth-child(1){
+				color: #ffbd38;
+			}
+			text:nth-child(2){
+				color: #656565;
+				padding-right: 0;
+			}
+		}
+		.ShareBox{
+			position: absolute;
+			background-color: #eeeeee;
+			right: 0;
+			top: 90upx;
+			view{
+				padding: 0upx 20upx;
+				font-size: 28upx;
+				color: #000;
+				border-bottom:2upx solid #bfbfbf; 
+				height: 70upx;
+				line-height: 70upx;
+				text{
+					padding: 0 10upx;
+				}
+			}
+		}
+		
+	}
+// 顶部图片
+.section{
+	padding: 0 30upx;
+	//自定义导航
+	box-sizing: border-box;
+	background-color: #fff;
+	margin-top: 20upx;
+	border-radius: 20upx 20upx 0 0;
+	margin-bottom: 80upx;
+	.Pl{
+		padding-right: 10upx;
+	}
+	.Conment{
+		
+		.UserBox{
+			padding: 40upx 0;
+			display: flex; 
+			position: relative;
+			border-bottom: 2upx solid #eeeeee;
+			.ImgBox{
+				
+				width: 80upx;
+				height: 80upx;
+				img{
+					width: 100%;
+					height: 100%;
+					border-radius: 50%;
+				}
+			
+			}
+			.UserConment{
+				padding-left: 20upx;
+			
+				.name{
+					display: flex;
+					font-size: 28upx;
+					color: #000;
+					font-weight: 600;
+					line-height: 1.5;
+					.RenBox{
+						margin-left:20upx;
+						// margin-top: 5upx;
+						width: 20upx;
+						height: 20upx;
+						img{
+							width: 100%;
+							height: 100%;
+						}
+					}
+				}
+				.time{
+					padding: 5upx 0;
+					font-size: 24upx;
+					color: #000;
+					text{
+						padding-left: 20upx;
+					}
+				}
+			}
+			.redom{
+				font-size: 28upx;
+				font-weight: 600;
+				color: #686868;
+				position: absolute;
+				right: 0;
+				top: 50upx;
+			}
+		}
+		.introduce{
+			padding: 40upx 0;
+			.title{
+				font-size: 26upx;
+				color: #000;
+				font-weight: 400;
+				letter-spacing: 5upx;
+			}
+			.introduceBottom{
+				margin-top: 20upx;
+				text{
+					font-size: 28upx;
+					color: #febe3a;
+				}
+				text:nth-child(1){
+					font-size: 26upx;
+					color: #676767;
+					font-weight: 600;
+					text{
+						color: #febe3a;
+						font-weight: 600;
+						padding-left: 20upx;
+						box-sizing: border-box;
+					}
+				}
+				text:nth-child(2){
+					display: inline-block;
+					border: 1px solid #f1f1f1;
+					border-radius: 25px;
+					margin-left: 40upx;
+					padding: 2upx 20upx;
+					box-sizing: border-box;
+				}
+			}
+		
+			
+		}
+			.Banner{
+			.BannerList{
+				width: 687upx;
+				height: 796upx;
+				margin-bottom: 10upx;
+				img{
+					width: 100%;
+					height: 100%;
+					border-radius: 20upx;
+				}
+			}
+		}
+		.comment{
+			padding: 10upx 0 20upx 0;
+			box-sizing: border-box;
+			.commentTitle{
+				margin: 20upx 0 40upx 0;
+				font-size: 32upx;
+				font-weight: 600;
+				letter-spacing: 5upx;
+			}
+			.CommentImg{
+				width: 100%;
+				height: 400upx;
+				
+				img{
+					width: 100%;
+					height: 100%;
+				}
+				}
+			.commentBox{
+				padding: 30upx 30upx;
+				box-sizing: border-box;
+			}
+			.commentList{
+				box-sizing: border-box;
+				 border-radius: 20upx;
+				padding:0upx 27upx;
+				box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
+			}
+			.commentListTop{
+				position: relative;
+				padding: 40upx 0;
+				.icons{
+					color: #259bfe;
+					padding-left: 10upx;
+				}
+				.position{
+					font-size: 28upx;
+					color: #747474;
+					line-height: 2;
+					font-weight: 600;
+				}
+				.userMassage{
+					padding-left: 30upx;
+				}
+				.company{
+					font-size: 24upx;
+					color: #989898;
+					font-weight: lighter;
+				}
+				display: flex;
+				.userImg{
+					width: 100upx;
+					height: 100upx;
+					
+					 img{
+						width: 100upx;
+						height: 100upx;
+						 border-radius:50%;
+					 }
+				}
+			}
+			.commentContent{
+				margin-top: 30upx;
+				font-size: 28upx;
+				letter-spacing: 5upx;
+				color: #000;
+				
+			}
+			.icond3{
+				color: #6b6b6b;
+			}
+			.icond{
+				color: #6b6b6b;
+				font-weight: 600;
+				position: absolute;
+				right: 12upx;
+				top: 50upx;
+			}
+			.icond2{
+				color: #ffd082;
+			
+			}
+			.commentNumber{
+				color: #666666;
+				font-size: 28upx;
+				padding-left: 20upx;
+			}
+			.introduction{
+				border-bottom:2upx solid #d2d2d2; 
+			}
+			
+			.iconecodes{
+				position: absolute;
+				right: -218upx;
+				top: -6upx;
+				font-size: 28upx;
+				color: #686868;
+				font-weight: 600;
+			}
+			.iconecoded{
+				font-size: 60upx;
+				color: #ffbd38;
+				position: absolute;
+				right: -208upx;
+				top: 46upx;	
+				
+				}
+				.bottonBottom{
+					width: 100%;
+					height: 98upx;
+					background-color: #ffbd38;
+					position: fixed;
+					bottom: 0;
+					padding: 15upx 20upx;
+					box-sizing: border-box;
+					display: flex;
+					
+				}
+			.ComentInput{
+				width: 488upx;
+				height: 70upx;
+				border-radius: 40upx;
+				background-color: #fff;
+				input{
+					padding-top: 10upx;
+					padding-left: 40upx;
+					font-size: 14px;
+				}
+				
+			}
+			.LIst{
+				display: flex;
+			}
+			.ComentImgList{
+				box-sizing: border-box;
+				display: flex;
+				justify-content: space-between;
+				img{
+					width: 65upx;
+					height: 65upx;
+					margin: 6upx 0upx 6upx 40upx;
+				}
+			}
+			.ComentImgList2{
+				box-sizing: border-box;
+				
+				padding-left: 60upx;
+					img{
+						margin-top: -12upx;
+						width: 100upx;
+						 height: 100upx;
+					}
+			}
+			.subreply{
+				
+				box-sizing: border-box;
+				color: #ffc760;
+				font-size: 28upx;
+				padding: 20upx 0;
+				font-weight:lighter;
+			}
+		}
+	}
+}
+		.section .Conment .comment .introduction:last-child{
+				border:0; 
+			}
+			.bottonBottom{
+						width: 750upx;
+						height: 98upx;
+						background-color: #ffbd38;
+						position: fixed;
+						bottom: 0;
+						padding: 15upx 20upx;
+						box-sizing: border-box;
+						display: flex;
+						z-index: 100;
+						
+					}
+				.ComentInput{
+					width: 488upx;
+					height: 70upx;
+					border-radius: 40upx;
+					background-color: #fff;
+					input{
+						padding-top: 10upx;
+						padding-left: 40upx;
+						font-size: 14px;
+					}
+					
+				}
+				.LIst{
+					display: flex;
+				}
+				.ComentImgList{
+					display: flex;
+					justify-content: space-between;
+					img{
+						width: 65upx;
+						height: 65upx;
+						margin: 6upx 0upx 6upx 40upx;
+					}
+				}
+			.ComentImgList2{
+				box-sizing: border-box;
+				
+				padding-left: 60upx;
+					img{
+						margin-top: -12upx;
+						width: 100upx;
+						 height: 100upx;
+					}
+			}
+				.subreply{
+					color: #ffc760;
+					font-size: 28upx;
+					padding: 20upx 0;
+					font-weight:lighter;
+				}
+				.CommentImg{
+					width: 100%;
+					height: 400upx;
+					
+					img{
+						width: 100%;
+						height: 100%;
+					}
+					}
+					.commenttitle{
+						padding: 20upx 0;
+						text-align: center;
+						font-weight: 600;
+						font-size: 32upx;
+					}

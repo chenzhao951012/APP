@@ -1,0 +1,413 @@
+@mixin verMiddle {
+	display: inline-block;
+	vertical-align: middle;
+}
+@mixin widthHidden {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+@mixin box_sizing {
+	box-sizing: border-box;
+}
+
+
+// 评论
+.commentParent {
+	padding-bottom: 100upx;
+	// 评论title
+	.comment_title {
+		width: 750upx;
+		padding: 0 30upx;
+		@include box_sizing;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 2upx solid #eee;
+		view {
+			line-height: 80upx;
+			font-size: 28upx;
+			color: #666;
+		}
+		view:last-child {
+			font-size: 26upx;
+		}
+	}
+	// 评论区
+	.conment_content {
+		// 一级评论
+		> .conment_one {
+			border-bottom: 2upx solid #eee;
+			width: 750upx;
+			padding: 20upx 30upx;
+			@include box_sizing;
+			> ._title {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				._portrait,
+				._portrait image {
+					width: 88upx;
+					height: 88upx;
+					font-size: 0;
+					border-radius: 50%;
+					background: #eee9e9;
+				}
+				._userAndCompany {
+					width: 580upx;
+					._name {
+						font-size: 30upx;
+						color: #333;
+						line-height: 44upx;
+					}
+					._company {
+						font-size: 26upx;
+						color: #999;
+						line-height: 44upx;
+						view {
+							display: inline-block;
+							vertical-align: middle;
+						}
+						view:first-child {
+							max-width: 540upx;
+							@include widthHidden;
+						}
+						.iconfont {
+							color: #ff8100;
+							margin-left: 10upx;
+						}
+					}
+				}
+			}
+			> ._content {
+				font-size: 26upx;
+				color: #666;
+				letter-spacing: 2upx;
+				margin: {
+					top: 10upx;
+				}
+			}
+			> ._operation_border {
+				border-bottom: 2upx solid #eee;
+			}
+			> ._operation {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				font-size: 0;
+				._time {
+					font-size: 24upx;
+					color: #999;
+					line-height: 44upx;
+				}
+				.commentAndPraise {
+					> view:first-child {
+						margin: {
+							right: 20upx;
+						}
+					}
+					> view {
+						@include verMiddle;
+						line-height: 44upx;
+						font-size: 14px;
+					}
+				}
+			}
+			// 二级评论
+			> .conment_two {
+				border-bottom: 2upx solid #eee;
+				width: 670upx;
+				padding: {
+					top: 10upx;
+				}
+				margin: {
+					left: 28upx;
+				}
+				@include box_sizing;
+				> ._title {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					._portrait,
+					._portrait image {
+						width: 60upx;
+						height: 60upx;
+						font-size: 0;
+						border-radius: 50%;
+						background: #3285ff;
+					}
+					._userAndCompany {
+						width: 588upx;
+						._name {
+							font-size: 26upx;
+							color: #333;
+							line-height: 34upx;
+						}
+						._company {
+							font-size: 22upx;
+							color: #999;
+							line-height: 34upx;
+							view {
+								display: inline-block;
+								vertical-align: middle;
+							}
+							view:first-child {
+								max-width: 548upx;
+								@include widthHidden;
+							}
+							.iconfont {
+								color: #ff8100;
+								margin-left: 10upx;
+							}
+						}
+					}
+				}
+				> ._content {
+					font-size: 22upx;
+					color: #666;
+					letter-spacing: 2upx;
+					margin: {
+						top: 10upx;
+					}
+				}
+				> ._operation {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					font-size: 0;
+					._time {
+						font-size: 20upx;
+						color: #999;
+						line-height: 44upx;
+					}
+					.commentAndPraise {
+						> view:first-child {
+							margin: {
+								right: 20upx;
+							}
+						}
+						> view {
+							@include verMiddle;
+							line-height: 44upx;
+							font-size: 20upx;
+						}
+					}
+				}
+			}
+			> .conment_two:last-child {
+				border: 0;
+			}
+		}
+		>.conment_one:last-child{
+			border: 0;
+		}
+	}
+}
+.callAndShare_Left image{
+  width: 430rpx;
+  height: 74rpx;
+}
+.callAndShare_Right image{
+  width: 84rpx;
+  height: 94rpx;
+}
+.callAndShare_Right button{
+  width: 84rpx;
+  height: 94rpx;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  background: none;
+}
+.callAndShare_Center image{
+  width: 84rpx;
+  height: 94rpx;
+}
+uni-button:after{
+	border: none;
+}
+.comment_box{
+	width: 750upx;
+	height: 90upx;
+ position: fixed;
+  z-index: 999;
+  bottom: 0;
+  left: 0;
+	background:#F6F6F6;
+	
+}
+.InputBox{
+	display: flex;
+	margin-top: 10upx;
+	width: 70%;
+	height: 70upx;
+		border-radius: 10upx;
+		padding-left: 10upx;
+		border: 1px solid #d8d8d8;
+		z-index: 1000;
+		margin-left: 25upx;
+	input{
+		margin-top: 10upx;
+		font-size: 14px;
+		line-height: 40px;
+}
+}
+.comment{
+	padding: 0 24upx;
+	
+	display: flex;
+	justify-content: space-between;
+	.commentLeft{
+		font-size: 11px;
+		color:#999999;
+		font-weight: 600;
+	}
+	.commentRight{
+		font-size: 11px;
+		color:#999999;
+		font-weight: 600;
+		text{
+			margin: 0 10upx;
+		}
+	}
+	}
+	.commentImg{
+		width: 100%;
+		display: flex;
+		align-items: center;
+
+	img{
+		margin:21px auto 8px;
+		width: 140upx;
+		height: 132upx;
+	}	
+	}
+	.commentBox{
+		margin-bottom: 120upx;
+		
+	}
+	.commentText{
+		text-align: center;
+		font-size: 12px;
+		color:#999999;
+	}
+	.commentList{
+		width: 100%;
+		position: relative;
+	}
+	.commentListLeft{
+		margin-top: 40upx;
+		display: flex;
+		padding: 0 24upx;
+		width: 100%;
+		.commentListUserImg{
+			image{
+					width:96upx !important;
+				height:96upx !important;
+				border-radius:50%;
+			}
+		
+	
+		}
+		.commentListMassage{
+			width: 80%;
+			padding-left: 10upx;
+			.commentListname{
+				font-size: 12px;
+				color:#333;
+				padding: 10upx 0;
+			}
+			.commentListsubname{
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				
+			}
+			.commentListind{
+				font-size: 14px;
+			}
+			.commentListzans{
+				display: flex;
+				margin-bottom: 20upx;
+				position: absolute;
+				right: 10upx;
+				.commentListzan{
+					display: flex;
+					padding: 0 20upx;
+					.btnpv{
+						padding:0 10upx;
+					}
+					image{
+						width: 29upx;
+						height: 29upx;
+					}
+					}
+			}
+			
+		}
+		.distance{
+			padding-bottom:20upx;
+		}
+		
+			.rz {
+			  width: 24rpx;
+			  height: 24rpx;
+			}
+		
+	}
+	
+	
+.commentListLeft{    
+	width: 93%;
+	padding-bottom: 20upx;
+ border-bottom: 2px solid #ececec;
+}
+.callAndShare{
+  width: 750rpx;
+height: 100%;
+ 
+  box-sizing: border-box;
+  /* padding: 0rpx 30rpx; */
+  font-size: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #F6F6F6;
+}
+.InputBox{
+	display: flex;
+	margin-top: 10upx;
+	width: 70%;
+	height: 70upx;
+		border-radius: 10upx;
+		padding-left: 10upx;
+		border: 1px solid #d8d8d8;
+		z-index: 1000;
+		background-color: #ffff;
+		margin-left: 25upx;
+	input{
+		margin-top: 10upx;
+		font-size: 14px;
+		line-height: 40px;
+}
+}
+	.commentListzan{
+					display: flex;
+					padding: 0 20upx;
+					.btnpv{
+						padding:0 10upx;
+					}
+					image{
+						width: 29upx;
+						height: 29upx;
+					}
+					}
+					._comment{
+						margin: 0 15upx;
+						}
+						.changecolor{
+							color: #b0b0b0;
+						}
+						.changecolored{
+							color: blue;
+						}

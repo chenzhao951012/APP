@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "招聘求职发布",
+  "titleNView": {
+    "buttons": [
+      {
+        "text": "求职",
+        "fontSize": "14",
+        "color": "#548ef2"
+      }
+    ]
+  }
+}

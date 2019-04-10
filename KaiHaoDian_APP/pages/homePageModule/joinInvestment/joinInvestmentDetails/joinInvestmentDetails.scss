@@ -1,0 +1,630 @@
+@mixin verMiddle {
+	display: inline-block;
+	vertical-align: middle;
+}
+@mixin widthHidden {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+@mixin box_sizing {
+	box-sizing: border-box;
+}
+$color_ff8100: #ff8100; //标记文字颜色
+
+.banner,
+.banner image {
+	width: 750upx;
+	height: 520upx;
+	font-size: 0;
+	background: #3285ff;
+}
+.pagesInfoBox{
+	position: relative;
+}
+.banner {
+	position: relative;
+	view {
+		position: absolute;
+		right: 20upx;
+		bottom: 20upx;
+		color: #fff;
+		font-size: 20upx;
+		background: rgba(200, 200, 200, 0.5);
+		padding: 0 20upx;
+		border-radius: 40upx;
+		text {
+			display: inline-block;
+			line-height: 40upx;
+		}
+		.iconfont {
+			margin-right: 6upx;
+		}
+	}
+}
+.companyInfo {
+	width: 750upx;
+	@include box_sizing;
+	padding: 20upx 30upx 0 30upx;
+	._top {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		margin: 20upx 0;
+		.company_L,
+		.company_L image {
+			width: 88upx;
+			height: 88upx;
+			font-size: 0;
+			background: #eee9e9;
+			border-radius: 50%;
+			margin-right: 20upx;
+		}
+		.company_R {
+			color: #666;
+			position: relative;
+			.iconed{
+				position:absolute;
+				right: 0upx;
+				top: 8upx;
+				color: #299dff;
+				font-size: 28upx;				
+				}
+				.iconeds{
+					position:absolute;
+					right: -40upx;
+					top: 8upx;
+					color: #299dff;
+					font-size: 24upx;				
+					}
+			.R_name {
+				
+				width: 300upx;
+				font-size: 30upx;
+				color:#000000;
+				margin-bottom: 5upx;
+				@include widthHidden;
+				font-weight: 600;
+				letter-spacing: 5upx;
+					overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				
+			}
+			.R_intro {
+				width: 320upx;
+				font-size: 22upx;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				letter-spacing: 4upx;
+				color: #6b6b6b;
+				text {
+					@include verMiddle;
+				}
+				text:first-child {
+					margin-right: 10upx;
+					max-width: 520upx;
+					@include widthHidden;
+				}
+				.iconfont {
+					color: #ff8100;
+				}
+			}
+			.R_rz {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				view {
+					margin-right: 20upx;
+					text {
+						@include verMiddle;
+					}
+					font-size: 20upx;
+					color: #ff8100;
+					.iconfont {
+						font-size: 24upx;
+						color: #3285ff;
+						margin-right: 4upx;
+					}
+				}
+			}
+		}
+	}
+	._caller {
+		display: flex;
+		padding-bottom: 15px;
+	border-bottom: 1px solid #eeeeee;
+		align-items: center;
+		margin-top: 30upx;
+		> view {
+			
+		}
+		._L {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			image {
+				width: 70upx;
+				height: 70upx;
+				font-size: 0;
+				border-radius: 50%;
+				background: #eee9e9;
+				margin-right: 20upx;
+			}
+			._more {
+				color: #666;
+				text-align: center;
+				line-height: 50upx;
+				font-size: 28upx;
+			}
+		}
+		._R {
+			text-align: right;
+			font-size: 24upx;
+			color: #666;
+			text {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.iconfont {
+				margin-left: 10upx;
+				font-size: 38upx;
+			}
+		}
+	}
+}
+.projectIntro {
+	width: 750upx;
+	border-top: 10upx solid #f3f3f3;
+	.intro_cell {
+		padding: 0 30upx;
+		height: 80upx;
+		@include box_sizing;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		> view {
+			line-height: 80upx;
+			color: #999;
+			vertical-align: middle;
+		}
+		._L {
+			width: 100upx;
+			font-size: 22upx;
+		}
+		._R {
+			width: 590upx;
+			font-size: 24upx;
+			color: #333;
+			text {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			text:first-child {
+				color: $color_ff8100;
+				margin-right: 4upx;
+				font-weight: bold;
+			}
+		}
+	}
+	.intro_cell:first-child {
+		border-bottom: 2upx solid #eee;
+		> ._R {
+			font-size: 26upx;
+		}
+	}
+	.intro_cell:nth-child(2n) {
+		background: #f5f5f5;
+	}
+	.intro_cellTwo {
+		> view {
+			width: 330upx;
+			font-size: 22upx;
+			> view {
+				display: inline-block;
+			}
+			> view:first-child {
+				width: 100upx;
+			}
+			> view:last-child {
+				font-size: 24upx;
+				color: #333;
+			}
+		}
+		._C {
+			margin-right: 4upx;
+			font-weight: bold;
+			color: $color_ff8100;
+		}
+	}
+}
+.projectDetail {
+	width: 750upx;
+	// padding: 0 30upx;
+	@include box_sizing;
+	color: #999;
+	padding-bottom: 100upx;
+	._title {
+		text-align: center;
+		font-size: 24upx;
+		line-height: 80upx;
+	}
+	._content {
+		color: #666;
+		font-size: 26upx;
+	}
+}
+.projectShow {
+	width: 750upx;
+	padding: 0 30upx 10upx;
+	@include box_sizing;
+	._title {
+		text-align: center;
+		font-size: 24upx;
+		line-height: 80upx;
+	}
+	.imgAll {
+		@include box_sizing;
+		overflow: hidden;
+		.imgAll_scroll {
+			white-space: nowrap;
+			font-size: 0;
+			image {
+				width: 210upx;
+				height: 240upx;
+				margin-right: 20upx;
+				background: #eee9e9;
+				border-radius: 8upx;
+			}
+		}
+	}
+}
+// 服务优势
+.service_top {
+	border: {
+		top: 10upx solid #eee;
+		bottom: 10upx solid #eee;
+	}
+	._title,
+	._content {
+		width: 750upx;
+		@include box_sizing;
+		padding: 0 30upx;
+	}
+	._title {
+		line-height: 80upx;
+		font-size: 28upx;
+		color: #333;
+		text-align: center;
+	}
+	._content {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		._cell {
+			width: 110upx;
+			text-align: center;
+			> image {
+				width:50upx;
+				height:50upx;
+				border-radius: 50%;
+			}
+			> view:last-child {
+				color: lightgreen;
+				font-size: 24upx;
+				color: #666;
+				line-height: 60upx;
+			}
+		}
+	}
+}
+.openStore_parent {
+	border-bottom: 10upx solid #eee;
+	._title,
+	._content {
+		width: 750upx;
+		@include box_sizing;
+		padding: 0 30upx;
+	}
+	._title {
+		line-height: 80upx;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 28upx;
+		color: #333;
+		> view:last-child {
+			text {
+				@include verMiddle;
+			}
+			text:last-child {
+				font-size: 32upx;
+			}
+		}
+	}
+	._content {
+		overflow: hidden;
+		._scroll {
+			white-space: nowrap;
+			._cell {
+				@include verMiddle;
+				width: 250upx;
+				margin: {
+					right: 20upx;
+				}
+				._logo,
+				._logo image {
+					font-size: 0;
+					width: 250upx;
+					height: 240upx;
+					background: #eee9e9;
+					border-radius: 16upx;
+				}
+				._name,
+				._intro {
+					width: 250upx;
+					font-size: 26upx;
+					color: #666;
+					@include widthHidden;
+					line-height: 40upx;
+				}
+				._intro {
+					font-size: 22upx;
+					color: #999;
+				}
+			}
+			._cell:last-child {
+				margin: {
+					right: 0;
+				}
+			}
+		}
+	}
+}
+.companyInfo{
+
+	background-color:rgba(255, 255, 255, .9);
+	position: absolute;
+	top:-160upx;
+	width: 93%;
+	left: 24upx;
+	border-radius:20upx; 
+		box-shadow: 0 2upx 20upx rgba(155, 155, 155, 0.6);
+	
+}
+.userInfo{
+	padding: 30upx 0;
+	font-size: 24upx;
+}
+.userInfoNuber{
+	color: #6b6b6b;
+	letter-spacing: 5upx;
+}
+.userInfoMsg{
+	color: #000;
+	padding-left: 5upx;
+	padding-right: 20upx;
+}
+.address{
+	line-height: 2;
+	font-size: 24upx;
+	padding-bottom: 30upx;
+	border-bottom: 1px solid #eeeeee;
+	}
+	.visitor{
+		font-size: 26upx;
+		
+		color: #858585;
+		padding-right: 20upx;
+	
+	}
+	.brand{
+		display: flex;
+		font-size: 28upx;
+		
+		
+		}
+		.projectDetail{
+			margin-top: 460upx;
+		}
+		.features{
+			display: flex;
+			flex-wrap:wrap; 
+			.featUresImgBox{
+				width: 27%;
+				padding: 20upx 20upx;
+				img{
+					width: 100%;
+					height: 215upx;
+					border-radius:40upx; 
+				}
+			}
+		}
+		.featurestitle{
+			padding: 10upx 20upx;
+			width: 200upx;
+			font-size: 24upx;
+			line-height: 2;
+			color: #000000;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.figurePeoplep{
+			display: flex;
+			flex-wrap:wrap; 
+			margin-bottom: 140upx;
+			view{
+				padding:20upx 0 0 28upx;
+				
+				border-radius:40upx; 
+				img{
+					width:333upx;
+					height: 250upx;
+					border-radius:20upx; 
+				}
+			}
+		}
+		.Aboutcompany{
+			padding: 30upx 30upx;
+		}
+		.introduction2{
+			    border-radius: 20upx;
+				padding:0upx 27upx;
+				box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
+				
+			.introduction{
+				padding:0upx 27upx;
+				padding-bottom: 40upx;
+					border-bottom:2upx solid #d2d2d2; 
+				.introductionTitle{
+			
+					text-align: center;
+					line-height: 3;
+					letter-spacing: 5upx;
+					font-size: 32upx;
+					font-weight: 600;
+					color: #000;
+				}
+				.introductionContent{
+					text-indent: 40upx;
+					font-size: 14px;
+					color: #aeaeae;
+					letter-spacing: 5upx;
+				}
+			}
+		}
+		.commentBox{
+			padding: 30upx 30upx;
+			box-sizing: border-box;
+		}
+		.commentList{
+			box-sizing: border-box;
+			 border-radius: 20upx;
+			padding:0upx 27upx;
+			box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
+		}
+		.commentListTop{
+			position: relative;
+			padding: 40upx 0;
+			.icons{
+				color: #259bfe;
+				padding-left: 10upx;
+			}
+			.position{
+				font-size: 28upx;
+				color: #747474;
+				line-height: 2;
+				font-weight: 600;
+			}
+			.userMassage{
+				padding-left: 30upx;
+			}
+			.company{
+				font-size: 24upx;
+				color: #989898;
+				font-weight: lighter;
+			}
+			display: flex;
+			.userImg{
+				width: 100upx;
+				height: 100upx;
+				
+				 img{
+					width: 100upx;
+					height: 100upx;
+					 border-radius:50%;
+				 }
+			}
+		}
+		.commentContent{
+			margin-top: 30upx;
+			font-size: 28upx;
+			letter-spacing: 5upx;
+			color: #000;
+			
+		}
+		.icond{
+			position: absolute;
+			right: 12upx;
+			top: 50upx;
+		}
+		.commentNumber{
+			color: #666666;
+			font-size: 28upx;
+			padding-left: 20upx;
+		}
+		.introduction{
+			border-bottom:2upx solid #d2d2d2; 
+		}
+		.iconecodes{
+			position: absolute;
+			right: -218upx;
+			top: -6upx;
+			font-size: 28upx;
+			color: #686868;
+			font-weight: 600;
+		}
+		.iconecoded{
+			font-size: 60upx;
+			color: #ffbd38;
+			position: absolute;
+			right: -208upx;
+			top: 46upx;	
+			
+			}
+			.bottonBottom{
+				width: 100%;
+				height: 98upx;
+				background-color: #ffbd38;
+				position: fixed;
+				bottom: 0;
+				padding: 15upx 20upx;
+				box-sizing: border-box;
+				display: flex;
+				
+			}
+		.ComentInput{
+			width: 488upx;
+			height: 70upx;
+			border-radius: 40upx;
+			background-color: #fff;
+			input{
+				padding-top: 10upx;
+				padding-left: 40upx;
+				font-size: 14px;
+			}
+			
+		}
+		.LIst{
+			display: flex;
+		}
+		.ComentImgList{
+			box-sizing: border-box;
+			display: flex;
+			justify-content: space-between;
+			img{
+				width: 65upx;
+				height: 65upx;
+				margin: 6upx 0upx 6upx 40upx;
+			}
+		}
+		.ComentImgList2{
+			box-sizing: border-box;
+			
+			padding-left: 60upx;
+				img{
+					margin-top: -12upx;
+					width: 100upx;
+					 height: 100upx;
+				}
+		}
+		.subreply{
+			
+			box-sizing: border-box;
+			color: #ffc760;
+			font-size: 28upx;
+			padding: 20upx 0;
+			font-weight:lighter;
+		}

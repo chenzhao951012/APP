@@ -1,0 +1,84 @@
+/* 公共样式 */
+._all_content{
+	font-size:28upx;
+}
+._display_flex{
+	display:flex;
+	justify-content: space-between;
+}
+/* 钱数量 */
+._money_number{
+	font-size:40upx;
+	text-align:center;
+	color: #fffeff;
+	margin-bottom: 40upx;
+}
+/* 提现按钮 */
+._withdrawal_button{
+	width:190upx;
+	height:76upx;
+	background:#DBDBDB;
+	border: 2upx solid #DBDBDB;
+	border-radius: 20upx;
+	text-align:center;
+	line-height:76upx;
+	margin:0 246upx 228upx 254upx;
+}
+/* 保证金余额 */
+._bottom_content{
+	
+}
+._arrow,._money_symbol{
+	width:48upx;
+	height:48upx;
+	text-align:center;
+	line-height:48upx;
+}
+._money_symbol{
+	margin-right:12upx;
+	font-size:48upx;
+	display:inline-block;
+	vertical-align: middle;
+}
+._margin_balance{
+	width:140upx;
+	height:40upx;
+	line-height:40upx;
+	text-align:center;
+	display:inline-block;
+}
+.wallet{
+	height: 400upx;
+	width: 100%;
+	background: url(../../../static/BgNav.png);
+	background-size:100% 400upx ;
+	padding: 100upx 0;
+	box-sizing: border-box;
+
+}
+._money_numbers{
+	font-size: 24upx;
+}
+.btnBox{
+	width:48%;
+	margin: 0 auto;
+	margin-top: 300upx;
+	
+}
+.btns1{
+		height: 80upx;
+		font-size: 28upx;
+		border-radius: 20upx;
+		margin-bottom: 40upx;
+		letter-spacing: 5upx;
+	}
+	.btns2{
+		font-size: 28upx;
+		background-color: #eeeeee;
+		border-radius: 20upx;
+		color: #333333;
+			letter-spacing: 5upx;
+	}
+	uni-button:after{
+		border: 0;
+	}

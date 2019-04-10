@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "用户详情",
+  "scrollIndicator": "none",
+  "titleNView": {
+    "buttons": [
+      {
+        "text": "",
+        "fontSrc": "/static/iconfont.ttf",
+        "fontSize": "26"
+      }
+    ]
+  }
+}

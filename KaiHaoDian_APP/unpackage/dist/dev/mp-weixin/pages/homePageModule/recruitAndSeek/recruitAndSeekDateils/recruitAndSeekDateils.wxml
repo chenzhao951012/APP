@@ -1,0 +1,2 @@
+<import src="./recruitAndSeekDateils.vue.wxml" />
+    <template is="7cd2ba70" data="{{ ...$root['0'], $root }}"/>

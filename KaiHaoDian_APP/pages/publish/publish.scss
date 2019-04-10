@@ -1,0 +1,50 @@
+@mixin box-sizing {
+	width: 750upx;
+	padding: 0 30upx;
+	box-sizing: border-box;
+}
+
+@mixin display-flex {
+	display:flex;
+	justify-content: space-between;
+}
+
+page {
+	height: 100%;
+	background: #fff;
+}
+
+/* 轮播图 */
+._swiper_ {
+	width: 750upx;
+	height: 320upx;
+	font-size: 0;
+	box-sizing:border-box;
+	margin-bottom:30upx;
+}
+
+/* 主页9个模块 */
+._moduleParent{
+	@include box-sizing;
+	@include display-flex;
+	flex-wrap: wrap;
+	margin-bottom:100upx;
+	._moduleChilds{
+		width:46%;
+		margin-bottom:30upx;
+		text-align:center;
+		color: #101010;
+		font-size: 28upx;
+		color: #ffbc39;
+		border: 2upx solid #ffbc39;
+		border-radius: 20upx;
+		>image{
+			width:100upx;
+			height:100upx;
+			margin-top:10upx;
+		}
+		._moduleText{
+			line-height: 2;
+		}
+	}
+}

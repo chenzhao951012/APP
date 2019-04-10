@@ -1,0 +1,2 @@
+<import src="./MarginBalance.vue.wxml" />
+    <template is="e41496a4" data="{{ ...$root['0'], $root }}"/>

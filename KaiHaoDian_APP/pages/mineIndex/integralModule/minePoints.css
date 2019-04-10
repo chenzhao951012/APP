@@ -1,0 +1,223 @@
+/* 公共样式 */
+.content{
+	width: 375upx;
+	
+}
+.all_content{
+	width: 100%;
+	font-size:28upx;
+	position: relative;
+}
+.viewBackground{
+	position:absolute;
+	top:0;
+	left:0;
+	width:750upx;
+	height:2826upx;
+	z-index:10;
+
+}
+
+
+.information{
+	z-index: 15;
+	position: absolute;
+	padding: 40upx 20upx;
+	width: 96%;
+	
+}
+.ImgBox{
+width:48upx;
+height:48upx;
+border-radius:50%;
+
+}
+.ImgBox img{
+	width:48upx;
+	height:48upx;
+	border-radius:50%;
+}
+.informationt-left{
+	display: flex;
+}
+.informationTop{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.informationtText{
+	font-size: 12px;
+	margin-top: 10upx;
+	margin-left: 10upx;
+}
+.informationtTexts{
+	font-size: 14px;
+	font-weight: 600;
+}
+.sign{
+	position:absolute;
+	top:342upx;
+	width:480upx;
+	height:88upx;
+	left:calc(50% - 240upx);
+	z-index:15;
+	border-radius:8upx;
+	background-color: coral;
+	text-align: center;
+	line-height: 88upx;
+	color: white;
+
+}
+.mango{
+width:112upx;
+height:140upx;
+font-size:0;
+position:absolute;
+z-index:15;
+top:1032upx;
+right:148upx;
+
+
+}
+.mango img{
+	width:112upx;
+	height:140upx;
+}
+.Tencent{
+width:112upx;
+height:140upx;
+font-size:0;
+position:absolute;
+z-index:15;
+top:666upx;
+right:148upx;
+
+
+}
+.Tencent img{
+	width:112upx;
+	height:140upx;
+}
+.Youku{
+width:112upx;
+height:140upx;
+font-size:0;
+position:absolute;
+z-index:15;
+top:666upx;
+right:492upx;
+
+
+}
+.Youku img{
+	width:112upx;
+	height:140upx;
+}
+.iQIYI{
+width:112upx;
+height:140upx;
+font-size:0;
+position:absolute;
+z-index:15;
+top:1032upx;
+right:492upx;
+
+
+}
+.iQIYI img{
+	width:112upx;
+	height:140upx;
+}
+.integral{
+	width:92upx;
+		height:92upx;
+		display:flex;
+		flex-wrap:wrap;
+		position:absolute;
+		border-radius:50%;
+		background:#fac61a;
+		z-index:16;
+		text-align:center;
+		padding:14upx 10upx;
+		box-sizing:border-box;
+		letter-spacing:2upx;
+		color: white;
+		font-size: 12px;
+
+	}
+	.Youkuintegral{
+		top: 628upx;
+		left: 244upx;
+	}
+	.Tencentintegral{
+			top: 628upx;
+			left: 584upx;
+	}
+	.iQIYIintegral{
+		top: 994upx;
+		left: 244upx;
+	}
+	.mangointegral{
+		top: 994upx;
+		left: 584upx;
+	}
+	.exchange{
+		width:224rpx;
+		height:58rpx;
+		line-height:58rpx;
+		position:absolute;
+		z-index:15;
+		
+		color:#fff;
+		letter-spacing:2rpx;
+		background:#ffb82d;
+		text-align:center;
+		overflow:hidden;
+		text-overflow:ellipsis;
+		white-space:nowrap;
+		font-size: 12px;
+
+	}
+	.box{
+		position:absolute;
+			z-index:15;
+			width:204rpx;
+			height:54rpx;
+			line-height:54rpx;
+			background:transparent;
+			color:#333;
+			font-size:28rpx;
+			text-align:center;
+			letter-spacing:2rpx;
+	}
+	.iQIYIBox{
+		top: 1280upx;
+		left: 102upx;
+	}
+	.YoukuBox{
+		top: 900upx;
+		left: 102upx;
+	}
+	.TencentBox{
+		top: 902upx;
+		left: 444upx;
+	}
+	.mangoBox{
+		top: 1280upx;
+		left: 444upx;
+	}
+	.Filesonic{
+		position:absolute;
+			z-index:15;
+			width:480rpx;
+			height:64rpx;
+			line-height:54rpx;
+			background:transparent;
+			color:#333;
+			font-size:28rpx;
+			text-align:center;
+			letter-spacing:2rpx;
+			top: 2308upx;
+			left: 136upx;
+
+	}

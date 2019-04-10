@@ -1,0 +1,2 @@
+<import src="./newShopRentalRelease.vue.wxml" />
+    <template is="c40dc700" data="{{ ...$root['0'], $root }}"/>

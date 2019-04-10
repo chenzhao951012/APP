@@ -1,0 +1,2 @@
+<import src="./locationRelease.vue.wxml" />
+    <template is="fa36bfa4" data="{{ ...$root['0'], $root }}"/>

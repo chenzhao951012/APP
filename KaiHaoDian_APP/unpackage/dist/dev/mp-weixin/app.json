@@ -1,0 +1,105 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/questionAndAnswer/questionAndAnswer",
+    "pages/questionAndAnswer/questionAndAnswerDetails/questionAndAnswerDetails",
+    "pages/index/userDateils/userDateils",
+    "pages/publish/publish",
+    "pages/contacts/contacts",
+    "pages/mineIndex/mineIndex",
+    "pages/searchPage/searchPage",
+    "pages/searchContent/searchContent",
+    "pages/homePageModule/joinInvestment/joinInvestment",
+    "pages/homePageModule/joinInvestment/publishJoin/publishJoin",
+    "pages/homePageModule/joinInvestment/joinInvestmentClassify/joinInvestmentClassify",
+    "pages/homePageModule/joinInvestment/joinInvestmentDetails/joinInvestmentDetails",
+    "pages/homePageModule/joinInvestment/joinInvestmentDetails/mineVisitor",
+    "pages/homePageModule/partnerOpenStore/partnerOpenStore",
+    "pages/homePageModule/partnerOpenStore/partnerOpenStoreDateils/partnerOpenStoreDateils",
+    "pages/homePageModule/partnerOpenStore/partnershipStoreRelease/partnershipStoreRelease",
+    "pages/homePageModule/storeMakeOver/storeMakeOver",
+    "pages/homePageModule/storeMakeOver/storeMakeOverDateils/storeMakeOverDateils",
+    "pages/homePageModule/storeMakeOver/locationRelease/locationRelease",
+    "pages/homePageModule/newStoreRental/newStoreRental",
+    "pages/homePageModule/newStoreRental/newStoreRentalDateils/newStoreRentalDateils",
+    "pages/homePageModule/newStoreRental/newShopRentalRelease/newShopRentalRelease",
+    "pages/homePageModule/recruitAndSeek/recruitAndSeek",
+    "pages/homePageModule/recruitAndSeek/recruitAndSeekDateils/recruitAndSeekDateils",
+    "pages/homePageModule/recruitAndSeek/recruitAndSeekRelease/candidate/candidate",
+    "pages/homePageModule/recruitAndSeek/recruitAndSeekRelease/recruit/recruit",
+    "pages/homePageModule/oldStoreTwoHand/oldStoreTwoHand",
+    "pages/homePageModule/oldStoreTwoHand/oldStoreTwoHandDateils/oldStoreTwoHandDateils",
+    "pages/homePageModule/oldStoreTwoHand/oldStoreTwoHandRelease/askToBuy/askToBuy",
+    "pages/homePageModule/oldStoreTwoHand/oldStoreTwoHandRelease/sale/sale",
+    "pages/homePageModule/openStoreSeekSite/openStoreSeekSite",
+    "pages/questionAndAnswer/commentsModule/viewAllComments",
+    "pages/questionAndAnswer/commentsModule/mineComments",
+    "pages/questionAndAnswer/knowledgeModule/knowledge",
+    "pages/questionAndAnswer/ideaModule/idea",
+    "pages/publish/publish",
+    "pages/contacts/contacts",
+    "pages/mineIndex/mineIndex",
+    "pages/mineIndex/focusModule/mineAttention",
+    "pages/mineIndex/FansModule/mineFans",
+    "pages/mineIndex/askQuestionsModule/mineAskQuestions",
+    "pages/mineIndex/walletModule/mineWallet",
+    "pages/mineIndex/walletModule/mineBill",
+    "pages/mineIndex/walletModule/MarginBalance",
+    "pages/mineIndex/walletModule/mineWithdrawal",
+    "pages/mineIndex/releaseModule/mineRelease",
+    "pages/mineIndex/integralModule/minePoints",
+    "pages/mineIndex/integralModule/pointExchangeRecord",
+    "pages/mineIndex/certificationModule/certificationIndex",
+    "pages/mineIndex/certificationModule/enterpriseCertification",
+    "pages/mineIndex/certificationModule/personalAuthentication"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "开好店",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "onReachBottomDistance": 50,
+    "scrollIndicator": "none"
+  },
+  "usingComponents": {},
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#007AFF",
+    "borderStyle": "black",
+    "backgroundColor": "#F8F8F8",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./static/shouyew.png",
+        "selectedIconPath": "./static/shouyexz.png"
+      },
+      {
+        "pagePath": "pages/questionAndAnswer/questionAndAnswer",
+        "text": "问答",
+        "iconPath": "./static/wendawxz.png",
+        "selectedIconPath": "./static/wendaxz.png"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发布",
+        "iconPath": "./static/fabu3.png",
+        "selectedIconPath": "./static/fabu.png"
+      },
+      {
+        "pagePath": "pages/contacts/contacts",
+        "text": "人脉",
+        "iconPath": "./static/xiaoxiwxu.png",
+        "selectedIconPath": "./static/xianxixz.png"
+      },
+      {
+        "pagePath": "pages/mineIndex/mineIndex",
+        "text": "我的",
+        "iconPath": "./static/wodewxz.png",
+        "selectedIconPath": "./static/wodexz.png"
+      }
+    ]
+  }
+}

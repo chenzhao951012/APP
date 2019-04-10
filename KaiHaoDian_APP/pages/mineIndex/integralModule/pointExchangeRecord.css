@@ -1,0 +1,18 @@
+._record{
+	padding:0 30upx;
+	box-sizing: border-box;
+}
+._record_header{
+	display:flex;
+	justify-content: space-between;
+	background:white;
+	font-size:24upx;
+	padding:20upx 0;
+	box-sizing: border-box;
+}
+._record_time{
+	margin-left:40upx;
+}
+._record_shop{
+	margin-right: 40upx;
+}

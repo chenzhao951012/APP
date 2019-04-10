@@ -1,0 +1,2 @@
+<import src="./mineAttention.vue.wxml" />
+    <template is="557eef16" data="{{ ...$root['0'], $root }}"/>

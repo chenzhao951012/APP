@@ -1,0 +1,55 @@
+/* 公共样式 */
+._all_content{
+	margin: 0 30rpx;
+	font-size:28rpx;
+}
+._display_flex{
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+/* 钱数量 */
+._money_number{
+	font-size:40rpx;
+	text-align:center;
+	margin:130rpx 280rpx 106rpx 262rpx;
+}
+/* 提现按钮 */
+._withdrawal_button{
+	width:190rpx;
+	height:76rpx;
+	background:#DBDBDB;
+	border: 2rpx solid #DBDBDB;
+	border-radius: 20rpx;
+	text-align:center;
+	line-height:76rpx;
+	margin:0 246rpx 228rpx 254rpx;
+}
+/* 保证金余额 */
+._bottom_content{
+}
+._arrow,._money_symbol{
+	width:48rpx;
+	height:48rpx;
+	text-align:center;
+	line-height:48rpx;
+}
+._money_symbol{
+	margin-right:12rpx;
+	font-size:48rpx;
+	display:inline-block;
+	vertical-align: middle;
+}
+._margin_balance{
+	width:140rpx;
+	height:40rpx;
+	line-height:40rpx;
+	text-align:center;
+	display:inline-block;
+}
+
