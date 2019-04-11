@@ -279,11 +279,12 @@
 		}
 	}
 	.Conent{
-		width: 100%;
+		width:690upx;
 		font-size:28upx;
 		color: #000;
 		font-weight: 600;
 		padding: 30upx 0;
+		box-sizing: border-box;
 			overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;

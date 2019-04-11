@@ -669,7 +669,9 @@
         }
         ,{
             "path" : "pages/mineIndex/Myorder/accomplish/accomplish",
-            "style" : {}
+            "style" : {
+				"navigationBarTitleText" : ""
+			}
         }
     ],
     /*------------------------------------------添加认证相关页面  End------------------------------------------*/
