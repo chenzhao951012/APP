@@ -1,6 +1,17 @@
 <template>
-	<view>
-		哈哈
+	<view class="content">
+		<view class="unfinished">
+			<view class="unfinished-top">
+				<view class="unfinishedBox">
+					<view class="unfinishedBox-top">
+						
+					</view>
+					<view>
+						
+					</view>
+				</view>
+			</view>
+		</view>
 	</view>
 </template>
 
