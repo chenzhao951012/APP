@@ -13,11 +13,139 @@
 			height: 400upx;
 			background-color: #ffbd38;
 			border-radius: 10upx;
-			padding: 0 20upx;
+			padding: 0 30upx;
 			box-sizing: border-box;
 			.unfinishedBox-top{
-				
+				padding: 30upx 10upx;
+				box-sizing: border-box;
+				border-bottom: 2upx solid #ffffff;
+				view:nth-child(1){
+					font-size: 28upx;
+					color: #ffffff;
+					font-weight: 600;
+					margin-bottom: 30upx;
+				}
+					view:nth-child(2){
+					font-size: 24upx;
+					color: #ffffff;
+					
+				}
 			}
+			.unfinishedBox-bottom{
+			
+				box-sizing: border-box;
+				font-size: 28upx;
+				color: #ffffff;
+				view:nth-child(1){
+					padding: 20upx 40upx;
+					box-sizing: border-box;
+					padding-bottom: 0;
+				}
+					view:nth-child(2){
+					padding: 0upx 20upx;
+					font-size: 24upx;
+					text{
+						padding-right: 90upx;
+						box-sizing: border-box;
+					}
+				}
+				.iconfonts{
+					display: inline-block;
+					font-size: 80upx;
+					color: #ffffff;
+					vertical-align: middle;
+					-webkit-transform:rotate(45deg);
+					margin: 0 10upx;
+				}
+				.iconfonts2{
+					font-size: 100upx;
+					vertical-align: middle;
+				}
+				}
 		}
 	}
 }
+//订单信息
+.productDetails{
+	width: 100%;
+	background-color: #fff;
+	padding: 0upx 20upx;
+	box-sizing: border-box;
+	border-radius: 10upx;
+	border: 2upx solid #eeeeee;
+	margin-top: 40upx;
+	.productDetailsTop{
+		display: flex;
+		justify-content: space-between;
+		
+		border-bottom: 2upx solid #eeeeee;
+		padding: 20upx 0;
+		// box-sizing: border-box;
+		view{
+			text{
+				font-size: 24upx;
+				color: #333333;
+				padding-left: 10upx;
+				font-weight: 600;
+				
+			}
+			img{
+				width: 40upx;
+				height: 60upx;
+				
+				vertical-align: middle;
+			}
+		}
+		.evaluate{
+			color: #7c7c7c;
+			font-size: 24upx;
+			line-height: 2;
+		}
+	}
+	.productDetailsCenter{
+		display: flex;
+		padding: 30upx 0;
+		box-sizing: border-box;
+		justify-content: space-between;
+		border-bottom: 2upx solid #eeeeee;
+		.CenterImgBox{
+			width: 200upx;
+			height: 200upx;
+			img{
+				width: 200upx;
+				height: 200upx;
+				border-radius: 20upx;
+			}
+		}
+		.CenterInfo{
+		padding: 48upx 0;
+			box-sizing: border-box;
+			
+			view{
+				color: #333333;
+				font-size: 24upx;
+				
+				text{
+					line-height: 2;
+					font-size: 24upx;
+					color: #333333;
+					padding-left: 20upx;
+					
+				}
+			}
+		}
+	}
+	.productDetailsBottom{
+		padding: 20upx 0;
+		font-size: 24upx;
+		color: #333333;
+		line-height: 2;
+		display: flex;
+		justify-content: space-between;
+		text{
+			padding-left: 10upx;
+		}
+		
+	}
+}
+
