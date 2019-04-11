@@ -1,6 +1,11 @@
 @mixin box_sizing {
 	box-sizing: border-box;
 }
+@mixin overflow_Es {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
 @mixin verMiddle {
 	display: inline-block;
 	vertical-align: middle;
@@ -81,7 +86,7 @@
 		position: fixed;
 		top:200upx;
 		left: 0;
-		z-index: 98;
+		z-index:800;
 		._top{
 			// width: 750upx;
 			height: 500upx;
@@ -89,6 +94,7 @@
 			padding: 0 30upx;
 			._swiper,._swiper_item,._scroll{
 				height: 500upx;
+					z-index:800;
 			}
 			._swiper_item{
 				overflow: hidden;
@@ -119,7 +125,8 @@
 		@include box_sizing;
 		box-sizing: border-box;
 		display: flex;
-	
+		position: relative;
+		margin-bottom: 20upx;
 		
 	}
 	
@@ -158,13 +165,13 @@
 			display: flex; 
 			width: 100%;
 			
-			    box-shadow: 0 5px 5px #e5e5e5;
+			    box-shadow: 0 6upx 10upx #e5e5e5;
 			border-radius: 10upx;
 			position: relative;
 			border-top: 1px solid #f4f2f3;
 			.imageBox{
 				width: 200upx;
-				height: 200upx;
+				height: 230upx;
 				position: absolute;
 				top: -64upx;
 				left: -26upx;
@@ -183,8 +190,8 @@
 					  overflow: hidden;
 					  text-overflow: ellipsis;
 					  display: -webkit-box;
-					  -webkit-line-clamp: 2;
-					  line-clamp: 2;
+					  -webkit-line-clamp: 3;
+					  line-clamp: 3;
 					  -webkit-box-orient: vertical;
 					  letter-spacing: 5upx;
 				}
@@ -227,6 +234,7 @@
 	  box-sizing: border-box;
 	  background: #fff;
 	 	display: flex;
+		margin-bottom: 20upx;
 	}
 	.transfers{
 		display: flex;
@@ -449,6 +457,7 @@
 		padding: 30upx 30upx 5upx 30upx;
 		box-sizing: border-box;
 		background-color: #fff;
+		position: relative;
 		.inviteox{
 			box-sizing: border-box;
 			width: 100%;
@@ -550,6 +559,7 @@
 	  justify-content: space-between;
 	  flex-wrap: wrap;
 	  .cell {
+			position: relative;
 	    width: 354upx;
 	    /* height: 524upx; */
 	    padding: 14upx;
@@ -644,8 +654,6 @@
 	  }
 	  .cellUserInfo-locationOrTime{
 	   
-	   
-	   
 	    color: #999;
 	    padding: 0;
 	  }
@@ -684,12 +692,6 @@
 	    text-align: right;
 	    font-size: 24upx;
 	  }
-	  // .hidden {
-	  //   overflow: hidden;
-	  //   text-overflow: ellipsis;
-	  //   white-space: nowrap;
-	  // }
-	  /* end */
 	  .MassageBoxs{
 	  	border: 2upx solid #eeeeee;
 	  	  width: 324upx;
@@ -716,12 +718,154 @@
 	}
 	
 	.iconfonted{
-		margin-left: -20upx;
-		margin-top: 110upx;
-		z-index: 200;
-		margin-right: 50upx;
+		color: #feb00f;
+		position: absolute;
+		bottom: -5upx;
+		right:30upx;
+		z-index: 500;
 	}
 	.iconfonted2{
-		margin-top: 290upx;
-		margin-left: 0;
+		position: absolute;
+		right:30upx;
+		bottom: -20upx;
+	}
+	//旺铺转让
+	.project_cell {
+		width: 690upx;
+		background: #fff;
+		border-radius: 16upx;
+		// box-shadow: 0 2upx 20upx rgba(155, 155, 155, 0.3);
+		margin: 0 auto;
+		position: relative;
+		margin: {
+			top: 30upx;
+		}
+		.cell_top,
+		.cell_top > image {
+			width: 690upx;
+			height: 394upx;
+			font-size: 0;
+		}
+		.cell_top {
+			position: relative;
+			image {
+				background: lightblue;
+				border-radius: 10upx;
+			}
+			.cell_top_bottom {
+				width: 690upx;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				background: rgba(20, 23, 16, 0.4);
+			
+				>view {
+					text-indent: 22upx;
+					line-height: 80upx;
+					color: #fff;
+					font-size: 32upx;
+					font-weight: 600;
+					letter-spacing:5upx;
+					padding: {
+						left: 20upx;
+					}
+				}
+				>view:last-child {
+					padding: {
+						left: 0;
+						right: 20upx;
+					}
+					.iconfont {
+						margin-right: 10upx;
+					}
+				}
+			}
+		}
+		.cell_bottom {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20upx 0;
+			border: 1px solid #e9e9e9;
+			border-top: 0;
+			border-radius: 0 0 20upx 20upx ;
+			._left{
+				width: 500upx;
+				box-sizing: border-box;
+				>view{
+					padding:{
+						left: 20upx;
+					}
+				}
+				._name{
+					width: 450upx;
+					line-height: 50upx;
+					font-size: 30upx;
+					color: #333;
+					@include overflow_Es;
+				}
+				._age{
+					font-size: 26upx;
+					color: #999;
+					display: flex;
+					align-items: center;
+					text{
+						max-width: 230upx;
+						line-height: 50upx;
+						display: inline-block;
+						@include overflow_Es;
+					}
+					text:first-child{
+						margin-right: 20upx;
+					}
+				}
+			}
+			._lineCss{
+				padding: 10upx 20upx;
+				font-size: 28upx;
+				color: #191919;
+				border: 1px solid #e5e5e5;
+				margin-right: 30upx;
+				border-radius: 100upx;
+				position: absolute;
+				right: 10upx;
+			}
+			._priceParent{
+				width: 180upx;
+				text-align: center;
+				>view{
+					line-height: 50upx;
+				}
+				._priceTop{
+					font-size: 30upx;
+					color: #333;
+				}
+				._price{
+					font-size: 26upx;
+					color: #ff8100;
+				}
+			}
+		}
+	}
+	.iconfonted3{
+		position: absolute;
+		right: 36upx;
+		bottom: 36upx;
+		    color: #feb00f;
+	}
+	.iconfonted4{
+		position: absolute;
+		right: 36upx;
+		bottom:5upx;
+		  color: #feb00f;
+	}
+	.iconfonted6{
+		position: absolute;
+		bottom: 5upx;
+		right: 10upx;
+		color: #ffbd3a;
 	}

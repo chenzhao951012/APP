@@ -32,9 +32,34 @@
 			</view>
 			<view class="_mask" @click="closeTabsMask"></view>
 		</view>
+		<!-- 招商加盟 -->
+					<view class="project_cell" v-for="(item,index) in list3" @click="toJoinInvestmentDetails(index,item.id)">
+						<text class="iconfont iconfonted6" v-if="isShow" @click.stop="removeJoin">&#xe68e;</text>
+			<view class="cell_top">
+				<image :src="item.logo" mode=""></image>
+				<view class="cell_top_bottom">
+					<view class="">{{item.brands}}</view>
+		
+				</view>
+			</view>
+			<view class="cell_bottom">
+				<view class="_left">
+					<view class="_name">
+						<text><text class="tese">加盟特色:</text><text></text><text class="times">品牌年龄{{item.storeage}}年</text></text>
+					</view>
+					<view class="_name">
+						<text><text class="tese">加盟费:</text><text></text><text class="times2">{{item.initialfee}}元</text></text>
+					</view>
+				</view>
+				<view class="_lineCss">
+					地址{{item.cityvalue}}
+				</view>
+				
+			</view>
+		</view>
 		<!-- 合伙开店列表 -->
 			<view class="partner_List" @click="toPartnerOpenStoreDateils(item.id,item.readnum)" v-for="(item,idx) in list4" :key="idx" v-if="sort2">
-			<text class="iconfont iconfonted" v-if="isShow">&#xe731;</text>
+			<text class="iconfont iconfonted" v-if="isShow" @click.stop="removeProject(idx,item.id,item.projectType)">&#xe68e;</text>
 			<view class="sectionBody">
 				<view class="sectionBodt">
 					{{item.title}}
@@ -59,7 +84,7 @@
 			<view class="" style="margin-top: 40upx;" v-if="sort3">
 					<view class='transfer'>
 				  <view class='transfer_listd' v-for="(item, index) in list1" :key="index" @click="toStoreMakeOverDateils(item.id)">
-						<text class="iconfont iconfonted iconfonted2" v-if="isShow">&#xe731;</text>
+						<text class="iconfont iconfonted iconfonted2" v-if="isShow" @click.stop="removeProject(index,item.id,item.projectType)">&#xe68e;</text>
 						<view class="">
 							 <view class="transfers">
 							 	<view class="transfer-left">
@@ -117,6 +142,7 @@
 			<!-- 新铺租售 -->
 				<view class='transfer' v-if="sort4">
 			  <view class='transfer_list' v-for="(item, index) in list2" :key="index" @click="toNewStoreRentalDateils(item.id)">
+						<text class="iconfont iconfonted3" v-if="isShow" @click.stop="removeProject(index,item.id,item.projectType)">&#xe68e;</text>
 					<view class="transferInfo">
 						<view class="transferConnent">
 							<view class="MassageBox">
@@ -145,6 +171,7 @@
 			</view>
 			<!-- 招聘 -->
 			<view class="JobBox" v-for="(item,index) in list5"  @click="toRecruitAndSeekDateils(item.id)" v-if="sort5">
+				<text class="iconfont iconfonted4" v-if="isShow" @click.stop="removeProject(index,item.id,item.projectType)">&#xe68e;</text>
 				<view class="inviteox">
 					<view class="subinviteox">
 						<view class="inviteoxLeft">
@@ -182,6 +209,7 @@
 			<!-- 老店二手 -->
 					<view class='cellParent'>
 							  <view class='cell' v-for="(item, index) in list6" :key="index" @click="toOldStoreTwoHandDateils(item.id)" v-if="sort6">
+									<text class="iconfont iconfonted4" v-if="isShow" @click.stop="removeProject(index,item.id,item.projectType)">&#xe68e;</text>
 								<view class='cellTop' v-if="item.portrait !== '' ? true : false ">
 								 <image src='http://39.104.48.81:8088/shop_file/img/20190212/1549952068215040398.png' ></image>
 								</view>
@@ -309,13 +337,39 @@
 			 	_this.getList4()
 					_this.getList1()
 			_this.getList5()
+			_this.getList3()
 		},
 		//原生导航事件 // 编辑
 	 onNavigationBarButtonTap() {  
-						console.log("导航事件")
+					this.isShow=!this.isShow
 				},
 		methods:{
-				
+				//招商加盟删除
+				removeJoin(index,id){
+					alert(12)
+// 					var that=this
+// 						  uni.showModal({
+// 					title: '',
+// 					content: '确认删除这条发布',
+// 					confirmColor:"#ffc140",
+// 						success: res => {
+// 						  if (res.confirm == true) {
+// 							uni.request({
+// 							  url: shoppublic.getUrl() + '/personalcenter/deleteProjectJoin',
+// 							  data: {
+// 								id: id,
+// 								token:that.token
+// 							  },
+// 							  success: (res) => {
+// 								list.splice(index, 1)
+// 								  _this.list=list
+// 							  }
+// 							})
+// 						  }
+// 							}
+// 					  })
+					},
+					
 					//类型选择
 					selenav(id,index){
 						var that=this
@@ -434,7 +488,7 @@
 						  _this.list=list
 						
 						if (e_projectType === '1') { //旺铺转让
-						  wx.request({
+						  uni.request({
 							url: shoppublic.getUrl() + '/personalcenter/findlistOldShopTransfer',
 							data: {
 							  id: id,
@@ -448,7 +502,7 @@
 							}
 						  })
 						} else if (e_projectType === '2') { //新铺租售
-						  wx.request({
+						  uni.request({
 							url: shoppublic.getUrl() + '/personalcenter/updateNewShopRentState',
 							data: {
 							  id: id,
@@ -462,7 +516,7 @@
 							}
 						  })
 						} else if (e_projectType === '3') { //项目加盟
-						  wx.request({
+						  uni.request({
 							url: shoppublic.getUrl() + '/personalcenter/updateProjectJoinState',
 							data: {
 							  id: id,
@@ -476,7 +530,7 @@
 							}
 						  })
 						} else if (e_projectType === '4') { // 合伙开店
-						  wx.request({
+						  uni.request({
 							url: shoppublic.getUrl() + '/personalcenter/updatePartnershipShopState',
 							data: {
 							  id: id,
@@ -491,7 +545,7 @@
 						  })
 						} else if (e_projectType === '5') { // 招聘求职
 
-						  wx.request({
+						  uni.request({
 							url: shoppublic.getUrl() + '/personalcenter/updateStoreRecruitmentState',
 							data: {
 							  id: id,
@@ -505,7 +559,7 @@
 							}
 						  })
 						} else if (e_projectType === '6') { //老店二手
-						  wx.request({
+						  uni.request({
 							url: shoppublic.getUrl() + '/personalcenter/updateStoreRecruitmentState',
 							data: {
 							  id: id,
@@ -526,13 +580,15 @@
 						var _this=this
 						var that=this
 							if (e_projectType === '1') { //旺铺转让删除
-							  wx.showModal({
-								title: '删除提示',
-								content: '是否确认删除',
+								
+						  uni.showModal({
+								title: '',
+								content: '确认删除这条发布',
+								confirmColor:"#ffc140",
 								success: res => {
 								  console.log(res);
 								  if (res.confirm == true) {
-									wx.request({
+									uni.request({
 									  url: shoppublic.getUrl() + '/personalcenter/deleteOldShopTransfer',
 									  data: {
 										id: id,
@@ -549,12 +605,13 @@
 								}
 							  })
 							} else if (e_projectType === '2') { //新铺租售删除
-							  wx.showModal({
-								title: '删除提示',
-								content: '是否确认删除',
+						  uni.showModal({
+							title: '',
+							content: '确认删除这条发布',
+							confirmColor:"#ffc140",
 								success: res => {
 								  if (res.confirm == true) {
-									wx.request({
+									uni.request({
 									  url: shoppublic.getUrl() + '/personalcenter/deleteNewShopRent',
 									  data: {
 										id: id,
@@ -569,52 +626,36 @@
 								}
 							  })
 							} else if (e_projectType === '3') { //项目加盟删除
-							  wx.showModal({
-								title: '删除提示',
-								content: '是否确认删除',
-								success: res => {
-								  if (res.confirm == true) {
-									wx.request({
-									  url: shoppublic.getUrl() + '/personalcenter/deleteProjectJoin',
-									  data: {
-										id: id,
-										token:that.token
-									  },
-									  success: (res) => {
-										list.splice(index, 1)
-										  _this.list=list
-									  }
-									})
-								  }
-								}
-							  })
+					
 							} else if (e_projectType === '4') { //合伙开店删除
-							  wx.showModal({
-								title: '删除提示',
-								content: '是否确认删除',
+							  uni.showModal({
+								title: '',
+								content: '确认删除这条发布',
+								confirmColor:"#ffc140",
 								success: res => {
 								  if (res.confirm == true) {
-									wx.request({
+									uni.request({
 									  url: shoppublic.getUrl() + '/personalcenter/deletePartnershipShop',
 									  data: {
 										id: id,
 										token:that.token
 									  },
 									  success: (res) => {
-										list.splice(index, 1)
-										  _this.list=list
+										list4.splice(index, 1)
+										  _this.list4=list
 									  }
 									})
 								  }
 								}
 							  })
 							} else if (e_projectType === '5') { //招聘求职删除
-							  wx.showModal({
-								title: '删除提示',
-								content: '是否确认删除',
+						  uni.showModal({
+							title: '',
+							content: '确认删除这条发布',
+							confirmColor:"#ffc140",
 								success: res => {
 								  if (res.confirm == true) {
-									wx.request({
+									uni.request({
 									  url: shoppublic.getUrl() + '/personalcenter/deleteStoreRecruitment',
 									  data: {
 										id: id,
@@ -622,19 +663,20 @@
 									  },
 									  success: (res) => {
 										list.splice(index, 1)
-										  _this.list=list
+										  _this.list=_this.list
 									  }
 									})
 								  }
 								}
 							  })
 							} else if (e_projectType === '6') { //老店二手删除
-							  wx.showModal({
-								title: '删除提示',
-								content: '是否确认删除',
+							  uni.showModal({
+								title: '',
+								content: '确认删除这条发布',
+								confirmColor:"#ffc140",
 								success: res => {
 								  if (res.confirm == true) {
-									wx.request({
+									uni.request({
 									  url: shoppublic.getUrl() + '/personalcenter/deleteSecondHandItem',
 									  data: {
 										id: id,
@@ -685,7 +727,7 @@
 				   // 新铺租售
 				  				  getList2() {
 				  					let that = this;
-				  					wx.request({
+				  					uni.request({
 				  					  url: shoppublic.getUrl() + '/personalcenter/findlistNewShopRent',
 				  					  data: {
 				  						token:that.token
@@ -713,10 +755,34 @@
 												url:"../../homePageModule/newStoreRental/newStoreRentalDateils/newStoreRentalDateils?id=" + id
 											})
 										},
+					// 项目加盟
+					 getList3() {
+								let that = this;
+								uni.request({
+									url: shoppublic.getUrl() + '/personalcenter/findlistProjectJoin',
+									data: {
+										token: 13067
+									},
+									header: {
+										'content-type': 'application/json' // 默认值
+									},
+									success: function(res) {
+										console.log(res)
+									
+											that.list3=res.data.responseBody								
+									},
+								})
+							},
+									// 跳转项目详情
+										toJoinInvestmentDetails(index,id){
+												uni.navigateTo({
+														url:'../../homePageModule/joinInvestment/joinInvestmentDetails/joinInvestmentDetails?key=' + index + '&id=' + id
+													})
+												},
 			//合伙开店
 			  getList4() {
 						let that = this;
-						wx.request({
+						uni.request({
 						  url: shoppublic.getUrl() + '/personalcenter/findlistPartnershipShop',
 						  data: {
 							token:that.token
@@ -754,7 +820,7 @@
 					    // 招聘求职
 					  getList5() {
 						let that = this;
-						wx.request({
+						uni.request({
 						  url: shoppublic.getUrl() + '/personalcenter/findlistStoreRecruitment',
 						  data: {
 							token: that.token
@@ -792,7 +858,7 @@
 					  //老店二手
 					    getList6() {
 							let that = this;
-							wx.request({
+							uni.request({
 							  url: shoppublic.getUrl() + '/personalcenter/findlistSecondHandItem',
 							  data: {
 								token: that.token
