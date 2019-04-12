@@ -16,6 +16,7 @@
 			return {
 				token:14651,
 				suggest:"",
+				
 			};
 		},
 		methods:{
@@ -36,11 +37,13 @@
 						token:_this.token,
 					  },
 					  success: function (res) {
+							var ress=res
+							console.log(res)
 						uni.showModal({
 						  title: '反馈成功',
 						  content: '返回个人中心',
 						  success: function (res) {
-							if (res.data.status == 1) {
+							if (ress.data.status == '1') {
 							  uni.switchTab({
 								url: '../../mineIndex',
 							  })

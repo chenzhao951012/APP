@@ -64,7 +64,7 @@
 				<view class="release_info" @click="switchStyle('3')">全国人脉<view :class="blockMessage ? '_border' : ''"></view></view>
 			</view>
 			<view :class="blockRelease ? '_release_swiper' : 'display_none'">
-				<view class="_info_cell" v-for="(items,index) in contactsInfoList" :key="index">
+				<view class="_info_cell" v-for="(items,index) in contactsInfoList" :key="index" @touchend="gotalk(items.tokenid,items.touid,items.portrait,items.name,items.type,user.portrait,token)">
 						<view class="question">
 							<view class="questionLift">
 									<view class="questionUser">
@@ -107,7 +107,7 @@
 										</view>
 									</view>
 							</view>
-							<view class="questionRight" @click="submitCrad(item.id,item.type,item.name,item.position,item.company,item.mainbusiness)" v-if="item.id != user.id && item.readstatus != '002' ">
+							<view class="questionRight" @click="submitCrad(item.id,item.type,item.name,item.position,item.company,item.mainbusiness,item.portrait)" v-if="item.id != user.id && item.readstatus != '002' " >
 								递交名片
 							</view>
 							<view class="questionRight" v-if="item.id != user.id && item.readstatus == '002' ">
@@ -135,7 +135,7 @@
 									</view>
 								</view>
 						</view>
-						<view class="questionRight" @click="submitCrad(itemed.id,itemed.type,itemed.name,itemed.position,itemed.company,itemed.mainbusiness)" v-if="itemed.readstatus ==null ">
+						<view class="questionRight" @click="submitCrad(itemed.id,itemed.type,itemed.name,itemed.position,itemed.company,itemed.mainbusiness,itemed.portrait)" v-if="itemed.readstatus ==null ">
 							递交名片
 						</view>
 						<view class="questionRight" v-if="itemed.readstatus == '002' ">
@@ -184,7 +184,7 @@
 				list2:"",
 				commentlist:[],
 				pinglunnull:true,
-				token:6239,
+				token:3605,
 				imglist:[],
 				imageUrl:shoppublic.getImageUrl(),
 				shareTitle:"",
@@ -210,7 +210,7 @@
 		onLoad(option) {
 			
 			var that=this
-			 that.onloadUserInfo(6239) 
+			 that.onloadUserInfo(3605) 
 			setTimeout(()=>{
 				if(that.commentlist.length>0){
 					that.isshowBox=true
@@ -229,6 +229,13 @@
 		},
 	
 		methods:{
+			// 去聊天界面
+			gotalk(tokenid,touid,portrait,name,type,myportrait,mytoken){
+				console.log(name)
+					wx.navigateTo({
+					  url: '../talk/talk?tokenid=' + tokenid + '&portrait=' + portrait + '&name=' + name+ '&touid=' + touid + '&myportrait=' + myportrait + '&type=' + type + '&mytoken=' + mytoken,
+    })
+			},
 			//更新全国人脉
 			nationwide(){
 				 this.getAllContacts()
@@ -240,7 +247,7 @@
 					  url: shoppublic.getUrl() + 'mine/qryPeopleLocal',
 					  data: {
 						city_id: '',
-						uid: 6239
+						uid: 3605
 					  },
 					  success: res => {
 						  console.log(res)
@@ -255,7 +262,7 @@
 					uni.request({
 					  url: shoppublic.getUrl() + '/chat/qryNeedHouse',
 					  data: {
-						uid: 6239
+						uid: 3605
 					  },
 					  success: res => {
 						  console.log(res)
@@ -264,7 +271,8 @@
 					})
 				  },
 			// 递交名片
-			  submitCrad(id,type,name,position,company,mainbusiness) {
+			  submitCrad(id,type,name,position,company,mainbusiness,tokenid,portrait) {
+				  var that=this
 						let data = {
 						  name: name,
 						  position: position,
@@ -272,25 +280,24 @@
 						  mainbusiness:mainbusiness
 						}
 						if (type === '1' || type === '2') {
-						  wx.request({
+						  uni.request({
 							url: shoppublic.getUrl() + '/chat/createHouse',
 							data: {
-							  uid: 14651, //自己id
+							  uid: 3605, //自己id
 							  touid: id, //对方id
 							  tocradinfo: JSON.stringify(data) + '_cardInfo' //名片信息
 							},
 							success: res => {
+								console.log(id)
 							  console.log(res);
 							  if (res.data.responseBody) {
-								// 跳转即时通讯
-// 								wx.navigateTo({
-// 								  url: '../../kai_mine/pages/mineInfo/mineInfo?roomNum=' + res.data.responseBody + '&touid=' + e_UserId + '&portrait=' + e_portrait + '&myportrait=' + e_myportrait + '&type=' + e_type,
-// 								})
+								  var res=res.data.responseBody
+								that.gotalk(res,id,portrait,name,type,that.user.portrait,that.token)
 							  }
 							}
 						  })
 						} else {
-						  wx.showToast({
+						  uni.showToast({
 							title: '您还未认证哦~两秒后自动转到认证',
 							icon: 'none',
 							duration: 2000
@@ -301,7 +308,7 @@
 							})
 						  }, 2000)
 						}
-
+							
 					  },
 			// 换一批
 			changeContacts(){
@@ -314,7 +321,7 @@
 					url: shoppublic.getUrl() + 'mine/qryPeopleLocal',
 					data: {
 					  city_id:610100,
-					  uid: 132
+					  uid: 3605
 					},
 					success: res => {
 					
@@ -389,7 +396,7 @@
 					  url: shoppublic.getUrl() + '/sysuserdetail/findQuestionsList',
 					  data: {
 						uid: userid,
-						token: 6239
+						token: 3605
 					  },
 					  success: function(res) {
 							
