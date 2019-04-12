@@ -184,7 +184,7 @@
 				list2:"",
 				commentlist:[],
 				pinglunnull:true,
-				token:14651,
+				token:6239,
 				imglist:[],
 				imageUrl:shoppublic.getImageUrl(),
 				shareTitle:"",
@@ -210,7 +210,7 @@
 		onLoad(option) {
 			
 			var that=this
-			 that.onloadUserInfo(14651) 
+			 that.onloadUserInfo(6239) 
 			setTimeout(()=>{
 				if(that.commentlist.length>0){
 					that.isshowBox=true
