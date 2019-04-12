@@ -387,11 +387,7 @@ export default {
 				url = '../homePageModule/openStoreSeekSite/openStoreSeekSite'
 			}
 			if(index === 7){
-				uni.showToast({
-					title:'暂未开放,敬请期待',
-					icon:'none',
-					duration:2000
-				})
+				url = '../homePageModule/Newpreparation/Newpreparation'
 			}
 			if(url){
 				uni.navigateTo({

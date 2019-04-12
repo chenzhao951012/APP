@@ -60,9 +60,9 @@
 				myImg:'',
 				id:'',
 				touid:'',
-				tokenid:'05d376ee177144d4873e35f3527d536a',
+				tokenid:'',
 				allContentList:'',
-				token:14651
+				token:''
 			};
 		},
 		onUnload() {
@@ -79,7 +79,7 @@
 			this.friendImg=option.portrait
 			this.id=option.mytoken
 			this.touid=option.touid.toString()
-			// this.tokenid=option.tokenid
+			this.tokenid=option.tokenid
 			});
 			let allTow = new Promise((resolve) => {
 			  _this.getChatInfo();
@@ -217,9 +217,9 @@
 				uni.request({
 				  url: shoppublic.getUrl() + '/chat/qryHistoryMessage',
 				  data: {
-					uid:_this.token,
+					uid:_this.id,
 					touid:_this.touid,
-					tokenid: '05d376ee177144d4873e35f3527d536a'
+					tokenid: _this.tokenid
 				  },
 				  success: res => {
 					console.log(res);

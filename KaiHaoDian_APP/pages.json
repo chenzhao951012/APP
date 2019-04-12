@@ -677,6 +677,12 @@
             "path" : "pages/talk/talk",
             "style" : {}
         }
+        ,{
+            "path" : "pages/homePageModule/Newpreparation/Newpreparation",
+            "style" : {
+				"navigationBarTitleText" : "新店筹备"
+			}
+        }
     ],
     /*------------------------------------------添加认证相关页面  End------------------------------------------*/
     "globalStyle" : {
