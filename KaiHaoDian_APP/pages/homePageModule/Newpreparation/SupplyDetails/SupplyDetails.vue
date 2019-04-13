@@ -10,14 +10,19 @@
 					</view>
 					<view class="header-right">
 						<view class="subLeft">
-							<view>
+							<view class="top">
 								嘿哈
-									<text  class="iconfont">&#xe692;</text>
-								<text></text>
+								<text  class="iconfont">&#xe61c;</text>
+								<text  class="iconfont iconfont2">&#xe6bc;</text>
 							</view>
-							<view>
-								<text></text>
-								<text></text>
+							<view class="bottom">
+								<view class="">
+									<text class="iconfont">&#xe6ed;</text>
+								</view>
+								<view class="">
+									<text>不可避免的会使用到各种各样的小图标 很多童鞋还是在用的时候去各种网站</text>
+								</view>
+								
 							</view>
 						</view>
 						<view  class="subright"></view>

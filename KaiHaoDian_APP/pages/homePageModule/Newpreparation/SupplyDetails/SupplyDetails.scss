@@ -13,6 +13,8 @@
 		.SupplyBox-header{
 			padding: 20upx 0;
 			box-sizing: border-box;
+			display: flex;
+			justify-content: space-between;
 			.header-left{
 				img{
 					width: 150upx;
@@ -21,7 +23,29 @@
 				}
 			}
 			.header-right{
-				
+				.subLeft{
+					font-size: 28upx;
+					font-weight: 600;
+					color: #333333;
+					letter-spacing: 5upx;
+					.top{
+						.iconfont{
+							padding-left: 20upx;
+							font-weight: 100;
+							font-size: 28upx;
+							color:#259bfe;
+							letter-spacing: 0;
+							
+						}
+						.iconfont2{
+							font-size: 32upx;
+							font-weight: 600;
+						}
+					}
+					.bottom{
+						
+					}
+				}
 			}
 		}
 	}
