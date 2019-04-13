@@ -26,8 +26,40 @@
 			<view><img src="../../../static/sectionRight.jpg" alt=""></view>
 		</view>
 		<!-- 商城消息 -->
-		<view class="Mallnews">
-			
+		<view class="MallnewsConnent">
+			<view class="MallnewsConnent">
+				<view><text class="iconfont">&#xe693;</text></view>
+				<view>
+					 <swiper class="swiper"  circular='true' vertical='true' :autoplay="autoplay" :interval="interval" :duration="duration">
+                        <swiper-item v-for="(item,index) in News" :key='index'> 
+                            <view class="news">{{item}}</view>
+                        </swiper-item>
+                    
+                    </swiper>
+				</view>
+			</view>
+		</view>
+		<!-- //供应商推荐 -->
+		<view class="recommend">
+			<view class="recommend-top">
+				<view>供应商推荐</view>
+				<view  class="iconfont">更多推荐 &#xe616;</view>
+			</view>
+			<view class="recommend-body">
+				<view class="title">
+					<text>所有花材新鲜,配送直达</text>
+				</view>
+				<view class="connent">
+					<view class="subconnent">
+						<view class="aderss">
+							<view></view>
+							<view class="">
+								<view></view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
 		</view>
 	</view>
 </template>
@@ -45,7 +77,11 @@ export default {
 	},
     data() {
         return {
-			
+			News:['谁是傻子','他','她'],
+            indicatorDots: true,
+            autoplay: true,
+            interval: 2000,
+            duration: 500,
 			swiperList:[//轮播图列表
 				{
 					url:'/images/Ban_zhaoshang2.jpeg'
@@ -71,10 +107,10 @@ export default {
 					{ name: '工服定制' },
 					{ name: '绿植花卉' }
                 ],
-				TabCur:0,
+			TabCur:0,
             current: 0,
             mode: 'long',
-			autoplay: true,
+		
         }
     },
 	   computed: {

@@ -18,7 +18,7 @@
         @tap="tabSelect(index)"
       >
         <text :class="item.icon"></text>
-        <span style='font-size: 24upx;'>{{item.name}}</span>
+        <span style='font-size: 28upx;'>{{item.name}}</span>
       </div>
     </div>
 
