@@ -9,4 +9,26 @@
 	}
 .tabConter{
 	padding: 0 30upx;
+	box-sizing: border-box;
+	padding-bottom: 4upx;
+	box-shadow: 0 8upx 10px -6px #e9e9eb;  
+	border-radius: 0 0 10upx 10upx;
+	background-color: #fff;
+}
+	// <!-- 供应商渠道 -->
+.section{
+	padding: 30upx 15upx;
+	box-sizing: border-box;
+	justify-content: space-between;
+	display:flex;
+	view{
+		width: 49.5%;
+		img{
+			width: 100%;
+			height: 236upx;
+		}
+	}
+}
+page{
+	background-color: #fbfcff;
 }

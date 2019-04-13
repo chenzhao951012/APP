@@ -7,10 +7,9 @@
                 <img :src="imageUrl + item.url" alt="">
             </view>
         </swiper-item>
-	
-	
     </swiper>
 </Swiperdot>
+<!-- 选项卡 -->
 	<view class="tabConter">
 				<tabControl 
 					:tab-list="tabList"
@@ -20,6 +19,15 @@
 			        select-class="text-green"
 			        @chags="tabChange">
 			</tabControl>
+		</view>
+		<!-- 供应商渠道 -->
+		<view class="section">
+			<view><img src="../../../static/sectionLeft.jpg" alt=""></view>
+			<view><img src="../../../static/sectionRight.jpg" alt=""></view>
+		</view>
+		<!-- 商城消息 -->
+		<view class="Mallnews">
+			
 		</view>
 	</view>
 </template>
@@ -52,14 +60,16 @@ export default {
 			imageUrl:imageUrl,
       
 			  tabList: [
-                    { name: '选项卡一' },
-                    { name: '选项卡二' },
-                    { name: '选项卡三' },
-                    { name: '选项卡四' },
-                    { name: '选项卡五' },
-                    { name: '选项卡六' },
-                    { name: '选项卡七' },
-                    { name: '选项卡八' }
+                    { name: '首页' },
+                    { name: '店铺装修' },
+                    { name: '绿植花卉' },
+                    { name: '桌椅货架' },
+                    { name: '图文印刷' },
+                    { name: '财税商标' },
+                    { name: '厨房设备' },
+                    { name: '营销庆典' },
+					{ name: '工服定制' },
+					{ name: '绿植花卉' }
                 ],
 				TabCur:0,
             current: 0,
