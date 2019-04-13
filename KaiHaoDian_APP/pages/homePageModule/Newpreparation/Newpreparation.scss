@@ -65,6 +65,7 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 30upx 0;
+		padding-bottom: 0;
 		box-sizing: border-box;
 		view:nth-child(1){
 			font-size: 28upx;
@@ -77,16 +78,17 @@
 		}
 	}
 	.recommend-body{
+		margin-top: 30upx;
 		.title{
-			width:100%;
-			text-align: right;
+			width:60%;
+		
 			font-size: 28upx;
 			font-weight: 600;
 			padding-bottom: 20upx;
 			 overflow:hidden;
 			text-overflow:ellipsis;
 			white-space:nowrap;
-			
+			margin-left:35%;
 			text{
 					padding-right: 88upx;
 					box-sizing: border-box;
@@ -170,6 +172,7 @@
 					box-sizing: border-box;
 					border-radius:0 0 20upx 20upx; 
 					color: #8e8e8e;
+					height: 152upx;
 				}
 			}
 			.ImgBox{
@@ -184,6 +187,9 @@
 			}
 		}
 	}
+}
+.recommend2{
+	background-color: #fff;
 }
 page{
 	background-color: #fbfcff;

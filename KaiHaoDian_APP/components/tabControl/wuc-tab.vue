@@ -15,7 +15,7 @@
         v-for="(item,index) in tabList"
         :key="index"
         :id="index"
-        @tap="tabSelect(index)"
+        @tap="tabSelect(index,item.id)"
       >
         <text :class="item.icon"></text>
         <span style='font-size: 28upx;'>{{item.name}}</span>
@@ -29,7 +29,7 @@
         v-for="(item,index) in tabList"
         :key="index"
         :id="index"
-        @tap="tabSelect(index,$event)"
+        @tap="tabSelect(index,item.id)"
       >
         <text :class="item.icon"></text>
         <span>{{item.name}}</span>
@@ -84,7 +84,7 @@ export default {
   methods: {
     tabSelect(index) {
       if (this.currentTab === index) return false;
-     
+   
       this.$emit("chags", index);
     }
   },
