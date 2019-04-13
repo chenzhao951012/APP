@@ -22,8 +22,8 @@
 		</view>
 		<!-- 供应商渠道 -->
 		<view class="section" v-if="isShow">
-			<view><img src="../../../static/sectionLeft.jpg" alt=""></view>
-			<view><img src="../../../static/sectionRight.jpg" alt=""></view>
+			<view @click="Supplychannels(1)"><img src="../../../static/sectionLeft.jpg" alt=""></view>
+			<view @click="Supplychannels(2)"><img src="../../../static/sectionRight.jpg" alt=""></view>
 		</view>
 		<!-- 商城消息 -->
 		<view class="MallnewsConnent" v-if="isShow">
@@ -73,6 +73,7 @@
 			</view>
 		</view>
 		<view class="recommend recommend2">
+			<img src="../../../static/ComentImg.jpg" alt="" class='NoInfo' v-if='ImgInfor'>
 			<view class="recommend-body" v-for="(item,idx) in companyList" :key='idx'>
 				<view class="title">
 					<text>{{item.mainbusiness}}</text>
@@ -117,6 +118,9 @@ export default {
 	},
     data() {
         return {
+			Supplychannels2:"餐饮渠道供应商",
+			Supplychannels1:"零售渠道供应商",
+			ImgInfor:false,
 			type:0,
 			isShow:true,
 			companyList:[],
@@ -173,6 +177,18 @@ export default {
 			this.getSupplierInfor();
 		},
     methods: {
+		//去供应商
+		Supplychannels(index){
+			if(index==1){	
+			uni.navigateTo({
+				url: 'SupplyChannels/SupplyChannels?name='+this.Supplychannels1+'&index='+index
+			})
+			}else if(index==2){
+				uni.navigateTo({
+					url: 'SupplyChannels/SupplyChannels?name='+this.Supplychannels2 +'&index='+index
+				})
+			}
+		},
         change(e) {
             this.current = e.detail.current;
         },
@@ -182,6 +198,7 @@ export default {
 				if(index==0){
 					that.isShow=true
 					that.type=0
+					 that.ImgInfor=false
 				}else{
 					that.isShow=false
 				}
@@ -202,7 +219,6 @@ export default {
 				}else if(index==8){
 					that.type=9
 				}
-				
 				this.getSheBeiByType(that.type)
             },
 		// 信息获取
@@ -230,6 +246,16 @@ export default {
 				  success: function (res) {
 				console.log(res)
 					  _this.companyList=res.data.responseBody
+					  if(_this.type==0){
+						   _this.ImgInfor=false
+					  }else{
+						    if(res.data.msgCode=='2'){
+						  			 _this.ImgInfor=true
+						  }else{
+						  			_this.ImgInfor=false
+						  }
+					  }
+					
 					  // isHaveCompanyList:true
 					
 // 					if (_this.data.companyList) {

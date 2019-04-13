@@ -1,0 +1,28 @@
+.SupplyDetails{
+	width: 750upx;
+	background-color: #f3f3f3;
+	padding-top: 20upx;
+	box-sizing: border-box;
+	.SupplyBox{
+		background-color: #fff;
+		border-radius:20upx 20upx 0 0; 
+		
+		padding: 0 30upx;
+		box-sizing: border-box;
+		// 用户信息
+		.SupplyBox-header{
+			padding: 20upx 0;
+			box-sizing: border-box;
+			.header-left{
+				img{
+					width: 150upx;
+					height: 150upx;
+					border-radius: 20upx;
+				}
+			}
+			.header-right{
+				
+			}
+		}
+	}
+}

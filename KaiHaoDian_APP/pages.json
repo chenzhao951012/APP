@@ -683,6 +683,18 @@
 				"navigationBarTitleText" : "新店筹备"
 			}
         }
+        ,{
+            "path" : "pages/homePageModule/Newpreparation/SupplyChannels/SupplyChannels",
+            "style" : {
+				"navigationBarTitleText" : ""
+			}
+        }
+        ,{
+            "path" : "pages/homePageModule/Newpreparation/SupplyDetails/SupplyDetails",
+            "style" : {
+				"navigationBarTitleText" : "供应商详情"
+			}
+        }
     ],
     /*------------------------------------------添加认证相关页面  End------------------------------------------*/
     "globalStyle" : {

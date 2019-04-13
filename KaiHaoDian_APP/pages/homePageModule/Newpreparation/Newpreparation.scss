@@ -110,7 +110,7 @@
 				background-color: #fff;
 				padding: 20upx 0;
 				box-sizing: border-box;
-				box-shadow: 0 3px 0 #f0f0f1,0 -3px 0 #f0f0f1;//底部阴影
+				box-shadow: 0 2px 0 #f0f0f1,0 -2px 0 #f0f0f1;//底部阴影
 			}
 			.aderss{
 				width: 70%;
@@ -189,7 +189,18 @@
 	}
 }
 .recommend2{
+	padding: 20upx 30upx;
+	margin-top: 20upx;
 	background-color: #fff;
+	box-sizing: border-box;
+	.recommend-body{
+		margin-top: 0;
+	}
+}
+.NoInfo{
+	width: 85%;
+	height: 720upx;
+	margin-left: 10%;
 }
 page{
 	background-color: #fbfcff;
