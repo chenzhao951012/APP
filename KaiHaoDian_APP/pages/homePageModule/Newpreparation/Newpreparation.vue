@@ -47,16 +47,27 @@
 			</view>
 			<view class="recommend-body">
 				<view class="title">
-					<text>所有花材新鲜,配送直达</text>
+					<text>所有花材新鲜,配送地直达</text>
 				</view>
 				<view class="connent">
 					<view class="subconnent">
 						<view class="aderss">
-							<view></view>
-							<view class="">
-								<view></view>
+							<view class="aderss-top"><text class="iconfont">&#xe6ed;</text></view>
+							<view class="aderss-body">
+								<view>Iconfont-阿里巴巴矢量图标库Iconfont-阿里巴巴矢量图标库</view>
+								<view class="Pageview">
+									<text  class="iconfont iconfont2">&#xe692; 50</text>
+								
+									<text  class="iconfont iconfont3">&#xe655; 12</text>
+								</view>
+							</view>
+							<view class="fitment">
+								<view>店铺装修</view>
 							</view>
 						</view>
+					</view>
+					<view class="ImgBox">
+						<img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2259376396,2250852130&fm=27&gp=0.jpg" alt="">
 					</view>
 				</view>
 			</view>

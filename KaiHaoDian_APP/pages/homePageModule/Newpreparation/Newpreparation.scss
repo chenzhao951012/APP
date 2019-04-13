@@ -78,14 +78,17 @@
 	}
 	.recommend-body{
 		.title{
-			width: 100%;
+			width:100%;
 			text-align: right;
 			font-size: 28upx;
 			font-weight: 600;
 			padding-bottom: 20upx;
-		
+			 overflow:hidden;
+			text-overflow:ellipsis;
+			white-space:nowrap;
+			
 			text{
-					padding-right: 100upx;
+					padding-right: 88upx;
 					box-sizing: border-box;
 					letter-spacing: 5upx;
 			}
@@ -94,11 +97,13 @@
 			width: 100%;
 			display: flex;
 			justify-content: flex-end;
+			margin-bottom: 40upx;
+			position: relative;
 			.subconnent{
 				display: flex;
 				justify-content: flex-end;
 				width: 95%;
-				height: 200upx;
+				
 				border-radius: 10upx;
 				background-color: #fff;
 				padding: 20upx 0;
@@ -106,9 +111,76 @@
 				box-shadow: 0 3px 0 #f0f0f1,0 -3px 0 #f0f0f1;//底部阴影
 			}
 			.aderss{
-				width: 66%;
-				height:150upx;
-				border:2upx solid skyblue;
+				width: 70%;
+				
+			
+				display: flex;
+			
+				box-sizing: border-box;
+				position: relative;
+				.aderss-top{
+					color: #767676;
+					margin-top: -10upx;
+					
+					.iconfont{
+						vertical-align: middle;
+					}
+					
+				}
+				.aderss-body{
+					width: 70%;
+					color: #767676;
+					font-size: 24upx;
+					margin-left: 10upx;
+					view:nth-child(1){
+						margin-bottom:60upx; 
+						overflow: hidden;
+						text-overflow: ellipsis;
+						display: -webkit-box;
+						-webkit-line-clamp: 2;  // 控制多行的行数
+						-webkit-box-orient: vertical;
+						
+					}
+					.Pageview{
+						
+						color: #6b6b6b;
+						.iconfont{
+							display: inline-block;
+							padding-right: 20upx;
+							
+						}
+						.iconfont2{
+							border-right: 2upx solid #d2d2d2;
+						}
+						.iconfont3{
+							padding-left: 20upx;
+						}
+						
+					}
+				}
+				.fitment{
+					position: absolute;
+					top: -20upx;
+					right: 20upx;
+					width: 40upx;
+					text-align: center;
+					font-size: 24upx;
+					background-color: #eeeeee;
+					padding: 10upx 0;
+					box-sizing: border-box;
+					border-radius:0 0 20upx 20upx; 
+					color: #8e8e8e;
+				}
+			}
+			.ImgBox{
+				position: absolute;
+				top: -50upx;
+				left: 0;
+				img{
+					width: 216upx;
+					height: 224upx;
+					border-radius: 20upx;
+				}
 			}
 		}
 	}
