@@ -352,4 +352,79 @@
 		top: 46upx;	
 		
 		}
-	
+		.talkus{
+			position:fixed;
+			left: 30upx;
+			top: 50%;
+			img{
+				width: 120upx;
+				height: 120upx;
+			}
+		}
+		.tlkBox{
+			width: 750upx;
+			height: 100%;
+			position: fixed;
+			background: rgba(125, 126, 128, 0.5);
+			z-index: 600;
+			top: 88upx;
+			
+			box-sizing: border-box;
+			display: flex;justify-content: space-around;
+			align-items: center;
+		}
+	.masster{
+		position:fixed;
+		top: 200upx;
+		width: 94%;
+		height:80%;
+		background: url(../../../../static/masster.png) no-repeat;
+		background-size: 100% 80%;
+		
+		}
+		.massterBox{
+			padding:0 30upx;
+			box-sizing: border-box;
+			.massterBox-top{
+				display: flex;
+				justify-content: space-around;
+				margin-top: 40upx;
+				view{
+					width: 100%;
+					text-align: center;
+					font-size: 28upx;
+					color: #333333;
+					line-height: 1.5;
+					text{
+						padding: 10upx;
+						box-sizing: border-box;
+					}
+				}
+				.position{
+					font-weight: 600;
+				}
+				.comopy{
+					color: #c0c0c0;
+					font-size: 24upx;
+					text-align: center;
+					letter-spacing: 5upx;
+					.iconfont{
+						color: #279dfd;
+					}
+				}
+				.img{
+					
+					img{
+						width: 80upx;
+						height: 80upx;
+						border-radius: 50%;
+					}
+				}
+				
+			}
+			.massterBox-body{
+				.massterList{
+					
+				}
+			}
+		}

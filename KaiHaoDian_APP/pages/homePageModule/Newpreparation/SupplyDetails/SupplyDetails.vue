@@ -174,6 +174,43 @@
 				<img src="../../../../static/conmented.png" alt="">
 			</view>
 		</view>
+		<!-- 一件约谈 -->
+		<view class="talkus">
+			<img src="../../../../static/talkus.png" alt="">
+		</view>
+		<!-- //弹窗 -->
+		<view class="tlkBox">
+			<view class="masster">
+				<view class="massterBox">
+					<view class="massterBox-top">
+						<view class="title">
+							<view class="img"><img src="http://39.104.48.81:8088/shop_file/img/20190313/1552406435467095230.jpg" alt=""></view>
+							<view class="position">王明<text>·</text>副总</view>
+							<view class="comopy">西安开好店有限公司<text class="iconfont">&#xe61c;</text></view>
+						</view>
+						
+					</view>
+					<view class="massterBox-body">
+						<view class="massterList">
+							<view>地点:</view>
+							<view><input type="text" value="" /></view>
+						</view>
+						<view class="massterList">
+							<view>日期:</view>
+							<view><input type="text" value="" /></view>
+						</view>
+						<view class="massterList">
+							<view>时间</view>
+							<view><input type="text" value="" /></view>
+						</view>
+						<view class="massterList">
+							<view>备注</view>
+							<view><input type="text" value="" /></view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -252,11 +289,14 @@
 								content:_this.connect,
 							  },
 							  success: function(res) {
-								uni.navigateTo({
-										url: 'SupplyDetailsy?id='+id
-									})
-								  _this.changed(2)
-							 console.log(res)
+								  if(res.data.msgCode==1){
+									  var user=res.data.responseBody
+									  _this.commentList.unshift(res.data.responseBody)
+									  _this.NoImg=false
+								  }else{
+									  _this.NoImg=true
+								  }
+								
 							  },
 							  fail: function(res) {
 								  console.log(res)
