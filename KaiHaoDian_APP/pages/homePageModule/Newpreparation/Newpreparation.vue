@@ -45,7 +45,7 @@
 				<view>供应商推荐</view>
 				<view  class="iconfont">更多推荐 &#xe616;</view>
 			</view>
-			<view class="recommend-body" v-for="(item,idx) in SupplierInforList" :key='idx'>
+			<view class="recommend-body" v-for="(item,idx) in SupplierInforList" :key='idx' @click="SupplyChannels(item.id)">
 				<view class="title">
 					<text>{{item.mainbusiness}}</text>
 				</view>
@@ -74,7 +74,7 @@
 		</view>
 		<view class="recommend recommend2">
 			<img src="../../../static/ComentImg.jpg" alt="" class='NoInfo' v-if='ImgInfor'>
-			<view class="recommend-body" v-for="(item,idx) in companyList" :key='idx'>
+			<view class="recommend-body" v-for="(item,idx) in companyList" :key='idx' @click="SupplyChannels(item.id)">
 				<view class="title">
 					<text>{{item.mainbusiness}}</text>
 				</view>
@@ -177,6 +177,12 @@ export default {
 			this.getSupplierInfor();
 		},
     methods: {
+		// 去详情
+		SupplyChannels(id){
+			uni.navigateTo({
+				url:'./SupplyDetails/SupplyDetails?id=' + id
+			});
+		},
 		//去供应商
 		Supplychannels(index){
 			if(index==1){	

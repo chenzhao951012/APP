@@ -625,7 +625,9 @@
         }
         ,{
             "path" : "pages/homePageModule/joinInvestment/reply/reply",
-            "style" : {}
+            "style" : {
+				"navigationBarTitleText" : "回复"
+			}
         }
        
         ,{
@@ -693,6 +695,12 @@
             "path" : "pages/homePageModule/Newpreparation/SupplyDetails/SupplyDetails",
             "style" : {
 				"navigationBarTitleText" : "供应商详情"
+			}
+        }
+        ,{
+            "path" : "pages/homePageModule/Newpreparation/reply/reply",
+            "style" : {
+				"navigationBarTitleText" : "回复"
 			}
         }
     ],

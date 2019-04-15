@@ -164,3 +164,192 @@
 		
 	}
 }
+.NoImg{
+	width:100%;
+	
+	img{
+		width: 100%;
+		margin-top: 60upx;
+	}
+}
+//关于公司
+.AboutCompany{
+	padding: 0 30upx;
+	box-sizing: border-box;
+	border: 2upx solid #eeeeee;
+	margin-top: 40upx;
+	border-radius:10upx;
+	
+	
+	.AboutCompany2{
+		padding: 30upx 30upx;
+		box-sizing: border-box;
+		border-bottom: 2upx solid #eeeeee;
+		
+		.title{
+			text-align: center;
+			font-size: 28upx; 
+			font-weight: 600;
+			color: #333333;
+			margin-bottom: 30upx;
+			letter-spacing: 5upx;
+		}
+		.connent{
+			font-size: 28upx;
+			letter-spacing: 5upx;
+			color: #6b6b6b;
+		}
+	}
+}
+//企业证书
+.AboutCompany-two{
+	width: 100%;
+	 box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
+	  margin-bottom: 150upx;
+	  .AboutCompany2{
+		  padding-left: 0;
+		  padding-right: 0;
+	  }
+	  img{
+		  width: 100%;
+		  height: 400upx;
+	  }
+	}
+	//评论按钮
+	.bottonBottom{
+			width: 100%;
+			height: 98upx;
+			background-color: #ffbd38;
+			position: fixed;
+			bottom: 0;
+			padding: 15upx 20upx;
+			box-sizing: border-box;
+			display: flex;
+			
+		}
+	.ComentInput{
+		width: 488upx;
+		height: 70upx;
+		border-radius: 40upx;
+		background-color: #fff;
+		input{
+			padding-top: 10upx;
+			padding-left: 40upx;
+			font-size: 14px;
+		}
+		
+	}
+	.LIst{
+		display: flex;
+	}
+	.ComentImgList{
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-between;
+		img{
+			width: 65upx;
+			height: 65upx;
+			margin: 6upx 0upx 6upx 40upx;
+		}
+	}
+	.ComentImgList2{
+		box-sizing: border-box;
+		
+		padding-left: 60upx;
+			img{
+				margin-top: -12upx;
+				width: 100upx;
+				 height: 100upx;
+			}
+	}
+	.subreply{
+		
+		box-sizing: border-box;
+		color: #ffc760;
+		font-size: 28upx;
+		padding: 20upx 0;
+		font-weight:lighter;
+	}
+		.commentBox{
+		padding: 30upx 30upx;
+		margin-top: 20upx;
+		
+		box-sizing: border-box;
+	}
+	.commentList{
+		box-sizing: border-box;
+		 border-radius: 20upx;
+		padding:0upx 27upx;
+		border: 2upx solid #eeeeee;
+		margin-bottom: 100upx;
+	}
+	.commentListTop{
+		position: relative;
+		padding: 40upx 0;
+		.icons{
+			color: #259bfe;
+			padding-left: 10upx;
+		}
+		.position{
+			font-size: 28upx;
+			color: #747474;
+			line-height: 2;
+			font-weight: 600;
+		}
+		.userMassage{
+			padding-left: 30upx;
+		}
+		.company{
+			font-size: 24upx;
+			color: #989898;
+			font-weight: lighter;
+		}
+		display: flex;
+		.userImg{
+			width: 100upx;
+			height: 100upx;
+			
+			 img{
+				width: 100upx;
+				height: 100upx;
+				 border-radius:50%;
+			 }
+		}
+	}
+	.commentContent{
+		margin-top: 30upx;
+		font-size: 28upx;
+		letter-spacing: 5upx;
+		color: #000;
+		
+	}
+	.icond{
+		position: absolute;
+		right: 12upx;
+		top: 50upx;
+	}
+	.commentNumber{
+		color: #666666;
+		font-size: 28upx;
+		padding-left: 20upx;
+	}
+	.introduction{
+		border-bottom:2upx solid #d2d2d2; 
+	}
+	.iconecodes{
+		position: absolute;
+		right: -218upx;
+		top: -6upx;
+		font-size: 28upx;
+		color: #686868;
+		font-weight: 600;
+	}
+	.iconecoded{
+		font-size: 60upx;
+		color: #ffbd38;
+		position: absolute;
+		right: -208upx;
+		top: 46upx;	
+		
+		}
+	

@@ -1,0 +1,137 @@
+.header{
+	padding: 35upx 30upx;
+	background-color: #fff;
+	border-radius: 10upx;
+	padding-top: 0;
+	box-sizing: border-box;
+	
+}
+.commentBox{
+	
+	display: flex;
+	border-bottom: 10upx solid #eeeeee;
+	position: relative;
+	padding: 30upx 0;
+box-sizing: border-box;
+	.commentRight{
+		padding-left: 20upx;
+		width: 80%;
+		.commentRight-top{
+			display: flex;
+			justify-content: space-between;
+			.giveMilke{
+				position: absolute;
+				right: 0upx;
+				color: #999;
+				font-size: 28upx;
+				text{
+					padding-left: 10upx;
+				}
+			}
+		}
+	}
+	
+}
+.userImg{
+	width: 100upx;
+	height: 100upx;
+	img{
+		width: 100upx;
+	height: 100upx;
+	 border-radius:50%;
+	}
+}
+.comoneyPople{
+	font-size: 14px;
+    color: #747474;
+    line-height: 2;
+    font-weight: 600;
+}
+.comoney{
+	    font-size: 12px;
+    color: #989898;
+    font-weight: lighter
+}
+.iconed{
+	padding-left: 10upx;
+	color: #259bfe;
+}
+.question{
+	    margin-top: 15px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #000;
+	margin-bottom: 40upx;
+}
+uni-page-body{
+	background-color: #eeeeee;
+	
+	padding-top: 20upx;
+}
+.subcommentBox{
+	border: 0;
+	margin-top: 20px;
+}
+.title{
+	padding-top: 40upx;
+	padding-bottom: 0upx;
+	color: #222222;
+	font-size: 30upx;
+	font-weight: 600;
+	letter-spacing: 5upx;
+}
+.dian{
+	padding:0 5upx;
+}
+.commentRight-two{
+	border-bottom: 2upx solid #d2d2d2
+}
+.bottonBottom{
+				width: 750upx;
+				height: 98upx;
+				background-color: #ffbd38;
+				position: fixed;
+				bottom: 0;
+				padding: 15upx 20upx;
+				box-sizing: border-box;
+				display: flex;
+				
+			}
+		.ComentInput{
+			width: 488upx;
+			height: 70upx;
+			border-radius: 40upx;
+			background-color: #fff;
+			input{
+				padding-top: 10upx;
+				padding-left: 40upx;
+				font-size: 14px;
+			}
+			
+		}
+		.LIst{
+			display: flex;
+		}
+		.ComentImgList{
+			display: flex;
+			justify-content: space-between;
+			img{
+				width: 65upx;
+				height: 65upx;
+				margin: 6upx 0upx 6upx 40upx;
+			}
+		}
+		.ComentImgList2{
+			padding-left: 80upx;
+			margin: -12upx;
+				img{
+					width: 100upx;
+					 height: 100upx;
+				}
+		}
+		.subreply{
+			color: #ffc760;
+			font-size: 28upx;
+			padding: 20upx 0;
+			font-weight:lighter;
+		}

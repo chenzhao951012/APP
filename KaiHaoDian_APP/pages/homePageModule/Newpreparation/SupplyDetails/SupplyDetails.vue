@@ -53,25 +53,132 @@
 					<SwiperNav :modelData='modelData' @changed='changed'></SwiperNav>
 				</view>
 				<!-- 案例展示 -->
-				<view class="Case" v-for='(item,idx) in caseImgs' :key='idx'>
-					<view class="CaseImg">
-						<img :src="items" alt="" v-for='(items,idx) in item.src.slice(0,4)' :key='idx'>
+				<view class="" v-if="caseed" style="margin-bottom: 100upx;">
+					<view class="NoImg">
+						<img src="../../../../static/ComentImg.png" alt="" v-if='isshows'>
 					</view>
-					<view class="CaseInfor">
-						<view class="title">一草一木</view>
-						<view>
-							<text class="iconfont">&#xe64c;</text><text>2563</text>
-							<text class="lins">|</text>
-							<text class="iconfont">&#xe872;</text><text>19</text>
+						<view class="Case" v-for='(item,idx) in caseImgs' :key='idx'>
+						<view class="CaseImg">
+							<img :src="items" alt="" v-for='(items,idxc) in item.src.slice(0,4)' :key='idxc' @click='previewImg(idx,idxc)'>
+						</view>
+						<view class="CaseInfor">
+							<view class="title">一草一木</view>
+							<view>
+								<text class="iconfont">&#xe64c;</text><text>2563</text>
+								<text class="lins">|</text>
+								<text class="iconfont">&#xe872;</text><text>19</text>
+							</view>
 						</view>
 					</view>
 				</view>
+				<!-- //关于公司 -->
+				<view class="" v-if="AboutCompany">
+						<view class="AboutCompany">
+						<view class="AboutCompany2">
+								<view class="title">
+									公司介绍
+								</view>
+								<view class="connent">
+									{{user.mainbusiness}}
+								</view>
+						</view>
+							<view class="AboutCompany2">
+								<view class="title">
+									服务优势
+								</view>
+								<view class="connent">
+									{{user.serviceadvantage}}
+								</view>
+						</view>
+							<view class="AboutCompany2">
+								<view class="title">
+									主营业务
+								</view>
+								<view class="connent">
+									{{user.mainbusiness}}
+								</view>
+						</view>
+							<view class="AboutCompany2">
+								<view class="title">
+									售后服务
+								</view>
+								<view class="connent">
+									
+								</view>
+						</view>
+						<view class="AboutCompany2" style="border-bottom: 0;">
+								<view class="title">
+									总部支持
+								</view>
+								<view class="connent">
+									
+								</view>
+						</view>
+					</view>
+					<view class="AboutCompany AboutCompany-two">
+						<view class="AboutCompany2">
+								<view class="title">
+									企业证书
+								</view>
+								<view class="connent connent2">
+									<img :src="imageUrl + user.businesslicense" alt="">
+								</view>
+						</view>
+						
+					</view>
+				</view>
+			
+					
+			</view>
+		</view>
+			<!-- 用户评论 -->
+		<view class="commentBox" v-if="comnnent">
+			<view class="commentList">
+				<view class="NoImg">
+					<img src="../../../../static/ComentImg.png" alt="" v-if='NoImg'>
+				</view>
+				<view class="introduction" v-for="(itemd,index) in commentList" :key='index' v-if="commentList" @click="subReply(user.id)">
+					<view class="commentListTop">
+						<view class="userImg">
+							<img :src="itemd.sysuser.portrait" alt="" v-if="itemd.sysuser.portrait">
+						</view>
+						<view class="userMassage">
+							<view class="position">
+								{{itemd.sysuser.name}}<text v-if="itemd.sysuser.position">·</text>{{itemd.sysuser.position}}
+							</view>
+							<view class="company" v-if="itemd.sysuser.company">
+							{{itemd.sysuser.company}}<text class="iconfont icons">&#xe730;</text>
+							</view>
+							<view class="commentContent">
+								{{itemd.content}}
+							</view>
+						
+						</view>
+					</view>
+				</view>
+					
+			</view> 
+		</view>
+		<!-- //评论按钮 -->
+		<view class="bottonBottom">
+			<view class="LIst">
+				<view class="ComentInput">
+					<input type="text" value="" placeholder="输入你的评论~" @focus="Onfocusn"  @blur="Onbuler" v-model="connect"/>
+				</view>
+			</view>
+			<view class="ComentImgList" v-if="Show">
+				<img src="../../../../static/talk.png" alt="" >
+				<img src="../../../../static/playPhone.png" alt="" @touchend="PlayPhone">
+			</view>
+			<view class="ComentImgList2" v-if="isShow" @touchend="comment">
+				<img src="../../../../static/conmented.png" alt="">
 			</view>
 		</view>
 	</view>
 </template>
 
 <script>
+	var imageUrl = shoppublic.getImageUrl();
 		import shoppublic from '@/common/shoppublic';
 		import SwiperNav from '@/components/SlidingNavigation.vue';
 	export default {
@@ -80,6 +187,19 @@
 		},
 		data() {
 			return {
+				id:"",
+				token:6239,
+				phoneNumber:"",
+				AboutCompany:false,
+				comnnent:false,
+				caseed:true,
+				NoImg:false,
+				commentList:[],
+				connect:"",
+				isShow:false,
+				Show:true,
+				imageUrl:imageUrl,
+				isshows:false,
 				caseImgs:[],
 				imglist:[],
 				user:"",
@@ -101,39 +221,159 @@
 				]
 			};
 		},
-		onLoad() {
-			this.getsysuserdetail(2339)
+		onLoad(option) {
+			this.getsysuserdetail(option.id)
+			console.log(option.id)
 			this.addCisitorCount()
-			this.caseImg(2212)
-			
+			this.caseImg(option.id)
+			this.evaluate(option.id)
+			this.id=option.id
 		},
 		methods:{
+			
+			comment: function(uidss,_comment_index) {
+				  var _this = this;
+							if (_this.connect == '') {
+							  wx.showToast({
+								title: '回复内容不能为空',
+								icon: 'none',
+								duration: 2000
+							  })
+							  return;
+							}
+						
+							var commentlist = _this.commentlist;
+						
+							uni.request({
+							    url: shoppublic.getUrl() + '/sysuserdetail/addReviews',
+							  data: {
+								token: _this.token,
+								uid: _this.id,
+								content:_this.connect,
+							  },
+							  success: function(res) {
+								uni.navigateTo({
+										url: 'SupplyDetailsy?id='+id
+									})
+								  _this.changed(2)
+							 console.log(res)
+							  },
+							  fail: function(res) {
+								  console.log(res)
+							  }
+							});
+						  },
+			//评论详情
+			subReply(id){
+				uni.navigateTo({
+						url: '../reply/reply?id='+id + '&token='+ this.token
+					})
+			},
+				// 评论聚焦
+			Onfocusn(){
+				this.isShow=true
+				this.Show=false
+			},
+			Onbuler(){
+				this.isShow=false
+				this.Show=true
+				this.connect=""
+			},
+			//图片预览
+			previewImg(indexs,index){
+							var that = this;
+							var current = that.caseImgs[indexs].src
+							uni.previewImage({
+							  current:current[index], // 当前显示图片的http链接  
+							  urls:that.caseImgs[indexs].src // 需要预览的图片http链接列表  
+							})
+			},
 			//获取案例图片
 			  caseImg(userid) {
 						var _this = this;
 						uni.request({
 						  url: shoppublic.getUrl() + '/sysuserdetail/findlistProjectCases',
 						  data: {
-							token: 6239,
+							token: _this.token,
 							uid: userid
 						  },
 						  success: function(res) {
-							  console.log(res)
-						_this.caseImgs=res.data.responseBody
+							if(res.data.msgCode==2){
+								_this.isshows=true
+							}else{
+									  console.log(res)
+								_this.caseImgs=res.data.responseBody
+							}
+						
 						  },
 						  fail: function(res) {}
 						});
 					  },
 			changed(index){
-				
+				var that=this
+				if(index==0){
+					that.AboutCompany=false
+					that.comnnent=false
+					that.caseed=true
+				}else if(index==1){
+					that.AboutCompany=true
+					that.comnnent=false
+					that.caseed=false
+				}else if(index==2){
+					that.AboutCompany=false
+					that.comnnent=true
+					that.caseed=false
+				}
 			},
+			  // 评价列表
+				  evaluate(userid) {
+					let that = this
+					uni.request({
+					  url: shoppublic.getUrl() + '/sysuserdetail/findlistReviews',
+					  data: {
+						token: 6239,
+						uid: userid
+					  },
+					  header: {
+						'content-type': 'application/json' // 默认值
+					  },
+					  success: function(res) {
+						  console.log(res)
+						if (res.data.responseBody == null) {
+								that.NoImg=true
+						} else {
+						that.NoImg=false
+							that.commentList=res.data.responseBody
+							
+						}
+					  }
+					})
+				  },
+				  	//电话添加
+				  PlayPhone(userid){
+				  		var that=this
+				  		 event.preventDefault();
+				  		
+				  		  uni.showActionSheet({
+				  		    itemList: [that.phoneNumber, '呼叫'],
+				  		    success: function (res) {
+				  		    	if(res.tapIndex==1){
+				  		    		uni.makePhoneCall({
+				  		    		phoneNumber:that.user.phone//仅为示例
+				  		    		});
+				  		    	}			 
+				  		    						
+				  				}
+				  			 })
+				  	},
+			
 			  // 访客
-			  addCisitorCount() {
+			  addCisitorCount(id) {
 				  var that=this
 			    uni.request({
 					url: shoppublic.getUrl() + '/sysuserdetail/findpersonaldetailssysuserrecommend',
 					data: {
-					  token: 2239
+					  token: id
 					},
 					success(res) {
 						console.log(res)
@@ -162,7 +402,7 @@
 				  success: function(res) {
 					  console.log(res)				
 				  _this.user=res.data.responseBody
- 					
+ 					_this.phoneNumber= _this.user.phone.slice(0,3)+'-'+_this.user.phone.slice(3,7)+'-'+_this.user.phone.slice(7,11)
 
 				  },
 				  fail: function(res) {}

@@ -410,7 +410,7 @@ export default {
 			console.log(this.pagesInfo);
 			var that = this;
 			var current = that.pagesInfo[0].srcs
-			wx.previewImage({
+			uni.previewImage({
 				current: current[index], // 当前显示图片的http链接 
 				urls: that.pagesInfo[0].srcs // 需要预览的图片http链接列表  
 			})
