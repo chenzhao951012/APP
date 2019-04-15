@@ -15,6 +15,7 @@
 			box-sizing: border-box;
 			display: flex;
 			justify-content: space-between;
+			
 			.header-left{
 				img{
 					width: 150upx;
@@ -23,30 +24,143 @@
 				}
 			}
 			.header-right{
+				display: flex;
 				.subLeft{
 					font-size: 28upx;
 					font-weight: 600;
 					color: #333333;
 					letter-spacing: 5upx;
+					padding-left: 20upx;
 					.top{
 						.iconfont{
-							padding-left: 20upx;
+							padding-left: 10upx;
 							font-weight: 100;
-							font-size: 28upx;
+							font-size: 24upx;
 							color:#259bfe;
 							letter-spacing: 0;
 							
 						}
 						.iconfont2{
-							font-size: 32upx;
+							font-size: 28upx;
 							font-weight: 600;
 						}
 					}
 					.bottom{
 						
+						margin-top: 20upx;
+						display: flex;
+						font-size: 24upx;
+						
+						.aderss{
+							font-size: 32upx;
+							vertical-align: middle;
+							font-weight: 100;
+						}
+					}
+				}
+				.subright{
+					.examine{
+						color: #686868;
+						font-size: 24upx;
+						.iconfont{
+							font-weight: 600;
+							padding-right: 10upx;
+							font-size: 32upx;
+							vertical-align: middle;
+						}
+					}
+					.collect{
+						margin-top: 20upx;
+						text-align: right;
+						.iconfont{
+							color: #ffbd38;
+							font-size: 60upx;
+						}
 					}
 				}
 			}
 		}
+		.SupplyBox-body{
+			margin-top: 20upx;
+			padding: 20upx 0;
+			box-sizing: border-box;
+			border: 2upx solid #eeeeee;
+			border-left: 0;
+			border-right: 0;
+			font-size: 24upx;
+			line-height: 1.5;
+		}
+		.SupplyBox-foot{
+			
+			padding: 30upx 0;
+			box-sizing: border-box;
+			display: flex;
+			box-shadow: 0 2px 0 #f0f0f1;//底部阴影
+			border-radius:20upx; 
+			
+			.visitor{
+				margin-left: 20upx;
+				font-size: 24upx;
+				line-height: 2;
+				letter-spacing: 20upx;
+			}
+			.userImg{
+			
+				img{
+					width: 60upx;
+					height: 60upx;
+					border-radius: 50%;
+					vertical-align: middle;
+					margin-right: 20upx;
+				}
+				
+			}
+		}
+		.tab{
+			border-radius:20upx; 
+			box-shadow: 0 2px 0 #f0f0f1;//底部阴影
+			padding: 20upx 0;
+			padding-bottom: 0;
+			box-sizing: border-box;
+		}
+		.Case{
+			width: 100%;
+			margin-top: 40upx;
+			border-bottom: 2upx solid #eeeeee;
+			margin-bottom: 50upx;
+			.CaseImg{
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+			}
+			img{
+				width: 49%;
+				height: 300upx;
+				border-radius: 20upx;
+				margin-bottom: 10upx;
+			}
+			.CaseInfor{
+				display: flex;
+				justify-content: space-between;
+				padding: 40upx 0;
+				box-sizing: border-box;
+				padding-top: 30upx;
+				.title{
+					font-size: 28upx;
+					line-height: 2;
+				}
+				.iconfont{
+					padding-right: 10upx;
+				}
+				text{
+					font-size: 28upx;
+				}
+				.lins{
+					font-size: 28upx;
+					padding: 0 30upx;
+				}
+			}
+		}
+		
 	}
 }
