@@ -423,8 +423,17 @@
 				
 			}
 			.massterBox-body{
+				padding: 0 20upx;
+				box-sizing: border-box;
+				margin-top: 40upx;;
 				.massterList{
-					
+					display: flex;
+					font-size: 24upx;
+					height: 90upx;
+					line-height:90upx;
+					.inputBox{
+						border-bottom: 2upx solid #eeeeee;
+					}
 				}
 			}
 		}

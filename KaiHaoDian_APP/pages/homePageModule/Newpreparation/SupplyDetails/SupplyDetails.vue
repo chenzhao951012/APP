@@ -193,19 +193,19 @@
 					<view class="massterBox-body">
 						<view class="massterList">
 							<view>地点:</view>
-							<view><input type="text" value="" /></view>
+							<view class="inputBox"><input type="text" value="" /></view>
 						</view>
 						<view class="massterList">
 							<view>日期:</view>
-							<view><input type="text" value="" /></view>
+							<view class="inputBox"><input type="text" value="" /></view>
 						</view>
 						<view class="massterList">
 							<view>时间</view>
-							<view><input type="text" value="" /></view>
+							<view class="inputBox"><input type="text" value="" /></view>
 						</view>
 						<view class="massterList">
 							<view>备注</view>
-							<view><input type="text" value="" /></view>
+							<view class="inputBox"><input type="text" value="" /></view>
 						</view>
 					</view>
 				</view>
