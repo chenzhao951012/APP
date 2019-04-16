@@ -1,12 +1,12 @@
 <template>
 	<view class="uni-swiper__warp">
 		<slot></slot>
-		<view v-if="mode === 'default'" class="uni-swiper__dots-box" :style="{'bottom':dots.bottom + 'px'}">
+		<view v-if="mode === 'default'" class="uni-swiper__dots-box" :style="{'bottom':bottom + 'px'}">
 			<view class="uni-swiper__dots-item" v-for="(item,index) in info" :style="{
 				 'width': dots.width + 'px','height':dots.height +'px' ,'background-color':index !== current?dots.backgroundColor:dots.selectedBackgroundColor,'border':index !==current ? dots.border:dots.selectedBorder}"
 			 :key="index"></view>
 		</view>
-		<view v-if="mode === 'long'" class="uni-swiper__dots-box" :style="{'bottom':dots.bottom + 'px'}">
+		<view v-if="mode === 'long'" class="uni-swiper__dots-box" :style="{'bottom':bottom + 'px'}">
 			<view class="uni-swiper__dots-item " v-for="(item,index) in info" :class="[index === current&&'uni-swiper__dots-long']"
 			 :style="{
 				 'width':(index === current? dots.width*3:dots.width ) + 'px','height':dots.height +'px' ,'background-color':index !== current?dots.backgroundColor:dots.selectedBackgroundColor,'border':index !==current ? dots.border:dots.selectedBorder}"
@@ -16,7 +16,7 @@
 			<view class="uni-swiper__dots-nav-item" :style="{'color':dotsStyles.color}">{{(current+1)+"/"+info.length}}
 				{{info[current][field]}}</view>
 		</view>
-		<view v-if="mode === 'indexes'" class="uni-swiper__dots-box" :style="{'bottom':dots.bottom + 'px'}">
+		<view v-if="mode === 'indexes'" class="uni-swiper__dots-box" :style="{'bottom':bottom + 'px'}">
 			<view class="uni-swiper__dots-item uni-swiper__dots-indexes" v-for="(item,index) in info" :style="{
 				 'width':dots.width + 'px','height':dots.height +'px' ,'color':index === current?dots.selectedColor:dots.color,'background-color':index !== current?dots.backgroundColor:dots.selectedBackgroundColor,'border':index !==current ? dots.border:dots.selectedBorder}"
 			 :key="index">{{index+1}}</view>
@@ -53,7 +53,11 @@
 			field: {
 				type: String,
 				default: ''
-			}
+			},
+			bottom: {
+				type: Number
+			
+			},
 		},
 		data() {
 			return {

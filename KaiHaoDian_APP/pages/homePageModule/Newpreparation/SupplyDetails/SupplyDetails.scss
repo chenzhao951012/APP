@@ -432,8 +432,29 @@
 					height: 90upx;
 					line-height:90upx;
 					.inputBox{
+						width: 85%;
+						height: 75upx;
 						border-bottom: 2upx solid #eeeeee;
+						margin-left: 10upx;
+						line-height: 75upx;
+						padding-left: 20upx;
+						box-sizing: border-box;
+						input{
+							margin-top: 20upx;
+							font-size: 28upx;
+							color: #3d3d3d;
+						}
 					}
 				}
+				.title{
+					color: #989898;
+				}
 			}
+		}
+		.close{
+			position: absolute;
+			right: 0;
+			top:-6px;
+			height: 6upx;
+			width: 20upx;
 		}

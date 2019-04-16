@@ -703,6 +703,18 @@
 				"navigationBarTitleText" : "回复"
 			}
         }
+        ,{
+            "path" : "pages/homePageModule/Newpreparation/flowerOrd/flowerOrd",
+            "style" : {
+				"navigationBarTitleText" : ""
+			}
+        }
+        ,{
+            "path" : "pages/homePageModule/Newpreparation/Flowerdetails/Flowerdetails",
+            "style" : {
+				"navigationBarTitleText" : "商品详情"
+			}
+        }
     ],
     /*------------------------------------------添加认证相关页面  End------------------------------------------*/
     "globalStyle" : {

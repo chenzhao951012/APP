@@ -55,6 +55,7 @@
 		},
 		data() {
 			return {
+				usercard:'',
 				talk:'',
 				friendImg:'',
 				myImg:'',
@@ -205,9 +206,7 @@
 						uid: _this.touid,
 						message: onMessage.data
 					  });
-						 
 						  console.log( _this.allContentList)
-					 
 					  
 					})
 				  },
@@ -224,6 +223,8 @@
 				  success: res => {
 					console.log(res);
 					  _this.allContentList=res.data.responseBody
+						_this.usercard=res.data.responseBody[0].massage
+						console.log(	_this.usercard)
 					
 				  }
 				})

@@ -131,16 +131,16 @@ export default {
             interval: 2000,
             duration: 500,
 			swiperList:[//轮播图列表
-				{
-					url:'/images/Ban_zhaoshang2.jpeg'
-				},
-				{
-					url:'/images/Ban_zhaoshang1.jpeg'
-				},
-				{
-					url:'/images/Bro-gsb.jpg'
-				},
-			],
+			{
+				url:'/images/Ban_zhaoshang2.jpeg'
+			},
+			{
+				url:'/images/Ban_zhaoshang1.jpeg'
+			},
+			{
+				url:'/images/Bro-gsb.jpg'
+			},
+		],
 			imageUrl:imageUrl,
       
 			  tabList: [
