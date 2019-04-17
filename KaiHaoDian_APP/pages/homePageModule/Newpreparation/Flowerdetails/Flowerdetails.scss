@@ -1,8 +1,124 @@
 .swiper-box{
 	height: 400upx;
-	width: 750upx;
+	width: 100%;
 	img{
 		height: 400upx;
-		width: 750upx;
+		width: 100%;
 	}
 }
+.content{
+	background-color: #f3f3f3;
+	.contenttitle{
+		background-color: #fff;
+		padding: 30upx;
+		box-sizing: border-box;
+		
+		.name{
+			font-size: 28upx;
+			color: #333333;
+			font-weight: 600;
+			letter-spacing: 5upx;
+			margin-bottom: 10upx;
+		}
+		.conents{
+			font-size: 24upx;
+			color: #333333;
+			
+		}
+		//价格
+		.price{
+			border-top: 2upx solid #eeeeee;
+			display: flex;
+			padding: 30upx 0;
+			box-sizing: border-box;
+			font-size: 24upx;
+			color: #686868;
+			justify-content: space-between;
+			.Nowprice{
+				font-size: 40upx;
+				color: #ffbc39;
+				padding-left: 10upx;
+				box-sizing: border-box;
+				font-weight: 600;
+			}
+			.pastprice{
+				padding-left: 30upx;
+						color: #989898;	
+						text-decoration: line-through;
+						box-sizing: border-box;
+							
+				}
+				.btns{
+					
+					.btn{
+						width: 160upx;
+						height: 60upx;
+						background-color: #ffbd38;
+						font-size: 24upx;
+					}
+				}
+		}
+		
+	}
+	.setmeal{
+		margin-top: 20upx;
+		background-color: #fff;
+		padding: 30upx;
+		padding-bottom: 0;
+		box-sizing: border-box;
+		.subsetmeal{
+			padding-bottom: 30upx;
+				box-sizing: border-box;
+			border-bottom: 2upx solid #eeeeeeee;
+			margin-bottom: 30upx;
+			.title{
+				position: relative;
+				font-size: 28upx;
+				color: #333333;
+				padding-left: 20upx;
+				.lins{
+					margin-right: 10upx;
+					display: inline-block;
+					width: 10upx;
+					height: 30upx;
+					background-color: #ffbd38;
+					border-radius: 8upx;
+					position: absolute;
+					left: 0;
+					top: 4upx;
+				}
+			}
+			.introduce{
+				font-size: 24upx;
+				color: #747474;
+				margin-top: 10upx;
+				.introduced{
+					margin-bottom: 20upx;
+				}
+			}
+		}
+	}
+}
+.bottomBox{
+		display: flex;
+		width: 750upx;
+		position: fixed;
+		bottom: 0;
+		color: #ffffff;
+		view{
+			width: 50%;
+			height: 100upx;
+			background-color: #ffbd38;
+			line-height: 100upx;
+			text-align: center;
+			font-size: 28upx;
+			.iconfont{
+				padding-right: 20upx;
+				font-size: 40upx;
+				vertical-align: middle;
+			}
+		}
+		.chat{
+				border-right: 2upx solid #ffffff;
+			}
+		}
