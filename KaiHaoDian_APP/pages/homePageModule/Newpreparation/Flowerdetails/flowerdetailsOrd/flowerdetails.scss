@@ -1,0 +1,128 @@
+.submitorder{
+	background-color: #fff;
+	margin-top: 20upx;
+	box-sizing: border-box;
+	padding-top: 30upx;
+		box-sizing: border-box;
+		margin-bottom: 150upx;
+	/* <!-- //选择配送方式 --> */
+	.orderconnent{
+		
+		border-radius: 20upx 20upx 0 0;
+		
+		box-sizing: border-box;
+		.selectBox{
+		
+			background-color: #fff;
+			display: flex;
+			height: 80upx;
+			line-height: 80upx;
+			padding:0 30upx;
+			
+			box-sizing: border-box;
+			.left{
+				width: 70%;
+				font-size: 28upx;
+				color: #ffffff;
+				background-color: #ffbd38;
+				text-align: center;
+				border-radius: 10upx;
+				z-index: 2;
+			}
+			.right{
+				height: 72upx;
+				margin-top: 5upx;
+				background-color: #eeeeee;
+				text-align: center;
+					flex: 1;
+				font-size: 28upx;
+				border-radius: 10upx;
+				line-height: 70upx;
+				color: #ffbd38;
+				
+				
+			}
+		}
+		.setmeal{
+			background-color: #fff;
+			padding:0 30upx;
+			box-sizing: border-box;
+			.setmealOrd{
+				display: flex;
+				height: 100upx;
+				justify-content:space-between;
+				line-height: 100upx;
+				border-bottom: 2upx solid #eeeeee;
+				font-size: 28upx;
+				color: #333333;
+				view{
+					display: flex;
+					input{
+						margin-top: 24upx;
+						margin-left: 20upx;
+					}
+					.number{
+						width: 80upx;
+						height: 40upx;
+						border: 2upx solid #ffbd3a;
+						border-radius: 8upx;
+						margin: 0 10upx;
+						margin-top: 24upx;
+						line-height: 40upx;
+						text{
+							text-align: center;
+							padding-left: 20upx;
+						}
+					}
+				}
+			}
+			.setmealOrd2{
+				margin-top: 20upx;
+			}
+		}
+	
+	}
+}
+page{
+	background-color: #f3f3f3;
+}
+.lins{
+	height: 20upx;
+	background-color: #f3f3f3;
+	width: 750upx;
+}
+.Timecolor{
+	color: #ffd99e;
+}
+.nonsupport{
+	    color: grey;
+	}
+/* 支付 */
+.payfor{
+	width: 750upx;
+	height:90upx;
+	line-height: 90upx;
+	position: fixed;
+	bottom: 0;
+	background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+	font-size: 28upx;
+	padding-left: 30upx;
+	box-sizing: border-box;
+	border-top: 2upx solid #ffbd38;
+	text{
+		font-size: 32upx;
+		color: #ffbb3b;
+		padding-left: 20upx;
+	}
+	.btns{
+		width: 200upx;
+		font-size: 28upx;
+		background-color: #ffbd38;
+		height: 100%;
+		line-height: 90upx;
+		border: 0;
+		border-radius: 0;
+		}
+	}
