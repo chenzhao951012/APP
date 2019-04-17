@@ -66,6 +66,7 @@
 		padding: 30upx;
 		padding-bottom: 0;
 		box-sizing: border-box;
+		margin-bottom: 100upx;
 		.subsetmeal{
 			padding-bottom: 30upx;
 				box-sizing: border-box;
@@ -94,6 +95,8 @@
 				margin-top: 10upx;
 				.introduced{
 					margin-bottom: 20upx;
+					padding-left: 16upx;
+					box-sizing: border-box;
 				}
 			}
 		}
@@ -122,3 +125,38 @@
 				border-right: 2upx solid #ffffff;
 			}
 		}
+.massage{
+	width: 750upx;
+	height: 100%;
+	background-color: rgba(51, 51, 51, 0.6);
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	.tost{
+		width: 100%;
+		height: 360upx;
+		background-color: #fff;
+		  position:fixed;
+		bottom:0;
+		padding: 30upx 30upx;
+		box-sizing: border-box;
+		border-radius: 20upx 20upx 0 0;
+		.chosseBox{
+			display: flex;
+			.chose{
+				font-size: 28upx;
+				letter-spacing: 5upx;
+				font-weight: 600;
+				color: #333333;
+			}
+			.lins{
+				width: 8upx;
+				height: 30upx;
+				background-color: #ffbd38;
+				margin-right: 10upx;
+				border-radius:10upx;
+				 margin-top: 6upx;
+			}
+		}
+	}
+}

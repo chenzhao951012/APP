@@ -21,7 +21,7 @@
 						¥<text class="Nowprice">98.00</text><text class="pastprice">198</text>
 					</view>
 					<view class="btns">
-						<button type="primary" class="btn">立即抢购</button>
+						<button type="primary" class="btn" @click="purchase">立即抢购</button>
 					</view>
 				</view>
 			</view>
@@ -52,21 +52,50 @@
 			<view class="chat"><text  class="iconfont">&#xe620;</text>发消息</view>
 			<view @touchend="PlayPhone"><text  class="iconfont">&#xe622;</text>电话联系</view>
 		</view>
+		
+		<!-- 底部弹窗 -->
+		<view class="massage" v-if="tost" @click="layer">
+			
+			<view class="tost">
+				<view class="chosseBox">
+					<view class="lins"></view>
+					<view class="chose">请选择你的套餐</view>
+				</view>
+				<tost :labelList='labelList' @chengd='chengd'></tost>
+			</view>
+			
+		</view>
 	</view>
 	
 </template>
 
 <script>
+	import tost from '@/components/wl-radio.vue'
 	var imageUrl = shoppublic.getImageUrl();
 	import shoppublic from '@/common/shoppublic'; //服务器地址
 	import Swiperdot from '@/components/swipers/uni-swiper-dot.vue';
 	export default {
 			components:{
 			Swiperdot,
-			
+			tost
 		},
-		data() {
+			data() {
 			return {
+				tost:false,
+					labelList:[
+				{
+					name:'玫瑰套餐A',
+					checked:false
+				},
+				{
+					checked:false,
+					name:'玫瑰套餐B'
+				},
+				{
+					name:'玫瑰套餐C',
+					checked:false
+				}
+			],
 				combo:[
 					{
 						title1:"玫瑰套餐一",
@@ -137,6 +166,23 @@
 			};
 		},
 		methods:{
+			layer(){
+				this.tost=false
+			},
+			//立即抢购
+			purchase(){
+				this.tost=true
+			},
+			// 底部弹窗
+		chengd(name,idx){
+			console.log(name,idx)
+			setTimeout(()=>{
+				uni.navigateTo({
+					url:'flowerdetailsOrd/flowerdetailsOrd?id='+1
+				})
+			},200)
+		},
+			//打电话
 				  PlayPhone(userid){
 								var that=this
 								 event.preventDefault();

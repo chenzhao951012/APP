@@ -715,6 +715,12 @@
 				"navigationBarTitleText" : "商品详情"
 			}
         }
+        ,{
+            "path" : "pages/homePageModule/Newpreparation/Flowerdetails/flowerdetailsOrd/flowerdetailsOrd",
+            "style" : {
+				"navigationBarTitleText" : "提交订单"
+			}
+        }
     ],
     /*------------------------------------------添加认证相关页面  End------------------------------------------*/
     "globalStyle" : {
