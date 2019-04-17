@@ -69,9 +69,10 @@
 						margin: 0 10upx;
 						margin-top: 24upx;
 						line-height: 40upx;
+						display: flex;
+						justify-content: space-around;
 						text{
-							text-align: center;
-							padding-left: 20upx;
+						
 						}
 					}
 				}
@@ -125,4 +126,8 @@ page{
 		border: 0;
 		border-radius: 0;
 		}
+	}
+	.subtotal{
+		color: #dddddd;
+		padding-right: 40upx;
 	}

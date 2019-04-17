@@ -2,6 +2,11 @@
 	<view class="content">
 		<view class="submitorder ">
 			<view class="orderconnent">
+				 <view class="uni-list-cell-db">
+				           <picker mode="date" :value="date" :start="startDate" :end="endDate" @change="bindDateChange">
+				               <view class="uni-input">{{date}}</view>
+				           </picker>
+				       </view>
 				<!-- //选择配送方式 -->
 				<view class="selectBox">
 					<view :class="left" @click="ischeck(1)">快递配送</view>
@@ -16,18 +21,16 @@
 					<view class="setmealOrd">
 						<view>商品数量</view>
 						<view>
-							<text class="iconfont">&#xe6c8;</text>
+							<text class="iconfont" @click="subtraction">&#xe6c8;</text>
 							<view class="number">
 								<text>{{number}}</text>
 							</view>
 							<text class="iconfont" @click="addNuber">&#xe69a;</text>
 						</view>
 					</view>
-				
-					
 					<view class="setmealOrd">
 						<view>小计</view>
-						<view class="Timecolor">{{price}}元</view>
+						<view class="Timecolor"><text class="subtotal">x{{number}}</text>{{totalPricesed}}元</view>
 					</view>
 			
 					
@@ -42,7 +45,7 @@
 				</view>
 					<view class="setmeal">
 					<view class="setmealOrd">
-						<view>收货信息<input type="text" value="" placeholder="请输入地址信息"/></view>
+						<view>收货地址</view>
 						<view>></view>
 					</view>
 					
@@ -90,14 +93,21 @@
 			<view>合计:<text>{{totalPricesed}}元</text></view>
 			<view><button type="primary" class="btns">立即支付</button></view>
 		</view>
+		
 	</view>
 	
 </template>
 
 <script>
+	
 	export default {
 		data() {
+			  const currentDate = this.getDate({
+			      format: true
+			  })
 			return {
+				 date: currentDate,
+				
 				price:98,
 				number:1,
 				totalPrices:'',
@@ -127,19 +137,69 @@
 			totalPricesed(){
 				var totalPrices= this.price*this.number
 				return totalPrices
-			}
+			},
+			 startDate() {
+            return this.getDate('start');
+        },
+        endDate() {
+            return this.getDate('end');
+        }
+    
 
 		},
 		methods:{
+// 			bindPickerChange: function(e) {
+//             console.log('picker发送选择改变，携带值为', e.target.value)
+//             this.index = e.target.value
+//         },
+        bindDateChange: function(e) {
+            this.date = e.target.value
+        },
+//         bindTimeChange: function(e) {
+//             this.time = e.target.value
+//         },
+        getDate(type) {
+            const date = new Date();
+            let year = date.getFullYear();
+            let month = date.getMonth() + 1;
+            let day = date.getDate();
+
+            if (type === 'start') {
+                year = year - 60;
+            } else if (type === 'end') {
+                year = year + 60;
+            }
+            month = month > 9 ? month : '0' + month;;
+            day = day > 9 ? day : '0' + day;
+            return `${year}-${month}-${day}`;
+        },
+			//立即支付
+			payment(){
+				uni.request({
+				url: 'https://www.example.com/request', //仅为示例，并非真实接口地址。
+				data: {
+					text: 'uni.request'
+				},
+				header: {
+					'custom-header': 'hello' //自定义请求头信息
+				},
+				success: (res) => {
+					
+				}
+			});
+				
+		},
 			//计算数量加减
 			addNuber(){
 				this.number++;
 			},
 			subtraction(){
-				if(this.number<1){
-					r
+				if(this.number<2){
+					return
+				}else{
+					this.number--;
 				}
-				this.number--;
+				
 			},
 			ischeck(index){
 				if(index==1){
