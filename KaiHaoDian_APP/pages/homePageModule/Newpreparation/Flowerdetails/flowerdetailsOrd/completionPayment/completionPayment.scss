@@ -1,0 +1,78 @@
+.paymentsuccess{
+	background-color: #f3f3f3;
+	padding-top: 20upx;
+	box-sizing: border-box;
+	.paymentBox{
+		background-color: #fff;
+		border-radius: 20upx 20upx 0 0;
+		padding: 30upx;
+		box-sizing: border-box;
+		.title{
+			width: 100%;
+			text-align: center;
+			margin-bottom: 80upx;
+			view:nth-child(1){
+				font-size: 28upx;
+				color: #ffbb39;
+				margin-bottom: 10upx;
+			}
+			view:nth-child(2){
+				font-size: 24upx;
+				color: #666666;
+			}
+		}
+		//订单编号
+		.orderNumber{
+				width: 100%;
+		margin-top: 100upx;
+		margin-bottom: 20upx;
+			view:nth-child(1){
+				font-size: 28upx;
+				color: #ffbb39;
+				margin-bottom: 10upx;
+			}
+			view:nth-child(2){
+				font-size: 24upx;
+				color: #666666;
+			}
+		}
+		.QRcode{
+			width: 100%;
+			padding: 30upx 0;
+			box-sizing: border-box;
+			 box-shadow: 0 0 6upx #eeeeee ;
+			 text-align: center;
+			 border-radius:20upx; 
+			img{
+				width: 360upx;
+				height: 360upx;
+			}
+			.figure{
+					width: 100%;
+					height: 16upx;
+					img{
+						width: 100%;
+						height: 100%;
+						border-radius:0 0 20upx 20upx; 
+					}
+			}
+		}
+		.advicePayment{
+			 box-shadow: 0 2px 0 #f0f0f1, 0 0px 0 #f0f0f1;
+			  border-radius:20upx; 
+			  margin-top: -5upx;
+			img{
+				width: 100%;
+				height: 16upx;
+				display: block;
+			}
+			.figure2{
+				
+				padding: 30upx;
+				box-sizing: border-box;
+				font-size: 28upx;
+				color: #666666;
+			}
+		}
+	}
+}

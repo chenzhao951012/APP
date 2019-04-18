@@ -26,11 +26,11 @@
 					</view>
 					<view class="setmealOrd">
 						<view>小计</view>
-						<view class="Timecolor"><text class="subtotal">x{{number}}</text>{{totalPricesed}}元</view>
+						<view class="Timecolor"><text class="subtotal">x{{number}}</text>{{totalPricesed-money}}元</view>
 					</view>
 			
 					
-					<view class="setmealOrd" style="border-bottom: 0;">
+					<view class="setmealOrd" style="border-bottom: 0;" v-if="showList">
 						<view>配送费</view>
 						<view class="Timecolor">5元</view>
 					
@@ -39,19 +39,19 @@
 				<view class="lins">
 				</view>
 					<view class="setmeal">
-					<view class="setmealOrd">
+					<view class="setmealOrd" v-if="showList">
 						<view>收货地址</view>
 						<view @click="goshippingAddress">></view>
 					</view>
 					
-					<view class="setmealOrd">
+					<view class="setmealOrd" v-if="showList">
 						<view>你的电话<input type="text" value="" placeholder="请填写你的电话以备不时之需 " maxlength="11"/></view>
 						<view></view>
 					</view>
 				
 					
 					<view class="setmealOrd">
-						<view>送货时间</view>
+						<view>{{claimGods}}</view>
 						<view class="Timecolor">
 							  <picker mode="date" :value="date" :start="startDate" :end="endDate" @change="bindDateChange">
 										<text style="padding-right: 30upx;box-sizing: border-box;">
@@ -65,23 +65,23 @@
 						</view>
 					</view>
 				</view>
-				<view class="lins">
+				<view class="lins" v-if="showList">
 					
 				</view>
 						<view class="setmeal">
-					<view class="setmealOrd">
+					<view class="setmealOrd" v-if="showList">
 						<view>代写卡片<input type="text" value="" placeholder=""/></view>
 						<view></view>
 					</view>
-						<view class="setmealOrd">
+						<view class="setmealOrd" v-if="showList">
 						<view><input type="text" value="" placeholder=""/></view>
 						<view></view>
 					</view>
-					<view class="setmealOrd">
+					<view class="setmealOrd" v-if="showList">
 						<view>订单备注<input type="text" value="" placeholder="请输入地址信息"/></view>
 						<view class="Timecolor"></view>
 					</view>
-						<view class="setmealOrd">
+						<view class="setmealOrd" v-if="showList">
 						<view>开发票</view>
 						<view class="nonsupport">本店暂不支持开发票</view>
 					</view>
@@ -95,7 +95,7 @@
 		<!-- 支付部分 -->
 		
 		<view class="payfor">
-			<view>合计:<text>{{totalPricesed}}元</text></view>
+			<view>合计:<text>{{type>0? totalPricesed-money:totalPricesed}}元</text></view>
 			<view><button type="primary" class="btns">立即支付</button></view>
 		</view>
 		
@@ -112,6 +112,10 @@
 			      format: true
 			  })
 			return {
+				type:0,
+				showList:true,
+				claimGods:"送货时间",
+				money:5,
 				showpicker2:false,
 				time:'',
 				date: currentDate,
@@ -128,7 +132,9 @@
 			
 		},
 		onLoad() {
+
 			this.getNowFormatDate()
+			console.log(12)
 		},
 		computed:{
 		
@@ -139,7 +145,7 @@
 			},
 			//总价计算
 			totalPricesed(){
-				var totalPrices= this.price*this.number
+				var totalPrices= this.price*this.number+this.money
 				return totalPrices
 			},
 			 startDate() {
@@ -155,7 +161,7 @@
 			//去收货地址
 			goshippingAddress(){
 				uni.navigateTo({
-					url:'shippingAddress/shippingAddress'
+					url:'../selectAdress/selectAdress'
 				})
 			},
 			clicks(){
@@ -171,12 +177,13 @@
 			var seperator2 = ":";
 			var month = date.getMonth() + 1<10? "0"+(date.getMonth() + 1):date.getMonth() + 1;
 			var strDate = date.getDate()<10? "0" + date.getDate():date.getDate();
+			var minutes=date.getMinutes()<10? "0" + date.getMinutes():date.getMinutes();
 			var currentdate = date.getFullYear() + seperator1  + month    
 					 console.log(date.getMinutes)
 					
 			this.date== date.getFullYear() + seperator1  + month  + seperator1+'' 
 					
-			this.time= '' + (date.getHours()+1) + seperator2  + date.getMinutes()
+			this.time= '' + (date.getHours()+1) + seperator2  + minutes
 			},
         bindDateChange: function(e) {
             this.date = e.target.value
@@ -225,16 +232,21 @@
 				}else{
 					this.number--;
 				}
-				
 			},
 			ischeck(index){
 				if(index==1){
 					this.left='left'
 					this.right='right'
+					this.claimGods='送货时间'
+					this.showList=true
+					this.type=0
 				}else{
-					
 					this.left='right'
 					this.right='left'
+					this.claimGods='取货时间'
+					this.showList=false
+					
+					this.type=1
 				}
 			}
 		}

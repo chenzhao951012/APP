@@ -727,11 +727,32 @@
 				"navigationBarTitleText" : "收货地址"
 			}
         }
-       
+     
         ,{
-            "path" : "pages/homePageModule/Newpreparation/Flowerdetails/flowerdetailsOrd/selectAddress /selectAddress ",
+            "path" : "pages/homePageModule/Newpreparation/Flowerdetails/selectAdress/selectAdress",
             "style" : {
 				"navigationBarTitleText" : "选择地址"
+			}
+        }
+        ,{
+            "path" : "pages/homePageModule/Newpreparation/Flowerdetails/flowerdetailsOrd/completionPayment/completionPayment",
+            "style" : {
+				"navigationBarTitleText" : "支付成功",
+				 "app-plus": {
+				     "bounce": "none", //关闭窗口回弹效果
+				     "titleNView": {
+				         "buttons": [ //原生标题栏按钮配置,
+				             {
+				                 "text": "完成",
+																   "fontSize":"28upx",
+																	"width":"80upx",
+																   "fontWeight":"bold",
+																   "color":"#fdbd39"
+																	
+															   }
+				         ]
+				     }
+				 }
 			}
         }
     ],

@@ -1,0 +1,48 @@
+.selectAdress{
+	width: 750upx;
+	background-color: #f3f3f3;
+	padding-top: 20upx;
+	box-sizing: border-box;
+	margin-bottom: 90upx;
+	.adressList{
+			background-color: #fff;
+			background-color: #fff;
+			border-radius: 20upx 20upx 0 0;
+			padding: 30upx;
+			box-sizing: border-box;
+			
+			.surface{
+				padding: 30upx;
+				box-sizing: border-box;
+				 box-shadow: 0 2px 0 #f0f0f1, 0 -2px 0 #f0f0f1;
+				 border-left:2upx solid  #f0f0f1;
+				  border-right:2upx solid  #f0f0f1;
+				  border-radius: 20upx;
+				  display: flex;
+				  justify-content: space-between;
+				  margin-bottom: 20upx ;
+				  .adressInfo{
+					  font-size: 24upx;
+					  color: #333333;
+					  line-height: 2;
+				  }
+				.compile{
+					margin-top: 20upx;
+					 color: #333333;
+				}
+		}
+	}
+
+}
+.increased{
+	width: 750upx;
+	height: 90upx;
+	line-height: 90upx;
+	text-align: center;
+	color: #fff;
+	background-color: #ffbd38;
+	position: fixed;
+	bottom: 0;
+	font-size: 28upx;
+	letter-spacing: 5px;
+}

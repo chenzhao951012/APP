@@ -40,6 +40,7 @@
 	export default {
 		data() {
 			return {
+			
 				checkValue:'男',
 				ipone:'',
 				username:'',
@@ -62,7 +63,15 @@
         }
 	
 		},
-			
+			onLoad(option) {
+					if(option.id=='compile'){
+							this.ipone=''
+							this.username=''
+							this.adderssMassage=''
+					}else{
+						console.log(30)
+					}
+			},
 		methods:{
 			 radioChange: function(e) {
 				 console.log(e)
