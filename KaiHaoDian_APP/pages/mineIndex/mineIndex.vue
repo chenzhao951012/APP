@@ -459,7 +459,7 @@
 				}else if(index == "6"){
 					//申请交换联系
 					uni.navigateTo({
-						url: 'help/help/help',
+						url: 'Application/Application',
 						success: res => {
 							console.log(res);
 						},

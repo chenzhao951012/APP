@@ -1,0 +1,94 @@
+.enterBox{
+	background-color: #f3f3f3;
+	padding-top: 20upx;
+	block-size:border-box;
+	.apply{
+		background-color: #fff;
+		border-radius:20upx 20upx 0 0;
+		 .tab{
+			 border-radius:0 0 0upx 0upx;
+			  box-shadow: 0 2px 0 #f0f0f1, 0 0px 0 #f0f0f1;
+			}
+			
+			
+		}
+		//信息类别
+		.information{
+			background-color: #fff;
+			margin-top: 4upx;
+				.category{
+				height: 100upx;
+				line-height: 100upx;
+				font-size: 24upx;
+				color: #333333;
+				display: flex;
+				border-bottom: 2upx solid #eeeeee;
+				padding: 0 30upx;
+				box-sizing: border-box;
+				view{
+					input{
+						margin-top: 24upx;
+						margin-left: 20upx;
+					}
+				}
+			}
+			.category2{
+				display: flex;
+				justify-content: space-between;
+			}
+			.category3{
+				padding: 0 30upx;
+				box-sizing: border-box;
+				font-size: 24upx;
+				color: #333333;
+				.title{
+					line-height: 100upx;
+				}
+				// 营业执照上传
+				.ImgBox{
+					display: flex;
+				
+					.license{
+						display: flex;
+						justify-content: space-between;
+						width: 100%;
+						view{
+							width: 30%;
+							position: relative;
+							.iconfont{
+								color: #ffbd38;
+								position: absolute;
+								right: 0;
+								top: 0;
+								font-size: 40upx;
+							}
+						}
+						img{
+							height: 160upx;
+							width:100%;
+						}
+					}
+					
+				}
+			}
+		}
+	
+	 }
+	 .lins{
+		 width: 750upx;
+		 height: 20upx;
+		 background-color: #f3f3f3;
+	 }
+	 // 底部按钮
+	 .next{
+		 width: 750upx;
+		 height: 90upx;
+		 background-color: #ffbd38;
+		 color: #fff;
+		 font-size: 28upx;
+		 font-weight: 600;
+		 position: fixed;
+		 bottom: 0;
+		 text-align: center;
+		 line-height: 90upx;
+		 }

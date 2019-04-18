@@ -755,6 +755,18 @@
 				 }
 			}
         }
+        ,{
+            "path" : "pages/mineIndex/Application/Application",
+            "style" : {
+				"navigationBarTitleText" : "入驻认证"
+			}
+        }
+        ,{
+            "path" : "pages/mineIndex/Application/Applicationin/Applicationin",
+            "style" : {
+				"navigationBarTitleText" : "申请入驻"
+			}
+        }
     ],
     /*------------------------------------------添加认证相关页面  End------------------------------------------*/
     "globalStyle" : {

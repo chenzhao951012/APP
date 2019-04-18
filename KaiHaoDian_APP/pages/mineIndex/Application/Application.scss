@@ -1,0 +1,74 @@
+.enterBox{
+	background-color: #f3f3f3;
+	padding-top: 20upx;
+	block-size:border-box;
+	.apply{
+		background-color: #fff;
+		border-radius:20upx 20upx 0 0;
+		 .tab{
+			 border-radius:0 0 0upx 0upx;
+			  box-shadow: 0 2px 0 #f0f0f1, 0 0px 0 #f0f0f1;
+		 }
+		 .flow{
+			 padding: 30upx;
+			 box-sizing: border-box;
+			margin-top: 60upx;
+			font-size: 24upx;
+			color: #333333;
+			
+			 .flowBox{
+				  padding:0 30upx;
+				 box-sizing: border-box;
+				 border: 2upx solid #ffbd38;
+				 line-height: 4;
+				 border-radius:10upx; 
+				  .iconfont{
+				 	 color: #ffbd38;
+				 	 font-size: 40upx;
+					 vertical-align: middle;
+					 padding-right: 20upx;
+				 	font-weight: 100;
+				 	}
+				 }
+				 .flowBox2{
+					line-height: 0;
+					 padding: 20upx 30upx;
+					 box-sizing: border-box;
+					 .contentOne{
+						  line-height:2.5;
+						  margin-bottom: 60upx;
+					 }
+					 .contenTwo{
+						 .remark{
+							 font-weight: 600;
+							 font-size: 28upx;
+							 color: #ffbe36;
+							 margin-bottom: 40upx;
+							 
+							 }
+							 .subconnent{
+								  line-height: 2.5;
+								  font-size: 24upx;
+								  margin-bottom: 10upx;
+							 }
+					 }
+				 }
+			
+		 }
+	}
+	
+}
+//底部按钮
+	.submitBox{
+		width: 750upx;
+		background-color: #ffbd38;
+		color: #fff;
+		text-align: center;
+		font-size: 28upx;
+		height: 90upx;
+		position: fixed;
+		bottom: 0;
+		line-height: 90upx;
+		letter-spacing: 5upx;
+		font-weight: 600;
+		}
