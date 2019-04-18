@@ -1,0 +1,56 @@
+.shippingaddress{
+	background-color: #f3f3f3;
+	padding-top: 20upx;
+	box-sizing: border-box;
+	.address{
+		padding: 0 30upx;
+		box-sizing: border-box;
+		border-radius: 20upx 20upx 0 0;
+		background-color: #fff;
+		.profile{
+			display: flex;
+			
+			border-bottom: 2upx solid #eeeeee;
+			height: 100upx;
+			line-height: 100upx;
+			font-size: 28upx;
+			font-weight: 600;
+			color: #333333;
+			input{
+				margin-top: 24upx;
+				margin-left: 20upx;
+				font-weight: 100;
+				color: #666666;
+			}
+			.iconfont{
+				font-size: 32upx;
+				font-weight: 100;
+				
+			}
+			text{
+				padding-left: 20upx;
+			}
+		}
+	}
+}
+.checkbox{
+	display: flex;
+	margin-right: 40upx;
+	color: #666666;
+	font-size: 28upx;
+	font-weight: 100;
+	uni-radio .uni-radio-input{
+		border: 2upx solid #ffbb39 !important;
+	}
+}
+.saveBox{
+	width: 750upx;
+	height: 100upx;
+	color: #fff;
+	text-align: center;
+	background-color: #ffbd38;
+	position: fixed;
+	bottom: 0;
+	font-size: 28upx;
+	line-height: 100upx;
+	}

@@ -2,11 +2,7 @@
 	<view class="content">
 		<view class="submitorder ">
 			<view class="orderconnent">
-				 <view class="uni-list-cell-db">
-				           <picker mode="date" :value="date" :start="startDate" :end="endDate" @change="bindDateChange">
-				               <view class="uni-input">{{date}}</view>
-				           </picker>
-				       </view>
+ 
 				<!-- //选择配送方式 -->
 				<view class="selectBox">
 					<view :class="left" @click="ischeck(1)">快递配送</view>
@@ -41,12 +37,11 @@
 				</view>
 				</view>
 				<view class="lins">
-					
 				</view>
 					<view class="setmeal">
 					<view class="setmealOrd">
 						<view>收货地址</view>
-						<view>></view>
+						<view @click="goshippingAddress">></view>
 					</view>
 					
 					<view class="setmealOrd">
@@ -57,7 +52,17 @@
 					
 					<view class="setmealOrd">
 						<view>送货时间</view>
-						<view class="Timecolor">{{getNowFormatDate}}</view>
+						<view class="Timecolor">
+							  <picker mode="date" :value="date" :start="startDate" :end="endDate" @change="bindDateChange">
+										<text style="padding-right: 30upx;box-sizing: border-box;">
+										{{date}}
+										</text>				   
+							</picker>
+							 <picker mode="time" :value="time" start="09:01" end="21:01" @change="bindTimeChange">
+							 <text>{{time}}</text>
+							</picker>
+							
+						</view>
 					</view>
 				</view>
 				<view class="lins">
@@ -99,15 +104,17 @@
 </template>
 
 <script>
-	
+	import mpvuePicker from '@/components/mpvue-picker/mpvuePicker.vue';
 	export default {
+		
 		data() {
 			  const currentDate = this.getDate({
 			      format: true
 			  })
 			return {
-				 date: currentDate,
-				
+				showpicker2:false,
+				time:'',
+				date: currentDate,
 				price:98,
 				number:1,
 				totalPrices:'',
@@ -116,18 +123,15 @@
 				
 			};
 		},
+		components: {
+			mpvuePicker,
+			
+		},
+		onLoad() {
+			this.getNowFormatDate()
+		},
 		computed:{
-			getNowFormatDate() {//获取当前时间
-			var date = new Date();
-			var seperator1 = "-";
-			var seperator2 = ":";
-			var month = date.getMonth() + 1<10? "0"+(date.getMonth() + 1):date.getMonth() + 1;
-			var strDate = date.getDate()<10? "0" + date.getDate():date.getDate();
-			var currentdate = date.getFullYear() + seperator1  + month  + seperator1  + strDate
-					+ " "  +(date.getHours()+1)   + seperator2  + date.getMinutes()
-					 console.log(date)
-			return currentdate;
-			},
+		
 			phoneNumber(){
 				var phone='17611205736'
 				var phons=phone.substring(0,3)+'****'+phone.substring(7,11)
@@ -148,16 +152,38 @@
 
 		},
 		methods:{
+			//去收货地址
+			goshippingAddress(){
+				uni.navigateTo({
+					url:'shippingAddress/shippingAddress'
+				})
+			},
+			clicks(){
+				this.showpicker2=true
+			},
 // 			bindPickerChange: function(e) {
 //             console.log('picker发送选择改变，携带值为', e.target.value)
 //             this.index = e.target.value
 //         },
+	getNowFormatDate() {//获取当前时间
+			var date = new Date();
+			var seperator1 = "-";
+			var seperator2 = ":";
+			var month = date.getMonth() + 1<10? "0"+(date.getMonth() + 1):date.getMonth() + 1;
+			var strDate = date.getDate()<10? "0" + date.getDate():date.getDate();
+			var currentdate = date.getFullYear() + seperator1  + month    
+					 console.log(date.getMinutes)
+					
+			this.date== date.getFullYear() + seperator1  + month  + seperator1+'' 
+					
+			this.time= '' + (date.getHours()+1) + seperator2  + date.getMinutes()
+			},
         bindDateChange: function(e) {
             this.date = e.target.value
         },
-//         bindTimeChange: function(e) {
-//             this.time = e.target.value
-//         },
+        bindTimeChange: function(e) {
+            this.time = e.target.value
+        },
         getDate(type) {
             const date = new Date();
             let year = date.getFullYear();

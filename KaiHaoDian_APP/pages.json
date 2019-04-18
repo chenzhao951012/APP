@@ -721,6 +721,19 @@
 				"navigationBarTitleText" : "提交订单"
 			}
         }
+        ,{
+            "path" : "pages/homePageModule/Newpreparation/Flowerdetails/flowerdetailsOrd/shippingAddress/shippingAddress",
+            "style" : {
+				"navigationBarTitleText" : "收货地址"
+			}
+        }
+       
+        ,{
+            "path" : "pages/homePageModule/Newpreparation/Flowerdetails/flowerdetailsOrd/selectAddress /selectAddress ",
+            "style" : {
+				"navigationBarTitleText" : "选择地址"
+			}
+        }
     ],
     /*------------------------------------------添加认证相关页面  End------------------------------------------*/
     "globalStyle" : {
