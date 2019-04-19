@@ -8,7 +8,7 @@
 
 <script>
 	export default {
-		props:['modelData','initIndex'],
+		props:['modelData','initIndex','chooseIndex'],
 		data() {
 			return {
 				defaultInfo:{
@@ -48,6 +48,7 @@
 		created() {
 			this.initActive()
 			console.log(this.modelData)
+			console.log(this.chooseIndex)
 		},
 	}
 </script>

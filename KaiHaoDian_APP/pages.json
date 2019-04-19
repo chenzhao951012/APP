@@ -767,6 +767,69 @@
 				"navigationBarTitleText" : "申请入驻"
 			}
         }
+        ,{
+            "path" : "pages/mineIndex/Application/Applicationin/Selectindustry/Selectindustry",
+            "style" : {
+				"navigationBarTitleText" : "",
+				 "app-plus": {
+				    "bounce": "none", //关闭窗口回弹效果
+				    "titleNView": {
+				        "buttons": [ //原生标题栏按钮配置,
+				            {
+				                "text": "完成",
+									"fontSize":"28upx",
+									"width":"80upx",
+									"fontWeight":"bold",
+									"color":"#fdbd39"
+																					
+									}
+				        ]
+				    }
+				}
+			}
+        }
+        ,{
+            "path" : "pages/mineIndex/Application/Applicationin/brandcharacteristics/brandcharacteristics",
+            "style" : {
+					"navigationBarTitleText" : "品牌特色",
+				 "app-plus": {
+				    "bounce": "none", //关闭窗口回弹效果
+				    "titleNView": {
+				        "buttons": [ //原生标题栏按钮配置,
+				            {
+				                "text": "完成",
+									"fontSize":"28upx",
+									"width":"80upx",
+									"fontWeight":"bold",
+									"color":"#fdbd39"
+																					
+									}
+				        ]
+				    }
+				}
+			}
+        }
+        ,{
+            "path" : "pages/mineIndex/Application/Applicationin/brandShow/brandShow",
+            "style" : {
+				"navigationBarTitleText" : "品牌展示",
+				 "app-plus": {
+				    "bounce": "none", //关闭窗口回弹效果
+				    "titleNView": {
+				        "buttons": [ //原生标题栏按钮配置,
+				            {
+				                "text": "完成",
+									"fontSize":"28upx",
+									"width":"80upx",
+									"fontWeight":"bold",
+									"color":"#fdbd39"
+																					
+									}
+				        ]
+				    }
+				}
+			}
+        }
     ],
     /*------------------------------------------添加认证相关页面  End------------------------------------------*/
     "globalStyle" : {

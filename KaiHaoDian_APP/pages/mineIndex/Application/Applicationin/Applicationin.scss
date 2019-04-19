@@ -1,7 +1,7 @@
 .enterBox{
 	background-color: #f3f3f3;
 	padding-top: 20upx;
-	block-size:border-box;
+		box-sizing: border-box;
 	.apply{
 		background-color: #fff;
 		border-radius:20upx 20upx 0 0;
@@ -17,6 +17,7 @@
 			background-color: #fff;
 			margin-top: 4upx;
 				.category{
+					width: 100%;
 				height: 100upx;
 				line-height: 100upx;
 				font-size: 24upx;
@@ -26,15 +27,25 @@
 				padding: 0 30upx;
 				box-sizing: border-box;
 				view{
+					
 					input{
 						margin-top: 24upx;
 						margin-left: 20upx;
+						width:100%;
 					}
+				}
+				view:nth-child(2){
+					width: 75%;
 				}
 			}
 			.category2{
 				display: flex;
 				justify-content: space-between;
+					view:nth-child(2){
+					width: 30%;
+					text-align: right;
+				}
+				
 			}
 			.category3{
 				padding: 0 30upx;
@@ -55,20 +66,54 @@
 						view{
 							width: 30%;
 							position: relative;
+							justify-content: space-between;
 							.iconfont{
 								color: #ffbd38;
 								position: absolute;
-								right: 0;
-								top: 0;
-								font-size: 40upx;
+								right: -12upx;
+								top: -16upx;
+								font-size: 36upx;
 							}
 						}
 						img{
 							height: 160upx;
 							width:100%;
 						}
+						.addImg{
+							
+							height: 160upx;
+							border: 2upx solid #eeeeee;
+							line-height: 160upx;
+							
+								.iconfont{
+								color: #333333;
+								position: absolute;
+								left:56upx;
+								top: 0;
+								font-size: 100upx;
+							}
+						}
 					}
 					
+				}
+			}
+			.category4{
+				padding: 30upx;
+				box-sizing: border-box;
+				padding-bottom: 0;
+				font-size: 24upx;
+				view:nth-child(2){
+					margin-top: 30upx;
+					width: 100%;
+					min-height: 240upx;
+					border: 2upx solid #ffbd38;
+					textarea{
+						padding: 30upx;
+						box-sizing: border-box;
+						color: #c2c2c2;
+						font-size: 24upx;
+						width: 100%;
+					}
 				}
 			}
 		}
@@ -91,4 +136,7 @@
 		 bottom: 0;
 		 text-align: center;
 		 line-height: 90upx;
+		 }
+		 .enterBox{
+		 	margin-bottom: 160upx;
 		 }

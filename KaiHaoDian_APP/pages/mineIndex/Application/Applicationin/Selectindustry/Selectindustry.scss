@@ -1,0 +1,44 @@
+.enterBox{
+	background-color: #f3f3f3;
+	padding-top: 20upx;
+	box-sizing: border-box;
+	.apply{
+		background-color: #fff;
+		border-radius:20upx 20upx 0 0;
+		padding: 30upx;
+		box-sizing: border-box;
+		display: flex;
+		
+		flex-wrap: wrap;
+		justify-content:space-between;
+		.title{
+				padding: 20upx 30upx;
+				
+				box-sizing: border-box;
+				background-color: #eeeeee;
+				border-radius:10upx;
+				margin-bottom: 40upx;
+				 
+				 font-size: 24upx;
+				 color: #333333;
+				}
+				.title2{
+					background-color: #ffbd38;
+					color: #fff;
+				}
+// 				.title:nth-child(4){
+// 					margin-right: 0;
+// 					margin-left: auto;
+// 				}
+// 				.title:nth-child(8){
+// 					margin-right: 0;
+// 					margin-left: auto;
+// 				}
+				.title:nth-child(11){
+					width: 100%;
+					margin-right: 0;
+				}
+				
+			}
+		}	
+		

@@ -1,0 +1,50 @@
+.enterBox{
+	background-color: #f3f3f3;
+	padding-top: 20upx;
+	box-sizing: border-box;
+	.chooseImg{
+		padding: 30upx;
+		box-sizing: border-box;
+		background-color: #fff;
+		border-radius:20upx 20upx 0 0;
+		.showImg{
+			margin-top: 20upx;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			.show{
+				width: 31%;
+				position: relative;
+				img{
+					width: 100%;
+					height: 220upx;
+					border-radius:10upx; 
+					margin-bottom: 20upx;
+					display: flex;
+				}
+				.iconfont{
+					position: absolute;
+					color: #ffbd38;
+					position: absolute;
+					right: -12upx;
+					top: -16upx;
+					font-size: 32upx;
+				}
+			}
+			.addImg{
+				width: 31%;
+				height: 216upx;
+				border: 2upx solid #eeeeee;
+				text-align: center;
+				line-height: 220upx;
+				
+				border-radius:10upx; 
+				.iconfont{
+					font-size:90upx;
+					color: #888888;
+					
+				}
+			}
+		}
+	}
+}
