@@ -66,27 +66,27 @@
 				<view class="information">
 					<view class="category">
 						<view>品牌名称</view>
-						<view><input type="text" v-model="brandname" maxlength="300"></view>
+						<view><input type="text"  v-model="info.brandname"  maxlength="300"></view>
 					</view>
 					<view class="category">
 						<view>品牌龄</view>
-						<view><input type="text" v-model="brandage"></view>
+						<view><input type="text" v-model="info.brandage"></view>
 					</view>
 					<view class="category">
 						<view>加盟费</view>
-						<view><input type="text" v-model="franchisefee"></view>
+						<view><input type="text" v-model="info.franchisefee"></view>
 					</view>
 					<view class="category">
 						<view>加盟特色</view>
-						<view><input type="text" v-model="characteristics"></view>
+						<view><input type="text" v-model="info.characteristics"></view>
 					</view>
 					<view class="category">
 						<view>现有门店</view>
-						<view><input type="text" v-model="Existingstores"></view>
+						<view><input type="text" v-model="info.Existingstores"></view>
 					</view>
 					<view class="category">
 						<view>总部地址</view>
-						<view><input type="text" v-model="headquarteraddress"></view>
+						<view><input type="text" v-model="info.headquarteraddress"></view>
 					</view>
 				</view>
 				<view class="lins">
@@ -103,7 +103,7 @@
 					</view>
 					<view class="category category2">
 						<view>品牌展示</view>
-						<view><text  class="iconfont">&#xe616;</text></view>
+						<view @click="brandshow">{{accomplish3}}<text  class="iconfont"  v-if="showRight3">&#xe616;</text></view>
 					</view>
 				</view>
 				<view class="lins">
@@ -114,31 +114,31 @@
 					<view class="category4">
 						<view>公司介绍</view>
 						<view>
-							<textarea value="" placeholder="" v-model="companyintroduction"/>
+							<textarea value="" placeholder="" v-model="info.companyintroduction"/>
 						</view>
 					</view>
 						<view class="category4">
 						<view>服务优势</view>
 						<view>
-							<textarea value="" placeholder="" v-model="advantageservice"/>
+							<textarea value="" placeholder="" v-model="info.advantageservice"/>
 						</view>
 					</view>
 						<view class="category4">
 						<view>运营优势</view>
 						<view>
-							<textarea value="" placeholder="" v-model="Operatingadvantages"/>
+							<textarea value="" placeholder="" v-model="info.Operatingadvantages"/>
 						</view>
 					</view>
 						<view class="category4">
 						<view>售后服务</view>
 						<view>
-							<textarea value="" placeholder="" v-model="aftersalesservice"/>
+							<textarea value="" placeholder="" v-model="info.aftersalesservice"/>
 						</view>
 					</view>
 						<view class="category4">
 						<view>总部支持</view>
 						<view>
-							<textarea value="" placeholder="" v-model="support"/>
+							<textarea value="" placeholder="" v-model="info.support"/>
 						</view>
 					</view>
 					<view class="category3">
@@ -169,40 +169,50 @@
 			
 			</view>
 		</view>
-		<view class="next" @click="submitInfo">
+		<view class="next" @click="nextstep">
 			下一步
 		</view>
 	</view>
 </template>
 
 <script>
+	import getLocation from '@/common/getLocation.js';
+	import shoppublic from '@/common/shoppublic';
 	import SwiperNav from '@/components/SlidingNavigation.vue';
 	export default {
 		data() {
 			return {
+				info:{
+					brandname:'',//品牌名称
+					brandage:'',//品牌年龄
+					franchisefee:'',//加盟费
+					characteristics:'',//加盟特色
+					Existingstores:'',//现有门店
+					headquarteraddress:'',//总部地址
+					companyintroduction:'',//公司介绍
+					advantageservice:'',//服务优势
+					Operatingadvantages:'',//运营优势
+					aftersalesservice:'',//售后服务
+					support:'',//总部支持
+				},
+				accomplish3:'',
 				showRight:true,
 				showRight2:true,
+				showRight3:true,
 				accomplish2:'',
 				imgListed:[],
 				imgListed2:[],
 				initIndex:0,
 				accomplish:'',
 				state:1,
-				brandname:'',//品牌名称
-				 brandage:'',//品牌年龄
-				 franchisefee:'',//加盟费
-				 characteristics:'',//加盟特色
-				 Existingstores:'',//现有门店
-				 headquarteraddress:'',//总部地址
-				 companyintroduction:'',//公司介绍
-				 advantageservice:'',//服务优势
-				 Operatingadvantages:'',//运营优势
-				 aftersalesservice:'',//售后服务
-				 support:'',//总部支持
+				
 				showindustry:true,
 				industry:'',
 				ishwos:true,
 				imgList:[],
+				imgList1:[],
+				imgList2:[],
+				imgList3:[],
 				site:'',
 				shopname:'',
 				phone:'',
@@ -225,29 +235,43 @@
 			SwiperNav
 		},
 		onBackPress(){
-		
-		try {
-			uni.removeStorageSync('imgList1');
-		} catch (e) {
-			
-		}
-		try {
-			uni.removeStorageSync('imgList2');
-		} catch (e) {
-			
-		}
+// 		
+// 		try {
+// 			uni.removeStorageSync('imgList1');
+// 		} catch (e) {
+// 			
+// 		}
+// 		try {
+// 			uni.removeStorageSync('imgList2');
+// 		} catch (e) {
+// 			
+// 		}
+// 			try {
+// 			uni.removeStorageSync('imgList3');
+// 		} catch (e) {
+// 			
+// 		}
 		},
 		onLoad(option) {
+			getLocation.getLocation(function(res_p, res_c) {
+				// _this.setLocation(res_p, res_c);
+				// console.log('省', JSON.stringify(res_p));
+				// console.log('市', JSON.stringify(res_c));
+// 				_this.location_city = res_c[0].id;
+// 				console.log(res_p, res_c)
+			});
 			var that=this
 			console.log(this.imgListed2)
 			uni.getStorage({
 			key: 'imgList1',
 			success: function (res) {
+				that.imgList1=res.data
 				if(res.data.length>0){
 					that.accomplish='已完成'
 					that.initIndex=1
 					that.showindustry=false
 					that.showRight=false
+					that.state=2
 				}
 			}
 		});
@@ -255,11 +279,34 @@
 			key: 'imgList2',
 			success: function (res) {
 				console.log(res.data)
+				that.imgList2=res.data
 				if(res.data.length>0){
 					that.accomplish2='已完成'
 					that.initIndex=1
 					that.showindustry=false
 					that.showRight2=false
+					that.state=2
+				}
+			}
+		});
+		uni.getStorage({
+			key: 'inputvalue',
+			success: function (res) {
+				console.log(res.data)
+				that.info=res.data
+			}
+		});
+		uni.getStorage({
+			key: 'imgList3',
+			success: function (res) {
+				console.log(res.data)
+				that.imgList3=res.data
+				if(res.data.length>0){
+					that.accomplish3='已完成'
+					that.initIndex=1
+					that.showindustry=false
+					that.showRight3=false
+					that.state=2
 				}
 			}
 		});
@@ -267,8 +314,186 @@
 			
 		},
 		methods:{
+			nextstep(){
+				uni.navigateTo({
+					url:"../../../agreement/agreement"
+				})
+// 				if(this.state==2){
+// 					this.pulbish()
+// 				}else{
+// 					console.log('hah ')
+// 				}
+			},
+			//招商发布
+			pulbish(){
+				var warn;
+				var that=this
+// 					var data={
+// 					logo: tData.logo,
+// 					token: token,
+// 					title: tData.title,
+// 					brands: tData.brands,
+// 					mainProduct: tData.brandss,
+// 					phone: tData.phone,
+// 					type: typeid,
+// 					typevalue: tData.typevalue,
+// 					storeage: tData.storeage,
+// 					storecount: tData.storecount,
+// 					initialfee: tData.initialfee,
+// 					province: province_id,
+// 					provincevalue: provinceName,
+// 					affiliatearea: tData.quyu,
+// 					city: city_id,
+// 					cityvalue: cityName,
+// 					county: county_id,
+// 					countyvalue: countyName,
+// 					street: tData.street,
+// 					service: tData.allGoodsFilte,
+// 					videoaddress: tData.videourl,
+// 					src: tData.imgsrc,
+// 					// src:'321321',
+// 					introduction: tData.introduction,
+// 					dataarea: tData.dataarea, //推广时长
+// 					area: tData.area, //推广范围
+// 				}
+				if(that.info.brandname==''){
+					warn='品牌名称不能为空'
+				}else if(that.info.brandage==''){
+					warn='品牌年龄不能为空'
+				}else if(that.info.franchisefee==''){
+					warn='品加盟费用不能为空'
+				}else if(that.info.characteristics==''){
+					warn='加盟特色不能为空'
+				}else if(that.info.Existingstores==''){
+					warn='现有门店不能为空'
+				}else if(that.info.headquarteraddress==''){
+					warn='总部地址不能为空'
+				}
+				else if(that.info.companyintroduction==''){
+					warn='公司介绍不能为空'
+				}
+				else if(that.info.advantageservice==''){
+					warn='服务优势不能为空'
+				}
+				else if(that.info.Operatingadvantages==''){
+					warn='运营优势不能为空'
+				}
+				else if(that.info.support==''){
+					warn='总部技术支持不能为空'
+				}else if(that.info.imgList.length<1){
+					warn='至少添加一张企业证书照'
+				}
+				else if(that.info.imgList1.length<1){
+					warn='至少添加一张品牌特色照'
+				}
+				else if(that.info.imgList2.length<1){
+					warn='至少添加一张品牌形象照'
+				}
+				else if(that.info.imgList3.length<1){
+					warn='至少添加一张品牌展示照'
+				}
+				else{
+					 uni.request({
+									url: shoppublic.getUrl() + '/projectJoin/addProjectJoin',
+									data: data,
+									header: {
+									  'content-type': 'application/json' // 默认值
+									},
+									success: (res) => {
+									  if (res.data.responseBody == null || res.data.responseBody == '') {
+										
+										uni.showModal({
+										  title: '提示',
+										  icon:'none',
+										  content: '网络繁忙,请稍后重试'
+										})
+										return;
+									  } else {
+										console.log(1234)
+										_project_id = res.data.responseBody
+										console.info('res_idddd', res.data.responseBody)
+										console.log(res)
+										if (flag == true) {
+										  wx.showModal({
+											title: '提示',
+											content: warn
+										  })
+										  return;
+										  
+										}
+										this.xiadan();
+									  }
+									},
+									fail: function(res) {
+									  console.log("qqq")
+									}
+					
+					})
+				}
+				 
+			  uni.showToast({
+			  	title: warn,
+			  	icon:"none",
+			  	duration: 2000
+			  });
+					},
+					//下单
+					release() {
+						console.info(1);
+						var that = this;
+						uni.request({
+						  url: shoppublic.getUrl() + '/PayProjectJoin/pay',
+						  method: 'POST',
+						  header: {
+							'content-type': 'application/x-www-form-urlencoded'
+						  },
+						  data: {
+							token: token,
+							projectId: _project_id
+						  },
+						  success: function(res) {
+							console.info('下单', res.data);
+							prepay_id = res.data.prepay_id;
+							console.log("统一下单返回 prepay_id:" + prepay_id);
+							that.sign(prepay_id);
+						  }
+						})
+			  },
+			// 去展示页
+			brandshow(){
+				uni.navigateTo({
+					url:'./brandShow/brandShow'
+				})
+			},
+				//将input里的值存到本地
+			SetStorage(){
+					var that=this
+			
+				var data={
+						brandname:that.info.brandname,//品牌名称
+						brandage:that.info.brandage,//品牌年龄
+						franchisefee:that.info.franchisefee,//加盟费
+						characteristics:that.info.characteristics,//加盟特色
+						Existingstores:that.info.Existingstores,//现有门店
+						headquarteraddress:that.info.headquarteraddress,//总部地址
+						companyintroduction:that.info.companyintroduction,//公司介绍
+						advantageservice:that.info.advantageservice,//服务优势
+						Operatingadvantages:that.info.Operatingadvantages,//运营优势
+						aftersalesservice:that.info.aftersalesservice,//售后服务
+						support:that.info.aftersalesservice,//总部支持
+						}
+					uni.setStorage({
+								key: 'inputvalue',
+								data: data,
+								success: function () {
+								console.log('success');
+									
+								}
+						});
+			},
 			// 品牌特色跳转
 			Bcharacteristics(type){
+						this.SetStorage()
 						uni.navigateTo({
 						url:'./brandcharacteristics/brandcharacteristics?type='+type
 					})
@@ -276,6 +501,7 @@
 				},
 			// 行业选择
 			Chooseindustry(){
+				this.SetStorage()
 				uni.navigateTo({
 					url:'./Selectindustry/Selectindustry'
 				})

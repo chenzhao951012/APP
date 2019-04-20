@@ -1,0 +1,63 @@
+.agreement{
+	width: 750upx;
+	background-color: #f3f3f3;
+	padding-top: 20upx;
+	box-sizing: border-box;
+	.agreementBox{
+		background-color: #fff;
+		border-radius:20upx 20upx 0 0; 
+		padding: 30upx;
+		box-sizing: border-box;
+		.explain{
+			font-size: 24upx;
+			color: #333333;
+			text-indent: 60upx;
+			letter-spacing: 2upx;
+			line-height: 1.5;
+			.date{
+				
+				text{
+					padding-left: 10upx;
+					padding-right: 10upx;
+					color: #ffcf6d;
+				}
+				.year{
+					padding-left: 30upx;
+					padding-right: 10upx;
+				}
+			}
+			view{
+				text{
+					padding-left: 30upx;
+					padding-right: 10upx;
+				
+				}
+			}
+			
+		}
+	}
+	.checkbox{
+		padding: 30upx;
+		box-sizing: border-box;
+		background-color: #fff;
+		font-size: 24upx;
+		text{
+			color: #ffd37a;
+		}
+		.checkbox .uni-checkbox-input{
+border: 1px solid #9a9a9a;
+border-radius: 50%;
+width: 40rpx; 
+height: 40rpx;
+box-sizing:border-box;
+}
+	}
+}
+.title{
+	font-size: 28upx;
+	color: #333333;
+	font-weight: 600;
+	margin-top: 40upx;
+	text-indent: 60upx;
+	margin-bottom: 10upx;
+}

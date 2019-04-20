@@ -1,0 +1,39 @@
+.enterBox{
+	width: 750upx;
+	background-color: #f3f3f3;
+	padding-top: 20upx;
+	box-sizing: border-box;
+	
+}
+.addImgBox{
+	padding: 30upx;
+	box-sizing: border-box;
+	background: #fff;
+	.imgBox{
+		width: 100%;
+		border: 2upx solid #e5e5e5;
+		height: 380upx;
+		border-radius:10upx; 
+		margin-bottom: 20upx;
+		text-align: center;
+		.iconfont{
+			font-size: 100upx;
+			color: #666666;
+			
+			line-height:380upx;
+		}
+		img{
+			width: 100%;
+			height: 380upx;
+			border-radius:10upx; 
+		}
+	}
+	.addition{
+		
+		text-align: center;
+		.iconfont{
+			font-size: 40upx;
+			color: #7d7d7d;
+		}
+	}
+}

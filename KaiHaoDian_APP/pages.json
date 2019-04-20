@@ -830,6 +830,12 @@
 				}
 			}
         }
+        ,{
+            "path" : "pages/agreement/agreement",
+            "style" : {
+				"navigationBarTitleText" : ""
+			}
+        }
     ],
     /*------------------------------------------添加认证相关页面  End------------------------------------------*/
     "globalStyle" : {

@@ -57,9 +57,15 @@ function loadCity(longitude, latitude, callBack) {
           return (value.name == res.data.result.addressComponent.city);
         }
       )
+			var result_county = result_county.filter( //过滤市
+			  function(value) {
+			    return (value.name == res.data.result.addressComponent.county);
+			  }
+			)
 			console.log('省',JSON.stringify(result_P));
 			console.log('市',JSON.stringify(result_C));
-      callBack(result_P,result_C);
+				console.log('市',JSON.stringify(result_county));
+      callBack(result_P,result_C,result_county);
     },
     fail: function(res) {},
   })
