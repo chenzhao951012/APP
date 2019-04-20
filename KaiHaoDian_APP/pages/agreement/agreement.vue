@@ -94,7 +94,7 @@
 			</view>
 			<view>
 				<view class="checkbox">
-					 <radio color='#ffbd38' :checked="ischeck" id="check"/><text>我已仔细阅读并同意签约协议</text>
+					<text  @click="changed" class="iconfont" v-if="ischeck">&#xe685;</text><text @click="changed" class="iconfont" v-if="!ischeck">&#xe968;</text><text>我已仔细阅读并同意签约协议</text>
 				</view>
 			</view>
 		</view>
@@ -105,7 +105,8 @@
 	export default {
 		data() {
 			return {
-				ischeck:false,
+				
+				ischeck:true,
 				year:'',
 				month:'',
 				day:''
@@ -118,6 +119,9 @@
 			this.getNowFormatDate()
 		},
 		methods:{
+			changed(){
+				this.ischeck=!this.ischeck
+			},
 			getNowFormatDate() {//获取当前时间
 					var date = new Date();
 					var month = date.getMonth() + 1<10? "0"+(date.getMonth() + 1):date.getMonth() + 1;
