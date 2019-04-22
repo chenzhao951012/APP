@@ -579,8 +579,8 @@
 </script>
 
 <style lang="scss">
-	.uni-actionsheet__cell::nth-child(1){
-		color: red;
-	}
+// 	.uni-actionsheet__cell::nth-child(1){
+// 		color: red;
+// 	}
 	@import './contacts.scss'
 </style>

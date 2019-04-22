@@ -41,36 +41,54 @@ page {
   background: #fff;
   overflow: hidden;
 }
+.TopBox {
+  height: 60rpx;
+  width: 100%;
+  background-color: #eeeeee;
+}
 ._business_card {
   width: 690rpx;
+  border: 2rpx solid #ffbd3a;
   margin: 0 auto;
   border-radius: 30rpx;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-box-shadow: 0 0 30rpx rgba(100, 100, 100, 0.14);
           box-shadow: 0 0 30rpx rgba(100, 100, 100, 0.14);
+  margin-top: 5rpx;
+  z-index: -1;
 }
 ._business_card ._card_top {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     text-align: left;
+    margin-top: 10rpx;
+    border-radius: 20rpx;
+    padding: 20rpx 30rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 ._business_card ._card_top > ._card_left {
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
-      padding-left: 26rpx;
+}
+._business_card ._card_top > ._card_left ._img {
+        width: 25rpx;
+        height: 26rpx;
+        vertical-align: middle;
+        margin-left: 10rpx;
+        margin-top: -4rpx;
 }
 ._business_card ._card_top > ._card_left > ._place {
         -webkit-box-sizing: border-box;
                 box-sizing: border-box;
-        margin: 64rpx 0 62rpx;
-        font-size: 28rpx;
+        margin-top: 30rpx;
+        margin-bottom: 10rpx;
+        font-size: 24rpx;
+        font-weight: 600;
+        color: #333333;
 }
 ._business_card ._card_top > ._card_left > ._place > ._spot {
           width: 4rpx;
@@ -87,11 +105,11 @@ page {
 }
 ._business_card ._card_top > ._card_left > ._company {
         font-size: 24rpx;
-        color: #585858;
+        color: #6a6a6a;
 }
 ._business_card ._card_top > ._card_left > ._company > text {
           margin-left: 12rpx;
-          color: #fbbf13;
+          color: #289cff;
 }
 ._business_card ._card_top > ._card_left > ._describe {
         font-size: 22rpx;
@@ -100,11 +118,11 @@ page {
 ._business_card ._card_top > ._card_right {
       text-align: center;
       position: relative;
-      margin-right: 58rpx;
+      margin-right: 10rpx;
 }
 ._business_card ._card_top > ._card_right > image {
-        width: 150rpx;
-        height: 150rpx;
+        width: 80rpx;
+        height: 80rpx;
         border: 2rpx solid #ccc;
         border-radius: 50%;
         margin-top: 22rpx;
@@ -136,14 +154,99 @@ page {
     -webkit-justify-content: space-around;
         -ms-flex-pack: distribute;
             justify-content: space-around;
-    margin-bottom: 20rpx;
+    width: 90%;
+    margin: 0 auto;
+    border: 2rpx solid #eeeeee;
+    height: 50rpx;
+    border-radius: 40rpx;
+    line-height: 50rpx;
+    margin-bottom: 40rpx;
 }
 ._business_card > ._bottom_info ._contact_way {
       font-size: 30rpx;
 }
-._business_card > ._bottom_info ._contact_way > text {
+._business_card > ._bottom_info .iconfont {
+      color: #fdbd35;
+}
+._business_card > ._bottom_info .iconfont text {
         font-size: 22rpx;
         margin-left: 10rpx;
+        color: #333333;
+}
+._business_card .companyAderss {
+    padding: 0 30rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-bottom: 40rpx;
+    position: relative;
+}
+._business_card .companyAderss view view {
+      line-height: 2;
+      font-size: 24rpx;
+      font-weight: 600;
+      color: #333333;
+      letter-spacing: 5rpx;
+}
+._business_card .companyAderss view view text {
+        padding-left: 20rpx;
+}
+._business_card .companyAderss .btn {
+      width: 130rpx;
+      height: 60rpx;
+      background-color: #ffbd38;
+      font-size: 24rpx;
+      position: absolute;
+      top: 40rpx;
+      right: 30rpx;
+}
+._business_card .companyAderss .btn2 {
+      width: 130rpx;
+      height: 60rpx;
+      background-color: #ccc;
+      font-size: 24rpx;
+      position: absolute;
+      top: 40rpx;
+      right: 30rpx;
+}
+.attentionBox {
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.attentionBox .attentionBox2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 40rpx 30rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 2rpx solid #ffbd38;
+    border-radius: 20rpx;
+    border-top: 2rpx dashed #ffbd38;
+    -webkit-box-shadow: 0px 10rpx 0px #ffbd38;
+            box-shadow: 0px 10rpx 0px #ffbd38;
+}
+.attentionBox .attentionBox2 .lines {
+      border-right: 2rpx dashed #ffbd38;
+}
+.attentionBox .attentionBox2 .lines:last-child {
+      border-right: 0;
+}
+.attentionBox .attentionBox2 view {
+      width: 33%;
+      font-size: 24rpx;
+      text-align: center;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      color: #333333;
+}
+.attentionBox .attentionBox2 view view {
+        width: 100%;
+        padding: 0;
+}
+.attentionBox .attentionBox2 view view:nth-child(1) {
+        margin-bottom: 5rpx;
 }
 ._caller {
   width: 750rpx;
@@ -206,20 +309,28 @@ page {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 32rpx 66rpx 40rpx 58rpx;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    font-size: 30rpx;
+    font-size: 28rpx;
+    font-weight: 600;
+    color: #333333;
+    border: 2rpx solid #ededed;
+    height: 80rpx;
+    border-radius: 20rpx;
+    margin-top: 30rpx;
+}
+._RI ._top_swiper .release_info {
+      text-align: center;
+      margin-top: 14rpx;
+      width: 33.3%;
 }
 ._RI ._top_swiper .release_info > ._border {
-      height: 4rpx;
-      margin-top: 14rpx;
-      background: #307ffa;
-      border-radius: 2rpx;
+        width: 50%;
+        height: 4rpx;
+        background: #ffbd38;
+        border-radius: 2rpx;
+        margin: 0 auto;
+        margin-top: 14rpx;
 }
 ._RI ._release_swiper {
     margin: 0 16rpx 0 18rpx;
@@ -233,7 +344,6 @@ page {
       -webkit-justify-content: space-between;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      margin-bottom: 52rpx;
       font-size: 28rpx;
 }
 ._RI ._release_swiper > ._info_cell > ._R {
@@ -243,6 +353,44 @@ page {
 ._RI ._release_swiper > ._info_cell > ._R > text {
           margin-left: 12rpx;
           font-size: 30rpx;
+}
+._RI ._release_swiper > ._info_cell .question {
+        width: 100%;
+        padding: 40rpx 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        border-bottom: 2rpx solid #e5e5e5;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+}
+._RI ._release_swiper > ._info_cell .question .questionLift {
+          width: 70%;
+          overflow: hidden;
+          -o-text-overflow: ellipsis;
+             text-overflow: ellipsis;
+          white-space: nowrap;
+          font-weight: 600;
+          color: #333333;
+          font-size: 28rpx;
+}
+._RI ._release_swiper > ._info_cell .question .questionRight {
+          padding: 5rpx 40rpx;
+          background-color: #cf353c;
+          color: white;
+          font-size: 28rpx;
+          border-radius: 20rpx 0 0 20rpx;
+}
+._RI ._release_swiper .Noquestion {
+      width: 100%;
+      height: 400rpx;
+}
+._RI ._release_swiper .Noquestion ._img {
+        width: 100%;
+        height: 100%;
 }
 ._connection_cell {
   display: -webkit-box;
@@ -476,5 +624,41 @@ page {
     text-align: center;
     color: #999;
     margin-bottom: 50rpx;
+}
+.shares {
+  position: absolute;
+  right: 30rpx;
+  top: 64rpx;
+  height: 100rpx;
+  width: 100rpx;
+  border: 2rpx dashed #ffbd38;
+  border-radius: 0 30rpx 0 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  z-index: 10;
+}
+.Noquestion {
+  width: 95%;
+  height: 400rpx;
+  margin: 0 auto;
+}
+.Noquestion ._img {
+    width: 100%;
+    height: 100%;
+}
+.kinsd {
+  padding-top: 5rpx;
+  font-weight: 100;
+  color: #dcdcdc;
+  font-size: 40rpx;
 }
 

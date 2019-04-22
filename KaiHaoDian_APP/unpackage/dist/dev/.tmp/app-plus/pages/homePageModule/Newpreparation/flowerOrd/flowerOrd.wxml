@@ -1,0 +1,2 @@
+<import src="./flowerOrd.vue.wxml" />
+    <template is="4068a920" data="{{ ...$root['0'], $root }}"/>

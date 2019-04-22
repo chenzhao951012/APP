@@ -89,7 +89,7 @@
 												{{itemd.content}}
 											</view>
 											<view class="" @touchend="clickZanImg(indexs,itemd.id)">
-												<text class="iconfont icond"><text :class="(itemd.praisecount==1) ? iSclor='icond2' : iSclor='icond3' ">&#xe872;</text><text class="commentNumber">{{itemd.praisecount}}</text></text>
+<!-- 												<text class="iconfont icond"><text :class="(itemd.praisecount==1) ? iSclor='icond2' : iSclor='icond3' ">&#xe872;</text><text class="commentNumber">{{itemd.praisecount}}</text></text> -->
 												
 											</view>
 										<!-- 	<button @click="chanchu(indexs,itemd.id)">删除</button>	 -->										<view class="subreply" v-if="itemd.comment_list.length!=0">

@@ -26,10 +26,13 @@
 /* 文章场景相关 */
 .assistbox{
 	width:690rpx;
-	height:621rpx;
-	background:#F7F7F7;
+	height:380rpx;
+	background:white;
 	margin:auto;
 	margin-top:20rpx;
+	-webkit-box-shadow: 0 0 10px #eeeeee;
+	        box-shadow: 0 0 10px #eeeeee;
+	border-radius: 10rpx;
 }
 .assisttextarea{
 	padding-top: 30rpx;
@@ -37,12 +40,18 @@
 	width: 100%;
 	padding-left: 24rpx;
 	font-size: 14px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	color: #333333;
 }
 .buttons{
-	padding: 234rpx 60rpx;
+	padding: 200rpx 60rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 .submient{
-	border-radius: 50rpx;
+	border-radius: 10rpx;
+	background-color: #ffbd38;
 }
 .status_bar {
   height: var(--status-bar-height);

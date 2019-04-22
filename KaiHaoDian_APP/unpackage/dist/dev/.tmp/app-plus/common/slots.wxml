@@ -1,24 +1,31 @@
+<import src="/components/swipers/uni-swiper-dot.vue.wxml" />
+<import src="/components/tabControl/wuc-tab.vue.wxml" />
 <import src="/components/mpvue-picker/mpvuePicker.vue.wxml" />
 <import src="/components/mpvue-citypicker/mpvueCityPicker.vue.wxml" />
-<import src="/components/stzhang-tab/stzhang-tab.vue.wxml" />
-<import src="/components/SwiperNav.vue.wxml" />
-<import src="/components/noComment/noComment.vue.wxml" />
+<import src="/components/wl-radio.vue.wxml" />
+<import src="/components/rate/uni-rate.vue.wxml" />
 
-<template name="4a87b58b-default-4a87b58b-0">确定</template>
+<template name="18d83758-default-18d83758-1"><swiper class="_swiper 18d83758 swiper-box" bindchange="handleProxy" autoplay="{{true}}" duration="{{1000}}" circular="{{true}}" data-eventid="{{'18d83758-0'}}" data-comkey="{{$k}}"><swiper-item wx:key="idx" key="{{idx}}" wx:for="{{swiperList}}" wx:for-index="idx" wx:for-item="item" class="_swiper-item 18d83758"><view class="_view 18d83758 swiper-item"><image src="{{imageUrl + item.url}}" alt class="_img 18d83758"></image></view></swiper-item></swiper></template>
 
 <template name="29ef55bc-default-29ef55bc-0">确定</template>
 
-<template name="c40dc700-default-c40dc700-0">确定</template>
+<template name="7e0072bc-default-7e0072bc-1"><swiper class="_swiper 7e0072bc swiper-box" bindchange="handleProxy" autoplay="{{true}}" duration="{{1000}}" circular="{{true}}" data-eventid="{{'7e0072bc-0'}}" data-comkey="{{$k}}"><swiper-item wx:key="index" key="{{index}}" wx:for="{{swiperList}}" wx:for-index="index" wx:for-item="item" class="_swiper-item 7e0072bc"><view class="_view 7e0072bc swiper-item"><image src="{{imageUrl + item.url}}" alt class="_img 7e0072bc"></image></view></swiper-item></swiper></template>
 
-<template name="0d329060-default-0d329060-0">确定</template>
+<template name="7e0072bc-default-7e0072bc-3-+idx"><swiper class="_swiper 7e0072bc swiper-box" bindchange="handleProxy" duration="{{1000}}" circular="{{true}}" data-eventid="{{'7e0072bc-2-'+idx}}" data-comkey="{{$k}}"><swiper-item wx:key="idxw" key="{{idxw}}" wx:for="{{item.imglist}}" wx:for-index="idxw" wx:for-item="items" class="_swiper-item 7e0072bc"><view class="_view 7e0072bc swiper-item"><image src="{{items.url}}" alt class="_img 7e0072bc"></image></view></swiper-item></swiper></template>
+
+<template name="4068a920-default-4068a920-1"><swiper class="_swiper 4068a920 swiper-box" bindchange="handleProxy" autoplay="{{true}}" duration="{{1000}}" circular="{{true}}" data-eventid="{{'4068a920-0'}}" data-comkey="{{$k}}"><swiper-item wx:key="idx" key="{{idx}}" wx:for="{{swiperList}}" wx:for-index="idx" wx:for-item="item" class="_swiper-item 4068a920"><view class="_view 4068a920 swiper-item"><image src="{{imageUrl + item.url}}" alt class="_img 4068a920"></image></view></swiper-item></swiper></template>
+
+<template name="c40dc700-default-c40dc700-0">确定</template>
 
 <template name="fa36bfa4-default-fa36bfa4-0">确定</template>
 
+<template name="0d329060-default-0d329060-0">确定</template>
+
 <template name="5254da22-default-5254da22-0">确定</template>
+
+<template name="699f2bb1-default-699f2bb1-0">确定</template>
 
 <template name="41d4034f-default-41d4034f-0">确定</template>
 
 <template name="331a643b-default-331a643b-0">确定</template>
-
-<template name="699f2bb1-default-699f2bb1-0">确定</template>
 

@@ -478,8 +478,8 @@
 				         "buttons": [ //原生标题栏按钮配置,
 				             {
 				                 "text": "编辑",
-																   "fontSize":"28upx",
-																	"width":"72upx",
+																   "fontSize":"14px",
+																	"width":"40px",
 																   "fontWeight":"bold",
 																   "color":"#fdbd39"
 																	
@@ -557,8 +557,8 @@
 				          "buttons": [ //原生标题栏按钮配置,
 				              {
 				                  "text": "完成",
-												   "fontSize":"28upx",
-													"width":"72upx",
+												   "fontSize":"14px",
+													"width":"40px",
 												   "fontWeight":"bold",
 												   "color":"#fdbd39"
 													
@@ -580,8 +580,8 @@
 				           "buttons": [ //原生标题栏按钮配置,
 				               {
 				                   "text": "完成",
-								   "fontSize":"28upx",
-									"width":"72upx",
+								   "fontSize":"14px",
+									"width":"40px",
 								   "fontWeight":"bold",
 								   "color":"#fdbd39"
 									
@@ -640,6 +640,7 @@
             "path" : "pages/mineIndex/Myorder/Myorder",
             "style" : {
 				"navigationBarTitleText" : "我的订单"
+				
 			}
         }
         ,{
@@ -652,8 +653,8 @@
 				          "buttons": [ //原生标题栏按钮配置,
 				              {
 				                  "text": "提交",
-												   "fontSize":"28upx",
-													"width":"72upx",
+												   "fontSize":"14px",
+													"width":"40px",
 												   "fontWeight":"bold",
 												   "color":"#fdbd39"
 													
@@ -744,8 +745,8 @@
 				         "buttons": [ //原生标题栏按钮配置,
 				             {
 				                 "text": "完成",
-																   "fontSize":"28upx",
-																	"width":"80upx",
+																   "fontSize":"14px",
+																	"width":"40px",
 																   "fontWeight":"bold",
 																   "color":"#fdbd39"
 																	
@@ -777,8 +778,8 @@
 				        "buttons": [ //原生标题栏按钮配置,
 				            {
 				                "text": "完成",
-									"fontSize":"28upx",
-									"width":"80upx",
+									"fontSize":"14px",
+									"width":"40px",
 									"fontWeight":"bold",
 									"color":"#fdbd39"
 																					
@@ -798,8 +799,8 @@
 				        "buttons": [ //原生标题栏按钮配置,
 				            {
 				                "text": "完成",
-									"fontSize":"28upx",
-									"width":"80upx",
+									"fontSize":"14px",
+									"width":"40px",
 									"fontWeight":"bold",
 									"color":"#fdbd39"
 																					
@@ -819,8 +820,8 @@
 				        "buttons": [ //原生标题栏按钮配置,
 				            {
 				                "text": "完成",
-									"fontSize":"28upx",
-									"width":"80upx",
+									"fontSize":"14px",
+									"width":"40px",
 									"fontWeight":"bold",
 									"color":"#fdbd39"
 																					
@@ -836,6 +837,33 @@
 				"navigationBarTitleText" : ""
 			}
         }
+        ,{
+            "path" : "pages/Incharge/Incharge",
+            "style" : {
+				"navigationBarTitleText" : ""
+			}
+        }
+        ,{
+            "path" : "pages/Incharge/finalizePayment/finalizePayment",
+            "style" : {
+				 "app-plus": {
+				    "bounce": "none", //关闭窗口回弹效果
+				    "titleNView": {
+				        "buttons": [ //原生标题栏按钮配置,
+				            {
+				                "text": "完成",
+									"fontSize":"14px",
+									"width":"40px",
+									"fontWeight":"bold",
+									"color":"#fdbd39"
+																					
+									}
+				        ]
+				    }
+				}
+			}
+        }
+       
     ],
     /*------------------------------------------添加认证相关页面  End------------------------------------------*/
     "globalStyle" : {

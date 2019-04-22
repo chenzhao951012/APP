@@ -1,0 +1,2 @@
+<import src="./brandcharacteristics.vue.wxml" />
+    <template is="456bc1a8" data="{{ ...$root['0'], $root }}"/>

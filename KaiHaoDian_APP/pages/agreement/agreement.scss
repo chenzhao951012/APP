@@ -41,6 +41,7 @@
 		box-sizing: border-box;
 		background-color: #fff;
 		font-size: 24upx;
+		padding-bottom: 160upx;
 		text{
 			color: #ffd37a;
 		}
@@ -59,4 +60,15 @@
 	margin-top: 40upx;
 	text-indent: 60upx;
 	margin-bottom: 10upx;
+}
+.nextstep{
+	height: 90upx;
+	width: 750upx;
+	background-color: #ffbd38;
+	line-height: 90upx;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	color: #fff;
+	font-size: 24upx;
 }

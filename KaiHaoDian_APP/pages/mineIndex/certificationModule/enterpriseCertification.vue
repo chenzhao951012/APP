@@ -56,10 +56,10 @@
 			<!-- 服务优势 -->
 			<view class="_menu_list">
 				<view class="_main_business">营业执照</view>
-				<view class="Upimg" v-if="ImgUrl!=`` ">
+				<view class="Upimg" v-if="ImgUrl!='' ">
 					<img :src="ImgUrl" alt="">
 				</view>
-				<view class="UpimgList" @touchend="enterprise" v-if="ImgUrl==`` ">
+				<view class="UpimgList" @touchend="enterprise" v-if="ImgUrl=='' ">
 					<img src="../../../static/upimg.png" alt="">
 				</view>
 			</view>

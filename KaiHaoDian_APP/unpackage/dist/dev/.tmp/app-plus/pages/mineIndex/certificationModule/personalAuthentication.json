@@ -1,3 +1,15 @@
 {
-  "navigationBarTitleText": "个人认证"
+  "navigationBarTitleText": "个人认证",
+  "bounce": "none",
+  "titleNView": {
+    "buttons": [
+      {
+        "text": "完成",
+        "fontSize": "14px",
+        "width": "40px",
+        "fontWeight": "bold",
+        "color": "#fdbd39"
+      }
+    ]
+  }
 }

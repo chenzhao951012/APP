@@ -98,6 +98,9 @@
 				</view>
 			</view>
 		</view>
+		<view class="nextstep" @click="nextstep">
+			下一步
+		</view>
 	</view>
 </template>
 
@@ -132,6 +135,19 @@
 						this.year=date.getFullYear();
 						this.month=date.getMonth()
 						this.day=date.getDate()
+					},
+					nextstep(){
+						if(this.ischeck==true){
+						uni.showToast({
+							title: '请选择协议签订',
+							icon:'none',
+							duration: 2000
+						});
+						}else{
+							uni.navigateTo({
+								url:'../Incharge/Incharge'
+							})
+						}
 					}
 		}
 	}

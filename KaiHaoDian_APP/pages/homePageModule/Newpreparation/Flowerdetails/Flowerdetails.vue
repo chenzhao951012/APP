@@ -2,7 +2,7 @@
 	<view class="content">
 			<Swiperdot :info="swiperList" :current="current" field="content" :mode="mode">
 				<swiper class="swiper-box" @change="change" :autoplay="true" :duration="1000" :circular="true">
-		        <swiper-item v-for="(item,idx) in swiperList" :key='idx'>
+		        <swiper-item v-for="(item,index) in swiperList" :key='index'>
 		            <view class="swiper-item">
 		                <img :src="imageUrl + item.url" alt="">
 		            </view>
@@ -12,6 +12,7 @@
 		<!-- //介绍/ -->
 		<view class="content">
 			<view class="contenttitle">
+				
 				<view class="">
 					<view class="name">MELSSA</view>
 					<view class="conents">弹弹堂,弹弹堂官方网站-无需下载的Q版射击竞技游戏...-4399网页游戏</view>
@@ -37,7 +38,7 @@
 						</view>
 							<Swiperdot :info="swiperList" :current="current" field="content" :mode="mode">
 								<swiper class="swiper-box" @change="change" :duration="1000" :circular="true">
-						        <swiper-item v-for="(items,idx) in item.imglist" :key='idx'>
+						        <swiper-item v-for="(items,idxw) in item.imglist" :key='idxw'>
 						            <view class="swiper-item">
 						                <img :src="items.url" alt="">
 						            </view>

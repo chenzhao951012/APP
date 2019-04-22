@@ -1,0 +1,13 @@
+
+      !(function(){
+        var uniAppViewReadyCallback = function(){
+          setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"status_bar { height: var(--status-bar-height); width: 100%; }\n.",[1],"top_view { height: var(--status-bar-height); width: 100%; position: fixed; top: 0; }\n.",[1],"content { width: ",[0,750],"; }\n.",[1],"enterBox { background-color: #f3f3f3; padding-top: ",[0,20],"; block-size: border-box; }\n.",[1],"enterBox .",[1],"apply { background-color: #fff; border-radius: ",[0,20]," ",[0,20]," 0 0; }\n.",[1],"enterBox .",[1],"apply .",[1],"tab { border-radius: 0 0 ",[0,0]," ",[0,0],"; -webkit-box-shadow: 0 2px 0 #f0f0f1, 0 0px 0 #f0f0f1; box-shadow: 0 2px 0 #f0f0f1, 0 0px 0 #f0f0f1; }\n.",[1],"enterBox .",[1],"apply .",[1],"flow { padding: ",[0,30],"; -webkit-box-sizing: border-box; box-sizing: border-box; margin-top: ",[0,60],"; font-size: ",[0,24],"; color: #333333; }\n.",[1],"enterBox .",[1],"apply .",[1],"flow .",[1],"flowBox { padding: 0 ",[0,30],"; -webkit-box-sizing: border-box; box-sizing: border-box; border: ",[0,2]," solid #ffbd38; line-height: 4; border-radius: ",[0,10],"; }\n.",[1],"enterBox .",[1],"apply .",[1],"flow .",[1],"flowBox .",[1],"iconfont { color: #ffbd38; font-size: ",[0,40],"; vertical-align: middle; padding-right: ",[0,20],"; font-weight: 100; }\n.",[1],"enterBox .",[1],"apply .",[1],"flow .",[1],"flowBox2 { line-height: 0; padding: ",[0,20]," ",[0,30],"; -webkit-box-sizing: border-box; box-sizing: border-box; }\n.",[1],"enterBox .",[1],"apply .",[1],"flow .",[1],"flowBox2 .",[1],"contentOne { line-height: 2.5; margin-bottom: ",[0,60],"; }\n.",[1],"enterBox .",[1],"apply .",[1],"flow .",[1],"flowBox2 .",[1],"contenTwo .",[1],"remark { font-weight: 600; font-size: ",[0,28],"; color: #ffbe36; margin-bottom: ",[0,40],"; }\n.",[1],"enterBox .",[1],"apply .",[1],"flow .",[1],"flowBox2 .",[1],"contenTwo .",[1],"subconnent { line-height: 2.5; font-size: ",[0,24],"; margin-bottom: ",[0,10],"; }\n.",[1],"submitBox { width: ",[0,750],"; background-color: #ffbd38; color: #fff; text-align: center; font-size: ",[0,28],"; height: ",[0,90],"; position: fixed; bottom: 0; line-height: ",[0,90],"; letter-spacing: ",[0,5],"; font-weight: 600; }\n",],undefined,{path:"./pages/mineIndex/Application/Application.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/mineIndex/Application/Application.wxml') } }));
+        }
+        if(window.__uniAppViewReady__){
+          uniAppViewReadyCallback()
+        }else{
+          document.addEventListener('uniAppViewReady',uniAppViewReadyCallback)
+        }
+      })();
+      

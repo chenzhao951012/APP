@@ -37,13 +37,685 @@
 .content {
   width: 750rpx;
 }
-.content {
-  text-align: center;
-  padding-bottom: 100rpx;
+page {
+  background: #fff;
+  overflow: hidden;
 }
-.title {
+.TopBox {
+  height: 20rpx;
+  width: 100%;
+  background-color: #eeeeee;
+}
+._business_card {
+  width: 690rpx;
+  border: 2rpx solid #ffbd3a;
+  margin: 0 auto;
+  border-radius: 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 0 30rpx rgba(100, 100, 100, 0.14);
+          box-shadow: 0 0 30rpx rgba(100, 100, 100, 0.14);
+  margin-top: 5rpx;
+  z-index: -1;
+}
+._business_card ._card_top {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+    margin-top: 10rpx;
+    border-radius: 20rpx;
+    padding: 20rpx 30rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+._business_card ._card_top > ._card_left {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+}
+._business_card ._card_top > ._card_left ._img {
+        width: 25rpx;
+        height: 26rpx;
+        vertical-align: middle;
+        margin-left: 10rpx;
+        margin-top: -4rpx;
+}
+._business_card ._card_top > ._card_left > ._place {
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        margin-top: 30rpx;
+        margin-bottom: 10rpx;
+        font-size: 24rpx;
+        font-weight: 600;
+        color: #333333;
+}
+._business_card ._card_top > ._card_left > ._place > ._spot {
+          width: 4rpx;
+          height: 4rpx;
+          border-radius: 50%;
+          background: #2f2f2f;
+          display: inline-block;
+          margin: 0 0 6rpx 10rpx;
+}
+._business_card ._card_top > ._card_left > ._place > ._MD {
+          margin-left: 8rpx;
+          font-size: 26rpx;
+          color: #585858;
+}
+._business_card ._card_top > ._card_left > ._company {
+        font-size: 24rpx;
+        color: #6a6a6a;
+}
+._business_card ._card_top > ._card_left > ._company > text {
+          margin-left: 12rpx;
+          color: #289cff;
+}
+._business_card ._card_top > ._card_left > ._describe {
+        font-size: 22rpx;
+        margin: 20rpx 0 42rpx;
+}
+._business_card ._card_top > ._card_right {
+      text-align: center;
+      position: relative;
+      margin-right: 10rpx;
+}
+._business_card ._card_top > ._card_right > image {
+        width: 80rpx;
+        height: 80rpx;
+        border: 2rpx solid #ccc;
+        border-radius: 50%;
+        margin-top: 22rpx;
+}
+._business_card ._card_top > ._card_right > ._add {
+        color: #307ffa;
+        position: absolute;
+        top: 54%;
+        left: 35%;
+        font-size: 42rpx;
+        background: #fff;
+        border-radius: 50%;
+}
+._business_card ._card_top > ._card_right > .follower {
+        font-size: 22rpx;
+        color: #585858;
+        margin-top: 14rpx;
+}
+._business_card ._card_top > ._card_right > .follower > text {
+          margin-left: 20rpx;
+          color: #000;
+}
+._business_card > ._bottom_info {
+    color: #999;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+    border: 2rpx solid #eeeeee;
+    height: 50rpx;
+    border-radius: 40rpx;
+    line-height: 50rpx;
+    margin-bottom: 40rpx;
+}
+._business_card > ._bottom_info ._contact_way {
+      font-size: 30rpx;
+}
+._business_card > ._bottom_info .iconfont {
+      color: #fdbd35;
+}
+._business_card > ._bottom_info .iconfont text {
+        font-size: 22rpx;
+        margin-left: 10rpx;
+        color: #333333;
+}
+._business_card .companyAderss {
+    padding: 0 30rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-bottom: 40rpx;
+    position: relative;
+}
+._business_card .companyAderss view view {
+      line-height: 2;
+      font-size: 24rpx;
+      font-weight: 600;
+      color: #333333;
+      letter-spacing: 5rpx;
+}
+._business_card .companyAderss view view text {
+        padding-left: 20rpx;
+}
+._business_card .companyAderss .btn {
+      width: 130rpx;
+      height: 60rpx;
+      background-color: #ffbd38;
+      font-size: 24rpx;
+      position: absolute;
+      top: 40rpx;
+      right: 30rpx;
+}
+._business_card .companyAderss .btn2 {
+      width: 130rpx;
+      height: 60rpx;
+      background-color: #ccc;
+      font-size: 24rpx;
+      position: absolute;
+      top: 40rpx;
+      right: 30rpx;
+}
+.attentionBox {
+  padding: 0 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.attentionBox .attentionBox2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 40rpx 30rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 2rpx solid #ffbd38;
+    border-radius: 20rpx;
+    border-top: 2rpx dashed #ffbd38;
+    -webkit-box-shadow: 0px 6rpx 0px #ffbd38;
+            box-shadow: 0px 6rpx 0px #ffbd38;
+}
+.attentionBox .attentionBox2 .lines {
+      border-right: 2rpx dashed #ffbd38;
+}
+.attentionBox .attentionBox2 .lines:last-child {
+      border-right: 0;
+}
+.attentionBox .attentionBox2 view {
+      width: 33%;
+      font-size: 24rpx;
+      text-align: center;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      color: #333333;
+}
+.attentionBox .attentionBox2 view view {
+        width: 100%;
+        padding: 0;
+}
+.attentionBox .attentionBox2 view view:nth-child(1) {
+        margin-bottom: 5rpx;
+}
+._caller {
+  width: 750rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 40rpx 0;
   font-size: 30rpx;
-  color: #8F8F94;
+  color: #010101;
+}
+._caller ._right_image {
+    margin-left: 18rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+._caller ._right_image view > image {
+      width: 48rpx;
+      height: 48rpx;
+      border-radius: 50%;
+      border: 2rpx solid #ccc;
+      margin-right: 8rpx;
+}
+._caller ._right_image ._more {
+      color: #666;
+      text-align: center;
+      line-height: 50rpx;
+      font-size: 28rpx;
+}
+._RI {
+  width: 690rpx;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 30rpx;
+  padding-bottom: 2rpx;
+  margin-bottom: 10rpx;
+}
+._RI ._top_swiper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 28rpx;
+    font-weight: 600;
+    color: #333333;
+    border: 2rpx solid #ededed;
+    height: 80rpx;
+    border-radius: 20rpx;
+    margin-top: 30rpx;
+}
+._RI ._top_swiper .release_info {
+      text-align: center;
+      margin-top: 14rpx;
+      width: 33.3%;
+}
+._RI ._top_swiper .release_info > ._border {
+        width: 50%;
+        height: 4rpx;
+        background: #ffbd38;
+        border-radius: 2rpx;
+        margin: 0 auto;
+        margin-top: 14rpx;
+}
+._RI ._release_swiper {
+    margin: 0 16rpx 0 18rpx;
+}
+._RI ._release_swiper > ._info_cell {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      font-size: 28rpx;
+}
+._RI ._release_swiper > ._info_cell > ._R {
+        font-size: 22rpx;
+        color: #999;
+}
+._RI ._release_swiper > ._info_cell > ._R > text {
+          margin-left: 12rpx;
+          font-size: 30rpx;
+}
+._RI ._release_swiper .Noquestion {
+      width: 76%;
+      height: 260rpx;
+}
+._RI ._release_swiper .Noquestion ._img {
+        width: 100%;
+        height: 100%;
+}
+._connection_cell {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 16rpx 22rpx 0 12rpx;
+  margin-bottom: 44rpx;
+}
+._connection_cell > image {
+    width: 65rpx;
+    height: 65rpx;
+    border-radius: 50%;
+    border: 2rpx solid #ccc;
+}
+._connection_cell > ._R {
+    width: 584rpx;
+    margin-left: 28rpx;
+}
+._connection_cell > ._R > ._top_info {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin-bottom: 22rpx;
+}
+._connection_cell > ._R > ._top_info > ._name {
+        font-size: 28rpx;
+}
+._connection_cell > ._R > ._top_info > ._time {
+        font-size: 22rpx;
+        color: #585858;
+}
+._connection_cell > ._R > ._bottom_describe {
+      font-size: 26rpx;
+      color: #585858;
+}
+._message_swiper > ._message_cell > ._describe_info {
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+._message_swiper > ._message_cell > image {
+  width: 662rpx;
+  height: 266rpx;
+  border: 2rpx solid #ccc;
+  background: skyblue;
+  margin: 20rpx 12rpx 26rpx;
+}
+._message_swiper > ._message_cell > .osCell_bottom {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 24rpx 46rpx;
+  font-size: 24rpx;
+  color: #8a8a8a;
+}
+._message_swiper > ._message_cell > .osCell_bottom .icon_comment {
+    font-size: 30rpx;
+    margin-right: 8rpx;
+}
+.display_none {
+  display: none;
+}
+.comtentbottomBox {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 90rpx;
+  width: 100%;
+  background-color: #f6f6f6;
+}
+.comtentinputbox2 {
+  line-height: 70rpx;
+  width: 70%;
+  border: 1rpx solid #999;
+  height: 70rpx;
+  border-radius: 10rpx;
+  margin-top: 10rpx;
+}
+.comtentinputbox2 ._input {
+    margin-top: 10rpx;
+    font-size: 14px;
+}
+.comtentinputbox {
+  padding: 0 20rpx;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.comtentinputbox .bottons {
+    height: 70rpx;
+    line-height: 70rpx;
+    margin-top: 10rpx;
+}
+.comtents {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  width: 100%;
+  height: 400rpx;
+}
+.comtents .text {
+    color: #999;
+    font-size: 14px;
+    margin-top: 50rpx;
+    text-align: center;
+}
+.comtents image {
+    width: 164rpx;
+    height: 156rpx;
+}
+.List {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1rpx solid #ececec;
+}
+.List .distance {
+    padding: 0rpx 0rpx 10rpx 0;
+}
+.List .ListImg {
+    width: 250rpx;
+    height: 200rpx;
+}
+.List .ListImg image {
+      width: 100%;
+      height: 100%;
+}
+.List .magssage {
+    margin-left: 20rpx;
+}
+.List .magssage .title {
+      width: 400rpx;
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+         text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 32rpx;
+}
+.List .magssage .submage {
+      color: #9a9a9a;
+      font-size: 24rpx;
+}
+.List .magssage .pice {
+      color: #FF753F;
+      font-size: 32rpx;
+}
+.knowledgeBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0  60rpx;
+}
+.knowledgeBox .ideas {
+    width: 25%;
+    text-align: center;
+    height: 80rpx;
+    font-size: 14px;
+}
+.changeColor {
+  width: 25%;
   text-align: center;
+  height: 80rpx;
+  font-size: 14px;
+  border-bottom: 2px solid #307ffa;
+  color: #307ffa;
+}
+.infoBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  height: 100%;
+}
+.infoBox .infoImg {
+    margin: 100rpx 0;
+    width: 300rpx;
+    height: 290rpx;
+}
+.infoBox .infoImg ._img {
+      width: 100%;
+      height: 100%;
+}
+.infoBox .infoText {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: #999;
+    margin-bottom: 50rpx;
+}
+.shares {
+  position: absolute;
+  right: 30rpx;
+  top: 24rpx;
+  height: 100rpx;
+  width: 100rpx;
+  border: 2rpx dashed #ffbd38;
+  border-radius: 0 30rpx 0 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  z-index: 10;
+}
+.Noquestion {
+  width: 73%;
+  height: 260rpx;
+  margin: 0 auto;
+  margin-top: 72rpx;
+}
+.Noquestion ._img {
+    width: 100%;
+    height: 100%;
+}
+.kinsd {
+  padding-top: 5rpx;
+  font-weight: 100;
+  color: #dcdcdc;
+  font-size: 40rpx;
+}
+.questionUser {
+  width: 80rpx;
+  height: 80rpx;
+}
+.questionUser ._img {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
+.question {
+  width: 100%;
+  padding: 40rpx 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 2rpx solid #e5e5e5;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.question .questionLift {
+    width: 80%;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 600;
+    color: #333333;
+    font-size: 28rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.question .questionLift .user_company {
+      margin-left: 20rpx;
+      width: 80%;
+}
+.question .questionLift .user_company .Username {
+        margin-top: 4rpx;
+        margin-bottom: 10rpx;
+        font-size: 24rpx;
+        color: #333333;
+        letter-spacing: 5rpx;
+}
+.question .questionLift .user_company ._company {
+        font-size: 24rpx;
+        color: #6a6a6a;
+        font-weight: 100;
+}
+.question .questionLift .user_company ._company text {
+          margin-left: 12rpx;
+          color: #289cff;
+}
+.question .questionLift .user_company ._company ._img {
+          width: 25rpx;
+          height: 26rpx;
+          vertical-align: middle;
+          margin-left: 10rpx;
+          margin-top: -4rpx;
+}
+.question .questionRight {
+    border: 2rpx solid #d2d2d2;
+    color: #333333;
+    font-size: 24rpx;
+    border-radius: 10rpx;
+    height: 56rpx;
+    line-height: 52rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 140rpx;
+    text-align: center;
+    font-weight: 600;
+}
+.refresh {
+  padding: 40rpx 0;
+  text-align: center;
+}
+.refresh ._img {
+    vertical-align: middle;
+}
+.refresh text {
+    font-size: 24rpx;
+    color: #666666;
+    padding: 0 10rpx;
 }
 

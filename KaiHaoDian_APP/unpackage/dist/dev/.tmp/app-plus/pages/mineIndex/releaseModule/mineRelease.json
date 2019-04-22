@@ -1,3 +1,15 @@
 {
-  "navigationBarTitleText": "我的发布"
+  "navigationBarTitleText": "我的发布",
+  "bounce": "none",
+  "titleNView": {
+    "buttons": [
+      {
+        "text": "编辑",
+        "fontSize": "14px",
+        "width": "40px",
+        "fontWeight": "bold",
+        "color": "#fdbd39"
+      }
+    ]
+  }
 }

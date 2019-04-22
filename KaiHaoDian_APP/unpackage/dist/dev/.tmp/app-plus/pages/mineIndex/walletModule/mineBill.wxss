@@ -1,6 +1,5 @@
 /* 公共样式 */
 .allContent{
-	margin: 0 30rpx;
 	font-size:24rpx;
 }
 ._display_flex{
@@ -16,10 +15,62 @@
 ._every_queue{
 	margin:20rpx 0;
 }
-._bill_specific_time,
-._bill_money_number{
-	display:inline-block;
-	width:220rpx;
-	height:34rpx;
+._bill_specific_time{
+	font-size: 24rpx;
+	font-weight: 600;
+	color: #333333;
+	letter-spacing: 5rpx;
+	margin-bottom: 10rpx;
+	padding: 0 30rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+._bill_specific_time text{
+	color: #333333;
+	padding-left: 10rpx;
+}
+.LinBox{
+	height: 20rpx;
+	width: 100%;
+	background-color: #f3f3f3;
+}
+.particulars{
+	padding: 30rpx 80rpx 30rpx 40rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	border-bottom: 2rpx solid #d2d2d2;
+}
+.particularsRight text{
+	font-size: 28rpx;
+	color: #333333;
+	font-weight: 600;
+	line-height: 3;
+}
+.particularsLeft{
+	font-size: 28rpx;
+	color: #333333;
+	font-weight: 600;
+}
+.time{
+	line-height: 2;
+	font-size: 24rpx;
+	color: #b8b8b8;
+	padding-right: 20rpx;
+	letter-spacing: 5rpx;
+	font-weight: 100;
+}
+.niknanme text{
+	padding: 0 8rpx;
+}
+.niknanme{
+	margin-bottom: 10rpx;
 }
 

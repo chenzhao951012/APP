@@ -37,144 +37,64 @@
 .content {
   width: 750rpx;
 }
-page {
-  height: 100%;
-  background: #fff;
+.Line {
+  height: 20rpx;
+  width: 100%;
+  background-color: #f3f3f3;
 }
-._infoFill {
-  width: 750rpx;
-  padding: 0 30rpx;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.information .list-call {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 96rpx;
-  line-height: 96rpx;
-  font-size: 28rpx;
-  color: #1b1e26;
-}
-._infoFill ._input {
-    line-height: 60rpx;
-    text-align: right;
-    font-size: 28rpx;
-    margin-top: 20rpx;
-}
-._infoFill ._left {
-    color: #1b1e26;
-}
-._infoFill ._left ._left_phono {
-      display: inline-block;
-}
-._infoFill ._left ._left_input {
-      margin-left: 20rpx;
-      display: inline-block;
-      text-align: left;
-      line-height: 60rpx;
-      font-size: 28rpx;
-      margin-top: 20rpx;
-      vertical-align: top;
-}
-._infoFill ._right {
-    color: #585858;
-}
-._infoFill ._identifying_code {
-    width: 162rpx;
-    height: 52rpx;
-    line-height: 52rpx;
-    text-align: center;
-    color: #548ef2;
-    border: 2rpx solid #548ef2;
-    border-radius: 10rpx;
-    margin-top: 20rpx;
-}
-._infoFill:nth-child(2n-1) {
-  background: #f7f7f7;
-}
-._title_parnters::after {
-  display: block;
-  content: "";
-  clear: both;
-}
-._title_parnters {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100rpx;
+  color: #c2c2c2;
+  border-bottom: 1rpx solid #e6e6e6;
+  position: relative;
+  padding: 0rpx 30rpx;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 28rpx;
-  background: #f7f7f7;
-  height: 372rpx;
+  letter-spacing: 5rpx;
 }
-._title_parnters ._top_caption {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    padding: 0 30rpx;
+.information .list-call text {
+    font-size: 24rpx;
+    color: #333333;
 }
-._title_parnters ._top_caption ._title_caption {
-      margin-right: 36rpx;
-      height: 96rpx;
-      line-height: 96rpx;
+.information .list-call ._input {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: left;
+  font-size: 24rpx;
+  line-height: 100rpx;
+  margin-left: 16rpx;
+  color: #333333;
 }
-._title_parnters ._top_caption ._input {
-      vertical-align: middle;
-}
-._material_selection {
-  width: 750rpx;
-  padding: 0 30rpx;
+.list-call2 {
+  padding: 0rpx 30rpx;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: "#1b1e26";
-  font-size: 30rpx;
-  margin: 36rpx 0 116rpx;
 }
-._material_selection ._material_bottom {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-    margin-top: 30rpx;
-}
-._material_selection ._material_bottom ._material_cell {
-      border: 2rpx solid #ccc;
-      width: 326rpx;
-      text-align: center;
-      margin-bottom: 30rpx;
-      border-radius: 20rpx;
-}
-._material_selection ._material_bottom ._material_cell > image {
-        width: 150rpx;
-        height: 150rpx;
-        margin: 40rpx 0;
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-}
-._material_selection ._material_bottom ._material_cell > view {
-        margin-bottom: 40rpx;
-}
-._material_selection ._prompt {
-    color: #b0b0b0;
-    font-size: 22rpx;
-}
-._submit_audit {
-  width: 640rpx;
-  height: 72rpx;
-  line-height: 72rpx;
-  background: #548ef2;
-  color: #FFFFFF;
-  font-size: 32rpx;
-  margin: 0 auto;
-  text-align: center;
-  margin-bottom: 122rpx;
-  border-radius: 10rpx;
+.list-call2 ._textarea {
+    margin-top: 10rpx;
+    width: 100%;
+    height: 300rpx;
+    font-size: 24rpx;
+    color: #333333;
+    line-height: 2;
 }
 

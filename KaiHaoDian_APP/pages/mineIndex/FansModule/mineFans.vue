@@ -14,7 +14,7 @@
 						</view>
 					</view>
 				</view>
-				<view :class="focusbutton" @touchend="guanzhu(index)"><text class="_arrow iconfont" v-if="item.state == `2` ">&#xe680;</text>{{FocusOn}}</view>
+				<view :class="focusbutton" @touchend="guanzhu(index)"><text class="_arrow iconfont" v-if="item.state == '2' " >&#xe680;</text>{{FocusOn}}</view>
 			</view>
 		</view>
 		<view class="emptyBox" v-if="exhibition2">

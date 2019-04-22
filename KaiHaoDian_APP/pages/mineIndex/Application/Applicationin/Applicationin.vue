@@ -623,9 +623,9 @@
 					
 				},
 				// 品牌入驻
-				brands(){
-					
-				},
+// 				brands(){
+// 					
+// 				},
 				//下一步
 				submitInfo(){
 					var that=this

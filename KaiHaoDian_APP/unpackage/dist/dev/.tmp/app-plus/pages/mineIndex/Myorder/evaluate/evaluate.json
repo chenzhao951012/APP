@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "",
+  "bounce": "none",
+  "titleNView": {
+    "buttons": [
+      {
+        "text": "提交",
+        "fontSize": "14px",
+        "width": "40px",
+        "fontWeight": "bold",
+        "color": "#fdbd39"
+      }
+    ]
+  }
+}

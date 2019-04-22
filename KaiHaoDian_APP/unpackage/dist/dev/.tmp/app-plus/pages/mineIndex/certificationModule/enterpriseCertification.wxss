@@ -52,15 +52,30 @@
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 96rpx;
-  line-height: 96rpx;
-  font-size: 28rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 24rpx;
+  border-bottom: 2rpx solid #eeeeee;
+}
+._menu_list .Upimg ._img {
+    margin-top: 8rpx;
+    width: 160rpx;
+    height: 100rpx;
+}
+._menu_list .UpimgList ._img {
+    width: 40rpx;
+    height: 40rpx;
+}
+._menu_list ._menu_name {
+    color: #333333;
+    font-weight: 600;
 }
 ._menu_list ._input {
     line-height: 60rpx;
     text-align: right;
-    font-size: 28rpx;
-    margin-top: 20rpx;
+    font-size: 24rpx;
+    margin-top: 26rpx;
+    color: #333333;
 }
 ._menu_list ._left_phono {
     display: inline-block;
@@ -74,21 +89,17 @@
 ._menu_list ._menu_content {
     min-width: 42rpx;
     height: 40rpx;
+    color: #989898;
 }
 ._menu_list ._select_list {
+    font-size: 24rpx;
     height: 40rpx;
-    color: #101010;
+    color: #989898;
 }
 ._menu_list ._get_verification_code {
     width: 140rpx;
     height: 40rpx;
     color: #0A82CE;
-}
-._menu_list:nth-child(2n-1) {
-  background: #f7f7f7;
-}
-._main_business_info:nth-of-type(9) {
-  background: #f7f7f7;
 }
 ._main_business_info {
   width: 750rpx;
@@ -101,9 +112,6 @@
 ._main_business_info ._main_business {
     height: 96rpx;
     line-height: 96rpx;
-}
-._main_business_info ._textarea {
-    height: 120rpx;
 }
 ._material_selection {
   width: 750rpx;
@@ -174,5 +182,10 @@
     width: 370rpx;
     height: 370rpx;
     border-radius: 20rpx;
+}
+.comenpy {
+  font-size: 24rpx;
+  font-weight: 600;
+  color: #333333;
 }
 

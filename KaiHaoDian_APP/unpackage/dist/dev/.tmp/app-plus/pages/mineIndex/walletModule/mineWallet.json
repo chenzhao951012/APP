@@ -3,7 +3,7 @@
   "titleNView": {
     "buttons": [
       {
-        "text": "账单",
+        "text": "明细",
         "fontSize": "14"
       }
     ]

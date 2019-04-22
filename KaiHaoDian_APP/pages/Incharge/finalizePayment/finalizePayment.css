@@ -1,0 +1,33 @@
+.finalizePaymentBox{
+	width: 750upx;
+	background-color: #f3f3f3;
+	padding-top: 20upx;
+	
+	
+}
+.finalizePayment{
+	background-color: #fff;
+	width: 750upx;
+	height: 100%;
+	border-radius: 10upx;
+
+	
+}
+.box{
+	background-color: #fff;
+	padding-top: 35%;
+}
+.iconfont{
+	font-size: 50upx;
+	color: #ffbd38;
+	text-align: center;
+	margin-bottom: 40upx;
+	
+}
+.title{
+	font-size: 28upx;
+	color: #ffbd38;
+	text-align: center;
+	line-height: 1.5;
+	}
+	

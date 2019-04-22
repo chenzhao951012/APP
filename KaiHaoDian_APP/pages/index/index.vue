@@ -242,15 +242,12 @@ export default {
 		};
 	},
 	// 监听页面加载
-	created() {
+	onLoad() {
 		
 		let _this = this;
 		_this.getBannerList();
 		_this.onloadContactsList();
-		setTimeout(()=>{
 			_this.getOpenStoreLore();
-		},200)
-		
 		uni.getStorage({
 			key: 'location',
 			success: res => {
@@ -333,27 +330,6 @@ export default {
 				var [errr,res]=data
 				if(res.data.msgCode==1){
 					_this.magessageList=res.data.responseBody
-					setTimeout(()=>{
-						
-						_this.magessageList.forEach((item)=>{
-							if(item.typevalue[0]=="美容"){
-								console.log(1)
-								_this.typeColor="typestitle2"
-							}else if(item.typevalue[0]=="服饰"){
-								console.log(2)
-								_this.typeColor="typestitle3"
-							}else if(item.typevalue[0]===" 超市"){
-								_this.typeColor="typestitle4"
-							}else if(item.typevalue[0]==" 餐饮"){
-								_this.typeColor="typestitle5"
-							}else if(item.typevalue[0]==" 百货"){
-								_this.typeColor="typestitle6"
-							}else if(item.typevalue[0]==" 娱乐"){
-								_this.typeColor="typestitle7"
-							}
-						})
-					})
-					
 					console.log(_this.magessageList)
 				}else{
 					_this.magessageList=""
@@ -455,14 +431,14 @@ export default {
 			});
 		},
 		// 获取浏览量
-		getReadNum (){
-			uni.request({
-				url:shoppublic.getUrl + '/ReadNum/qryReadNum',
-				success:res=>{
-					// console.log(res);
-				}
-			})
-		},
+// 		getReadNum (){
+// 			uni.request({
+// 				url:shoppublic.getUrl + '/ReadNum/qryReadNum',
+// 				success:res=>{
+// 					// console.log(res);
+// 				}
+// 			})
+// 		},
 		//跳转搜索:0是主页跳转
 		toSearch(e) {
 			uni.navigateTo({

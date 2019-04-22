@@ -23,7 +23,7 @@ function getLocation(callBack) {
   uni.getLocation({
     type: 'wgs84',
     success: function(res) {
-	
+			console.log(res);
       var longitude = res.longitude
       var latitude = res.latitude
       loadCity(longitude, latitude, callBack);
@@ -46,7 +46,7 @@ function loadCity(longitude, latitude, callBack) {
       "Content-Type": "application/x-www-form-urlencoded"
     },
     success: function(res) {
-		
+			console.log(JSON.stringify(res));
       var result_P = result_province.filter( //过滤省
         function(value) {
           return (value.name == res.data.result.addressComponent.province);
@@ -57,15 +57,9 @@ function loadCity(longitude, latitude, callBack) {
           return (value.name == res.data.result.addressComponent.city);
         }
       )
-			var result_county = result_county.filter( //过滤市
-			  function(value) {
-			    return (value.name == res.data.result.addressComponent.county);
-			  }
-			)
 			console.log('省',JSON.stringify(result_P));
 			console.log('市',JSON.stringify(result_C));
-				console.log('市',JSON.stringify(result_county));
-      callBack(result_P,result_C,result_county);
+      callBack(result_P,result_C);
     },
     fail: function(res) {},
   })

@@ -73,7 +73,6 @@
 
 <script>
 	import oderList from '@/components/oderList.vue'
-	import  '@/common/iconfont.js'
 	export default {
 		components:{
 			oderList

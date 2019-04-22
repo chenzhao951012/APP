@@ -1,86 +1,89 @@
 /* 公共样式 */
+page{
+	background-color: #f3f3f3;
+}
 .all_content{
-	margin: 76rpx 30rpx 0;
-	font-size:28rpx;
+	background-color: #f3f3f3;
+	padding: 30rpx 30rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
-._display_flex{
-	display:-webkit-box;
-	display:-webkit-flex;
-	display:-ms-flexbox;
-	display:flex;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
-}
-._top_content{
-	/* margin:80upx 30upx 0; */
-}
-._micro_letter{
-	width:112rpx;
-	height:40rpx;
-	margin-right:68rpx;
-	display: inline-block;
-	/* border:2upx solid; */
-	vertical-align: top;
-}
-._micro_letter_content{
-	display: inline-block;
-}
-._micro_letter_image{
-	width:86rpx;
-	height:86rpx;
-	border:2rpx solid #BBBBBB;
-	border-radius: 50%;
-	margin-right:26rpx;
-	/* vertical-align: middle; */
-}
-._micro_letter_info{
-	height:102rpx;
-	display:inline-block;
-}
-._micro_letter_name{
-	width:168rpx;
-	height:40rpx;
-	margin-bottom:22rpx;
-}
-._arrive_time{
-	width:186rpx;
-	height:40rpx;
-}
-/* 提现金额 */
-._withdrawal_amount{
-	/* width:112upx; */
-	height: 40rpx;
-	margin:138rpx 0 40rpx;
-}
-._money_amount{
-	heihgt:56rpx;
-	font-size:40rpx;
-	line-height:56rpx;
-	margin-bottom:24rpx;
-}
-._input{
-	/* width:120upx; */
-	margin-left:20rpx;
-	display:inline-block;
-	vertical-align: middle;
-	/* border-bottom:1upx solid #DBDBDB; */
-}
-._change_balance{
-	margin-bottom:80rpx;
-}
-._all_withdrawal{
-	color:#1B83BD;
+.withdrawBox{
+	width: 100%;
+	background-color: #fff;
+	height: 672rpx;
+	border-radius: 10rpx;
+	-webkit-box-shadow: 0 3px 5px rgba(100, 100, 100, 0.14);
+	        box-shadow: 0 3px 5px rgba(100, 100, 100, 0.14);
+	padding: 30rpx 30rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 ._withDrawal_button{
-	width:502rpx;
+	width:480rpx;
 	height:80rpx;
-	background:#DBDBDB;
+	background:#366ef7;
 	border: 2rpx solid #DBDBDB;
 	border-radius: 20rpx;
 	line-height:80rpx;
 	text-align:center;
 	margin:0 auto;
+	font-size: 28rpx;
+	color: #FFFEFF;
+	margin-top: 80rpx;
+	font-weight: 600;
+	letter-spacing: 5rpx;
+}
+.title{
+	font-size: 24rpx;
+	color: #606060;
+	font-weight: 600;
+}
+.Connent{
+	margin-top: 80rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	padding-bottom: 100rpx;
+	border-bottom: 2rpx dashed #ededed;
+	margin-bottom: 100rpx;
+}
+.Connentinput{
+	margin-left: 20rpx;
+	border-bottom: 2rpx solid #ededed;
+	width: 90%;
+}
+.Connentinput ._input{
+	font-size: 28rpx;
+	color: #333333;
+	text-align: center;
+	font-weight: 600;
+}
+.iconfonts{
+	font-size: 28rpx;
+	color: #333333;
+	font-weight: 600;
+}
+.iconfont1{
+	color: #4f9aff;
+}
+.iconfont2{
+	color: #4bb46f;
+}
+.Withdrawal{
+	width: 95%;
+	height: 120rpx;
+	line-height: 120rpx;
+	margin: 0 auto;
+	border-bottom: 2rpx solid #ededed;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 

@@ -116,7 +116,7 @@
 					
 							<!-- 点赞 -->
 						<view class="praise">
-							<text class="iconfont"><text :class="(items.praisecount==1) ? iSclor='IsCorlor2' : iSclor='IsCorlor' " @click="clickZanImg(indexs,items.id)">&#xe872; {{items.praisecount}}</text></text>
+							<!-- <text class="iconfont"><text :class="(items.praisecount==1) ? iSclor='IsCorlor2' : iSclor='IsCorlor' " @click="clickZanImg(indexs,items.id)">&#xe872; {{items.praisecount}}</text></text> -->
 							
 						</view>
 							<!-- <view class="subreply" v-if="items.comment_list.length!=0">

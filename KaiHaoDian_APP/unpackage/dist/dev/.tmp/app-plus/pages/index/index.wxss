@@ -50,7 +50,7 @@ page {
 .content {
   width: 750rpx;
   height: 100%;
-  background: #eeeeee;
+  background: #f3f3f3;
 }
 .index_swiper {
   position: relative;
@@ -217,10 +217,8 @@ page {
   width: 750rpx;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0 0 30rpx;
-  background: #fbfcfe;
+  background: #f3f3f3;
   margin-top: 20rpx;
-  background-color: white;
 }
 ._contacts_title {
   display: -webkit-box;
@@ -241,7 +239,7 @@ page {
   padding: 0 30rpx;
   line-height: 80rpx;
   color: #999;
-  background-color: white;
+  margin-bottom: 10rpx;
 }
 ._contacts_titleL {
   font-size: 32rpx;
@@ -265,7 +263,7 @@ page {
 }
 ._contacts {
   border-radius: 8rpx;
-  background: #fffcf3;
+  background: #ffffff;
   display: inline-block;
   vertical-align: middle;
   width: 310rpx;
@@ -298,7 +296,7 @@ page {
     margin-top: 20rpx;
 }
 ._contacts ._contacts_name {
-    color: #000000;
+    color: #333333;
     font-weight: 600;
     font-size: 30rpx;
 }
@@ -322,11 +320,11 @@ page {
       margin-left: 10rpx;
 }
 ._contacts ._contacts_gz_state {
-    width: 160rpx;
-    line-height: 48rpx;
-    border: 2rpx solid #646561;
-    color: #000000;
-    border-radius: 48rpx;
+    width: 140rpx;
+    line-height: 54rpx;
+    background-color: #ffbd38;
+    color: #ffffff;
+    border-radius: 10rpx;
     margin: 0 auto;
     font-size: 24rpx;
     text-align: center;
@@ -346,8 +344,8 @@ page {
     font-weight: 700;
 }
 ._contacts ._contacts_gz_state2 {
-    border: 2rpx solid #646561;
-    color: #000000;
+    background-color: #ffbd38;
+    color: #ffffff;
 }
 ._contacts:last-child {
   margin-right: 0;
@@ -363,7 +361,7 @@ page {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding: 0 30rpx;
-    color: #010101;
+    color: #333333;
     font-weight: 600;
     line-height: 80rpx;
     font-size: 32rpx;
@@ -536,7 +534,7 @@ page {
 /* end */
 .openStory_cell-title {
   width: 80%;
-  color: #151515;
+  color: #333333;
   font-size: 30rpx;
   overflow: hidden;
   -o-text-overflow: ellipsis;

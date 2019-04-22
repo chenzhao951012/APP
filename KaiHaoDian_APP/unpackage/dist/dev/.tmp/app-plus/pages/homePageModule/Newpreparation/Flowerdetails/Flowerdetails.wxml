@@ -1,0 +1,2 @@
+<import src="./Flowerdetails.vue.wxml" />
+    <template is="7e0072bc" data="{{ ...$root['0'], $root }}"/>

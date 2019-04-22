@@ -41,37 +41,37 @@
 		},
 		onLoad() {
 			var _this=this
-				uni.getStorage({
-				key: 'location',
-				success: res => {
-					// console.log('getStorage', JSON.stringify(res));
-					_this.location = {
-						province_id: res.data.province_id,
-						province_name: res.data.province_name,
-						city_id: res.data.city_id,
-						city_name: res.data.city_name
-					};
-					_this.location_city = JSON.parse(res.data.city_name);
-					_this.location_privce=JSON.parse(res.data.province_name)
-					_this.location_cityid=JSON.parse( res.data.city_id)
-					_this.location_privceid=JSON.parse( res.data.province_id)
-					// console.info('_location_city',_this.location_city);
-				},
-				fail: res => {
-					
-					if ((_this.location.province_name || _this.location.province_id || _this.location.city_id) == '') {
-							getLocation.getLocation(function(res_p, res_c) {
-							_this.location_city = res_c[0].name
-							
-							_this.location_privce=JSON.parse(res_p[0].name)
-							_this.location_cityid=JSON.parse( res_c[0].id)
-							_this.location_privceid=JSON.parse( res_p[0].id)
-							_this.cityText=_this.location_privce+_this.location_city
-						})
-					
-					}
-				}
-			})
+// 				uni.getStorage({
+// 				key: 'location',
+// 				success: res => {
+// 					// console.log('getStorage', JSON.stringify(res));
+// 					_this.location = {
+// 						province_id: res.data.province_id,
+// 						province_name: res.data.province_name,
+// 						city_id: res.data.city_id,
+// 						city_name: res.data.city_name
+// 					};
+// 					_this.location_city = JSON.parse(res.data.city_name);
+// 					_this.location_privce=JSON.parse(res.data.province_name)
+// 					_this.location_cityid=JSON.parse( res.data.city_id)
+// 					_this.location_privceid=JSON.parse( res.data.province_id)
+// 					// console.info('_location_city',_this.location_city);
+// 				},
+// 				fail: res => {
+// 					
+// 					if ((_this.location.province_name || _this.location.province_id || _this.location.city_id) == '') {
+// 							getLocation.getLocation(function(res_p, res_c) {
+// 							_this.location_city = res_c[0].name
+// 							
+// 							_this.location_privce=JSON.parse(res_p[0].name)
+// 							_this.location_cityid=JSON.parse( res_c[0].id)
+// 							_this.location_privceid=JSON.parse( res_p[0].id)
+// 							_this.cityText=_this.location_privce+_this.location_city
+// 						})
+// 					
+// 					}
+// 				}
+// 			})
 		},
 		components: {
 			mpvuePicker,
@@ -121,9 +121,7 @@
 				
 			};
 		},
-		 onNavigationBarButtonTap() {  
-					console.log("导航事件")
-			},  
+		 
 		methods:{
 			display1(){
 				this.weChat = !this.weChat
@@ -340,7 +338,7 @@
 		     }
 		   })
 		 } else {
-		   wx.showModal({
+		   uni.showModal({
 		     title: '提示',
 		     content: '请正确填写手机号',
 		     showCancel: false,
@@ -351,7 +349,15 @@
 
 
   },
-		}
+		},
+		 onNavigationBarButtonTap() {  
+							uni.showModal({
+							  title: '提示',
+							  content: '完成',
+							  showCancel: false,
+							  success: function() {}
+							})
+					}, 
 	}
 </script>
 

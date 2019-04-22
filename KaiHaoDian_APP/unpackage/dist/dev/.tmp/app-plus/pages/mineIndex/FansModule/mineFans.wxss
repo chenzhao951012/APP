@@ -29,7 +29,6 @@
 	padding-top:40rpx;
 	margin: 0 30rpx;
 	font-size:28rpx;
-	border-bottom: 1rpx solid #ececec;
 }
 ._display_flex{
 	display:-webkit-box;
@@ -44,41 +43,49 @@
 /* 关注详情 */
 ._focus_on_info{
 	font-size:28rpx;
-	margin-bottom:64rpx;
+	border-bottom: 1rpx solid #ececec;
+	padding-bottom: 40rpx;
+	margin-bottom: 20rpx;
 }
 ._focus_image{
 	width:100rpx;
 	height:100rpx;
 	border-radius: 50%;
 	border:2rpx solid #BBBBBB;
-	margin-right:32rpx;
+	margin-right:10rpx;
 	vertical-align: middle;
 }
 ._focus_name{
-	
+	color: #333333;
+	font-weight: 600;
 	height:40rpx;
 	margin-bottom:20rpx;
 }
 ._focus_button{
-	width:160rpx;
+	width: 120rpx;
 	height:58rpx;
 	line-height:58rpx;
-border: 1px solid #3285ff;
-    color: #3285ff;
-	
+	background-color: #ffbc39;
+    color: white;
 	border-radius: 20rpx;
 	text-align:center;
 	margin: 20rpx 0;
+	font-size: 24rpx;
 }
 ._focus_button2{
 	width:160rpx;
 	height:58rpx;
 	line-height:58rpx;
-    background: #f5f5f5;
-    color: #999;
-	border-radius: 20rpx;
+   border:2rpx solid #d2d2d2;
+    color: #333333;
+	border-radius: 10rpx;
 	text-align:center;
 	margin: 20rpx 0;
+	font-size: 24rpx;
+	font-weight: 600;
+}
+._focus_button2 ._arrow{
+	padding-right: 10rpx;
 }
 ._focus_contacts{
 	width: 320rpx;
@@ -86,6 +93,8 @@ border: 1px solid #3285ff;
 -o-text-overflow:ellipsis;
    text-overflow:ellipsis;
 white-space: nowrap;
+font-size: 24rpx;
+color: #989898;
 }
 .emptyBox{
 	display: -webkit-box;
@@ -106,6 +115,11 @@ white-space: nowrap;
 	margin-top: 40rpx;
 	color: #585858;
 	font-size: 14px;
+}
+.lines{
+		height: 20rpx;
+		width: 750rpx;
+		background-color: #f3f3f3;
 }
 .status_bar {
   height: var(--status-bar-height);
