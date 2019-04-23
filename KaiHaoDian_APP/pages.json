@@ -493,7 +493,7 @@
 		    // 申请交换列表
 		    "path" : "pages/mineIndex/exchangePhone/exchangePhone",
 		    "style" : {
-		        "navigationBarTitleText" : "申请交换列表" //设置页面标题文字
+		        "navigationBarTitleText" : "申请交换联系方式" //设置页面标题文字
 		    }
 		},
 		   {
@@ -864,6 +864,12 @@
 			}
         }
        
+        ,{
+            "path" : "pages/mineIndex/messageNotification/messageNotification",
+            "style" : {
+				"navigationBarTitleText" : "消息通知"
+			}
+        }
     ],
     /*------------------------------------------添加认证相关页面  End------------------------------------------*/
     "globalStyle" : {

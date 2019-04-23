@@ -1,0 +1,12 @@
+.massageBox{
+	// 消息盒子
+	width: 750upx;
+	background-color: #f3f3f3;
+	padding-top: 20upx;
+	.massageList{
+		background-color: #fff;
+		padding: 30upx;
+		box-sizing: border-box;
+		border-radius:10upx 10upx 0 0; 
+	}
+}

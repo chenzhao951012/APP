@@ -231,10 +231,10 @@
 			setTimeout(()=>{
 				if(!that.userInfo.type){
 					that.information="未认证"
-				}else if(userInfo.type==='2' || userInfo.type==='1'){
+				}else if(that.userInfo.type==='2' || that.userInfo.type==='1'){
 					that.information="已认证"
-					hat.unauthorize='renzheng2'
-				}else if(userInfo.type === '4_1' || userInfo.type === '4_2'){
+					that.unauthorize='renzheng2'
+				}else if(that.userInfo.type === '4_1' || that.userInfo.type === '4_2'){
 					that.information="认证中"
 					that.unauthorize='_unauthorized'
 					}
@@ -439,7 +439,7 @@
 				}else if(index == "4"){
 					//申请交换联系
 					uni.navigateTo({
-						url: 'exchangePhone/exchangePhone',
+						url: 'messageNotification/messageNotification',
 						success: res => {
 							console.log(res);
 						},

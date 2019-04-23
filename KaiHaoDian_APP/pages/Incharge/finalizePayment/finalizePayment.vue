@@ -8,7 +8,6 @@
 					<view class="title">我们将在3-5个工作内进行审核</view>
 					<view class="title">请注意查收消息通知~</view>
 				</view>
-				
 			</view>
 		</view>
 	</view>

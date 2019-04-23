@@ -56,7 +56,9 @@ function checkLogin() {
     if (value) {
       return true;
     }
-  } catch (e) {}
+  } catch (e) {
+		
+	}
   return false;
 }
 

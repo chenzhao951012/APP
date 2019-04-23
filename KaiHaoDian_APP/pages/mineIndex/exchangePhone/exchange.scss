@@ -1,23 +1,73 @@
-.ImgBox{
-	width:300upx;
-	height:290upx;
-	
-}
-img{
-	width:300upx;
-height:290upx;
-}
-.box0{
+.exChane{
 	width: 750upx;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-		height: 800upx;
-}
-.Imgtitle{
-		font-size:32upx;
-		text-align:center;
-		color:#ccc;
-		margin-top: 50upx;
-
+	padding-top: 20upx;
+	background-color: #f3f3f3;
+	.changePhone{
+		background-color: #fff;
+		padding: 30upx;
+		box-sizing: border-box;
+		border: 10upx 10upx 0 0;
+		.noinformation{
+			width: 100%;
+				img{
+				width: 100%;
+				height: 1000upx;
+			}
+		}
+		.userInfo{
+			border-bottom: 2upx solid #eeeeee;
+			.userTop{
+				display: flex;
+				.left{
+					img{
+						width: 80upx;
+						height: 80upx;
+						border-radius: 50%;
+					}
+				}
+				.right{
+					margin-left: 20upx;
+					font-size: 24upx;
+					letter-spacing: 2upx;
+					view:nth-child(1){
+						font-size: 28upx;
+						margin-bottom: 12upx;
+						font-weight: 600;
+						color: #333333;
+						text{
+							padding: 0 4upx;
+						}
+					}
+						view:nth-child(2){
+						font-size: 24upx;
+						
+						color: #8f8f8f;
+						.iconfont{
+							padding: 0 10upx;
+							color: #299dff;
+						}
+					}
+				}
+			}
+			.chooseBox{
+				margin: 30upx 0;
+				margin-bottom: 20upx;
+				font-size: 24upx;
+				display: flex;
+				justify-content: space-around;
+				color: #fff;
+				view{
+					padding: 10upx 50upx;
+					background-color: #ffbd38;
+					border-radius: 50upx;
+					box-sizing: border-box;
+				}
+				view:nth-child(1){
+					background-color: #dcdcdc;
+					color: #333333;
+					font-weight: 600;
+				}
+			}
+		}
+	}
 }
