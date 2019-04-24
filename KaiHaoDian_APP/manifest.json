@@ -55,6 +55,17 @@
         }
     },
     "h5" : {
-        "title" : "开好店"
+        "title" : "开好店",
+		"devServer": {
+		"port": 8000,
+		"disableHostCheck":true,
+		"proxy": {
+		"/dpc": {
+		"target": "http://dpc.dapeis.net",
+		"changeOrigin": true,
+		"secure": false
+		}
+		}
+		}
     }
 }

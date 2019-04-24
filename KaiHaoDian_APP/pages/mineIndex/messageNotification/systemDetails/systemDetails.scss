@@ -1,0 +1,35 @@
+.systemBox{
+	width: 750upx;
+	background-color: #f3f3f3;
+	padding-top: 20upx;
+	box-sizing: border-box;
+	.system{
+		padding: 30upx;
+		box-sizing: border-box;
+		background-color: #fff;
+		.contentBox{
+			display: flex;
+			.systemImg{
+				width: 100upx;
+				height: 100upx;
+				img{
+					width: 100upx;
+					height: 100upx;
+					border-radius: 50%;
+				}
+			}
+			.systemcontent{
+				margin-left: 4%;
+				background-color: #ffde9b;
+				padding: 20upx 20upx;
+				box-sizing: border-box;
+				max-width: 70%;
+				font-size: 24upx;
+				color: #333333;
+				border-radius: 0 10upx 10upx 20upx;
+			}
+		}
+		
+		
+	}
+}

@@ -1,122 +1,117 @@
 <template>
 	<view class="content">
 		<!-- 列表项 -->
-		<mpvue-picker :themeColor="themeColor" ref="mpvuePicker" :mode="mode" :deepLength="deepLength" :pickerValueDefault="pickerValueDefault"
+		<!-- <mpvue-picker :themeColor="themeColor" ref="mpvuePicker" :mode="mode" :deepLength="deepLength" :pickerValueDefault="pickerValueDefault"
 		 @onConfirm="onConfirm" @onCancel="onCancel" :pickerValueArray="pickerValueArray">确定</mpvue-picker>
 		<mpvue-city-picker :themeColor="themeColor" ref="mpvueCityPicker" :pickerValueDefault="cityPickerValueDefault"
-		 @onCancel="onCancel" @onConfirm="onConfirm"></mpvue-city-picker>
+		 @onCancel="onCancel" @onConfirm="onConfirm"></mpvue-city-picker> -->
 		<!-- 区域 -->
-		<view class="_cell_items">
-			<view class="_district">所在区域</view>
-			<view class="_select_district" @click="showMulLinkageThreePicker" data-type="1">{{pickerText3}}</view>
-		</view>
-		<!-- 联系电话 -->
-		<view class="_cell_items">
-			<view class="_district">联系电话</view>
-			<input class="_select_district phone" type="number" placeholder="请输入联系电话" maxlength="11" @blur="validating"/>
-		</view> 
-		<!-- 项目名称 -->     
-		<view class="_cell_items">
-			<view class="_district">项目名称</view>
-			<input class="_select_district" type="text" placeholder="请输入项目名称" maxlength="11" />
-		</view>
-		<!-- 项目类型 -->
-		<view class="_cell_items">
-			<view class="_district">项目类型</view>
-			<view class="_select_district" @click="showSinglePicker" data-type="2">{{pickerText1}}</view>
-		</view>
-		<!-- 项目进度 -->
-		<view class="_cell_items">
-			<view class="_district">项目进度</view>
-			<view class="_select_district" @click="showSinglePicker2" data-type="3">{{pickerText2}}</view>
-		</view>
-		<!-- 寻找合伙人 -->
-		<view class="_partners_find">
-			<view class="_partners_title">寻找合伙人</view>
-			<view class="_select_icon">
-				<view class="_service_cell" :class="item.bool ? '_color3285ff' : ''" v-for="(item,index) in partnersList" :key="index" @click="switchStyle(index,item.bool)">
-					<view class="iconfont">&#xe7f0;</view>
-					<view>{{item.title}}</view>
+		<view class="setShop">
+			<!-- //头部 -->
+			<view class="partnership-top">
+				<view class="title">
+					<view><text>介绍标题</text></view>
+					<view class="inputBox"><input type="text" maxlength="100" placeholder="给你的店铺七个响亮的标题吧~"  placeholder-style="color:#b4b4b4"></view>
+				</view>
+					<view class="title title2">
+					<view><text>店铺名称</text></view>
+					<view class="inputBox"><input type="text" maxlength="100" placeholder=""  placeholder-style="color:#333333"></view>
 				</view>
 			</view>
 		</view>
-		<!-- 标题 -->
-		<view class="_title_parnters">
-			<view class="_top_caption">
-				<view class="_title_caption">标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题</view>
-				<input type="text" placeholder="请输入标题" maxlength="28"/>
+		<view class="setShop">
+			<!-- //头部 -->
+			<view class="partnership-top">
+				<view class="title">
+					<view><text>项目进度</text></view>
+					<view class="inputBox"><input type="text" maxlength="100" placeholder="给你的店铺七个响亮的标题吧~"  placeholder-style="color:#b4b4b4"></view>
+				</view>
+					<view class="title">
+					<view><text>详细地址</text></view>
+					<view class="inputBox"><input type="text" maxlength="100" placeholder=""  placeholder-style="color:#b4b4b4"></view>
+				</view>
+				<view class="title" style="border-bottom: 0;">
+					<view><text>联系方式</text></view>
+					<view class="inputBox"><input type="text" maxlength="100" placeholder=""  placeholder-style="color:#b4b4b4"></view>
+				</view>
 			</view>
-			<!-- 合伙说明 -->
-			<view class="_title_instructions">
-				<view class="_title_top">合伙说明</view>
-				<textarea type="text" placeholder="请输入项目描述" maxlength="200"/>
-			</view>
-			<!-- 添加图片 -->
-			<view class="_add_photo">
-				<view class="_photo_icon iconfont">&#xe6e7;</view>
-				<view class="_photo_title">至少添加一张图片</view>
-			</view>
+			
 		</view>
-		
-		
-		<!-- 单选题 -->
-		<view class="_confirm">
-			<view class="_confirm_icon"></view>
-			<view class="">本人承诺以上全部属实</view>
+			<view class="setShop">
+			<!-- //头部 -->
+			<view class="partnership-top">
+				<view class="title">
+					<view><text>项目进度</text></view>
+					<view class="inputBox"><input type="text" maxlength="100" placeholder="给你的店铺七个响亮的标题吧~"  placeholder-style="color:#b4b4b4"></view>
+				</view>
+					<view class="title">
+					<view><text>详细地址</text></view>
+					<view class="inputBox"><input type="text" maxlength="100" placeholder=""  placeholder-style="color:#b4b4b4"></view>
+				</view>
+				<view class="title" style="border-bottom: 0;">
+					<view><text>联系方式</text></view>
+					<view class="inputBox"><input type="text" maxlength="100" placeholder=""  placeholder-style="color:#b4b4b4"></view>
+				</view>
+			</view>
+			
 		</view>
-		<!-- 发布按钮 -->
-		<view class="_position_button">
-			<view class="_left_button">发布</view>
-			<view class="_right_button">加急发布</view>
+			<view class="setShop">
+			<!-- //头部 -->
+			<view class="partnership-top ">
+				<view class="title" style="border-bottom: 0;">
+					<view><text>图片展示</text></view>
+				</view>
+					<view class="ImgBox">
+							<view class="ImgBox2" v-for="(item,idx) in ImgList" :key='idx'>
+							<img :src="item" alt="">
+						<view class="iconfont" @click="deleImg(idx)">
+							&#xe68e;
+						</view>
+						</view>
+						<view class="addImg" @click="addImg">
+							<text class="iconfont">&#xe649;</text>
+						</view>
+					</view>
+					
+			</view>
+			
 		</view>
 	</view>
 </template>
 
 <script>
 	// 城市选择器
-	import mpvuePicker from '@/components/mpvue-picker/mpvuePicker.vue';
-	import mpvueCityPicker from '@/components/mpvue-citypicker/mpvueCityPicker.vue';
+	
 	import cityData from '@/common/city.data.js';
 	// end
 	import shoppublic from '@/common/shoppublic'; //服务器地址
 	import getLocation from '@/common/getLocation.js'; //获取地理位置
 	export default {
-		// 监听页面返回
-		onBackPress() {
-			if (this.$refs.mpvuePicker.showPicker) {
-				this.$refs.mpvuePicker.pickerCancel();
-				return true;
-			}
-			if (this.$refs.mpvueCityPicker.showPicker) {
-				this.$refs.mpvueCityPicker.pickerCancel();
-				return true;
-			}
-		},
-		// 监听页面卸载
-		onUnload() {
-			if (this.$refs.mpvuePicker.showPicker) {
-				this.$refs.mpvuePicker.pickerCancel();
-			}
-			if (this.$refs.mpvueCityPicker.showPicker) {
-				this.$refs.mpvueCityPicker.pickerCancel();
-			}
-		},
 		components: {
-			mpvuePicker,
-			mpvueCityPicker
+			
+		},
+		onLoad() {
+			 uni.request({
+			  url:'localhost:192.168.0.104/khd/personalcenter/sharecode',
+			  data: {
+				userid: 14651
+			  },
+// 			  header: {
+// 				// 'content-type': 'application/json' // 默认值
+// 			  },
+			  success: function(res) {
+					console.log(res)
+			   
+			  },
+			  fail: function(res) {
+			
+			  }
+			})
 		},
 		data() {
 			return {
-				mulLinkageTwoPicker: cityData,
-				cityPickerValueDefault: [0, 0, 1],
-				themeColor: '#007AFF', //主体颜色
-				pickerText3: '请选择区域',
-				pickerText1: '请选择类型',
-				pickerText2: '请选择',
-				mode: '', //组件类型
-				deepLength: 1, //几级联动
-				pickerValueDefault: [0], //默认选中值
-				pickerValueArray: [], //渲染数据
+			
+				ImgList:[],
 				shoppublic: shoppublic, //服务器地址
 				partnersList:[
 					{
@@ -146,65 +141,39 @@
 				],
 				citySelect: 'false' ,//城市选择器状态
 				location_city:'',//地址选择
-				pickerSingleArray: [{
-                        label: '休闲娱乐',
-                        value: 1
-                    },
-                    {
-                        label: '休闲',
-                        value: 2
-                    },
-                    {
-                        label: '娱乐',
-                        value: 3
-                    },
-                    {
-                        label: '服饰鞋包',
-                        value: 4
-                    },
-                    {
-                        label: '鞋包',
-                        value: 5
-                    },
-                    {
-                        label: '鞋',
-                        value: 6
-                    },
-                    {
-                        label: '包',
-                        value: 7
-                    }
-                ],
-				pickerSingleArray2:[
-					{
-						label: '考察',
-						value: 1
-					},
-					{
-						label: '装修中',
-						value: 2
-					},
-					{
-						label: '开业筹备',
-						value: 3
-					},
-					{
-						label: '考察',
-						value: 4
-					},
-					{
-						label: '装修中',
-						value: 5
-					},
-					{
-						label: '开业筹备',
-						value: 6
-					},
-				],
-				type:"",//点击选择列表的类型
-			};
+				}
 		},
 		methods:{
+			// 图片删除
+			deleImg(index){
+				this.ImgList.splice(index,1)
+			},
+			// 添加图片
+			addImg(){
+				var that=this
+				uni.chooseImage({
+				count: 3,
+				sourceType: ['album'],
+				success: function (res) {
+					uni.getImageInfo({
+						src: res.tempFilePaths[0],
+						success: function (image) {
+							if(that.ImgList.length>2){
+								uni.showToast({
+									title:'至多添加三张图片',
+									duration:2000,
+									icon:'none'
+								})
+								return;
+							}else{
+								that.ImgList.push(res.tempFilePaths[0])
+							}
+							
+						}
+					});
+				}
+			});
+			},
 			// 项目类型单列
             showSinglePicker(e) {
 				console.log(e.currentTarget.dataset.type);

@@ -870,6 +870,27 @@
 				"navigationBarTitleText" : "消息通知"
 			}
         }
+        
+        ,{
+            "path" : "pages/mineIndex/messageNotification/systemDetails/systemDetails",
+            "style" : {
+				"navigationBarTitleText" : "系统消息"
+			}
+        }
+		
+		
+        ,{
+            "path" : "pages/mineIndex/messageNotification/Personalchat/chatpage/chatpage",
+            "style" : {
+				"navigationBarTitleText" : ""
+			}
+        }
+        ,{
+            "path" : "pages/mineIndex/messageNotification/Personalchat/Chatdetails/Chatdetails",
+            "style" : {
+				"navigationBarTitleText" : ""
+			}
+        }
     ],
     /*------------------------------------------添加认证相关页面  End------------------------------------------*/
     "globalStyle" : {
