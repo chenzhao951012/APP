@@ -96,9 +96,9 @@
 			  data: {
 				userid: 14651
 			  },
-// 			  header: {
-// 				// 'content-type': 'application/json' // 默认值
-// 			  },
+				header: {
+					'content-type': 'application/x-www-form-urlencoded',
+				},
 			  success: function(res) {
 					console.log(res)
 			   
