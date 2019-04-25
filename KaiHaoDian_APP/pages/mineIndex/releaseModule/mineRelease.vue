@@ -638,11 +638,11 @@
 									  url: shoppublic.getUrl() + '/personalcenter/deletePartnershipShop',
 									  data: {
 										id: id,
-										token:that.token
+										token:14651
 									  },
 									  success: (res) => {
-										list4.splice(index, 1)
-										  _this.list4=list
+										that.list4.splice(index, 1)
+										
 									  }
 									})
 								  }
@@ -785,7 +785,7 @@
 						uni.request({
 						  url: shoppublic.getUrl() + '/personalcenter/findlistPartnershipShop',
 						  data: {
-							token:that.token
+							token:14651
 						  },
 						  header: {
 							'content-type': 'application/json' // 默认值

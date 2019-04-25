@@ -229,7 +229,7 @@ export default {
 				
 				setTimeout(()=>{
 					 _this.getAderss(610100)
-					  _this.getPartnerList()
+					  _this.getPartnerList(610100)
 					 	
 				},500)
 	
@@ -334,7 +334,7 @@ export default {
 					url: shoppublic.getUrl() + "/partnershipShop/findPartnershipShopList",
 					data:{
 						index:_this.index,
-						city:_this.countryid,
+						city:610100,
 						county:_this.countyIds,
 						partner:_this.typeid,
 						type:_this.xiangmuId
@@ -357,7 +357,7 @@ export default {
 					url: shoppublic.getUrl() + "/partnershipShop/findPartnershipShopList",
 					data:{
 						index:_this.pagesize,
-						city:_this.countryid,
+						city:610100,
 						county:_this.countyIds,
 						partner:_this.typeid,
 						type:_this.xiangmuId

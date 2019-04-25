@@ -581,7 +581,7 @@
 				  this.type = e.currentTarget.dataset.type
 				  this.pickerValueArray = this.dianpuleixing
 				  this.mode = 'selector'
-				
+					console.log(this.typevalue, this.type)
 				},
 				//商品配套
 					 serviceValChange: function (e) {
@@ -635,6 +635,7 @@
 				let _this = this;
 				console.log(JSON.stringify(e.label));
 				if(this.type == "1"){
+					
 					_this.pickerText1 = e.label;
 					_this.countycode=e.cityCode.countycode
 					_this.cityCode=e.cityCode.cityCode
@@ -645,9 +646,11 @@
 					_this.cityName= locations[1]
 					_this.provinceName=locations[0];
 					_this.countyName=locations[2];
+					cong.log(_this.provinceName,_this.cityName,_this.countyName,_this.provincecode,_this.cityCode,_this.countycode)
 				}else if(this.type == "2"){
 					_this.typevalue = e.label;
 					this.type1=e.value
+					console.log(_this.typevalue,e.value)
 				}
 				let location = e.label.split('-');
 				let city_name = location[location.length - 1];

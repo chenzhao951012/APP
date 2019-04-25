@@ -36,7 +36,10 @@
 					}
 				}
 			}
-			
+			.inputBox2{
+				font-size: 28upx;
+				color: #b4b4b4;text-align: right;
+			}
 		}
 		.ImgBox{
 			display: flex;
@@ -88,4 +91,76 @@
 		}
 	}
 	
+}
+//合伙人需求
+.demand{
+	width: 100%;
+	min-height: 200upx;
+	border: 2upx solid #ffbd38;
+	padding: 20upx;
+	box-sizing: border-box;
+	textarea{
+		width: 100%;
+		font-size: 28upx;
+		color:rgb(180, 180, 180);
+	}
+	}
+	.peitao_r {
+  display: inline-block;
+  width:100%;
+  margin: 0 auto 30upx;
+}
+.choose {
+  min-height: 100upx;
+}
+.nav-list {
+  margin-top: 10upx;
+ 
+ 
+}
+.nav-list .navigator {
+  display: inline-block;
+  height: 100upx;
+  width: 20%;
+  text-align: center;
+  margin-top: 20upx;
+}
+
+.nav-list>view {
+  display: inline-block;
+  font-size: 30upx;
+  width: 90upx;
+  height: 90upx;
+  line-height: 30upx;
+  text-align: center;
+}
+
+.nav-list image {
+  margin: 10upx auto 20upx;
+  width: 46upx;
+  height: 46upx;
+  display: block;
+}
+
+.nav-list text {
+	width: 100%;
+  font-size: 26upx;
+  color: #000;
+}
+
+#JQQD_text {
+  color: #c8c8c8;
+}
+
+.paddingTop {
+  padding-top: 10upx;
+}
+
+.beizhu {
+  max-width: 446upx;
+  height: 170upx;
+}
+
+checkbox[hidden] {
+  display: none !important;
 }
