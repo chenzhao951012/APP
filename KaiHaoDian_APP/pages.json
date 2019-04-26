@@ -216,6 +216,7 @@
             "path" : "pages/homePageModule/newStoreRental/newStoreRental", //新铺租售
             "style" : {
                 "navigationBarTitleText" : "新铺租售"
+				
             }
         },
         {
@@ -233,7 +234,22 @@
         {
             "path" : "pages/homePageModule/newStoreRental/newShopRentalRelease/newShopRentalRelease", //新铺租售发布
             "style" : {
-                "navigationBarTitleText" : "新铺租售发布"
+                "navigationBarTitleText" : "新铺租售发布",
+				 "app-plus": {
+				    "bounce": "none", //关闭窗口回弹效果
+				    "titleNView": {
+				        "buttons": [ //原生标题栏按钮配置,
+				            {
+				                "text": "完成",
+																				   "fontSize":"14px",
+																					"width":"40px",
+																				   "fontWeight":"bold",
+																				   "color":"#fdbd39"
+																					
+																			   }
+				        ]
+				    }
+				}
             }
         },
         {
