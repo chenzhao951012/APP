@@ -15,7 +15,7 @@
 				</view>
 					<view class="title title2">
 					<view><text>店铺名称</text></view>
-					<view class="inputBox"><input type="text" maxlength="100" placeholder="" v-model="shopname"  placeholder-style="color:#333333"></view>
+					<view class="inputBox inputBox3"><input type="text" maxlength="100" placeholder="" v-model="shopname"  placeholder-style="color:#333333"></view>
 				</view>
 				<view class="title">
 					<view><text>项目类型</text></view>
@@ -146,6 +146,7 @@
 			},
 		data() {
 			return {
+				wenTiTypeId: [],
 				pickerText3:'请选择',
 				type1:'',
 				type2:'',
@@ -154,7 +155,7 @@
 				provincecode:"",
 				mulLinkageTwoPicker: cityData,
 				cityPickerValueDefault: [0, 0, 1],
-				themeColor: '#007AFF', //主体颜色
+				themeColor: '#ffbd38', //主体颜色
 				pickerText1: '请选择',
 				pickerText2: '请选择',
 				mode: '', //组件类型
@@ -180,7 +181,7 @@
 				ImgList:[],
 				shoppublic: shoppublic, //服务器地址
 				stagelist: [{
-					id: "0",
+					value: "0",
 					label: "考察"
 				  },
 				  {
@@ -362,17 +363,17 @@
 					_this.cityName= locations[1]
 					_this.provinceName=locations[0];
 					_this.countyName=locations[2];
-					console.log(_this.provinceName,_this.cityName,_this.countyName,_this.provincecode,_this.cityCode,_this.countycode)
 				}else if(this.type == "2"){
 					// _this.typevalue = e.label;
 					this.type1=e.value
 					this.pickerText2=e.label
+					console.log(e)
 					
 				}else if(this.type == "3"){
 					// _this.typevalue = e.label;
 					this.type2=e.value
 					this.pickerText3=e.label
-					
+					console.log(e)
 				}
 				let location = e.label.split('-');
 				let city_name = location[location.length - 1];
@@ -389,75 +390,87 @@
 				
 				var that=this
 				var warn;
-	
-// 				if(that.Introducetitl==''){
-// 					warn='请输入介绍标题'
-// 				}else if(that.shopname==''){
-// 					warn='请输入商铺名称'
-// 				}else if(that.projectprogress==''){
-// 					warn='请输入项目进度'
-// 				}else if(that.adressdetailed==''){
-// 					warn='请输入详细地址'
-// 				}else if(that.phoneNumber=='' || !(/^1(3|4|5|7|8)\d{9}$/.test(that.phoneNumber))){
-// 					warn='联系方式格式不对'
-// 				}else if(that.ImgList==''){
-// 					warn='最少上传一张图片展示'
-// 				}else if(that.projectintroduction==''){
-// 					warn='请输入项目介绍'
-// 				}else if(that.checkArr==''){
-// 					warn='最少选择一项合伙人'
-// 				}else{
-// 					 
-				uni.request({
-		 				url: shoppublic.getUrl() + '/partnershipShop/addPartnershipShop',
-						data:{
-							city:that.cityCode,
-							cityvalue:that.cityName,
-							county:that.countycode,
-							countyvalue:that.countyName,
-							description:that.projectintroduction,
-							phone:that.phoneNumber,
-							province:that.provincecode,
-							provincevalue:that.provinceName, 
-							src:that.imgsrc.split(','),
-							stage:that.type1,
-							stagevalue:that.pickerText2,
-							storename:that.shopname,
-							street:that.pickerText1,
-							title:that.Introducetitl,
-							token:14651,
-							that:that.type2,
-							typevalue:that.pickerText3,
-							urgent:1,
-							value:that.allGoodsFilte,
-							videoaddress:that.videourl
-						},
-						header: {
-						'content-type': 'application/json' // 默认值
-		        },
-        success: function(res) {
-          console.log(res)
-          if (res.data.msgCode == "1") {
-            
-            uni.showModal({
-              title: '添加成功',
-              content: '每日分享任意页面即可获得一次发布内容置顶机会',
-              showCancel: false,
-              success(res) {
-                //直接跳转列表页面
-              warn='添加成功'
-              }
-            })
-          } else {
-           warn='添加失败'
-          }
-
-
-        },
-        fall: function(res) {
-
-        }
-      })
+					var data={
+						city:that.cityCode+'00',
+						cityvalue:that.cityName,
+						county:that.countycode,
+						countyvalue:that.countyName,
+						description:that.projectintroduction,
+						phone:that.phoneNumber,
+						province:that.provincecode+'0000',
+						provincevalue:that.provinceName, 
+						src:JSON.stringify(that.imgsrc),
+						stage:that.type1,
+						stagevalue:that.pickerText2,
+						storename:that.shopname,
+						street:that.pickerText1,
+						title:that.Introducetitl,
+						token:14651,
+						type:that.type2,
+						typevalue:that.pickerText3,
+						urgent:1,
+						value:JSON.stringify(that.allGoodsFilte),
+						videoaddress:that.videourl
+					}
+// 					setTimeout(()=>{
+// 						console.log(data)
+// 					},5000)
+				if(that.Introducetitl==''){
+					warn='请输入介绍标题'
+				}else if(that.shopname==''){
+					warn='请输入商铺名称'
+				}else if(that.projectprogress==''){
+					warn='请输入项目进度'
+				}else if(that.adressdetailed==''){
+					warn='请输入详细地址'
+				}else if(that.phoneNumber=='' || !(/^1(3|4|5|7|8)\d{9}$/.test(that.phoneNumber))){
+					warn='联系方式格式不对'
+				}else if(that.ImgList==''){
+					warn='最少上传一张图片展示'
+				}else if(that.projectintroduction==''){
+					warn='请输入项目介绍'
+				}else if(that.checkArr==''){
+					warn='最少选择一项合伙人'
+				}else if(thta.pickerText1=='请选择'){
+					warn='请选择开店地址'
+				}else if(thta.pickerText2=='请选择'){
+					warn='请选择项目进度'
+				}else if(thta.pickerText3=='请选择'){
+					warn='请选择项目类型'
+				}else{
+					uni.request({
+							 				url: shoppublic.getUrl() + '/partnershipShop/addPartnershipShop',
+											data:data,
+											header: {
+											'content-type': 'application/json' // 默认值
+							        },
+					  success: function(res) {
+					    console.log(res)
+					    if (res.data.msgCode == "1") {
+					      
+					      uni.showModal({
+					        title: '添加成功',
+					        content: '即将返回首页',
+					        showCancel: false,
+					        success(res) {
+					          setTimeout(()=>{
+										
+									},3000)
+					      
+					        }
+					      })
+					    } else {
+					     warn='添加失败'
+					    }
+					
+					
+					  },
+					  fall: function(res) {
+					
+					  }
+					})
+				}
+				
 				
 				 uni.showToast({
 				 	title:warn,
@@ -482,7 +495,7 @@
 				  var imgsrc = that.imgsrc;
 				  
 				uni.chooseImage({
-				count:3,
+				count:5,
 				 sizeType: ['original', 'compressed'],
 				sourceType: ['album','camera'],
 				success: function (res) {
@@ -523,22 +536,21 @@
 			},
 				// 寻找合伙人样式的切换
 			serviceValChange: function(e) {
-				var _this=this
-				var allGoodsFilte = _this.allGoodsFilte;
-
-				var checkArr = e.detail.value;
-				_this.checkArr=checkArr
-				for (var i = 0; i < allGoodsFilte.length; i++) {
+					console.log(e.detail.value)
+					var allGoodsFilte = this.allGoodsFilte;
+					var checkArr = e.detail.value;
+					  this.checkArr=checkArr
+					for (var i = 0; i < allGoodsFilte.length; i++) {
 					  if (checkArr.indexOf(i + "") != -1) {
 						allGoodsFilte[i].checked = true;
-
 					  } else {
 						allGoodsFilte[i].checked = false;
 					  }
 					};
-					_this.allGoodsFilte=allGoodsFilte
-						console.log(allGoodsFilte)
-			  },
+					  this.allGoodsFilte=allGoodsFilte
+					
+					console.log(allGoodsFilte)
+				  },
 		
 
 			// end
