@@ -1,60 +1,115 @@
-@mixin box_sizing {
+@mixin box-sizing {
 	width: 750upx;
 	padding: 0 30upx;
 	box-sizing: border-box;
 }
 
-@mixin display_flex{
+@mixin display-flex {
 	display:flex;
 	justify-content: space-between;
 }
-
-page {
-	height: 100%;
-	background: #fff;
-}
-
-.content {
-	padding: {
-		top: 6upx;
-	}
-}
-
-._infoFill:nth-child(2n-1){
-	background:rgb(247,247,247);
-}
-
-._infoFill{
-	@include box_sizing;
-	@include display_flex;
-	height:96upx;
-	line-height:96upx;
-	font-size:28upx;
-	color:rgb(27,30,38);
-	input{
-		line-height:60upx;
-		text-align:right;
-		font-size:28upx;
-		margin-top:20upx;
-	}
-	._right{
-		text-align:right;
-		input{
-			display:inline-block;
-			vertical-align: top;
-		}
-		text{
-			display:inline-block;
-			margin-left:6upx;
-		}
-	}
-}
-
+			.newShoprental{
+					background-color: #f3f3f3;
+					padding-top: 20upx;
+					.publishNewshop{
+						background-color: #fff;
+						box-sizing: border-box;
+						.titleBox2{
+							display: flex;
+						}
+						.titleBox3{
+							display: flex;
+							justify-content: space-between;
+						}
+						.titleBox{
+							padding:0 30upx;
+							height: 100upx;
+							line-height: 100upx;
+							border-bottom: 2upx solid #eeeeee;
+							font-size: 28upx;
+							color: #333333;
+							font-weight: 600;
+							input{
+								margin-left: 30upx;
+								margin-top: 24upx;
+								font-weight: 100;
+								
+							}
+							
+							
+							}
+					}
+					
+				}
+				// 店铺介绍
+				.introduce{
+						padding:0 30upx;
+						box-sizing: border-box;
+						background-color: #fff;
+						font-size: 28upx;
+						color: #333333;
+						
+						.title{
+							height: 100upx;
+							line-height: 100upx;
+							font-weight: 600;
+							
+						}
+						.introduceBox{
+							width: 100%;
+							border: 2upx solid #ffbd38;
+							height: 300upx;
+								padding: 30upx;
+								box-sizing: border-box;
+							textarea{
+								font-size: 28upx;
+								width: 100%;
+								
+								}
+							}
+							
+					}
+					// 店铺类型选择
+					.commodityinformation{
+						
+						box-sizing: border-box;
+						// display: flex;
+						background-color: #fff;
+						justify-content: space-between;
+						.type{
+							font-size: 28upx;
+							
+							border-bottom: 2upx solid #eeeeee;
+							padding:0 30upx;
+							box-sizing: border-box;
+							display: flex;
+							justify-content: space-between;
+							height: 100upx;
+							line-height: 100upx;
+							font-weight: 600;
+								view:nth-child(1){
+								font-size: 28upx;
+								letter-spacing: 2upx;
+								color: #333333;
+								
+							}
+							view:nth-child(2){
+								font-size: 28upx;
+								letter-spacing: 2upx;
+								color: rgb(102, 102, 102);
+							}
+						}
+					
+					}
+					
+				// 配套设施
 ._assort_store{
 	@include box-sizing;
 	font-size:28upx;
 	._assort_title{
-		margin: 56upx 0 50upx;
+		height:50upx;
+		line-height:50upx;
+		font-weight: 600;
 	}
 	._select_icon{
 		@include display-flex;
@@ -188,20 +243,100 @@ page {
 	}
 }
 .peitao_r {
+  
+  width: 690rpx;
+  margin: 0 auto;
+ 
+}
+.nav-list {
+  text-align: left;
+}
+
+
+
+.nav-list .navigator, .JQQD {
   display: inline-block;
+  height: 120rpx;
+  width: 16%;
+  text-align: center;
+
+}
+
+.nav-list1 .navigator {
+  display: inline-block;
+  height:100rpx;
+
+  text-align: center;
+  width: 25%;
+  
+}
+checkbox[hidden] {
+  display: none !important;
+}
+
+.checkbox22 {
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  display: inline-block;
+  margin-top: 20rpx;
+  border-radius: 30rpx;
+  color: #999;
+  border: 1px solid #ececec;
+}
+.is_checked22 {
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #2f86ff;
+  border: 1px solid #2f86ff;
+  border-radius: 30rpx;
+}
+.faBuRight {
+  float: left;
+  text-align: right;
+  width: 560rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.inp_a {
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 25rpx;
+  float: right;
+}
+.inp_text {
+  width: 164rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: inline-block;
+  border: 1px solid #d9d9d9;
+  float: left;
+  border-radius: 10rpx;
+}
+.inp_text_m {
+  display: inline-block;
+  float: left;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #333;
+}
+.peitao_r {
+ 
   width: 650upx;
   margin: 0 0 40upx 20upx;
 }
 .choose {
-  min-height: 100upx;
+  
 }
 .nav-list {
-  margin-top: 10upx;
+ 
 }
 .nav-list .navigator {
   display: inline-block;
-  height: 100upx;
-  width: 108upx;
+	width: 20%;
   text-align: center;
 margin-top: 20upx;
 }
@@ -244,14 +379,47 @@ checkbox[hidden] {
   display: none !important;
 }
 
-.ImgBox{
-	width: 100upx;
-	height: 100upx;
-
-	float: left;
-	margin: -80upx 10upx 20upx 10upx;
-	image{
-		width: 100%;
-		height: 100%;
+//添加图片
+.picturepresentation{
+	background-color: #fff;
+	padding: 30upx;
+	padding-top: 0;
+	block-size:border-box;
+	.title{
+		font-size: 28upx;
+		height: 100upx;
+		line-height: 100upx;
+		font-weight: 600;
 	}
 }
+.ImgBox{
+			display: flex;
+			justify-content: space-between;
+			.ImgBox2{
+				width:31%;
+				position: relative;
+				img{
+					width:100%;
+					height: 160upx;
+					border-radius: 10upx;
+				}
+				.iconfont{
+					color: #ffbd38;
+					font-size: 28upx;
+					position: absolute;
+					top: -12upx;
+					right: -12upx;
+				}
+			}
+			.addImg{
+				width: 31%;
+				height: 160upx;
+				border: 2upx solid #eeeeee;
+				text-align: center;
+				line-height: 160upx;
+				border-radius: 10upx;
+				.iconfont{
+					font-size: 60upx;
+				}
+			}
+		}

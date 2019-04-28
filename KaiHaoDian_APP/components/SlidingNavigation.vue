@@ -47,8 +47,7 @@
 		},
 		created() {
 			this.initActive()
-			console.log(this.modelData)
-			console.log(this.chooseIndex)
+			
 		},
 	}
 </script>

@@ -2,75 +2,216 @@
 	width: 750upx;
 	padding: 0 30upx;
 	box-sizing: border-box;
+	
 }
-
+.apply{
+		background-color: #fff;
+		border-radius:10upx;
+		  padding-bottom: 10upx;
+		  box-sizing: border-box;
+		 .tab{
+			 border-radius:0 0 0upx 0upx;
+			  box-shadow:0px 4upx 4upx #e4e4e4;
+			border-radius:10upx;
+			}
+			
+			
+		}
 @mixin display-flex {
 	display:flex;
 	justify-content: space-between;
 }
-
-page {
-	height: 100%;
-	background: #fff;
-}
-
-// 标题
-._title_parnters{
+			.newShoprental{
+					background-color: #f3f3f3;
+					padding-top: 20upx;
+					.publishNewshop2{
+								border-radius:20upx 20upx 0 0;
+					}
+					.publishNewshop{
+						background-color: #fff;
+			
+						box-sizing: border-box;
+						.titleBox2{
+							display: flex;
+						}
+						.titleBox3{
+							display: flex;
+							justify-content: space-between;
+						}
+						.titleBox{
+							padding:0 30upx;
+							height: 100upx;
+							line-height: 100upx;
+							border-bottom: 2upx solid #eeeeee;
+							font-size: 28upx;
+							color: #333333;
+							font-weight: 600;
+							input{
+								margin-left: 30upx;
+								margin-top: 24upx;
+								font-weight: 100;
+								
+							}
+							
+							
+							}
+					}
+					
+				}
+				// 店铺介绍
+				.introduce{
+						padding:0 30upx;
+						box-sizing: border-box;
+						background-color: #fff;
+						font-size: 28upx;
+						color: #333333;
+						
+						.title{
+							height: 100upx;
+							line-height: 100upx;
+							font-weight: 600;
+							
+						}
+						.introduceBox{
+							width: 100%;
+							border: 2upx solid #ffbd38;
+							height: 300upx;
+								padding: 30upx;
+								box-sizing: border-box;
+							textarea{
+								font-size: 28upx;
+								width: 100%;
+								
+								}
+							}
+							
+					}
+					// 店铺类型选择
+					.commodityinformation{
+						
+						box-sizing: border-box;
+						display: flex;
+						background-color: #fff;
+						justify-content: space-between;
+						border-bottom: 2upx solid #eeeeee;
+						.type{
+							width: 33.3%;
+							margin-top: 40upx;
+							margin-bottom: 40upx;
+							border-right: 2upx solid #eeeeee;
+							padding:0 30upx;
+							text-align: center;
+							box-sizing: border-box;
+							font-weight: 600;
+								view:nth-child(1){
+								font-size: 28upx;
+								letter-spacing: 2upx;
+								color: #656565;
+								
+							}
+							view:nth-child(2){
+								font-size: 28upx;
+								letter-spacing: 2upx;
+								color: #333333;
+								margin-top: 30upx;
+								
+							}
+						}
+					
+					}
+					
+				// 配套设施
+._assort_store{
 	@include box-sizing;
-	font-size:22upx;
-	background:#f7f7f7;
-	height:252upx;
-	overflow: hidden;
-	._title_top{
-		height:96upx;
-		line-height:96upx;
-		font-size:30upx;
-	}
-	textarea{
-		font-size:22upx;
-		height:80upx;
-		margin-bottom:20upx;
-	}
-	._title_bottom{
-		text-align:right;
-		color:#b0b0b0;
-	}
-}
-
-// 招聘列表
-._infoFill{
-	@include box-sizing;
-	@include display-flex;
 	font-size:28upx;
-	height:96upx;
-	line-height:96upx;
-	input{
-		line-height:60upx;
-		text-align:right;
-		font-size:28upx;
-		margin-top:20upx;
+	._assort_title{
+		height:50upx;
+		line-height:50upx;
+		font-weight: 600;
+	}
+	._select_icon{
+		@include display-flex;
+		justify-content: start;
+		flex-wrap: wrap;
+		text-align:center;
+		color: gray;
+		._service_cell{
+			width:138upx;
+			margin-bottom:36upx;
+			font-size:28upx;
+			>.iconfont{
+				font-size:34upx;
+			}
+		}
+		._color3285ff{
+			color: #3285ff;
+		}
 	}
 }
 
-._infoFill:nth-of-type(2n-1){
-	background:#f7f7f7;
+._title_parnters::after{
+	display:block;
+	content:"";
+	clear:both;
 }
 
-._infoFill:nth-of-type(8){
-	border-bottom:2upx solid #ccc;
+._title_parnters{
+	box-sizing:border-box;
+	font-size:28upx;
+	background:rgb(247,247,247);
+	height:500upx;
+	._top_caption{
+		box-sizing:border-box;
+		padding: 0 30upx;
+		border-bottom:2upx solid rgb(229,229,229);
+		height:96upx;
+		padding:{
+			top:20upx;
+		}
+		._title_caption{
+			display:inline-block;
+			margin-right:36upx;
+		}
+		input{
+			display:inline-block;
+			vertical-align: middle;
+		}
+	}
 }
 
 ._title_instructions{
-	@include box-sizing;
-	margin-bottom:20upx;
+	margin:42upx 0 36upx;
+	padding:0 30upx;
 	._title_top{
-		font-size:28upx;
-		height:96upx;
-		line-height:96upx;
+		margin-bottom:24upx;
 	}
-	textarea{
-		height:200upx;
-		font-size:22upx;
+	>textarea{
+		height:174upx;
+		font-size:28upx;
+	}
+}
+
+._add_photo{
+	padding: 0 30upx;
+	font-size:28upx;
+	color:#101010;
+	position:relative;
+	._photo_icon{
+		width:32upx;
+		height:28upx;
+		line-height:28upx;
+		font-size:34upx;
+		text-align:center;
+		align-items: center;
+		color:rgb(71,126,242);
+		position:absolute;
+		bottom:-60upx;
+	}
+	._photo_title{
+		color:#585858;
+		position:absolute;
+		right:30upx;
+		bottom:-60upx;
 	}
 }
 
@@ -118,34 +259,185 @@ page {
 		border-radius: 10upx;
 		background:#ed7f4e;
 	}
-	
-	
 }
-.Minmoney{
-		width: 30%;
-		height: 60upx;
-		background-color:#f7f7f7;
-		border-radius:20upx;
-		 margin-top: 20upx;
-		 uni-input{
-		 			 margin-top: 0;
-		 			 width: 100%;
-		 			 height: 100%;
-					 text-align: center;
-		 }
+.peitao_r {
+  
+  width: 690rpx;
+  margin: 0 auto;
+ 
+}
+.nav-list {
+  text-align: left;
+}
+
+
+
+.nav-list .navigator, .JQQD {
+  display: inline-block;
+  height: 120rpx;
+  width: 16%;
+  text-align: center;
+
+}
+
+.nav-list1 .navigator {
+  display: inline-block;
+  height:100rpx;
+
+  text-align: center;
+  width: 25%;
+  
+}
+checkbox[hidden] {
+  display: none !important;
+}
+
+.checkbox22 {
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  display: inline-block;
+  margin-top: 20rpx;
+  border-radius: 30rpx;
+  color: #999;
+  border: 1px solid #ececec;
+}
+.is_checked22 {
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #2f86ff;
+  border: 1px solid #2f86ff;
+  border-radius: 30rpx;
+}
+.faBuRight {
+  float: left;
+  text-align: right;
+  width: 560rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.inp_a {
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 25rpx;
+  float: right;
+}
+.inp_text {
+  width: 164rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: inline-block;
+  border: 1px solid #d9d9d9;
+  float: left;
+  border-radius: 10rpx;
+}
+.inp_text_m {
+  display: inline-block;
+  float: left;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #333;
+}
+.peitao_r {
+ 
+  width: 650upx;
+  margin: 0 0 40upx 20upx;
+}
+.choose {
+  
+}
+.nav-list {
+ 
+}
+.nav-list .navigator {
+  display: inline-block;
+	width: 20%;
+  text-align: center;
+margin-top: 20upx;
+}
+
+.nav-list>view {
+  display: inline-block;
+  font-size: 30upx;
+  width: 90upx;
+  height: 90upx;
+  line-height: 30upx;
+  text-align: center;
+}
+
+.nav-list image {
+  margin: 10upx auto 20upx;
+  width: 46upx;
+  height: 46upx;
+  display: block;
+}
+
+.nav-list text {
+  font-size: 26upx;
+  color: #000;
+}
+
+#JQQD_text {
+  color: #c8c8c8;
+}
+
+.paddingTop {
+  padding-top: 10upx;
+}
+
+.beizhu {
+  max-width: 446upx;
+  height: 170upx;
+}
+
+checkbox[hidden] {
+  display: none !important;
+}
+
+//添加图片
+.picturepresentation{
+	background-color: #fff;
+	padding: 30upx;
+	padding-top: 0;
+	block-size:border-box;
+	.title{
+		font-size: 28upx;
+		height: 100upx;
+		line-height: 100upx;
+		font-weight: 600;
 	}
-	.Maxmoney{
-		width: 30%;
-		height: 60upx;
-		background-color:#f7f7f7;
-		border-radius:20upx;
-		 margin-top: 20upx;
-		 // margin-left: 40upx;
-		 uni-input{
-			 margin-top: 0;
-			 width: 100%;
-			 height: 100%;
-			  text-align: center;
-		 }
-		
-	}
+}
+.ImgBox{
+			display: flex;
+			justify-content: space-between;
+			.ImgBox2{
+				width:31%;
+				position: relative;
+				img{
+					width:100%;
+					height: 160upx;
+					border-radius: 10upx;
+				}
+				.iconfont{
+					color: #ffbd38;
+					font-size: 28upx;
+					position: absolute;
+					top: -12upx;
+					right: -12upx;
+				}
+			}
+			.addImg{
+				width: 31%;
+				height: 160upx;
+				border: 2upx solid #eeeeee;
+				text-align: center;
+				line-height: 160upx;
+				border-radius: 10upx;
+				.iconfont{
+					font-size: 60upx;
+				}
+			}
+		}

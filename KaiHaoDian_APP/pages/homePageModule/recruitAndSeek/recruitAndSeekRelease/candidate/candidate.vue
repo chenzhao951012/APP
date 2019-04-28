@@ -393,7 +393,7 @@
 					console.log(e);
 					if(e.index === 0){
 						uni.navigateTo({
-							url: '../candidate/candidate'
+							url: '../recruit/recruit'
 						});
 					}
 				}

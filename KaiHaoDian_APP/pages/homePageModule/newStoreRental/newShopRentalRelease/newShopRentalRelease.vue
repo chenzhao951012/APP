@@ -197,7 +197,9 @@
 				},
 		data() {
 			return {
+				merchantsed:[{"value":"0","name":"餐饮美食","checked":false,"title":"cyms"},{"value":"1","name":"美容保健","checked":false,"title":"mrbj"},{"value":"2","name":"服饰鞋包","checked":false,"title":"fsxb"},{"value":"3","name":"休闲娱乐","checked":false,"title":"xxyl"},{"value":"4","name":"百货超市","checked":false,"title":"bhcs"},{"value":"5","name":"生活服务","checked":false,"title":"shfw"},{"value":"6","name":"电器通讯","checked":false,"title":"dqtx"},{"value":"7","name":"汽修服务","checked":false,"title":"qxfw"},{"value":"8","name":"医疗器械","checked":false,"title":"ylqx"},{"value":"9","name":"家居建材","checked":false,"title":"jjjc"},{"value":"10","name":"教育","checked":false,"title":"jy"},{"value":"11","name":"酒店宾馆","checked":false,"title":"jdbg"},{"value":"12","name":"农业环保","checked":false,"title":"nyhb"},{"value":"13","name":"母婴","checked":false,"title":"my"},{"value":"14","name":"网络服务","checked":false,"title":"wlfw"},{"value":"15","name":"其他","checked":false,"title":"qt"}],
 				isShowaddImg:true,
+				indexs:'',
 				imgsrc:[],
 				 pics: [],
 				 width: "",
@@ -423,15 +425,15 @@
 										token: _this.token,
 										title: _this.title,
 										phone:  _this.ThePhone,
-										areamin: '',
+										areamin: 1,
 										areamax: _this.Maxarea,
-										rentmin: '',
+										rentmin: 1,
 										rentmax: _this.Maxrent,
 										province: _this.provincecode,
 										provincevalue: _this.provinceName,
-										ccity: _this.cityCode,
+										city: _this.cityCode,
 										cityvalue: _this.cityName,
-										county: _this.cityCode,
+										county: _this.countycode,
 										countyvalue:_this.countyName,
 										street:_this.detailedAddress,
 										supporting: JSON.stringify(_this.allGoodsFilte),
@@ -439,7 +441,7 @@
 										videoaddress: "",
 										src: JSON.stringify(_this.imgsrc),
 										introduction: _this.describe,
-										merchants: JSON.stringify(_this.merchantList),
+										merchants: JSON.stringify(_this.merchantsed),
 										type: _this.type1,
 										typevalue: _this.typevalue,
 										urgent: 1
@@ -492,7 +494,7 @@
 
 												 
 												}else{
-													console.log(data)
+													
 																uni.request({
 																														url: shoppublic.getUrl() + '/newShopRent/addNewShopRent',
 																														data:data,
@@ -500,16 +502,20 @@
 																														 header: { "Content-Type": "application/x-www-form-urlencoded" },
 																														success: (res) => {
 																															console.log(res)
+																															console.log(res)
 																															if (res.data.msgCode == "1") {
 																																uni.showModal({
 																																  title: '提示',
 																																  content: '添加成功',
 																																  showCancel: false,
 																																  success(res) {
-																																	 uni.reLaunch({
-																																	   url: '../newStoreRental'
-																																	 })
-													// 																				 
+																																		setTimeout(()=>{
+																																			 uni.navigateTo({
+																																			 	  url: '../newStoreRental'
+																																			 })
+																																		},2000)
+																																	
+																									 
 																																  }
 																																})
 																															  } else {
@@ -529,19 +535,12 @@
 												
 											
 												
-															uni.showModal({
-															title: '提示',
-															content: warn,
-															  showCancel: false,
-														success: function (res) {
-															if (res.confirm) {
-														   // _this.isCheck=true
-														   
-															} else if (res.cancel) {
-												           // _this.isCheck=false
-															}
-														}
-												});
+															uni.showToast({
+																	title:warn,
+																	duration:2000,
+																	icon:'none'
+															})
+															
 							},
 						  zhouBian1: function (e) {
 								  var _this=this
@@ -591,7 +590,25 @@
 						console.log(this.typevalue, this.type)
 					},
 					//当前行业
+					//招商对象切换
+					merchantsChange: function (e) {
+						var merchants = this.merchantsed;
+						var checkArr = e.value[0];
 					
+							this.merchantsed=checkArr
+						
+						for (var i = 0; i < merchants.length; i++) {
+							if (checkArr.indexOf(i + "") != -1) {
+								merchants[i].checked = true;
+
+							} else {
+								merchants[i].checked = false;
+							}
+						}
+				
+					this.merchantsed=merchants
+						console.log(this.merchantsed)
+					},
 					 industry(e) {
 										  this.isShowChooseKaiShiTime=true,
 										    // this.industryed=this.dianpuleixing[0].value,
@@ -637,26 +654,7 @@
 								
 						
 				},
-			 // 招商业态
-			 merchantsChange: function (e) {
-				 var _this=this
-					var merchants = this.merchants;
-					var checkArr = e.detail.value;
-					
-					  _this.zhaoShangcheckArr=checkArr
-				
-					for (var i = 0; i < merchants.length; i++) {
-					  if (checkArr.indexOf(i + "") != -1) {
-						merchants[i].checked = true;
-
-					  } else {
-						merchants[i].checked = false;
-					  }
-					}
-				
-					  _this.merchants=merchants
-				
-				  },
+	
 				//三级联动
 			  showMulLinkageThreePicker(e) {
 				this.type = e.currentTarget.dataset.type
@@ -673,9 +671,9 @@
 				if(this.type == "1"){
 					console.log(	_this.pickerText1)
 					_this.pickerText1 = e.label;
-					_this.countycode=e.cityCode.countycode
-					_this.cityCode=e.cityCode.cityCode
-					_this.provincecode=e.cityCode.countycode
+					_this.countycode=e.cityCode.countyCode
+					_this.cityCode=e.cityCode.cityCode+'00'
+					_this.provincecode=e.cityCode.provinceCode+'0000'
 					let locations = e.label.split('-');
 					_this.cityName= locations[1]
 					let city_name = locations[locations.length - 1];
@@ -698,8 +696,8 @@
 					_this.industrytext = e.label;
 					_this.industrytype=e.value
 					_this.merchantList.push(e.label)
-					console.log(_this.merchantList,	_this.industrytype)
-				
+					console.log(e)
+					_this.merchantsChange(e)
 				}
 					else if(this.type == "5"){
 					_this.currentstatutext = e.label;

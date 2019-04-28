@@ -209,7 +209,21 @@
         {
             "path" : "pages/homePageModule/storeMakeOver/locationRelease/locationRelease", //旺铺转让发布
             "style" : {
-                "navigationBarTitleText" : "旺铺转让发布"
+                "navigationBarTitleText" : "旺铺转让发布",
+				 "app-plus": {
+				    "bounce": "none", //关闭窗口回弹效果
+				    "titleNView": {
+				        "buttons": [ //原生标题栏按钮配置,
+				            {
+				                "text": "完成",
+								"fontSize":"14px",
+								"width":"40px",
+								"fontWeight":"bold",
+								"color":"#fdbd39"
+								}
+				        ]
+				    }
+				}
             }
         },
         {
@@ -290,17 +304,20 @@
             "path" : "pages/homePageModule/recruitAndSeek/recruitAndSeekRelease/recruit/recruit", //招聘求职发布
             "style" : {
                 "navigationBarTitleText" : "招聘求职发布",
-                "app-plus" : {
-                    "titleNView" : {
-                        "buttons" : [
-                            {
-                                "text" : "求职",
-                                "fontSize" : "14",
-                                "color" : "#548ef2"
-                            }
-                        ]
-                    }
-                }
+              "app-plus": {
+                 "bounce": "none", //关闭窗口回弹效果
+                 "titleNView": {
+                     "buttons": [ //原生标题栏按钮配置,
+                         {
+                             "text": "完成",
+             					"fontSize":"14px",
+             					"width":"40px",
+             					"fontWeight":"bold",
+             					"color":"#fdbd39"
+             					 }
+                     ]
+                 }
+             }
             }
         },
         {
