@@ -5,69 +5,48 @@
 		<mpvue-city-picker :themeColor="themeColor" ref="mpvueCityPicker" :pickerValueDefault="cityPickerValueDefault"
 		 @onCancel="onCancel" @onConfirm="onConfirm"></mpvue-city-picker>
 		<!-- 所在区域 -->
-		<view class="_infoFill">
-			<view class="_left">所在区域</view>
-			<!--@touchend="showMulLinkageThreePicker" {{pickerText3}}-->
-		 	<view class="_right" data-type="3" @click="showMulLinkageThreePicker">{{pickerText3}}</view>
-		</view>
-		<!-- 地址 --> 
-		<view class="_infoFill">
-		 	<view class="_left">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址</view>
-		 	<input class="_right" type="text" value="" maxlength="20" placeholder="请输入详细地址" v-model="address"/>
-		</view>
-		<!-- 联系电话 -->
-		<view class="_infoFill">
-		 	<view class="_left">联系电话</view>
-		 	<input class="_right" type="text" value="" maxlength="20" placeholder="请输入联系方式" v-model="linkmanPhone"/>
-		</view>
-		<!-- 价格 -->
-		<view class="_infoFill">
-			<view class="_left">价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格</view>
-			<!--@touchend="showMulLinkageThreePicker" {{pickerText3}}-->
-		 	<view class="_right" data-type="1"><input type="text" value="" placeholder="请输入" v-model="price"/></view>
-		</view>
-		<!-- 物品类型 -->
-		<view class="_infoFill">
-			<view class="_left">物品类型</view>
-			<!--@touchend="showMulLinkageThreePicker" {{pickerText3}}-->
-		 	<view class="_right" data-type="2" @touchend="showSinglePicker">{{pickerText2}}</view>
-		</view>
-		<!-- 标题 -->
-		<view class="_title_parnters">
-		 	<view class="_top_caption">
-		 		<view class="_title_caption">标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题</view>
-		 		<input type="text" placeholder="请输入标题" maxlength="28" v-model="title"/>
-		 	</view>
-			<!-- 物品描述 -->
-			<view class="_title_instructions">
-			 	<view class="_title_top">物品描述</view>
-			 	<textarea type="text" placeholder="请输入物品描述" maxlength="200" v-model="jobRequirements"/>
+		<view class="preference">
+			<view class="productdescription">
+				<view>商品描述</view>
+				<view><textarea  placeholder="" maxlength="-1"/></view>
 			</view>
-			<!-- 添加图片 -->
-			<view class="_add_photo" style="margin-top: -40upx;">
-				<view class="ImgBox" v-for="(item,index) in imgList" :key="index" v-if="imgList" style="margin-bottom: 20upx;">
-				
-					<image :src="item" ></image>
+			<view class="_infoFill">
+				<view class="_left">所在区域</view>
+				<!--@touchend="showMulLinkageThreePicker" {{pickerText3}}-->
+			 	<view class="_right" data-type="3" @click="showMulLinkageThreePicker">{{pickerText3}}</view>
+			</view>
+			<view class="price">
+				<view>
+					价格
 				</view>
-				<view class="_photo_icon iconfont" @touchend="addImg">&#xe6e7;</view>
-				<view class="_photo_title">至少添加一张图片</view>
+				<view>
+					<input type="text" placeholder="">
+				</view>
+			</view>
+			<view class="price">
+				<view>
+					新旧度
+				</view>
+				<view style="text-align: right;flex: 1;">
+					<text class="iconfont">&#xe616;</text>
+				</view>
+			</view>
+			<view class="meansexchange">
+				<view class="means">
+					<view class="modes">
+						交易方式
+					</view>
+					<view class="deals">
+						<view v-for='(item,idx) in deal' :key='idx' class="deal">
+							{{item.title}}
+						</view>
+					</view>
+				</view>
+				
 			</view>
 		</view>
 		
-		<!-- 单选题 -->
-		<view class="_confirm">
-			<view class="_confirm_icon" @touchend="sishow">
-					
-					<image src="../../../../../static/dui.jpg" mode="" style="width: 20px;height: 20px;border-radius: 50%;" v-show="isImg"></image>
-			
-			</view>
-			<view class="">本人承诺以上全部属实</view>
-		</view>
-		<!-- 发布按钮 -->
-		<view class="_position_button">
-			<view class="_left_button" @touchend="formSubmit1">发布</view>
-			<view class="_right_button" @touchend="toJiaJiFaBu">加急发布</view>
-		</view>
+	
 	</view>
 </template>
 
@@ -86,6 +65,17 @@
 		data() {
 			
 			return {
+				deal:[
+					{
+						title:'自提',
+					},
+					{
+						title:'邮递',
+					},
+					{
+						title:'同城交易',
+					}
+				],
 				isImg:false,
 				flag:true,
 				price:"",
