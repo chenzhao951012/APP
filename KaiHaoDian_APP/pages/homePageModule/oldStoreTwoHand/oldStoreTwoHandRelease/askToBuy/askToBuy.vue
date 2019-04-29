@@ -8,7 +8,7 @@
 		<view class="preference">
 			<view class="productdescription">
 				<view>商品描述</view>
-				<view><textarea  placeholder="" maxlength="-1"/></view>
+				<view><textarea  placeholder="" maxlength="-1" v-model="description"/></view>
 			</view>
 			<view class="_infoFill">
 				<view class="_left">所在区域</view>
@@ -28,7 +28,10 @@
 					新旧度
 				</view>
 				<view style="text-align: right;flex: 1;">
-					<text class="iconfont">&#xe616;</text>
+					<navigator url="Degree/Degree">
+						{{oldtitle}}<text class="iconfont" v-if="!oldtitle">&#xe616;</text>
+					</navigator>
+					
 				</view>
 			</view>
 			<view class="meansexchange">
@@ -37,20 +40,45 @@
 						交易方式
 					</view>
 					<view class="deals">
-						<view v-for='(item,idx) in deal' :key='idx' class="deal">
-							{{item.title}}
+						<view v-for='(item,idx) in deal' :key='idx'  :class="item.isSelected ?'Active' : 'deal' " @click="changes(idx,item)">
+					{{item.title}}
+					<text class="iconfont">&#xe68e;</text>
 						</view>
 					</view>
 				</view>
 				
 			</view>
+			<view class="price">
+				<view>
+					价格
+				</view>
+				<view>
+					<input type="text" placeholder="" v-model="price">
+				</view>
+			</view>
+				<!-- //图片展示 -->
+					<view class=" newShoprental">
+				<view class="picturepresentation">
+					<view class="title">图片展示</view>
+						<view class="ImgBox">
+								<view class="ImgBox2" v-for="(item,idx) in imgsrc" :key='idx'>
+								<img :src="imageUrl + item" alt="">
+							<view class="iconfont" @click="deleImg(idx)">
+								&#xe68e;
+							</view>
+							</view>
+							<view class="addImg" @click="addImg" v-if="isShowaddImg">
+								<text class="iconfont">&#xe649;</text>
+							</view>
+						</view>
+				</view>
+				</view>
 		</view>
-		
-	
 	</view>
 </template>
 
 <script>
+	
 	import mpvuePicker from '@/components/mpvue-picker/mpvuePicker.vue';
 	import mpvueCityPicker from '@/components/mpvue-citypicker/mpvueCityPicker.vue';
 	import cityData from '@/common/city.data.js';
@@ -60,22 +88,43 @@
 	export default {
 			components: {
 			mpvuePicker,
-			mpvueCityPicker
+			mpvueCityPicker,
+			
+		},
+		onLoad(option) {
+			if(option.title){
+				this.oldtitle=option.title
+			}else{
+				this.oldtitle=''
+			}
 		},
 		data() {
-			
 			return {
+				Degree:'',
+				oldtitle:'',
+				ImgList:[],
+				changeed:-1,
+				imgsrc:[],
+				 pics: [],
+				 width: "",
+				 isShowaddImg:true,
 				deal:[
 					{
 						title:'自提',
+						isSelected:false
 					},
 					{
 						title:'邮递',
+						isSelected:false
 					},
 					{
 						title:'同城交易',
+						isSelected:false
 					}
 				],
+				business:'',
+				description:'',
+				token:14651,
 				isImg:false,
 				flag:true,
 				price:"",
@@ -97,10 +146,7 @@
 				pickerText2: '请选择',
 				pickerText1: '请选择',
 				mode: '',
-				linkmanPhone:"",
-				title:"",
-				jobRequirements:"",
-				address:"",
+				imageUrl:shoppublic.getImageUrl(),
 				type2:"",
 				industrylist: [
 					  { value: "0", label: "餐饮美食" },
@@ -123,6 +169,62 @@
 			};
 		},
 		methods:{
+				// 图片删除
+			deleImg(index){
+			if(this.ImgList.length<4){
+					console.log(2)
+					this.isShowaddImg=true
+				}
+				this.ImgList.splice(index,1)
+				this.imgsrc.splice(index,1)
+				console.log(this.imgsrc)
+			},
+				// 添加图片
+			addImg(){
+				var that=this
+				 var pics = that.pics
+				  var imgsrc = that.imgsrc;
+				  
+				uni.chooseImage({
+				count:5,
+				 sizeType: ['original', 'compressed'],
+				sourceType: ['album','camera'],
+				success: function (res) {
+					uni.getImageInfo({
+						src: res.tempFilePaths[0],
+						success: function (image) {
+						  var imgSrc = res.tempFilePaths
+							 that.pics=imgSrc
+							that.ImgList.push(res.tempFilePaths[0])
+							if(that.ImgList.length>2){
+								that.isShowaddImg=false
+							}
+							
+							let width = that.width;
+								for (var i = 0; i <= that.pics.length; i++) {
+								width = 120 * that.pics.length + 200;
+								}
+								  that.width=width
+								   for (var i = 0; i < imgSrc.length; i++) {
+								  var j = {};
+								  uni.uploadFile({
+									url: shoppublic.getUrl() + '/uploadimage', //仅为示例，非真实的接口地址
+									filePath: imgSrc[i],
+									name: 'file',
+									success: function(res) {
+									  console.log(res);
+									  j.url = JSON.parse(res.data).url;
+									  console.log(j.url)
+										that.imgsrc=that.imgsrc.concat(j.url)
+									  console.log(that.imgsrc);
+									}
+								  })
+								}
+								}
+					});
+				}
+			});
+			},
 				sishow(){
 			this.isImg=!this.isImg
 			},
@@ -130,53 +232,23 @@
 				 formSubmit1() {
 					this.fabu(1)
 			},
-			//加急发布
-			 toJiaJiFaBu: function () {
-					var that = this,
-					  urgent,
-					  integral,
-					  warn = "";
-
-					uni.request({
-					  url: shoppublic.getUrl() + '/common/checkPoints',
-					  data: {
-						token: token
-					  },
-					  success(res) {
-						urgent = res.data.responseBody.flag;
-						integral = res.data.responseBody.integral;
-						uni.showModal({
-						  title: '提示',
-						  content: "紧急发布每次需扣除" + integral + "积分！",
-						  success(res) {
-							if (res.confirm) {
-							  that.fabu(2, urgent);
-							} else if (res.cancel) {
-
-							}
-
-						  },
-						})
-					  }
-					})
-				  },
+			changes(index,item){
+				this.changeed=index
+				 item.isSelected = !item.isSelected
+			},
 			//发布公用函数
 			fabu(e,urgent){
 				var warn=""
 				var _this=this
 				var tData=_this
-				 if (e != 2) {
-				  e = 1
-				} else {
-				  e = 2
-				}
+				
 				var data={			
-				token: 998,
+				token: this.token,
 				title: tData.title, //名称
 				phone: tData.linkmanPhone,
 				type: tData.type2,   //
 				typevalue: tData.pickerText2,
-				description: tData.jobRequirements,
+				description: tData.description,
 				province: tData.province,
 				city: tData.city,
 				county: tData.county,
@@ -187,25 +259,24 @@
 				price: tData.price,
 				videoaddress: "",
 				src: tData.imgList,
-				urgent: e,
+				urgent: 1,
 				rentorsell: 1,
 				rentorsellvalue: "出售",
 				}
 				
 				if (tData.pickerText3 == "请选择") {
 					  warn = "请正确选择区域！"
-					  tData.flag = true
+					
 					} else if (tData.address.length < 1) {
 					  warn = "请正确填写详细地址！"
 
-					  tData.flag = true
-					} else if (tData.title.length > 27 || tData.title=="") {
-					  warn = "正确填写标题！"
-					  tData.flag = true
-					} else if (tData.linkmanPhone.length!=11) {
-					  warn = "请填写正确手机号！"
+					} else if (tData.oldtitle) {
+					  warn = "请选择新旧度！"
+					
+					} else if (tData.business) {
+					  warn = "请选择交易方式！"
 
-					   tData.flag = true
+					   
 					} else if (tData.price == "") {
 					  warn = "请填写价格！"
 
@@ -213,21 +284,18 @@
 					} else if (tData.type2 == "") {
 					  warn = "请选择物品类型！"
 
-					   tData.flag = true
-					} else if (tData.jobRequirements == "") {
-					  warn = "请输入物品描述！"
+					  
+					} else if (tData.description == "") {
+					  warn = "请输入商品描述！"
 
-					  tData.flag = true
+					  
 					} else if (tData.imgList == "") {
 					  warn = "一定要添加图片呀！"
 
-					  tData.flag = true
+					 
 					}else{
-						 tData.flag = false
-					}
-					if(tData.flag ==false && isImg===true){
-					uni.request({
-								  url: shoppublic.getUrl() + '/secondHandItem/addSecondHandItem',
+							uni.request({
+							  url: shoppublic.getUrl() + '/secondHandItem/addSecondHandItem',
 								data: data,
 								header: {
 									 'content-type': 'application/json' //自定义请求头信息
@@ -236,9 +304,9 @@
 								warn="添加成功"
 								},fall: function (res) {
 								  warn="添加失败"
-        }
-							});
-												}
+						}
+											});
+					}
 						uni.showModal({
 					  title: '提示',
 					  content: warn,
@@ -262,18 +330,6 @@
 			    this.deepLength = 1
 			    this.pickerValueDefault = [0]
 			    this.$refs.mpvuePicker.show()
-			},
-			addImg(){
-				var _this=this
-				uni.chooseImage({
-				count: 6, //默认9
-				sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
-				sourceType: ['album'], //从相册选择
-				success: function (res) {
-				_this.imgList=res.tempFilePaths
-				console.log(_this.imgList)
-				}
-});
 			},
 			onCancel(e) {
 							console.log(JSON.stringify(e.label));
@@ -307,19 +363,28 @@
 							// _this.startcreatview(city_name);
 						}
 					},
-			
+		
 		// 求购按钮的点击事件
 		onNavigationBarButtonTap(e) {
-			console.log(e);
-			if(e.index === 0){
-				uni.navigateTo({
-					url: '../sale/sale'
-				});
-			}
+			this.fabu()
 		}
 	}
 </script>
 
 <style lang="scss">
+	.Active{
+	padding: 0upx 30upx;
+	box-sizing: border-box;
+	border-radius: 10upx;
+    color: #333333;
+    background:#fff2d7;
+		position: relative;
+		.iconfont{
+			position: absolute;
+			right: -4upx;
+			top: -24upx;
+			color: #ffbd38;
+		}
+  }
 @import "./askToBuy.scss";
 </style>

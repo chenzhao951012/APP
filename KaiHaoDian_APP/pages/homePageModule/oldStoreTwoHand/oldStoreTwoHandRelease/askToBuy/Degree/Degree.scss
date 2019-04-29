@@ -1,0 +1,29 @@
+.Degree{
+	width: 750upx;
+	padding-top: 20upx;
+	box-sizing: border-box;
+	background-color: #f3f3f3;
+	.NewBox{
+		background-color: #fff;
+		padding: 0 30upx;
+		box-sizing: border-box;
+		font-size: 28upx;
+		height: 100upx;
+		line-height: 100upx;
+		border-bottom: 2upx solid #eeeeee;
+		display: flex;
+		justify-content: space-between;
+		
+		
+	}
+}
+.iconfont{
+			font-size: 40upx;
+			color: transparent;
+		}
+.Degree .NewBox:nth-child(7){
+			border-bottom: 0;
+		}
+		.iconfont2{
+			color: #ffbd38;
+		}

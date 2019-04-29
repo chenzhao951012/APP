@@ -945,6 +945,25 @@
 				"navigationBarTitleText" : ""
 			}
         }
+      
+        ,{
+            "path" : "pages/homePageModule/oldStoreTwoHand/oldStoreTwoHandRelease/askToBuy/Degree/Degree",
+            "style" : {
+				"navigationBarTitleText" : "老店二手新旧度"
+			}
+        }
+        ,{
+            "path" : "pages/homePageModule/Newpreparation/NewpreparationRelease/NewpreparationRelease",
+            "style" : {
+				"navigationBarTitleText" : "新店筹备发布"
+			}
+        }
+        ,{
+            "path" : "pages/homePageModule/Newpreparation/NewpreparationRelease/showcase/showcase",
+            "style" : {
+				"navigationBarTitleText" : "案例展示"
+			}
+        }
     ],
     /*------------------------------------------添加认证相关页面  End------------------------------------------*/
     "globalStyle" : {

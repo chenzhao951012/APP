@@ -105,11 +105,7 @@
 					url = '../homePageModule/openStoreSeekSite/openStoreSeekSite'
 				}
 				if(index === 7 || index === 8){
-					uni.showToast({
-						title:'暂未开放,敬请期待',
-						icon:'none',
-						duration:2000
-					})
+					url='../homePageModule/Newpreparation/NewpreparationRelease/NewpreparationRelease'
 				}
 				if(url){
 					uni.navigateTo({
