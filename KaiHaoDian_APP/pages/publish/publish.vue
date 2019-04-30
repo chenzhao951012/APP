@@ -105,7 +105,7 @@
 					url = '../homePageModule/openStoreSeekSite/openStoreSeekSite'
 				}
 				if(index === 7 || index === 8){
-					url='../homePageModule/Newpreparation/NewpreparationRelease/NewpreparationRelease'
+					url='../homePageModule/Newpreparation/SelectIndustry/SelectIndustry'
 				}
 				if(url){
 					uni.navigateTo({

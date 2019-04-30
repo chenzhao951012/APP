@@ -955,13 +955,73 @@
         ,{
             "path" : "pages/homePageModule/Newpreparation/NewpreparationRelease/NewpreparationRelease",
             "style" : {
-				"navigationBarTitleText" : "新店筹备发布"
+				"navigationBarTitleText" : "新店筹备发布",
+					 "app-plus": {
+				    "bounce": "none", //关闭窗口回弹效果
+				    "titleNView": {
+				        "buttons": [ //原生标题栏按钮配置,
+				            {
+				                "text": "完成",
+									"fontSize":"14px",
+									"width":"40px",
+									"fontWeight":"bold",
+									"color":"#fdbd39"
+																					
+									}
+				        ]
+				    }
+				}
 			}
         }
         ,{
             "path" : "pages/homePageModule/Newpreparation/NewpreparationRelease/showcase/showcase",
             "style" : {
-				"navigationBarTitleText" : "案例展示"
+				"navigationBarTitleText" : "案例展示",
+				 "app-plus": {
+				    "bounce": "none", //关闭窗口回弹效果
+				    "titleNView": {
+				        "buttons": [ //原生标题栏按钮配置,
+				            {
+				                "text": "完成",
+									"fontSize":"14px",
+									"width":"40px",
+									"fontWeight":"bold",
+									"color":"#fdbd39"
+																					
+									}
+				        ]
+				    }
+				}
+			}
+        }
+        ,{
+            "path" : "pages/homePageModule/Newpreparation/NewpreparationRelease/showcase/GreenflowersReleased/GreenflowersReleased",
+            "style" : {
+				"navigationBarTitleText" : "绿植花卉发布",
+				 "app-plus": {
+				    "bounce": "none", //关闭窗口回弹效果
+				    "titleNView": {
+				        "buttons": [ //原生标题栏按钮配置,
+				            {
+				                "text": "完成",
+									"fontSize":"14px",
+									"width":"40px",
+									"fontWeight":"bold",
+									"color":"#fdbd39"
+																					
+									}
+				        ]
+				    }
+				}
+			}
+        }
+        ,{
+            "path" : "pages/homePageModule/Newpreparation/SelectIndustry/SelectIndustry",
+            "style" : {
+				"navigationBarTitleText" : "选择行业",
+				 "app-plus": {
+				    "bounce": "none" //关闭窗口回弹效果
+				}
 			}
         }
     ],

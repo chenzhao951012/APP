@@ -10,7 +10,7 @@
 			<view class="release">
 			<view class="releaseBox shows">
 				<view>案列展示</view>
-				<view><text class="iconfont" @click="CaseShow">&#xe616;</text></view>
+				<view><text v-if="showImg1" @click="CaseShow">{{accomplish}}</text><text class="iconfont" @click="CaseShow" v-if="!showImg1">&#xe616;</text></view>
 			</view>
 			<view class="releaseBox">
 				<view>公司名称</view>
@@ -83,12 +83,16 @@
 		</view>
 	</view>
 </template>
-
 <script>
 	import shoppublic from '@/common/shoppublic'; //服务器地址
 	export default {
 		data() {
 			return {
+				accomplish:'完成',
+				showImg1:'',
+				showImg2:'',
+				showTitle1:'',
+				showTitle2:'',
 				massage:'',
 				support:"",//总部支持
 				aftersalesservice:"",//售后服务
@@ -107,9 +111,27 @@
 				 imageUrl:shoppublic.getImageUrl(),
 			};
 		},
+		//提交按钮
+		 onNavigationBarButtonTap() {  
+					//函数完成后清除本地缓存
+				},
 		onLoad() {
 			var that=this
 			// 获取本地存储填写信息
+			uni.getStorage({
+				key:'showImg',
+				success: function (res) {
+					console.log(res.data)
+					if(res.data){
+						that.showImg1=res.data.ImgList,
+						that.showImg2=res.data.ImgList2,
+						that.showTitle1=res.data.title,
+						that.showTitle2=res.data.title2
+					}else{
+						return
+					}
+					}
+			})
 			uni.getStorage({
 			key:'Newpreparations',
 			success: function (res) {

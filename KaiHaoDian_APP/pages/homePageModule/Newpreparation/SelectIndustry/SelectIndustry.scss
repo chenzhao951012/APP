@@ -1,0 +1,63 @@
+.Select{
+	width: 750upx;
+	padding-top: 20upx;
+	box-sizing:border-box;
+	background-color: #f3f3f3;
+	.Industry{
+		padding: 30upx;
+		box-sizing:border-box;
+		background-color: #fff;
+		border-radius: 10upx 10upx 0 0;
+		.top{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			.title{
+				font-size: 24upx;
+				padding: 16upx 30upx;
+				background-color: #eeeeee;
+				border-radius:8upx; 
+				color: #333333;
+				font-weight: 600;
+				box-sizing:border-box;
+				margin-bottom: 60upx;
+				
+				text{
+					color: #a5a5a5;
+					padding-left: 10upx;
+				}
+			}
+			.aiticeClass{
+				background-color: #ffbd38;
+				color: #fff;
+			}
+			}
+			.body{
+				display: flex;
+					.title{
+					font-size: 24upx;
+					padding: 16upx 30upx;
+					background-color: #eeeeee;
+					border-radius:8upx; 
+					color: #333333;
+					font-weight: 600;
+					margin-right: 28upx;
+					box-sizing:border-box;
+					
+				}
+			}
+			.body2{
+				margin-top: 60upx;
+				.title{
+					font-size: 24upx;
+					padding: 16upx 20upx;
+					background-color: #eeeeee;
+					border-radius:8upx; 
+					color: #333333;
+					font-weight: 600;
+					box-sizing:border-box;
+					
+				}
+				}
+	}
+}
