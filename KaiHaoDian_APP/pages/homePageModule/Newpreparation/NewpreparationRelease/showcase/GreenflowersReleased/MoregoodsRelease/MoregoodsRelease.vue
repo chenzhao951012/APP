@@ -77,13 +77,13 @@
 			</view>
 			<view class="picturepresentation">
 					<view class="ImgBox">
-							<view class="ImgBox2" v-for="(item,idx) in imgsrc" :key='idx'>
+							<view class="ImgBox2" v-for="(item,idx) in imgsrc1" :key='idx'>
 							<img :src="imageUrl + item" alt="">
 						<view class="iconfont" @click="deleImg(idx)">
 							&#xe68e;
 						</view>
 						</view>
-						<view class="addImg" @click="addImg" v-if="isShowaddImg">
+						<view class="addImg" @click="addImg2" v-if="isShowaddImg1">
 							<text class="iconfont">&#xe649;</text>
 						</view>
 					</view>
@@ -143,7 +143,7 @@
 				  pics1: [],
 				  width1: "",
 				 isShowaddImg:true,
-				  isShowaddImg1:false,
+				  isShowaddImg1:true,
 				 valueList:[],
 				LabelList:[
 					{
@@ -291,7 +291,7 @@
 			addImg2(){
 				var that=this
 				 var pics = that.pics
-				  var imgsrc = that.imgsrc;
+				  var imgsrc = that.imgsrc1;
 				  
 				uni.chooseImage({
 				count:5,
@@ -313,7 +313,7 @@
 								width = 120 * that.pics1.length + 200;
 								}
 								  that.width1=width
-								   for (var i = 0; i < imgSrc1.length; i++) {
+								   for (var i = 0; i < imgSrc.length; i++) {
 								  var j = {};
 								  uni.uploadFile({
 									url: shoppublic.getUrl() + '/uploadimage', //仅为示例，非真实的接口地址
