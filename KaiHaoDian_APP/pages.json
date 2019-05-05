@@ -596,7 +596,8 @@
             // 个人/企业认证
             "path" : "pages/mineIndex/certificationModule/certificationIndex",
             "style" : {
-                "navigationBarTitleText" : "认证" 
+                "navigationBarTitleText" : "认证"
+			
 			
             }
         },
@@ -1022,6 +1023,49 @@
 				 "app-plus": {
 				    "bounce": "none" //关闭窗口回弹效果
 				}
+			}
+        }
+        ,{
+            "path" : "pages/homePageModule/Newpreparation/NewpreparationRelease/showcase/GreenflowersReleased/particularCommodity/particularCommodity",
+            "style" : {
+				"navigationBarTitleText" : "单个商品上传",
+					 "app-plus": {
+				    "bounce": "none", //关闭窗口回弹效果
+				    "titleNView": {
+				        "buttons": [ //原生标题栏按钮配置,
+				            {
+				                "text": "完成",
+									"fontSize":"14px",
+									"width":"40px",
+									"fontWeight":"bold",
+									"color":"#fdbd39"
+																					
+									}
+				        ]
+				    }
+				}
+			}
+        }
+        ,{
+            "path" : "pages/homePageModule/Newpreparation/NewpreparationRelease/showcase/GreenflowersReleased/MoregoodsRelease/MoregoodsRelease",
+				   "style" : {
+					"navigationBarTitleText":"多个商品上传",
+						 "app-plus": {
+					    "bounce": "none", //关闭窗口回弹效果
+					    "titleNView": {
+					        "buttons": [ //原生标题栏按钮配置,
+					            {
+					                "text": "完成",
+										"fontSize":"14px",
+										"width":"40px",
+										"fontWeight":"bold",
+										"color":"#fdbd39"
+																						
+										}
+					        ]
+					    }
+					}
+				
 			}
         }
     ],

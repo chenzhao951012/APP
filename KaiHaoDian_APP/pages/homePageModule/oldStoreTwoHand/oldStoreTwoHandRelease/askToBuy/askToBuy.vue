@@ -57,7 +57,7 @@
 				</view>
 			</view>
 				<!-- //图片展示 -->
-					<view class=" newShoprental">
+			<view class=" newShoprental">
 				<view class="picturepresentation">
 					<view class="title">图片展示</view>
 						<view class="ImgBox">

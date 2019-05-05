@@ -198,13 +198,13 @@
 		data() {
 			return {
 				id:"",
-				 questionCount: 0,
+				questionCount: 0,
 				user:"",
 				fanscount:"",
 				attentionCount:"",
 				unauthorize:"renzheng",
 				information:"未认证",
-				token:14651,
+				token:17099,
 				userInfo:"",
 				myId:"",
 				userInfoes:"",

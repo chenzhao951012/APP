@@ -1,0 +1,138 @@
+.Aboutshop{
+	height: 100upx;
+	line-height: 100upx;
+	border-bottom: 2upx solid #eeeeee;
+	padding: 0 30upx;
+	box-sizing: border-box;
+	display: flex;
+	font-size: 28upx;
+	font-weight: 600;
+	color: #333333;
+	letter-spacing: 5upx;
+	.inputBox{
+		margin-left: 20upx;
+		flex: 1;
+		input{
+			margin-top: 24upx;
+		}
+	}
+	
+}
+.selectLabel{
+	display: flex;
+	
+	padding: 0 30upx;
+	box-sizing: border-box;
+	font-size: 28upx;
+	font-weight: 600;
+	letter-spacing: 5upx;
+	color: #333333;
+	.LabelLeft{
+		line-height: 100upx;
+	}
+	.chosseLable{
+		display: flex;
+		flex-wrap: wrap;
+		flex: 1;
+		margin-left: 20upx;
+		justify-content: space-between;
+		padding-right: 10upx;
+		padding: 20upx 0;
+		padding-bottom: 0;
+		box-sizing: border-box;
+		.title{
+			width: 31%;
+			padding: 10upx 0;
+			text-align: center;
+			border: 2upx solid #e4e4e4;
+			border-radius: 50upx;
+			margin-bottom: 30upx;
+			box-sizing: border-box;
+		}
+		.title2{
+			border: 2upx solid #ffbc37;
+		}
+	}
+}
+//图片展示
+			.newShoprental{
+					background-color: #ffffff;
+					
+					font-size: 28upx;
+					font-weight: 600;
+					.publishNewshop{
+						background-color: #fff;
+						box-sizing: border-box;
+						.titleBox2{
+							display: flex;
+						}
+						.titleBox3{
+							display: flex;
+							justify-content: space-between;
+						}
+						.titleBox{
+							padding:0 30upx;
+							height: 100upx;
+							line-height: 100upx;
+							border-bottom: 2upx solid #eeeeee;
+							font-size: 28upx;
+							color: #333333;
+							font-weight: 600;
+							input{
+								margin-left: 30upx;
+								margin-top: 24upx;
+								font-weight: 100;
+								
+							}
+							
+							
+							}
+					}
+					
+				}
+				.ImgBox{
+							display: flex;
+							justify-content: space-between;
+							flex-wrap: wrap;
+							.ImgBox2{
+								width:31%;
+								position: relative;
+								margin-bottom: 30upx;
+								img{
+									width:100%;
+									height: 160upx;
+									border-radius: 10upx;
+								}
+								.iconfont{
+									color: #ffbd38;
+									font-size: 28upx;
+									position: absolute;
+									top: -12upx;
+									right: -12upx;
+								}
+							}
+							.addImg{
+								width: 31%;
+								height: 160upx;
+								border: 2upx solid #eeeeee;
+								text-align: center;
+								line-height: 160upx;
+								border-radius: 10upx;
+								.iconfont{
+									font-size: 60upx;
+									font-weight: 100;
+								}
+							}
+						}
+						.picturepresentation{
+							background-color: #fff;
+							padding: 30upx;
+							padding-top: 0;
+							block-size:border-box;
+							.title{
+								font-size: 28upx;
+								height: 100upx;
+								line-height: 100upx;
+								font-weight: 600;
+							}
+						}

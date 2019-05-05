@@ -1,0 +1,43 @@
+.ramage{
+	width: 750upx;
+	padding-top: 20upx;
+	background-color: #f3f3f3;
+	.ramageType{
+		padding:  0 30upx;
+		box-sizing: border-box;
+		height: 100upx;
+		line-height: 100upx;
+		background-color: #fff;
+		border-bottom: 2upx solid #eeeeee;
+		.introduce{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			font-size: 28upx;
+			font-weight: 600;
+			color: #333333;
+			.shopTitle{
+				margin-left: 20upx;
+				flex: 1;
+				img{
+					width: 90upx;
+					height: 90upx;
+					margin-top: 6upx;
+					border-radius:10upx; 
+					
+				}
+				input{
+					margin-top: 24upx;
+					font-size: 28upx;
+				}
+				
+			}
+			.shopTitle2{
+				text-align: right;
+				.iconfont{
+					color: #999999;
+				}
+			}
+		}
+	}
+}
