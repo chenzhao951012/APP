@@ -2,12 +2,12 @@
 	<view class="boxa">
 		<view class="top_kbox">
 			<block v-for="(item,i) in newlist" :key="i">
-				<view class="ibox" @tap="alertnum(i)" :class="[i== i1?'actives':'']">
+				<view class="ibox" @tap="alertnum(i)">
 					<text class="uni_14">{{item}}</text>
 					<image v-if="i != i1" class="ii" src="/static/choose-Cadex.png" mode=""></image>
 					<image v-else class="ii" src="/static/choose-Cades.png" mode=""></image>
 				</view>
-			</block>
+			</block>	
 		</view>
 		<view  :class="[show?'list_boxs2':'list_boxs']">
 			<view class="lione">
@@ -21,6 +21,14 @@
 			<view class="hideA" @tap="hide">
 			</view>
 		</view>
+		<view  :class="[show2 ?'list_boxs3':'list_boxs4']" @click="hide2">
+			<view class="lione2">
+				<slot></slot>
+			</view>
+			<view class="hideA2" @hideA="hide2">
+			</view>
+				
+		</view>
 	</view>
 </template>
 
@@ -33,21 +41,32 @@
 				i2: null,
 				show: false,
 				listchild: [],
-				newlist: this.list
+				newlist: this.list,
+				show2:false
 			}
 		},
 		methods: {
 			alertnum(i) {
-				if (this.i1 != i) {
+				console.log(i)
+				if(i<4){
+					console.log(i)
+					this.show2 =false;
+					this.show =true;
+					if (this.i1 != i) {
 					this.listchild = [];
 					this.i1 = i;
 					this.listchild = this.arr[i];
 					this.i2 = null;
-					this.show = true;
+					this.show =true;
 					let ins = this.listchild.indexOf(this.newlist[i]);
 					if (ins > -1) {
-						this.i2 = ins
+							this.i2 = ins
+							console.log(ins)
+						}
 					}
+				}else if(i===4){
+					this.show2 =true;
+					this.show =false;
 				}
 
 			},
@@ -57,36 +76,57 @@
 				this.$emit('chooseLike', [this.i1, this.i2])
 			},
 			hide() {
+				this.show = !this.show;
+				this.show2 = false;
+			},
+			hide2() {
 				this.show = false;
-				this.i1 = null;
-				this.i2 = null;
-			}
+				this.show2 = !this.show2;
+			},
+			
 		}
 	}
 </script>
 
 <style scoped>
 	.hideA {
-		height: calc(100% - 310upx);
+		height: calc(100%);
 	}
-
+	.lione2{
+		width:65%;
+		padding: 0upx 0upx;
+		box-sizing: border-box;;
+		font-size: 28upx;
+		color: #333333;
+		min-height: 100%;
+		background-color: #fff;
+		/* height: 262upx; */
+		border-radius:0 0 10upx 10upx;
+		overflow: auto;
+	}
 	.mli {
 		/* border: 1upx solid red; */
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 22upx 0;
+		padding: 30upx 0;
 		font-size: 28upx;
 		color: #333333;
+		box-sizing: border-box;
+		border-bottom: 2upx solid #eeeeee;
+		padding-top: 10upx;
 	}
 
 	.lione {
 		background-color: #fff;
 		/* height: 262upx; */
-		padding: 10upx 30upx;
+		padding: 0upx 30upx;
 		box-sizing: border-box;;
 		font-size: 28upx;
 		color: #333333;
+		max-height: 600upx;
+		overflow-x: auto;
+		border-radius:0 0 10upx 10upx;
 	}
 
 	.list_boxs {
@@ -95,7 +135,7 @@
 		height: calc(100%);
 		width: 100%;
 		z-index: 88;
-		transition: all .5s;
+		transition: all .2s;
 		transform: translateY(-120%);
 		font-size: 28upx;
 		color: #333333;
@@ -111,44 +151,76 @@
 		font-size: 28upx;
 		color: #333333;
 	}
-
+.list_boxs4{
+		background-color: rgba(84, 80, 80, 0.48);
+		position: fixed;
+		height: calc(100%);
+		width: 100%;
+		z-index: 88;
+		transition: all .2s;
+		transform: translateX(120%);
+		font-size: 28upx;
+		color: #333333;
+		display: flex;
+		justify-content: flex-end;
+		
+	}
+	.list_boxs3{
+		background-color: rgba(84, 80, 80, 0.48);
+		position: fixed;
+		height: calc(100%);
+		width: 100%;
+		z-index: 88;
+		transform: translateX(0);
+		transition: all .5s;
+		font-size: 28upx;
+		color: #333333;
+		display: flex;
+		justify-content: flex-end;
+	}
 	.ii {
-		width: 30upx;
-		height: 30upx;
+		width: 20upx;
+		height: 20upx;
 		display: block;
 		margin-left: 12upx;
 		font-size: 28upx;
 		color: #333333;
+		font-weight:0;
 	}
 	.i2{
 		width: 50upx;
 		height: 50upx;
 	}
 	.actives {
-		color: #333333;
+		color: #ffc146;
+		font-weight: 0;
+		font-size: 28upx;
 	}
 
 	.ibox {
 		display: flex;
 		align-items: center;
 	}
-
 	.top_kbox {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		
 		background-color: #FFFFFF;
-		padding: 28upx 5%;
-		position: fixed;
-		top: 88upx;
-		width: 90%;
+		padding: 0upx 30upx;
+		box-sizing: border-box;
+		width: 100%;
 		z-index: 99;
 		/* #ifdef APP-PLUS */
 		top: 0;
 		/* #endif */
+		padding-bottom: 20upx;
+		
 	}
 	.boxa{
-		padding-top: 84upx;
+		
 		position: relative;
+		font-size: 28upx;
+		color: #333333;
+		font-weight: 0;
 	}
 </style>

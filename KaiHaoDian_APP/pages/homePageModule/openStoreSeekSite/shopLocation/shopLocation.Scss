@@ -1,0 +1,76 @@
+.header{
+	padding: 20upx 0;
+	background-color: #fff;
+	.storetype{
+		padding: 0upx 30upx;
+	}
+	.Box{
+		margin-bottom: 180upx;
+		.buttons{
+			display: flex;
+			button{
+				width: 50%;
+				background-color: #ffbd38;
+				font-size: 28upx;
+				font-weight: 100;
+				border-radius: 0;
+				border-right: 2upx solid #d2d1cf;
+				height: 90upx;
+				line-height: 90upx;
+			}
+		}
+	}
+	.store{
+		.storeBody{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			.details{
+				width: 32%;
+				height: 60upx;
+				text-align: center;
+				background-color: #eeeeee;
+				color: #333333;
+				margin-bottom: 8upx;
+				border-radius:6upx;
+				font-size: 24upx;
+				line-height:60upx;
+				font-weight: 100;
+			}
+		}
+	}
+	.storeHeader{
+		padding:20upx 0;
+		color: #666666;
+		display: flex;
+		justify-content: space-between;
+		.iconfont{
+			padding-right: 50upx;
+		}
+	}
+}
+//优秀选择
+.excellent{
+	padding: 0 30upx;
+	box-sizing: border-box;
+	margin-top: -10upx;
+	padding-right: 0;
+	.title{
+		font-size: 28upx;
+		color: #333333;
+		font-weight: 600;
+		margin-bottom: 30upx;
+		}
+		.imgBox{
+			img{
+					width: 260upx;
+					height: 200upx;
+					border-radius: 10upx;
+					
+				}
+				.titles{
+					font-size: 28upx;
+					margin-bottom: 10upx;
+				}
+		}
+}

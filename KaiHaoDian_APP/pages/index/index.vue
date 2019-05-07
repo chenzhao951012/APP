@@ -243,11 +243,10 @@ export default {
 	},
 	// 监听页面加载
 	onLoad() {
-		
 		let _this = this;
 		_this.getBannerList();
 		_this.onloadContactsList();
-			_this.getOpenStoreLore();
+		_this.getOpenStoreLore();
 		uni.getStorage({
 			key: 'location',
 			success: res => {
