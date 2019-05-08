@@ -1,11 +1,14 @@
 {
   "navigationBarTitleText": "二手转让发布",
+  "bounce": "none",
   "titleNView": {
     "buttons": [
       {
-        "text": "求购",
-        "fontSize": "14",
-        "color": "#548ef2"
+        "text": "完成",
+        "fontSize": "14px",
+        "width": "40px",
+        "fontWeight": "bold",
+        "color": "#fdbd39"
       }
     ]
   }

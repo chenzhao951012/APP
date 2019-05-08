@@ -37,50 +37,106 @@
 .content {
   width: 750rpx;
 }
-page {
-  height: 100%;
-  background: #fff;
+.newShoprental {
+  background-color: #f3f3f3;
+  padding-top: 20rpx;
 }
-.content {
-  padding-top: 6rpx;
+.newShoprental .publishNewshop {
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
-._infoFill:nth-child(2n-1) {
-  background: #f7f7f7;
+.newShoprental .publishNewshop .titleBox2 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
 }
-._infoFill {
-  width: 750rpx;
+.newShoprental .publishNewshop .titleBox3 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+}
+.newShoprental .publishNewshop .titleBox {
+      padding: 0 30rpx;
+      height: 100rpx;
+      line-height: 100rpx;
+      border-bottom: 2rpx solid #eeeeee;
+      font-size: 28rpx;
+      color: #333333;
+      font-weight: 600;
+}
+.newShoprental .publishNewshop .titleBox ._input {
+        margin-left: 30rpx;
+        margin-top: 24rpx;
+        font-weight: 100;
+}
+.introduce {
   padding: 0 30rpx;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  background-color: #fff;
+  font-size: 28rpx;
+  color: #333333;
+}
+.introduce .title {
+    height: 100rpx;
+    line-height: 100rpx;
+    font-weight: 600;
+}
+.introduce .introduceBox {
+    width: 100%;
+    border: 2rpx solid #ffbd38;
+    height: 300rpx;
+    padding: 30rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.introduce .introduceBox ._textarea {
+      font-size: 28rpx;
+      width: 100%;
+}
+.commodityinformation {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #fff;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 96rpx;
-  line-height: 96rpx;
-  font-size: 28rpx;
-  color: #1b1e26;
 }
-._infoFill ._input {
-    line-height: 60rpx;
-    text-align: right;
+.commodityinformation .type {
     font-size: 28rpx;
-    margin-top: 20rpx;
+    border-bottom: 2rpx solid #eeeeee;
+    padding: 0 30rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 100rpx;
+    line-height: 100rpx;
+    font-weight: 600;
 }
-._infoFill ._right {
-    text-align: right;
+.commodityinformation .type view:nth-child(1) {
+      font-size: 28rpx;
+      letter-spacing: 2rpx;
+      color: #333333;
 }
-._infoFill ._right ._input {
-      display: inline-block;
-      vertical-align: top;
-}
-._infoFill ._right text {
-      display: inline-block;
-      margin-left: 6rpx;
+.commodityinformation .type view:nth-child(2) {
+      font-size: 28rpx;
+      letter-spacing: 2rpx;
+      color: #666666;
 }
 ._assort_store {
   width: 750rpx;
@@ -90,7 +146,9 @@ page {
   font-size: 28rpx;
 }
 ._assort_store ._assort_title {
-    margin: 56rpx 0 50rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    font-weight: 600;
 }
 ._assort_store ._select_icon {
     display: -webkit-box;
@@ -252,20 +310,82 @@ page {
     background: #ed7f4e;
 }
 .peitao_r {
+  width: 690rpx;
+  margin: 0 auto;
+}
+.nav-list {
+  text-align: left;
+}
+.nav-list .navigator, .JQQD {
   display: inline-block;
+  height: 120rpx;
+  width: 16%;
+  text-align: center;
+}
+.nav-list1 .navigator {
+  display: inline-block;
+  height: 100rpx;
+  text-align: center;
+  width: 25%;
+}
+checkbox[hidden] {
+  display: none !important;
+}
+.checkbox22 {
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  display: inline-block;
+  margin-top: 20rpx;
+  border-radius: 30rpx;
+  color: #999;
+  border: 1px solid #ececec;
+}
+.is_checked22 {
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #2f86ff;
+  border: 1px solid #2f86ff;
+  border-radius: 30rpx;
+}
+.faBuRight {
+  float: left;
+  text-align: right;
+  width: 560rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+.inp_a {
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 25rpx;
+  float: right;
+}
+.inp_text {
+  width: 164rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: inline-block;
+  border: 1px solid #d9d9d9;
+  float: left;
+  border-radius: 10rpx;
+}
+.inp_text_m {
+  display: inline-block;
+  float: left;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #333;
+}
+.peitao_r {
   width: 650rpx;
   margin: 0 0 40rpx 20rpx;
 }
-.choose {
-  min-height: 100rpx;
-}
-.nav-list {
-  margin-top: 10rpx;
-}
 .nav-list .navigator {
   display: inline-block;
-  height: 100rpx;
-  width: 108rpx;
+  width: 20%;
   text-align: center;
   margin-top: 20rpx;
 }
@@ -300,14 +420,53 @@ page {
 checkbox[hidden] {
   display: none !important;
 }
-.ImgBox {
-  width: 100rpx;
-  height: 100rpx;
-  float: left;
-  margin: -80rpx 10rpx 20rpx 10rpx;
+.picturepresentation {
+  background-color: #fff;
+  padding: 30rpx;
+  padding-top: 0;
+  block-size: border-box;
 }
-.ImgBox image {
-    width: 100%;
-    height: 100%;
+.picturepresentation .title {
+    font-size: 28rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    font-weight: 600;
+}
+.ImgBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.ImgBox .ImgBox2 {
+    width: 31%;
+    position: relative;
+}
+.ImgBox .ImgBox2 ._img {
+      width: 100%;
+      height: 160rpx;
+      border-radius: 10rpx;
+}
+.ImgBox .ImgBox2 .iconfont {
+      color: #ffbd38;
+      font-size: 28rpx;
+      position: absolute;
+      top: -12rpx;
+      right: -12rpx;
+}
+.ImgBox .addImg {
+    width: 31%;
+    height: 160rpx;
+    border: 2rpx solid #eeeeee;
+    text-align: center;
+    line-height: 160rpx;
+    border-radius: 10rpx;
+}
+.ImgBox .addImg .iconfont {
+      font-size: 60rpx;
 }
 

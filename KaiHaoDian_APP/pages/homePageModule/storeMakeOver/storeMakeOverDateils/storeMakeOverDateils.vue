@@ -21,7 +21,7 @@
 						<view class="question">
 							{{item.oldShopTransfer.title}}
 						</view>
-						<view class="userMassage">
+						<view class="userMassage" v-if="item.sysuser">
 								<!-- 图像 -->
 							<view class="userMassage-Left">
 								<img :src="item.sysuser.portrait" alt="">
@@ -80,7 +80,7 @@
 								</view>
 							</view>
 						</view>
-							<view class="_caller">
+							<view class="_caller" v-if="item.sysuser">
 							<view class="visitor" @touchend="toVisitor">
 								<text>访   &nbsp;&nbsp;&nbsp;&nbsp; 客&nbsp;:</text>
 							</view>
@@ -135,7 +135,7 @@
 							<img src="../../../../static/ComentImg.png" alt="">
 						</view>
 						<view class="introduction" v-for="(itemd,indexs) in commentList" :key='indexs' @touchend="subReply(indexs)">
-							<view class="commentListTop">
+							<view class="commentListTop" v-if="itemd.sysuser">
 								<view class="userImg">
 									<img :src="itemd.sysuser.portrait" alt="" v-if="itemd.sysuser.portrait">
 								</view>

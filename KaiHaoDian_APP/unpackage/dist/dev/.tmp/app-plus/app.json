@@ -100,7 +100,19 @@
     "pages/mineIndex/Application/Applicationin/brandShow/brandShow",
     "pages/agreement/agreement",
     "pages/Incharge/Incharge",
-    "pages/Incharge/finalizePayment/finalizePayment"
+    "pages/Incharge/finalizePayment/finalizePayment",
+    "pages/mineIndex/messageNotification/messageNotification",
+    "pages/mineIndex/messageNotification/systemDetails/systemDetails",
+    "pages/mineIndex/messageNotification/Personalchat/chatpage/chatpage",
+    "pages/mineIndex/messageNotification/Personalchat/Chatdetails/Chatdetails",
+    "pages/homePageModule/oldStoreTwoHand/oldStoreTwoHandRelease/askToBuy/Degree/Degree",
+    "pages/homePageModule/Newpreparation/NewpreparationRelease/NewpreparationRelease",
+    "pages/homePageModule/Newpreparation/NewpreparationRelease/showcase/showcase",
+    "pages/homePageModule/Newpreparation/NewpreparationRelease/showcase/GreenflowersReleased/GreenflowersReleased",
+    "pages/homePageModule/Newpreparation/SelectIndustry/SelectIndustry",
+    "pages/homePageModule/Newpreparation/NewpreparationRelease/showcase/GreenflowersReleased/particularCommodity/particularCommodity",
+    "pages/homePageModule/Newpreparation/NewpreparationRelease/showcase/GreenflowersReleased/MoregoodsRelease/MoregoodsRelease",
+    "pages/homePageModule/openStoreSeekSite/shopLocation/shopLocation"
   ],
   "subPackages": [],
   "window": {

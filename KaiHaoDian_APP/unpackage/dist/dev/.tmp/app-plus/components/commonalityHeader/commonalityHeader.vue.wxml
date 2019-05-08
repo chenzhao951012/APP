@@ -1,0 +1,1 @@
+<import src="/common/slots.wxml" /><template name="dca9b7de"><view class="_view data-v-3727f5d8 content"><template name="default"></template><view class="_view data-v-3727f5d8 commonalityHeader"><view class="_view data-v-3727f5d8 commonality"><template data="{{...$root['0'], ...$root[$k], $root}}" is="{{$slotdefault || 'default'}}"></template></view></view></view></template>

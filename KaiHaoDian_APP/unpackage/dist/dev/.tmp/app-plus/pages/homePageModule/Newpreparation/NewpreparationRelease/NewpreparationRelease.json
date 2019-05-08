@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "新店筹备发布",
+  "bounce": "none",
+  "titleNView": {
+    "buttons": [
+      {
+        "text": "完成",
+        "fontSize": "14px",
+        "width": "40px",
+        "fontWeight": "bold",
+        "color": "#fdbd39"
+      }
+    ]
+  }
+}

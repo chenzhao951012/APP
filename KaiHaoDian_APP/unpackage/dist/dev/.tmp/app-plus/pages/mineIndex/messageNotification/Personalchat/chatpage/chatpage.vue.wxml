@@ -1,0 +1,1 @@
+<import src="/components/chat/wkiwi-action.vue.wxml" /><template name="4c2485df"><view class="_view data-v-cddbd9b4 content"><view class="_view data-v-cddbd9b4 message-list"><template bindgo="handleProxy" data-eventid="{{'4c2485df-0'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'4c2485df-0'],$root}}" is="d45c31ee"></template></view></view></template>

@@ -359,7 +359,7 @@ export default {
 				url = '../homePageModule/oldStoreTwoHand/oldStoreTwoHand'
 			}
 			if(index === 6){//开店寻址
-				url = '../homePageModule/openStoreSeekSite/openStoreSeekSite'
+				url = '../homePageModule/openStoreSeekSite/shopLocation/shopLocation'
 			}
 			if(index === 7){
 				url = '../homePageModule/Newpreparation/Newpreparation'

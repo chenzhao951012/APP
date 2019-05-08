@@ -68,8 +68,31 @@
 					<view>推荐地址</view>
 					<view>更多推荐<text class="iconfont">&#xe616;</text></view>
 				</view>
-				<view class="recommendBody">
+				<view class="recommendBody" v-for="(items,idx) in information" :key='idx' @click="particulars(idx,items.id)">
 					<view class="recommendBox">
+						<view class="Imgboxs">
+							<img :src="items.src" alt="">
+						</view>
+						<view class="recommendBoxRight">
+							<view class="" style="width: 62%;">
+									<view class="titlese"><text class="iconfont">&#xe694;</text><text class="">{{items.cityvalue}}{{items.countyValue}}{{items.street}}</text></view>
+									<view class="synthesize">
+										<view class="area">
+											<view><text class="iconfont">&#xe684;</text><text>{{items.rentMax}}元/月</text></view>
+											<view><text class="iconfont">&#xe683;</text><text>{{items.areaMax}}㎡</text></view>
+										</view>
+										<view class="matched-degree">
+											<view>匹配度</view>
+											<view>{{items.proportion}}%</view>
+										</view>
+									</view>
+								
+								<view class="browse">
+								该店配置齐全
+								</view>
+							</view>
+						
+						</view>
 						
 					</view>
 				</view>
@@ -92,16 +115,19 @@
 		},
 		data() {
 			return {
+				information:'',
 				location:'',
 				location_city:'',
 				list: ['综合', '面积', '租金','地址','筛选'],
 				arr: [
 					['综合', '信用', '最新发布'],
-					['10~20㎡', '10~20㎡', '50~100㎡','100㎡+'],
-					['0~1000元/月', '1000~2000元/月', '3000~4000元/月','4000~5000元/月','4000~5000元/月','5000~6000元/月','7000+元/月'],
+					['10~20㎡', '20~50㎡', '60~100㎡','100㎡+'],
+					['0~1000元/月', '1000~2000元/月', '3000~4000元/月','4000~5000元/月','4000~5000元/月','5000~6000元/月','7000+元/月'],	
 					[]
 ],
 				i2: [0, 0, 0],
+				areaMin:'',
+				adressLIst:[],
 				chooseType:[
 										{
 										type:0,
@@ -281,6 +307,7 @@
 									
 				]
 			};
+			
 		},	
 		onLoad() {
 			
@@ -306,17 +333,69 @@
 							_this.location.city_id) == ''
 					) {
 						getLocation.getLocation(function(res_p, res_c) {
+							console.log(res_c[0].name,res_c[0].id)
 							// _this.setLocation(res_p, res_c);
 							// console.log('省', JSON.stringify(res_p));
 							// console.log('市', JSON.stringify(res_c));
-							_this.location_city = res_c[0].name;
+							_this.location_city = res_c[0].id;
 						});
 					}
 				}
 			});
-			this.getAderss(610100)
+			this.getAderss(610000)
+			this.inquire();
 		},
 		methods:{
+			// 查询
+			 // 提交
+				inquire() {
+						var that = this;
+						var data = {
+							token:132,
+							areaMin:20,
+							areaMax:'',
+							rentMin:'',
+							rentMax:'',
+							province:610000,
+							provinceValue:'陕西省',
+							city:610100,
+							cityValue:'西安市',
+							County:'',
+							countyvalue:'',
+							support:'',
+							typeValue:'',
+							industryValue:''
+						};
+								uni.request({
+									url: shoppublic.getUrl() + '/KaiDian/searchAddress',
+									data: data,
+									method: "POST",
+									header: {
+										"Content-Type": "application/x-www-form-urlencoded"
+									},
+									success: function(res) {
+										console.log(res)
+										that.information=res.data.responseBody.shopAddressInfo
+									},
+									fall: function(res) {
+									
+									}
+								})
+						
+
+					},
+					//详情跳转
+					particulars(index,id){
+						if(this.information[index].type=='1'){
+								uni.navigateTo({
+								url:'../../storeMakeOver/storeMakeOverDateils/storeMakeOverDateils?id='+id
+							})
+						}else{
+								uni.navigateTo({
+							url:'../../newStoreRental/newStoreRentalDateils/newStoreRentalDateils?id='+id
+						})
+					}
+					},
 			//地址请求
 				getAderss(id){
 				var that=this
@@ -329,38 +408,36 @@
 				'content-type': 'application/json' // 默认值
 			  },
 			  success: function(res) {
+					that.adressLIst=res.data.responseBody
 				for(var i=0;i<res.data.responseBody.length;i++){
 					that.arr[3].push(res.data.responseBody[i].name)
 				}
-				
 				var county = res.data.responseBody;
 				var aa = {
 				  name: "全部",
 				  pid: "id",
 				  id: ''
 				};
-				if (county != null) {
-				
-				  county.unshift(aa);
-				}
+			
 				//county.reverse();
 				//county.push(aa);
 				//county.reverse();
 			   
-				  that.cityList=county
+				 
 			   
 			  },
 			  fail: function(res) {
-			
 			  }
 			})
 			},
 			chooseLike(i1) {
-				if (this.i2[i1[0]] != i1[1]) {
-					this.i2[i1[0]] = i1[1];
+			if(i1[0]==1){
+				var name=this.arr[1][i1[1]].split('~')
+				this.areaMin=name[0]
+				console.log(this.areaMin)
+			}
+			this.inquire()
 				}
-				console.log(i1)
-			},
 		}
 	}
 </script>

@@ -1,0 +1,13 @@
+
+      !(function(){
+        var uniAppViewReadyCallback = function(){
+          setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"status_bar { height: var(--status-bar-height); width: 100%; }\n.",[1],"top_view { height: var(--status-bar-height); width: 100%; position: fixed; top: 0; }\n.",[1],"content { width: ",[0,750],"; }\n.",[1],"showImg { width: ",[0,750],"; padding-top: ",[0,20],"; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: #f3f3f3; }\n.",[1],"showImg .",[1],"title { border-bottom: ",[0,2]," solid #eeeeee; height: ",[0,100],"; line-height: ",[0,100],"; background-color: #fff; padding: 0 ",[0,30],"; font-size: ",[0,28],"; font-weight: 600; color: #333333; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }\n.",[1],"showImg .",[1],"title .",[1],"input { margin-left: ",[0,30],"; -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; }\n.",[1],"showImg .",[1],"title .",[1],"input .",[1],"_input { width: 100%; margin-top: ",[0,24],"; height: ",[0,20],"; font-size: ",[0,28],"; }\n.",[1],"showImg .",[1],"ImgBox { background-color: #fff; padding: ",[0,30]," ",[0,30],"; -webkit-box-sizing: border-box; box-sizing: border-box; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }\n.",[1],"showImg .",[1],"ImgBox .",[1],"upImg { width: 31%; height: ",[0,200],"; background-color: #fff; margin-bottom: ",[0,20],"; position: relative; }\n.",[1],"showImg .",[1],"ImgBox .",[1],"upImg .",[1],"iconfont { position: absolute; top: ",[0,-12],"; right: ",[0,-12],"; color: #fdbd37; }\n.",[1],"showImg .",[1],"ImgBox .",[1],"upImg .",[1],"_img { width: 100%; height: ",[0,200],"; border-radius: ",[0,10],"; }\n.",[1],"showImg .",[1],"ImgBox .",[1],"addImg { width: 31%; height: ",[0,200],"; border: ",[0,2]," solid #eeeeee; text-align: center; line-height: ",[0,200],"; border-radius: ",[0,10],"; }\n",],undefined,{path:"./pages/homePageModule/Newpreparation/NewpreparationRelease/showcase/showcase.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/homePageModule/Newpreparation/NewpreparationRelease/showcase/showcase.wxml') } }));
+        }
+        if(window.__uniAppViewReady__){
+          uniAppViewReadyCallback()
+        }else{
+          document.addEventListener('uniAppViewReady',uniAppViewReadyCallback)
+        }
+      })();
+      

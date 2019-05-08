@@ -37,33 +37,84 @@
 .content {
   width: 750rpx;
 }
-.ImgBox {
-  width: 300rpx;
-  height: 290rpx;
-}
-._img {
-  width: 300rpx;
-  height: 290rpx;
-}
-.box0 {
+.exChane {
   width: 750rpx;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 800rpx;
+  padding-top: 20rpx;
+  background-color: #f3f3f3;
 }
-.Imgtitle {
-  font-size: 32rpx;
-  text-align: center;
-  color: #ccc;
-  margin-top: 50rpx;
+.exChane .changePhone {
+    background-color: #fff;
+    padding: 30rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 10rpx 10rpx 0 0;
+}
+.exChane .changePhone .noinformation {
+      width: 100%;
+}
+.exChane .changePhone .noinformation ._img {
+        width: 100%;
+        height: 1000rpx;
+}
+.exChane .changePhone .userInfo {
+      border-bottom: 2rpx solid #eeeeee;
+}
+.exChane .changePhone .userInfo .userTop {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+}
+.exChane .changePhone .userInfo .userTop .left ._img {
+          width: 80rpx;
+          height: 80rpx;
+          border-radius: 50%;
+}
+.exChane .changePhone .userInfo .userTop .right {
+          margin-left: 20rpx;
+          font-size: 24rpx;
+          letter-spacing: 2rpx;
+}
+.exChane .changePhone .userInfo .userTop .right view:nth-child(1) {
+            font-size: 28rpx;
+            margin-bottom: 12rpx;
+            font-weight: 600;
+            color: #333333;
+}
+.exChane .changePhone .userInfo .userTop .right view:nth-child(1) text {
+              padding: 0 4rpx;
+}
+.exChane .changePhone .userInfo .userTop .right view:nth-child(2) {
+            font-size: 24rpx;
+            color: #8f8f8f;
+}
+.exChane .changePhone .userInfo .userTop .right view:nth-child(2) .iconfont {
+              padding: 0 10rpx;
+              color: #299dff;
+}
+.exChane .changePhone .userInfo .chooseBox {
+        margin: 30rpx 0;
+        margin-bottom: 20rpx;
+        font-size: 24rpx;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: space-around;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+        color: #fff;
+}
+.exChane .changePhone .userInfo .chooseBox view {
+          padding: 10rpx 50rpx;
+          background-color: #ffbd38;
+          border-radius: 50rpx;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+}
+.exChane .changePhone .userInfo .chooseBox view:nth-child(1) {
+          background-color: #dcdcdc;
+          color: #333333;
+          font-weight: 600;
 }
 

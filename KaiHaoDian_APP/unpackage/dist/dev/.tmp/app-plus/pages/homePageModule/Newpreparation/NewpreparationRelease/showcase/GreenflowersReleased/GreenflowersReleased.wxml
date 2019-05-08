@@ -1,0 +1,2 @@
+<import src="./GreenflowersReleased.vue.wxml" />
+    <template is="4c62c089" data="{{ ...$root['0'], $root }}"/>

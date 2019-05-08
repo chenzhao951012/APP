@@ -1,11 +1,14 @@
 {
   "navigationBarTitleText": "招聘求职发布",
+  "bounce": "none",
   "titleNView": {
     "buttons": [
       {
-        "text": "招聘",
-        "fontSize": "14",
-        "color": "#548ef2"
+        "text": "完成",
+        "fontSize": "14px",
+        "width": "40px",
+        "fontWeight": "bold",
+        "color": "#fdbd39"
       }
     ]
   }

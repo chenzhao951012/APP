@@ -1,0 +1,2 @@
+<import src="./messageNotification.vue.wxml" />
+    <template is="cc6430ea" data="{{ ...$root['0'], $root }}"/>
