@@ -55,6 +55,10 @@
 	box-sizing: border-box;
 	margin-top: -10upx;
 	padding-right: 0;
+	border-bottom: 2upx solid #eeeeee;
+	padding-bottom: 30upx;
+		overflow: hidden;
+	white-space: nowrap;
 	.title{
 		font-size: 28upx;
 		color: #333333;
@@ -62,6 +66,8 @@
 		margin-bottom: 30upx;
 		}
 		.imgBox{
+			display: inline-block;
+			margin-right: 20upx;
 			img{
 					width: 260upx;
 					height: 200upx;
@@ -73,4 +79,38 @@
 					margin-bottom: 10upx;
 				}
 		}
+}
+//推荐地址
+.recommend{
+	padding: 0 30upx;
+	box-sizing: border-box;
+	.recommendHeader{
+		display: flex;
+		justify-content: space-between;
+		margin-top: 30upx;
+		font-size: 28upx;
+		view:nth-child(1){
+			font-weight: 600;
+			color: #333333;
+			letter-spacing: 4upx;
+		}
+		view:nth-child(2){
+			color: #666666;
+			font-size: 24upx;
+			.iconfont{
+				padding-left: 10upx;
+				color: #696969;
+				font-size: 28upx;
+			}
+		}
+	}
+	.recommendBody{
+		.recommendBox{
+			margin-top: 20upx;
+			padding: 0 30upx;
+			box-sizing: border-box;
+			height: 200upx;
+			box-shadow:2px 2px 2px #efefef,2px -2px 2px #efefef,-2px 2px 2px #efefef,-2px -2px 2px #efefef;
+		}
+	}
 }

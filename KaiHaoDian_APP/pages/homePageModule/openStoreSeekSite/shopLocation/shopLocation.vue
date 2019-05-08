@@ -42,7 +42,37 @@
 						<rate value="3.5" disabled="true" margin='5' size='18'></rate>
 					</view>
 			</view>
+					<view class="imgBox">
+			<img src="https://ss0.bdstatic.com/6Ox1bjeh1BF3odCf/it/u=3660968530,985748925&fm=191&app=48&size=h300&n=0&g=4n&f=JPEG?sec=1853310920&t=5e64af964be378c6c2a3b0acc65dfe24" alt="">
+					<view class="titles">
+						优质店铺
+					</view>
+					<view style="margin-left: -10upx;">
+						<rate value="3.5" disabled="true" margin='5' size='18'></rate>
+					</view>
+			</view>
+						<view class="imgBox">
+			<img src="https://ss0.bdstatic.com/6Ox1bjeh1BF3odCf/it/u=3660968530,985748925&fm=191&app=48&size=h300&n=0&g=4n&f=JPEG?sec=1853310920&t=5e64af964be378c6c2a3b0acc65dfe24" alt="">
+					<view class="titles">
+						优质店铺
+					</view>
+					<view style="margin-left: -10upx;">
+						<rate value="3.5" disabled="true" margin='5' size='18'></rate>
+					</view>
+			</view>
 				</scroll-view>
+			</view>
+			<!-- 推荐地址-->
+			<view class="recommend">
+				<view class="recommendHeader">
+					<view>推荐地址</view>
+					<view>更多推荐<text class="iconfont">&#xe616;</text></view>
+				</view>
+				<view class="recommendBody">
+					<view class="recommendBox">
+						
+					</view>
+				</view>
 			</view>
 		</commonalityHeader>
 	</view>
