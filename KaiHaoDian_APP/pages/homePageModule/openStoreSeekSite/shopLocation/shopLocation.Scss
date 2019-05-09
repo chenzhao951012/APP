@@ -3,11 +3,17 @@
 	background-color: #fff;
 	.storetype{
 		padding: 0upx 30upx;
+		padding-bottom: 300upx;
 	}
 	.Box{
-		margin-bottom: 180upx;
+		
 		.buttons{
 			display: flex;
+			position: fixed;
+			right: 0;
+			bottom: 0;
+			margin-bottom: 186upx;
+			width: 65%;
 			button{
 				width: 50%;
 				background-color: #ffbd38;
@@ -31,6 +37,18 @@
 				text-align: center;
 				background-color: #eeeeee;
 				color: #333333;
+				margin-bottom: 8upx;
+				border-radius:6upx;
+				font-size: 24upx;
+				line-height:60upx;
+				font-weight: 100;
+			}
+			.details2{
+				width: 32%;
+				height: 60upx;
+				text-align: center;
+				background-color: #ffbc34;
+				color: #fff;
 				margin-bottom: 8upx;
 				border-radius:6upx;
 				font-size: 24upx;

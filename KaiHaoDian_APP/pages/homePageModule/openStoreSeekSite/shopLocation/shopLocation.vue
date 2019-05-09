@@ -14,7 +14,7 @@
 										<view><text class="iconfont">&#xe74a;</text></view>
 								</view>
 								<view class="storeBody">
-									<view class="details" v-for="(itemed,i) in items.List" :key='i'>
+									<view class="details" v-for="(itemed,i) in items.List" :key='i' :class="{details2:itemed.isshow==1}" @click.stop="selectivetype(idx,i)">
 										{{itemed.value}}
 									</view>
 								</view>
@@ -22,7 +22,7 @@
 						</view>
 					</view>
 					<view class="buttons">
-						<button type="primary">重置</button><button type="primary">确认</button>
+						<button type="primary" @click.stop="replacement">重置</button><button type="primary" @click="confirms">确认</button>
 					</view>
 						</view>
 				</ChooseLits>
@@ -68,7 +68,7 @@
 					<view>推荐地址</view>
 					<view>更多推荐<text class="iconfont">&#xe616;</text></view>
 				</view>
-				<view class="recommendBody" v-for="(items,idx) in information" :key='idx' @click="particulars(idx,items.id)">
+				<view class="recommendBody" v-for="(items,idx) in information" :key='idx'  @click="particulars(idx,items.id)">
 					<view class="recommendBox">
 						<view class="Imgboxs">
 							<img :src="items.src" alt="">
@@ -96,6 +96,7 @@
 						
 					</view>
 				</view>
+				
 			</view>
 		</commonalityHeader>
 	</view>
@@ -107,14 +108,16 @@
 		import ChooseLits from '@/components/choose-Cade/choose-Cade.vue';
 		import getLocation from '@/common/getLocation.js'; //获取地理位置
 		import shoppublic from '@/common/shoppublic'; //服务器地址
+		var _self, page = 1, timer = null;
 	export default {
 		components: {
 			ChooseLits,
 			commonalityHeader,
-			rate
+			rate,
 		},
 		data() {
 			return {
+				current:-1,
 				information:'',
 				location:'',
 				location_city:'',
@@ -127,7 +130,26 @@
 ],
 				i2: [0, 0, 0],
 				areaMin:'',
+				areaMax:'',
+				rentMin:'',
+				rentMax:'',
 				adressLIst:[],
+				province:610000,
+				provinceValue:'陕西省',
+				city:610100,
+				cityValue:'西安市',
+				typeValue:'',//商业街铺
+				industryValue:'',//餐饮美食
+				support:'',//类型
+				typeValue2:'',//商业街铺
+				industryValue2:'',//餐饮美食
+				support2:'',//类型
+				lastInx:0,
+				lastI:0,
+				lastInx1:1,
+				lastI1:0,
+				lastInx2:2,
+				lastI2:0,
 				chooseType:[
 										{
 										type:0,
@@ -135,67 +157,83 @@
 										List:[
 														{
 													  id: "0",
-															value: "餐饮美食"
+															value: "餐饮美食",
+															isshow:0
 														},
 														{
 															id: "1",
-															value: "美容保健"
+															value: "美容保健",
+															isshow:0
 														},
 														{
 															id: "2",
-															value: "服饰鞋包"
+															value: "服饰鞋包",
+															isshow:0
 														},
 														{
 															id: "3",
-															value: "休闲娱乐"
+															value: "休闲娱乐",
+															isshow:0
 														},
 														{
 															id: "4",
-															value: "百货超市"
+															value: "百货超市",
+															isshow:0
 														},
 														{
 															id: "5",
-															value: "生活服务"
+															value: "生活服务",
+															isshow:0
 														},
 														{
 															id: "6",
-															value: "电器通讯"
+															value: "电器通讯",
+															isshow:0
 														},
 														{
 															id: "7",
-															value: "汽修服务"
+															value: "汽修服务",
+															isshow:0
 														},
 														{
 															id: "8",
-															value: "医疗器械"
+															value: "医疗器械",
+															isshow:0
 														},
 														{
 															id: "9",
-															value: "家居建材"
+															value: "家居建材",
+															isshow:0
 														},
 														{
 															id: "10",
-															value: "教育"
+															value: "教育",
+															isshow:0
 														},
 														{
 															id: "11",
-															value: "酒店宾馆"
+															value: "酒店宾馆",
+															isshow:0
 														},
 														{
 															id: "12",
-															value: "农业环保"
+															value: "农业环保",
+															isshow:0
 														},
 														{
 															id: "13",
-															value: "母婴"
+															value: "母婴",
+															isshow:0
 														},
 														{
 															id: "14",
-															value: "网络服务"
+															value: "网络服务",
+															isshow:0
 														},
 														{
 															id: "15",
-															value: "其他"
+															value: "其他",
+															isshow:0
 														}
 													],
 									},
@@ -205,31 +243,38 @@
 									List:[
 										{
 										id: "0",
-										value: "商业街"
+										value: "商业街",
+										isshow:0
 									},
 									{
 										id: "1",
-										value: "写字楼"
+										value: "写字楼",
+										isshow:0
 									},
 									{
 										id: "2",
-										value: "社区周边"
+										value: "社区周边",
+										isshow:0
 									},
 									{
 										id: "3",
-										value: "档口摊位"
+										value: "档口摊位",
+										isshow:0
 									},
 									{
 										id: "4",
-										value: "临街门面"
+										value: "临街门面",
+										isshow:0
 									},
 									{
 										id: "5",
-										value: "购物中心"
+										value: "购物中心",
+										isshow:0
 									},
 									{
 										id: "6",
-										value: "其他"
+										value: "其他",
+										isshow:0
 									},
 									],
 										
@@ -240,67 +285,83 @@
 										List:[
 												{
 													id: '0',
-													value: "货梯"
+													value: "货梯",
+													isshow:0
 												},
 												{
 													id: '1',
-													value: "客梯"
+													value: "客梯",
+													isshow:0
 												},
 												{
 													id: '2',
-													value: "扶梯"
+													value: "扶梯",
+													isshow:0
 												},
 												{
 													id: '3',
-													value: "空调"
+													value: "空调",
+													isshow:0
 												},
 												{
 													id: '4',
-													value: "停车"
+													value: "停车",
+													isshow:0
 												},
 												{
 													id: '5',
-													value: "网络"
+													value: "网络",
+													isshow:0
 												},
 												{
 													id: '6',
-													value: "天然气"
+													value: "天然气",
+													isshow:0
 												},
 												{
 													id: '7',
-													value: "暖气"
+													value: "暖气",
+													isshow:0
 												},
 												{
 													id: '8',
-													value: "上水"
+													value: "上水",
+													isshow:0
 												},
 												{
 													id: '9',
-													value: "下水"
+													value: "下水",
+													isshow:0
 												},
 												{
 													id: '10',
-													value: "排污"
+													value: "排污",
+													isshow:0
 												},
 												{
 													id: '11',
-													value: "排烟"
+													value: "排烟",
+													isshow:0
 												},
 												{
 													id: '12',
-													value: "380V"
+													value: "380V",
+													isshow:0
 												},
 												{
 													id: '13',
-													value: "餐煤"
+													value: "餐煤",
+													isshow:0
 												},
 												{
 													id: '14',
-													value: "可明火"
+													value: "可明火",
+													isshow:0
 												},
 												{
 													id: '15',
-													value: "外摆区"
+													value: "外摆区",
+													isshow:0
 												}
 													],
 									}
@@ -346,25 +407,61 @@
 			this.inquire();
 		},
 		methods:{
+			//确定按钮
+			confirms(){
+				this.typeValue2=this.typeValue
+				this.industryValue2=this.industryValue
+				this.support2=this.support
+				this.inquire()
+			},
+			//重置按钮
+			replacement(){
+				this.chooseType[this.lastInx].List[this.lastI]['isshow'] =  0
+				this.chooseType[this.lastInx1].List[this.lastI1]['isshow'] = 0
+				this.chooseType[this.lastInx2].List[this.lastI2]['isshow'] = 0
+			},
+		selectivetype(idx,i){
+				if(idx == this.lastInx){
+					this.chooseType[this.lastInx].List[this.lastI]['isshow'] = 0;
+					this.chooseType[this.lastInx].List[i]['isshow'] = 1;
+					this.lastI = i;
+					this.industryValue=this.chooseType[idx].List[i].value
+				}else if(idx == this.lastInx1){
+					this.chooseType[this.lastInx1].List[this.lastI1]['isshow'] = 0;
+					this.chooseType[this.lastInx1].List[i]['isshow'] = 1;
+					this.lastI1 = i;
+					this.typeValue=this.chooseType[idx].List[i].value
+					console.log(idx)
+				}else if(idx == this.lastInx2){
+					this.chooseType[this.lastInx2].List[this.lastI2]['isshow'] = 0;
+					this.chooseType[this.lastInx2].List[i]['isshow'] = 1;
+					this.lastI2 = i;
+					this.support=this.chooseType[idx].List[i].value + '|'
+				
+				}
+				
+			
+				
+			},
 			// 查询
 			 // 提交
 				inquire() {
 						var that = this;
 						var data = {
 							token:132,
-							areaMin:20,
-							areaMax:'',
-							rentMin:'',
-							rentMax:'',
+							areaMin:that.areaMin,
+							areaMax:that.areaMax,
+							rentMin:that.rentMin,
+							rentMax:that.rentMax,
 							province:610000,
 							provinceValue:'陕西省',
-							city:610100,
-							cityValue:'西安市',
+							city:that.city,
+							cityValue:that.cityValue,
 							County:'',
 							countyvalue:'',
-							support:'',
-							typeValue:'',
-							industryValue:''
+							support:that.support2,
+							typeValue:that.typeValue2,
+							industryValue:that.industryValue2
 						};
 								uni.request({
 									url: shoppublic.getUrl() + '/KaiDian/searchAddress',
@@ -375,7 +472,20 @@
 									},
 									success: function(res) {
 										console.log(res)
-										that.information=res.data.responseBody.shopAddressInfo
+										if(res.data.responseBody==null){
+											console.log(12)
+											uni.showToast({
+												title:'暂无找到相关数据',
+												icon:'none',
+												duration:2000
+											})
+										that.city=610100
+										that.cityValue='西安市'
+										}
+										
+										if(res && res.data && res.data.responseBody && res.data.responseBody.shopAddressInfo){
+											that.information=res.data.responseBody.shopAddressInfo
+										}
 									},
 									fall: function(res) {
 									
@@ -432,9 +542,38 @@
 			},
 			chooseLike(i1) {
 			if(i1[0]==1){
-				var name=this.arr[1][i1[1]].split('~')
-				this.areaMin=name[0]
-				console.log(this.areaMin)
+				var that = this;
+				var name=this.arr[1][i1[1]].replace(/^(\d+)~{0,1}(\d+){0,1}㎡\+?$/ , function(v , v1 , v2){
+					if(v1){
+							that.areaMin= v1;	
+					}
+					if(v2){
+							that.areaMax= v2;	
+					}else{
+							that.areaMax= v1+100;
+							that.areaMin= v1;	
+					}
+				})
+				console.log(this.areaMin , this.areaMax)
+			}else	if(i1[0]==2){
+				var that = this;
+				var name=this.arr[2][i1[1]].replace(/^(\d+)\+{0,1}~{0,1}(\d+){0,1}元\/月$/ , function(v , v1 , v2){
+					if(v1){
+							that.rentMin= v1;	
+					}
+					if(v2){
+							that.rentMax= v2;	
+					}else{
+							that.rentMin= v1+100;
+							that.rentMax= v1;	
+					}
+				})
+					
+			}else	if(i1[0]==3){
+				var that = this;
+				that.city=that.adressLIst[i1[1]].id
+				that.cityValue=that.adressLIst[i1[1]].name+'市'
+				console.log(that.city,that.cityValue)
 			}
 			this.inquire()
 				}
@@ -443,5 +582,7 @@
 </script>
 
 <style lang="scss">
+	.newslist{padding:10px; line-height:60px; font-size:28px;}
+.loading{text-align:center; line-height:80px;}
 @import 'shopLocation.Scss'
 </style>

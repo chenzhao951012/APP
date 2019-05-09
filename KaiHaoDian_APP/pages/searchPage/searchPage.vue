@@ -1,5 +1,8 @@
 <template>
 		<view class="content">
+			<view class="placeholder">
+				
+			</view>
 					<view class="search">
 						<!-- 搜索框 -->
 						<view class="searchBox">
@@ -44,13 +47,90 @@
 			};
 		},
 		onLoad(options) {
-			console.log(options.search_state);
-			let _this = this;
-		
-			_this.search_state = options.search_state;
-			_this.loadOldKeyword();
+			     startcreatview(){  
+                var s = this;  
+                s.TitleTimer = setTimeout(function() {  
+                    s.createView();  
+                }, 100);//具体缓迟时间可以按需设置  
+            }, 
+// 			console.log(options.search_state);
+// 			let _this = this;
+// 		
+// 			_this.search_state = options.search_state;
+// 			_this.loadOldKeyword();
 		},
 		methods:{
+			createView() {  
+                clearTimeout(this.TitleTimer);  
+                var s = this;  
+                var pages = getCurrentPages();  
+                var page = pages[pages.length - 1];  
+                var currentWebview = page.$getAppWebview();  
+                var nTitle = currentWebview.getTitleNView();  
+                    nTitle.draw(  
+                        [{  
+                                "tag": "rect",  
+                                "id": "rect",  
+                                "color": "#999",  
+                                "position": {  
+                                    "left": "50px",  
+                                    "right": "50px",  
+                                    "top": "7px",  
+                                    "bottom": "7px"  
+                                },  
+                                "rectStyles": {  
+                                    "color": "#f6f6f6",  
+                                    "radius": "30px",  
+                                    "borderColor": "#999"  
+                                }  
+                            },  
+                            {  
+                                "tag": "font",  
+                                "id": "font",  
+                                "text": "\ue466",  
+                                "position": {  
+                                    "left": "55px",  
+                                    "width": "30px",  
+                                    "top": "7px",  
+                                    "bottom": "7px"  
+                                },  
+                                "textStyles": {  
+                                    "size": "13px",  
+                                    "fontSrc": "/static/uni.ttf",  
+                                    "color": "#999"  
+                                }  
+                            },  
+                            {  
+                                "tag": "input",  
+                                "id": "input",  
+                                "position": {  
+                                    "left": "80px",  
+                                    "right": "70px",  
+                                    "top": "7px",  
+                                    "bottom": "7px"  
+                                },  
+                                "inputStyles": {  
+                                    "placeholder": "关键字搜索",  
+                                    "borderRadius": "30px",  
+                                    "borderWidth": "0px",  
+                                    "fontSize": "13px",  
+                                    "type": "search",  
+                                    "fontSrc": "/static/uni.ttf",  
+                                    "color": "#999",  
+                                    onComplete: function(e) {  
+                                        console.log('点击搜索执行' + e.text)  
+                                    },  
+                                    onFocus: function(e) {  
+                                        console.log('获得焦点')  
+                                    },  
+                                    onBlur: function(e) {  
+                                        console.log('失去焦点')  
+                                    }  
+                                }  
+                            }  
+                        ]  
+                    );  
+            },  
 			//删除历史记录
 			oldDelete() {
 				uni.showModal({

@@ -35,6 +35,7 @@
 				<view class="">{{item.title}}</view>
 			</view>
 		</view>
+		<navigator url="../Login/Login">登录</navigator>
 		<!-- 推荐人脉 -->
 		<view class="contactsParent">
 			<view class="_contacts_title">

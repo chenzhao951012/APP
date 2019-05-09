@@ -220,8 +220,13 @@
   letter-spacing: 5rpx;
 }
 .Btns {
+  width: 176rpx;
+  text-align: center;
   background-color: #ffbd38;
   font-size: 24rpx;
   border-radius: 50rpx;
+  height: 60rpx;
+  color: #fff;
+  line-height: 60rpx;
 }
 

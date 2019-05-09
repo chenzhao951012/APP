@@ -12,21 +12,17 @@
 			<view class="list-call">
 				<!-- <input type="number" maxlength="11"  placeholder="请填写你的手机号"/> -->
 				<input class="biaoti" v-model="phoneno" type="number" maxlength="11" placeholder="请填写你的手机号" />
-				<button type="primary" class="Btns" @tap="getcode">{{yanzhengma}}</button>
+				<view  class="Btns" @click="getcode">{{yanzhengma}}</view>
 			</view>
 			<view class="list-call">
 			
-				<input class="biaoti" v-model="password" type="text" maxlength="32" placeholder="请填写4位数验证码" password="true" />
+				<input class="biaoti" v-model="password" type="text" maxlength="32" placeholder="请填写4位数验证码"  />
 			</view>
 			
 		</view>
-		
-		<view class="dlbutton" hover-class="dlbutton-hover" @tap="bindLogin()">
+
+		<view class="dlbutton" hover-class="dlbutton-hover" @click="bindLogin">
 			<text>登录</text>
-		</view>
-		
-		<view class="xieyi">
-			还没有账号,&nbsp;&nbsp;点击<navigator url="../register/register" open-type="navigate">注册>></navigator>
 		</view>
 		<!-- 第三方登录 -->
 		<view class=" partyLogin">
@@ -53,34 +49,42 @@ import shoppublic from '@/common/shoppublic';
 			tha = this;
 		},
 		computed:{
-			yanzhengma(){
-				if(this.second==0){
-					return '获取验证码';
-				}else{
-					if(this.second<10){
-						return '重新获取0'+this.second;
-					}else{
-						return '重新获取'+this.second;
-					}
-				}
-			}
+		
 		},
 		data() {
 			return {
 				second:0,
 				phoneno:'',
-				password:''
+				password:'',
+				show: true,
+				count: '',
+				timer: null,
+				yanzhengma:'获取验证码',
+				verificationNumber:''
 			};
 		},
-		onUnload(){
-			clearInterval(js)
-			this.second = 0;
-		},
 		methods: {
+			//获取验证码
+			getCodes(){
+				var that=this
+			 const TIME_COUNT = 60;
+			 if (!that.timer) {
+			   that.count = TIME_COUNT;
+			   that.timer = setInterval(() => {
+			   if (that.count > 0 && that.count <= TIME_COUNT) {
+				 that.yanzhengma=(that.count--) + 's'
+				} else {
+				that.yanzhengma='重新获取'
+				 clearInterval(that.timer);
+				 that.timer = null;
+				}
+			   }, 1000)
+			  }
+		   } ,
 			getcode(){
-// 				if(this.second>0){
-// 					return;
-// 				}
+				if(this.second>0){
+					return;
+				}
 				var that=this
 				this.second = 60;
 				if (!(/^1(3|4|5|7|8|9)\d{9}$/.test(that.phoneno)) || that.phoneno =="") {
@@ -90,24 +94,27 @@ import shoppublic from '@/common/shoppublic';
 					});
 				}else{
 					uni.request({
-					    url: shoppublic.getUrl() + '/common/getVerificationCode',
+					    url: shoppublic.getUrl() + 'smslogin/sendcode',
 					    data: {
-							 phone: that.phoneno
+							 phone:that.phoneno
 							},
-						dataType:'json',
 					    success: (res) => {
-							console.log(res)
-// 							if(res.data.code!=200){
-// 								uni.showToast({title:res.data.msg,icon:'none'});
-// 							}else{
-// 								uni.showToast({title:res.data.msg});
-// 								js = setInterval(function(){
-// 									tha.second--;
-// 									if(tha.second==0){
-// 										clearInterval(js)
-// 									}
-// 								},1000)
-// 							}
+							console.log()
+							if(res.data.status==0){
+								
+								uni.showToast({
+									title:'验证码发送成功',
+									icon:'none',
+									duration:2000
+								})
+								that.getCodes()
+							}else{
+								uni.showToast({
+									title:'验证码获取失败',
+									icon:'none',
+									duration:2000
+								})
+							}
 					    }
 					});
 				}
@@ -116,20 +123,21 @@ import shoppublic from '@/common/shoppublic';
 			//微信登录
 			WeChatLogin(){
 				uni.login({
+			  provider: 'weixin',
+			  success: function (loginRes) {
+				console.log(loginRes.code);
+				// 获取用户信息
+				uni.getUserInfo({
 				  provider: 'weixin',
-				  success: function (loginRes) {
-					console.log(loginRes.authResult);
+				  success: function (infoRes) {
+					console.log('用户昵称为：' + JSON.stringify(infoRes.userInfo));
 				  }
 				});
+			  }
+			});
 			},
-			...mapMutations(['login']),
+			// ...mapMutations(['login']),
 		    bindLogin() {
-				uni.login({
-				  provider: 'weixin',
-				  success: function (loginRes) {
-					console.log(loginRes.authResult);
-				  }
-				});
 				if (this.phoneno.length != 11) {
 				     uni.showToast({
 				        icon: 'none',
@@ -137,31 +145,39 @@ import shoppublic from '@/common/shoppublic';
 				    });
 				    return;
 				}
-		        if (this.password.length < 6) {
-		            uni.showToast({
-		                icon: 'none',
-		                title: '密码不正确'
-		            });
-		            return;
+		        else{
+		          	uni.request({
+		              url:shoppublic.getUrl() + 'smslogin/login',
+		              data: {
+		          		phone:this.phoneno,
+		          		code:this.password
+		          	},
+		          	method: 'POST',
+		          	dataType:'json',
+		              success: (res) => {
+						  if(res.data.msgCode==0){
+							   uni.showLoading({
+							      title: '登录成功,即将去往首页'
+							  });
+							 setTimeout(()=>{
+								 uni.switchTab({
+								 	url: '../index/index'
+								 });
+								 uni.hideLoading();
+							 })
+						  }else{
+							   uni.showToast({
+							     icon: 'none',
+							     title: '登录失败'
+							 }); 
+						  }
+		          		 
+		          		
+		              }
+		          });
+		          
 		        }
-				uni.request({
-				    url: 'http://***/login.html',
-				    data: {
-						phoneno:this.phoneno,
-						password:this.password
-					},
-					method: 'POST',
-					dataType:'json',
-				    success: (res) => {
-						if(res.data.code!=200){
-							uni.showToast({title:res.data.msg,icon:'none'});
-						}else{
-							uni.setStorageSync('user_data', JSON.stringify(res.data.data));
-							this.login();
-							uni.navigateBack();
-						}
-				    }
-				});
+			
 				
 		    }
 		}

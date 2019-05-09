@@ -184,4 +184,8 @@
 .seekContent text {
     padding-left: 15rpx;
 }
+.placeholder {
+  width: 750rpx;
+  height: 88rpx;
+}
 

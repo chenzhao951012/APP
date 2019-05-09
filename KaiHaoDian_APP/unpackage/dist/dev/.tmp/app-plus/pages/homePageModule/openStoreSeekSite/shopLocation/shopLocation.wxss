@@ -73,9 +73,9 @@
 		-webkit-transform: translateY(0);
 		    -ms-transform: translateY(0);
 		        transform: translateY(0);
-		-webkit-transition: all .5s;
-		-o-transition: all .5s;
-		transition: all .5s;
+		-webkit-transition: all .2s;
+		-o-transition: all .2s;
+		transition: all .2s;
 		font-size: 28rpx;
 		color: #333333;
 }
@@ -111,9 +111,9 @@
 		-webkit-transform: translateX(0);
 		    -ms-transform: translateX(0);
 		        transform: translateX(0);
-		-webkit-transition: all .5s;
-		-o-transition: all .5s;
-		transition: all .5s;
+		-webkit-transition: all .2s;
+		-o-transition: all .2s;
+		transition: all .2s;
 		font-size: 28rpx;
 		color: #333333;
 		display: -webkit-box;
@@ -221,31 +221,43 @@
 .content {
   width: 750rpx;
 }
+.newslist {
+  padding: 10px;
+  line-height: 60px;
+  font-size: 28px;
+}
+.loading {
+  text-align: center;
+  line-height: 80px;
+}
 .header {
   padding: 20rpx 0;
   background-color: #fff;
 }
 .header .storetype {
     padding: 0rpx 30rpx;
-}
-.header .Box {
-    margin-bottom: 180rpx;
+    padding-bottom: 300rpx;
 }
 .header .Box .buttons {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 186rpx;
+    width: 65%;
 }
 .header .Box .buttons ._button {
-        width: 50%;
-        background-color: #ffbd38;
-        font-size: 28rpx;
-        font-weight: 100;
-        border-radius: 0;
-        border-right: 2rpx solid #d2d1cf;
-        height: 90rpx;
-        line-height: 90rpx;
+      width: 50%;
+      background-color: #ffbd38;
+      font-size: 28rpx;
+      font-weight: 100;
+      border-radius: 0;
+      border-right: 2rpx solid #d2d1cf;
+      height: 90rpx;
+      line-height: 90rpx;
 }
 .header .store .storeBody {
     display: -webkit-box;
@@ -266,6 +278,18 @@
       text-align: center;
       background-color: #eeeeee;
       color: #333333;
+      margin-bottom: 8rpx;
+      border-radius: 6rpx;
+      font-size: 24rpx;
+      line-height: 60rpx;
+      font-weight: 100;
+}
+.header .store .storeBody .details2 {
+      width: 32%;
+      height: 60rpx;
+      text-align: center;
+      background-color: #ffbc34;
+      color: #fff;
       margin-bottom: 8rpx;
       border-radius: 6rpx;
       font-size: 24rpx;

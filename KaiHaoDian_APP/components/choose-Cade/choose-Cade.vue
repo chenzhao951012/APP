@@ -46,8 +46,9 @@
 			}
 		},
 		methods: {
+	
 			alertnum(i) {
-				console.log(i)
+				document.body.addEventListener('touchmove',bodyScroll,false);
 				if(i<4){
 					console.log(i)
 					this.show2 =false;
@@ -74,21 +75,30 @@
 				this.i2 = i;
 				// this.newlist[this.i1] = this.listchild[i];
 				this.$emit('chooseLike', [this.i1, this.i2])
+				this.show =false;
 			},
 			hide() {
 				this.show = !this.show;
 				this.show2 = false;
+				document.body.removeEventListener('touchmove',bodyScroll,false);
 			},
 			hide2() {
 				this.show = false;
 				this.show2 = !this.show2;
+				document.body.removeEventListener('touchmove',bodyScroll,false);
 			},
+		bodyScroll(event){
+				event.preventDefault();
+			}
 			
-		}
+			
+			}
+	
 	}
 </script>
 
 <style scoped>
+
 	.hideA {
 		height: calc(100%);
 	}
@@ -147,7 +157,7 @@
 		width: 100%;
 		z-index: 88;
 		transform: translateY(0);
-		transition: all .5s;
+		transition: all .2s;
 		font-size: 28upx;
 		color: #333333;
 	}
@@ -172,7 +182,7 @@
 		width: 100%;
 		z-index: 88;
 		transform: translateX(0);
-		transition: all .5s;
+		transition: all .2s;
 		font-size: 28upx;
 		color: #333333;
 		display: flex;
