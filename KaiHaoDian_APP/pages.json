@@ -1076,6 +1076,12 @@
 				"navigationBarTitleText":"开店选址"
 			}
         }
+        ,{
+            "path" : "pages/mineIndex/mineExtend/mineExtend",
+            "style" : {
+				"navigationBarTitleText":"我的推广"
+			}
+        }
     ],
     /*------------------------------------------添加认证相关页面  End------------------------------------------*/
     "globalStyle" : {

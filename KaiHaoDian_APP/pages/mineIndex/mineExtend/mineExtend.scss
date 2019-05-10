@@ -1,0 +1,143 @@
+@mixin box-sizing{
+	width:750upx;
+	box-sizing:border-box;
+	padding:0 30upx;
+}
+
+@mixin display-flex{
+	display:flex;
+	justify-content: space-between;
+}
+
+@mixin textHidden {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.extendTop{
+	height: 300upx;
+	// background-color: #3285ff;
+	padding: 20upx;
+	.extendTop1{
+		height: 200upx;
+		margin: 0 auto;
+		margin-top: 20upx;
+		display: flex;
+		justify-content: space-between;
+		padding: 30upx 60upx;
+		background-color: #343434;
+		border-radius: 30upx;
+		
+		.cImg{
+		  width: 100upx;
+		  height: 100upx;
+		  border-radius: 50%;
+		  // margin-left: 20upx;
+		}
+		
+		.extendTop_l_name{
+			margin-bottom: 20upx;
+			font-size: 24upx;
+			text-align: center;
+			color: #fff;
+		}
+		
+		.A_information{
+			font-size: 24upx;
+			color: #fff;
+			text-align: center;
+		}
+	}
+	.extendTop_r{
+		
+		.Qr_code{
+			width: 130upx;
+			height:130upx
+		}
+		
+		.pressSave{
+			text-align:center;
+			margin-top:14upx;
+			font-size: 24upx;
+			color: #fff;
+		}
+	}
+}
+
+
+
+
+.title{
+  height:100upx;
+  display:flex;
+  justify-content:space-between;
+  padding:0 30upx;
+  
+	.titleone{
+	  width:150upx;
+	  height:100upx;
+	  line-height:100upx;
+	  text-align:center;
+	  font-size: 28upx;
+	}
+}
+
+.extendBottom{
+	
+	.extendBottom1{
+		display: flex;
+		justify-content: space-between;
+		align-items:center;
+		margin: 0 30upx;
+		padding: 40upx 0;
+		border-bottom: 1px solid #ddd;
+		
+		.extendBottom1_l{
+			
+			display:flex;
+			align-items: center;
+			
+			.cImg{
+				width: 100upx;
+				height: 100upx;
+				border-radius: 50%;
+				margin-left: 26upx;
+			}
+			
+			.namePosition{
+				font-size: 28upx;
+			}
+			
+			.company{
+				margin-top:20upx;
+				font-size: 28upx;
+			}
+		}
+		
+		.admissionFee{
+			width:140upx;
+			height:50upx;
+			line-height:50upx;
+			text-align:center;
+			font-size:28upx;
+		}
+	}
+	
+	.zanWuPingLunBox {
+	  text-align:center;
+	  padding-bottom:53upx;
+	  
+	  .zanWuPingLunImg {
+	    width:165upx;
+	    height:157upx;
+	    margin-top:118upx;
+	  }
+	  
+	  .zanWuPingLunText {
+	    font-size:28upx;
+	    color:#ccc;
+	    margin-top:40upx;
+	  }
+	}
+}
+
