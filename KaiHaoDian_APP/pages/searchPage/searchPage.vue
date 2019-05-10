@@ -25,11 +25,10 @@
 						<text class="iconfont" @click="oldDelete">&#xe7ed;</text>
 					</view>
 					<view class="history_content"  v-if="oldKeywordList.length !== 0">
-						<view class="history_cell textHidden" v-for="(item,index) in oldKeywordList" :key="index" @click="clickHistory(item)" hover-class="history_cell_active">{{item}}</view>
+						<view class="history_cell textHidden" v-for="(item,index) in oldKeywordList" :key="index" hover-class="history_cell_active" @click="saveKeyword(item,optionsType)">{{item}}</view>
 					</view>
 					<view class="history_null" v-if="oldKeywordList.length === 0">
-						<img src="../../static/ComentImg.jpg" alt="">
-						
+						<img src="../../static/ComentImg.jpg" alt=""/>
 					</view>
 				</view>
 		</view>
@@ -37,6 +36,7 @@
 </template>
 
 <script>
+	import shoppublic from '@/common/shoppublic'; //服务器地址
 	export default {
 		data() {
 			return {
@@ -44,55 +44,75 @@
 				Content:"",
 				search_state:'',//需要携带至搜索详情的参数
 				searchInfo:'',
+				optionsType:1
 			};
 		},
 		onLoad(options) {
-		 
  			console.log(options.search_state);
 			let _this = this;
  			_this.search_state = options.search_state;
-			_this.loadOldKeyword();
+			// _this.loadOldKeyword();
+			
+		},
+		onShow() {
+			this.Gethistory()
 		},
 		methods:{
-		 
+			//获取历史记录
+			Gethistory(){
+					//历史记录
+					let that = this;
+					uni.request({
+					  url: shoppublic.getUrl() + '/search/findHistoricalSearch',
+					  data: {
+						token: 17099
+					  },
+					  header: {
+						'content-type': 'application/json' // 默认值
+					  },
+					  success: function(res) {
+						  
+						that.oldKeywordList=res.data.responseBody
+					  }
+					}) 
+			},
 			//删除历史记录
 			oldDelete() {
 				uni.showModal({
 					content: '确定清除历史搜索记录？',
 					success: (res) => {
 						if (res.confirm) {
-							console.log('用户点击确定');
+							let that = this;
+							uni.request({
+							  url: shoppublic.getUrl() + '/search/deleteHistoricalSearch',
+							  data: {
+								token: 17099
+							  },
+							  header: {
+								'content-type': 'application/json' // 默认值
+							  },
+							  success: function(res) {
+								  that.oldKeywordList=[]
+							  }
+							})
 							this.oldKeywordList = [];
-							uni.removeStorage({
-								key: 'OldKeys'
-							});
 						} else if (res.cancel) {
-							console.log('用户点击取消');
+							
 						}
-					}
-				});
-			},
-			//读取本地数据
-			loadOldKeyword() {
-				uni.getStorage({
-					key: 'OldKeys',
-					success: (res) => {
-						var OldKeys = JSON.parse(res.data);
-						this.oldKeywordList = OldKeys;
 					}
 				});
 			},
 			// 搜索
 			SeachConent(){
 				var that=this
-				that.saveKeyword(that.Content)
+				that.saveKeyword(that.Content,that.optionsType)
 				setTimeout(()=>{
 					that.Content=""
 				},200)
 			},
 			//保存到历史记录
 			
-			saveKeyword(keyword) {
+			saveKeyword(keyword,optionsType) {
 				if(keyword==""){
 					uni.showToast({
 						title: '请输入相应字段',
@@ -100,35 +120,13 @@
 						duration: 2000
 					});
 				}else{
-					uni.getStorage({
-						key: 'OldKeys',
-						success: (res) => {
-							console.log(keyword);
-							var OldKeys = JSON.parse(res.data);
-							var findIndex = OldKeys.indexOf(keyword);
-							if (findIndex == -1) {
-								OldKeys.unshift(keyword);
-							} else {
-								OldKeys.splice(findIndex, 1);
-								OldKeys.unshift(keyword);
-							}
-							//最多10个纪录
-							OldKeys.length > 10 && OldKeys.pop();
-							uni.setStorage({
-								key: 'OldKeys',
-								data: JSON.stringify(OldKeys)
-							});
-							this.oldKeywordList = OldKeys; //更新历史搜索
-						},
-						fail: (e) => {
-							var OldKeys = [keyword];
-							uni.setStorage({
-								key: 'OldKeys',
-								data: JSON.stringify(OldKeys)
-							});
-							this.oldKeywordList = OldKeys; //更新历史搜索
-						}
-					});
+					
+					setTimeout(()=>{
+						uni.navigateTo({
+							url:'../searchContent/searchContent?value='+keyword + '&type='+optionsType
+						})
+					},200)
+		
 				}
 				
 			},
@@ -143,7 +141,7 @@
 			// 跳转搜索详情
 			toSearchDetails(){
 				let _this = this;
-				console.log('data-search:',_this.search_state);
+				
 				uni.navigateTo({
 					url:'../searchContent/searchContent?search_state=' + _this.search_state
 				})

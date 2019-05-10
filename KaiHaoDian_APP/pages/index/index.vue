@@ -72,13 +72,19 @@
 		<!-- 开店知识 -->
 		<view class="openStory">
 			<view class="openStory_title">开店知识</view>
-			<view class="openStory_cell" v-for="(item,index) in magessageList" :key="index" @click="toListInfoPage(item.id)" v-if="magessageList">
+			<view class="openStory_cell" v-for="(item,index) in magessageList" :key="index" @click="toListInfoPage(item.id)" v-if="item.user">
 			<view class="openStory_cellBox">
 				<view class="openStory_cell-title">
 					{{item.questions}}
 				</view>
 				<!-- 项目类型 -->
-				<view :class="typeColor" v-if="item.typevalue[0]=='服务'">
+				<view class="typestitle" v-if="item.typevalue[0]=='服务'">
+					{{item.typevalue[0]}}
+				</view>
+				<view class="typestitle" v-if="item.typevalue[0]=='医疗'">
+					{{item.typevalue[0]}}
+				</view>
+				<view class="typestitle" v-if="item.typevalue[0]=='教育'">
 					{{item.typevalue[0]}}
 				</view>
 				<view class="typestitle2" v-if="item.typevalue[0]=='美容'">
@@ -91,6 +97,9 @@
 					{{item.typevalue[0]}}
 				</view>
 				<view class="typestitle5" v-if="item.typevalue[0]=='餐饮'">
+					{{item.typevalue[0]}}
+				</view>
+				<view class="typestitle5" v-if="item.typevalue[0]=='咖啡'">
 					{{item.typevalue[0]}}
 				</view>
 				<view class="typestitle6" v-if="item.typevalue[0]=='百货'">
@@ -106,6 +115,10 @@
 					<view class="typestitle6" v-if="item.typevalue[0]=='批发'">
 					{{item.typevalue[0]}}
 				</view>
+					<view class="typestitle5" v-if="item.typevalue[0]=='酒店'">
+					{{item.typevalue[0]}}
+				</view>
+				
 				<!-- //项目图片 -->
 				<view class="openStoryImg">
 					<view class="">
@@ -123,7 +136,7 @@
 						</view>
 						<view class="userInRight">
 							<view class="userInTop">
-								<text class="userName">{{item.user.name !=undefined ? item.user.name :"匿名用户"}} · {{item.user.position}}</text><text class="usertime">{{item.addtime}}</text>
+								<text class="userName">{{item.user.name !=undefined ? item.user.name :"匿名用户"}} <text v-if="item.user.position">·</text> {{item.user.position}}</text><text class="usertime">{{item.addtime}}</text>
 								
 							</view>
 							<view class="userInfoCompy" v-if="item.user.company">

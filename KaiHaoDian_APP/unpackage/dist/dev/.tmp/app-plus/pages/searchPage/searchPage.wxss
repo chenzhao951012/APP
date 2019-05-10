@@ -53,7 +53,7 @@
           box-sizing: border-box;
 }
 .history_title {
-  line-height: 60rpx;
+  line-height: 80rpx;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -136,6 +136,7 @@
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-bottom: 2rpx solid #eeeeee;
 }
 .search .searchBox {
     display: -webkit-box;
@@ -177,10 +178,11 @@
     line-height: 60rpx;
 }
 .seekContent {
-  padding: 20rpx 30rpx;
+  padding: 30rpx 30rpx;
   font-size: 28rpx;
   color: #333333;
   font-weight: 600;
+  border-bottom: 2rpx solid #eeeeee;
 }
 .seekContent text {
     padding-left: 15rpx;

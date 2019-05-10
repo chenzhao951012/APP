@@ -152,8 +152,6 @@ import shoppublic from '@/common/shoppublic';
 		          		phone:this.phoneno,
 		          		code:this.password
 		          	},
-		          	method: 'POST',
-		          	dataType:'json',
 		              success: (res) => {
 						  if(res.data.msgCode==0){
 							   uni.showLoading({
@@ -164,7 +162,7 @@ import shoppublic from '@/common/shoppublic';
 								 	url: '../index/index'
 								 });
 								 uni.hideLoading();
-							 })
+							 },2000)
 						  }else{
 							   uni.showToast({
 							     icon: 'none',

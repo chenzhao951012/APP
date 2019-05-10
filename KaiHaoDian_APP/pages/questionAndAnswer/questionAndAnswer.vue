@@ -51,6 +51,9 @@
 				<view class="typestitle" v-if="item.typevalue[0]=='服务'">
 					{{item.typevalue[0]}}
 				</view>
+				<view class="typestitle" v-if="item.typevalue[0]=='医疗'">
+					{{item.typevalue[0]}}
+				</view>
 				<view class="typestitle" v-if="item.typevalue[0]=='教育'">
 					{{item.typevalue[0]}}
 				</view>
@@ -64,6 +67,9 @@
 					{{item.typevalue[0]}}
 				</view>
 				<view class="typestitle5" v-if="item.typevalue[0]=='餐饮'">
+					{{item.typevalue[0]}}
+				</view>
+				<view class="typestitle5" v-if="item.typevalue[0]=='咖啡'">
 					{{item.typevalue[0]}}
 				</view>
 				<view class="typestitle6" v-if="item.typevalue[0]=='百货'">
