@@ -157,6 +157,7 @@
       margin-top: 5rpx;
       color: #969799;
       width: 80%;
+      padding-top: 10rpx;
 }
 .search .searchBox .searciconfont {
       font-size: 28rpx;
@@ -186,6 +187,6 @@
 }
 .placeholder {
   width: 750rpx;
-  height: 88rpx;
+  height: 40rpx;
 }
 

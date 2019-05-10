@@ -85,16 +85,11 @@
         {
             "path" : "pages/searchPage/searchPage",
             "style" : {
-                "app-plus": {  
-                    "scrollIndicator": "none",  
-                    "titleNView": {  
-                        "titleText":"",//不要设置标题  
-                        "buttons": [{  
-                            "text": "取消",  
-                            "fontSize": "14"  
-                        }]  
-                    }  
-                }  
+				"app-plus": {
+                    "titleNView": false //禁用原生导航栏
+					
+                },
+				"navigationStyle":"custom" 
             }
         },
         {

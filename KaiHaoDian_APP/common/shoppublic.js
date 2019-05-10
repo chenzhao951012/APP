@@ -1,10 +1,10 @@
 //var HOST = "https://www.soeasyit.com/shop_api";
 function getUrl() {
   //  // 线上
-  // var HOST = "https://www.kaidianapp.com/shop_api/";
+  var HOST = "https://www.kaidianapp.com/shop_api/";
   // // 测试服务器
    // var HOST = "https://www.kaidianapp.net/shop_api/";
-  var HOST = "http://192.168.0.117/shop_api/";
+  // var HOST = "http://192.168.0.117/shop_api/";
   // var HOST = 'http://192.168.0.111:8080/Kaihaodian_api_war/';
   //  //本地2
   //  var HOST = "http://localhost:8080/";  
