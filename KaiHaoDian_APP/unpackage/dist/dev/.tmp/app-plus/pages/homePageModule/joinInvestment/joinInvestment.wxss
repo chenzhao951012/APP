@@ -39,7 +39,7 @@
 }
 .my-tabs {
   height: 110rpx;
-  font-size: 28rpx;
+  font-size: 24rpx;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -63,13 +63,13 @@
     min-width: 100rpx;
     text-align: center;
     color: #3d3d3d;
-    font-size: 32rpx;
+    font-size: 28rpx;
     font-weight: bold;
     letter-spacing: 5rpx;
 }
 .my-tabs .tab-item.active {
     font-weight: bold;
-    font-size: 32rpx;
+    font-size: 28rpx;
     position: relative;
     color: #3d3d3d;
     letter-spacing: 5rpx;

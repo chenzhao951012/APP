@@ -25,6 +25,15 @@
 	padding: {
 		// bottom: 20upx;
 	}
+	.swiper-box{
+			height: 400upx;
+			.swiper-item{
+				img{
+					width: 750upx;
+					height: 400upx;
+				}
+			}
+		}
 	._search {
 		width: 620upx;
 		height: 70upx;
@@ -55,7 +64,7 @@
 			width: 50upx;
 			text-align: right;
 			line-height: 50upx;
-			font-size: 30upx;
+			font-size: 24upx;
 			color: #666;
 		}
 	}
@@ -113,7 +122,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		font-size: 32upx;
+		font-size: 28upx;
 		font-weight: 600;
 		color: #181818;
 		line-height: 50upx;
@@ -155,7 +164,7 @@
 				text-indent: 22upx;
 				line-height: 80upx;
 				color: #fff;
-				font-size: 32upx;
+				font-size: 28upx;
 				font-weight: 600;
 				letter-spacing:5upx;
 				padding: {
@@ -193,7 +202,7 @@
 			._name{
 				width: 450upx;
 				line-height: 50upx;
-				font-size: 30upx;
+				font-size: 24upx;
 				color: #333;
 				@include overflow_Es;
 			}
@@ -215,7 +224,7 @@
 		}
 		._lineCss{
 			padding: 10upx 20upx;
-			font-size: 28upx;
+			font-size: 24upx;
 			color: #191919;
 			border: 1px solid #e5e5e5;
 			margin-right: 30upx;
@@ -230,7 +239,7 @@
 				line-height: 50upx;
 			}
 			._priceTop{
-				font-size: 30upx;
+				font-size: 24upx;
 				color: #333;
 			}
 			._price{
@@ -265,13 +274,13 @@
 }
 .tese{
 	color: #a7a7a7;
-	font-size: 28upx;
+	font-size: 24upx;
 	letter-spacing:5upx;
 }
 .times{
 	padding-left: 10upx;
-	font-size: 28upx;
-	color: #000000;
+	font-size: 24upx;
+	color: #333333;
 	letter-spacing:5upx;
 	font-weight: 500;
 }

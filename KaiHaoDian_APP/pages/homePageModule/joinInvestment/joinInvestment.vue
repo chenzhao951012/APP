@@ -4,7 +4,7 @@
 		<view class="position_button" @click="toPublishJoin">招商</view>
 		<!-- 轮播图 -->
 		<view class="banner">
-			<swiper class="_swiper swiperBox" id="swiper" :autoplay="true" :duration="1000" :circular="true" @change="ChangeSwiper">
+		<!-- 	<swiper class="_swiper swiperBox" id="swiper" :autoplay="true" :duration="1000" :circular="true" @change="ChangeSwiper">
 				<swiper-item class="_swiper _swipers" v-for="(item,index) in bannerList" :key="index" >
 					<image class="_swiper" :src="imageUrl + item.imageurl"></image>
 				</swiper-item>
@@ -13,7 +13,16 @@
 				<view :class="{'balltas':true,'active':activeIndex==indexe}" v-for="(items,indexe) in bannerList" :key="indexe">
 					
 			</view>
-			</view>
+			</view> -->
+				<Swiperdot :info="bannerList" :current="current" field="content" :mode="mode">
+					<swiper class="swiper-box" @change="change" :autoplay="true" :duration="1000" :circular="true">
+			        <swiper-item v-for="(item,idx) in bannerList" :key='idx'>
+			            <view class="swiper-item">
+			                <img :src="imageUrl + item.imageurl" alt="">
+			            </view>
+			        </swiper-item>
+			    </swiper>
+			</Swiperdot>
 		</view>
 		<stzhangTab @changed="changed"></stzhangTab>
 		<!-- //轮播图按钮 --> 
@@ -62,13 +71,16 @@
 	import shoppublic from '@/common/shoppublic'; //服务器地址
 	import getLocation from '@/common/getLocation.js'; //获取地理位置
 	import stzhangTab from '@/components/stzhang-tab/stzhang-tab.vue'
-	
+	import Swiperdot from '@/components/swipers/uni-swiper-dot.vue';
 export default {
 	components:{
+		Swiperdot,
 			stzhangTab:stzhangTab
 		},
 	data() {
 		return {
+			 current: 0,
+			mode: 'long',
 			activeIndex:0,
 			swipers:[],
 			SwiperColor:[
@@ -122,6 +134,9 @@ export default {
 	},
 	
 	methods:{
+		 change(e) {
+		    this.current = e.detail.current;
+		},
 		getDeals(type){
 			var _this=this
 				uni.request({

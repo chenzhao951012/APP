@@ -37,111 +37,720 @@
 .content {
   width: 750rpx;
 }
-.top_tab {
-  width: 750rpx;
+.tab {
+  border-radius: 0 0 0rpx 0rpx;
+  -webkit-box-shadow: 0 2px 0 #f0f0f1, 0 0px 0 #f0f0f1;
+          box-shadow: 0 2px 0 #f0f0f1, 0 0px 0 #f0f0f1;
+}
+.result {
+  padding: 0 0rpx;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0 30rpx;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 94rpx;
 }
-.lineCss {
-  width: 2rpx;
-  height: 44rpx;
-  background: #999;
+.result .Nomassage {
+    width: 750rpx;
+    height: 100%;
 }
-.tab_child {
-  width: 140rpx;
-  line-height: 88rpx;
-  text-align: center;
-  color: 666;
+.result .Nomassage ._img {
+      width: 750rpx;
 }
-.top_tab {
-  background: #f5f5f5;
+.result .userList {
+    border-bottom: 2rpx solid #eeeeee;
+    height: 140rpx;
+    padding: 0 30rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
-.top_tab .tab_child_hover {
-    background: #eee9e9;
-    border-bottom: 6rpx solid #3285ff;
+.result .userList .userRight {
+      padding-left: 20rpx;
+      font-size: 28rpx;
+      color: #333333;
+      font-weight: 600;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
 }
-.userList {
-  width: 750rpx;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0 30rpx 30rpx;
+.result .userList .userRight .company {
+        width: 60%;
+        line-height: 2;
+        white-space: nowrap;
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+           text-overflow: ellipsis;
 }
-.userList .user_cell {
+.result .userList .userRight .iconfont {
+        padding-left: 20rpx;
+        color: #259bfe;
+}
+.result .userList .userRight .attention {
+        height: 60rpx;
+        line-height: 60rpx;
+        width: 130rpx;
+        text-align: center;
+        background-color: #ffbd38;
+        color: #fff;
+        border-radius: 50rpx;
+        font-size: 28rpx;
+}
+.result .userList .userRight .attention .iconfont {
+          color: #fff;
+          padding-left: 0;
+          padding-right: 6rpx;
+}
+.result .userList .userRight .attentio2 {
+        height: 58rpx;
+        line-height: 58rpx;
+        width: 128rpx;
+        text-align: center;
+        border: 2rpx solid #e7e7e7;
+        color: #333333;
+        border-radius: 50rpx;
+        font-size: 28rpx;
+}
+.result .userList .userRight .attentio2 .iconfont {
+          color: #fff;
+          padding-left: 0;
+          padding-right: 6rpx;
+}
+.result .user {
+    height: 140rpx;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: 30rpx;
-    background: #f5f5f5;
 }
-.userList .user_cell .userCell_L,
-    .userList .user_cell .userCell_L image {
-      width: 100rpx;
-      height: 100rpx;
+.result .user .userImg {
+      width: 80rpx;
+      height: 80rpx;
+}
+.result .user .userImg ._img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+}
+/* 开店知识 */
+.openStory {
+  background: #fff;
+}
+.osCell_title {
+  width: 690rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.osCell_title > .osCell_title_left,
+  .osCell_title .osCell_title_left image {
+    width: 80rpx;
+    height: 80rpx;
+    font-size: 0;
+    background: #3285ff;
+    border-radius: 50%;
+}
+.osCell_title > .osCell_title_right {
+    width: 590rpx;
+}
+.osCell_title > .osCell_title_right > ._name {
       font-size: 0;
-      border-radius: 50%;
-      background: #eee9e9;
 }
-.userList .user_cell .userCell_C {
-      margin-left: 20rpx;
-      width: 470rpx;
-      line-height: 50rpx;
+.osCell_title > .osCell_title_right > ._name > text {
+        display: inline-block;
+        font-size: 34rpx;
+        color: #333;
+        font-weight: bold;
 }
-.userList .user_cell .userCell_C .userCell_C_title {
-        max-width: 470rpx;
+.osCell_title > .osCell_title_right > ._name > text:first-child {
+        font-weight: normal;
+}
+.osCell_title > .osCell_title_right > ._name > text:last-child {
+        font-size: 28rpx;
+        color: #999;
+        font-weight: normal;
+}
+.osCell_title > .osCell_title_right > ._company {
+      font-size: 0;
+}
+.osCell_title > .osCell_title_right > ._company > text {
+        font-size: 26rpx;
         color: #666;
+        display: inline-block;
+        vertical-align: middle;
+}
+.osCell_title > .osCell_title_right > ._company > ._L {
+        max-width: 550rpx;
+        margin-right: 10rpx;
+}
+.osCell_title > .osCell_title_right > ._company > .iconfont {
+        color: #fbbf13;
         font-size: 28rpx;
 }
-.userList .user_cell .userCell_C .userCell_C_company {
-        font-size: 24rpx;
+.osCell_content {
+  font-size: 30rpx;
+  color: #333;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  letter-spacing: 2rpx;
+  padding-bottom: 10rpx;
+  line-height: 44rpx;
+}
+.osCell_text {
+  font-size: 28rpx;
+  color: #2f2f2f;
+  width: 690rpx;
+  max-height: 348rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+  overflow: hidden;
+}
+.osCell_ImgAll,
+.osCell_ImgAll image {
+  width: 690rpx;
+  height: 280rpx;
+  font-size: 0;
+  background: #eee9e9;
+  border-radius: 4rpx;
+}
+.osCell_ImgOrText {
+  width: 690rpx;
+  height: 130rpx;
+  background: #f3f3f3;
+  font-size: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4rpx;
+}
+.osCell_ImgOrText > ._logo {
+    width: 220rpx;
+    height: 130rpx;
+    border-radius: 4rpx;
+    background: lightblue;
+}
+.osCell_ImgOrText > ._text {
+    width: 460rpx;
+    height: 130rpx;
+    color: #666;
+    line-height: 42rpx;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 26rpx;
+    letter-spacing: 2rpx;
+}
+.osCell_bottom {
+  width: 690rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0;
+}
+.osCell_bottom > view {
+    font-size: 24rpx;
+    color: #999;
+    line-height: 80rpx;
+}
+.osCell_bottom > .osCell_bottom_left {
+    width: 200rpx;
+}
+.osCell_bottom > .osCell_bottom_center {
+    width: 300rpx;
+}
+.osCell_bottom > .osCell_bottom_right {
+    width: 190rpx;
+    text-align: right;
+}
+.osCell_bottom > .osCell_bottom_right > text {
+      display: inline-block;
+      vertical-align: middle;
+}
+.totop:after {
+  width: 0;
+  height: 0;
+  content: '';
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid black;
+  position: relative;
+  top: -26rpx;
+  left: 16rpx;
+}
+.tobott:after {
+  width: 0px;
+  height: 0px;
+  content: '';
+  border-top: 10rpx solid black;
+  border-left: 10rpx solid transparent;
+  border-bottom: 0rpx solid transparent;
+  border-right: 10rpx solid transparent;
+  position: relative;
+  top: 24rpx;
+  left: 16rpx;
+}
+.topMask {
+  width: 750rpx;
+  height: calc(100% - 88rpx);
+  position: fixed;
+  top: 110rpx;
+  left: 0;
+  z-index: 98;
+}
+.topMask ._top {
+    margin-top: 88rpx;
+    width: 750rpx;
+    height: 500rpx;
+    background: #fff;
+}
+.topMask ._top ._swiper, .topMask ._top ._swiper_item, .topMask ._top ._scroll {
+      height: 500rpx;
+}
+.topMask ._top ._swiper_item {
+      overflow: hidden;
+}
+.topMask ._top ._swiper_item ._scroll {
+        padding: 0 30rpx;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+}
+.topMask ._top ._swiper_item ._scroll ._scroll_cell {
+          border-bottom: 1px solid #eeeeee;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          line-height: 80rpx;
+          font-size: 28rpx;
+          color: #666;
+}
+.topMask ._mask {
+    width: 750rpx;
+    height: calc(100% - 500rpx);
+    background: rgba(35, 35, 35, 0.5);
+}
+/* end */
+.openStory {
+  background: #fff;
+  padding-bottom: 4rpx;
+}
+.openStory .openStory_title {
+    width: 750rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0rpx 30rpx;
+    color: #010101;
+    font-weight: 600;
+    line-height: 80rpx;
+    font-size: 32rpx;
+}
+.openStory .openStory_cell {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 30rpx 30rpx 0;
+    position: relative;
+    border-radius: 10rpx;
+}
+.osCell_title {
+  width: 690rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.osCell_title > .osCell_title_left,
+  .osCell_title .osCell_title_left image {
+    width: 80rpx;
+    height: 80rpx;
+    font-size: 0;
+    background: #3285ff;
+    border-radius: 50%;
+}
+.osCell_title > .osCell_title_right {
+    width: 590rpx;
+}
+.osCell_title > .osCell_title_right > ._name {
+      font-size: 0;
+}
+.osCell_title > .osCell_title_right > ._name > text {
+        display: inline-block;
+        font-size: 34rpx;
+        color: #333;
+        font-weight: bold;
+}
+.osCell_title > .osCell_title_right > ._name > text:first-child {
+        font-weight: normal;
+}
+.osCell_title > .osCell_title_right > ._name > text:last-child {
+        font-size: 28rpx;
+        color: #999;
+        font-weight: normal;
+}
+.osCell_title > .osCell_title_right > ._company {
+      font-size: 0;
+}
+.osCell_title > .osCell_title_right > ._company > text {
+        font-size: 26rpx;
         color: #666;
+        display: inline-block;
+        vertical-align: middle;
 }
-.userList .user_cell .userCell_C .userCell_C_company text {
-          display: inline-block;
-          vertical-align: middle;
+.osCell_title > .osCell_title_right > ._company > ._L {
+        max-width: 550rpx;
+        margin-right: 10rpx;
 }
-.userList .user_cell .userCell_C .userCell_C_company .user_company {
-          max-width: 400rpx;
-          margin-right: 10rpx;
-          overflow: hidden;
-          -o-text-overflow: ellipsis;
-             text-overflow: ellipsis;
-          white-space: nowrap;
+.osCell_title > .osCell_title_right > ._company > .iconfont {
+        color: #fbbf13;
+        font-size: 28rpx;
 }
-.userList .user_cell .userCell_C .userCell_C_company .user_company_rz {
-          color: #ff8100;
+.osCell_content {
+  font-size: 30rpx;
+  color: #333;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  letter-spacing: 2rpx;
+  padding-bottom: 10rpx;
+  line-height: 44rpx;
 }
-.userList .user_cell .userCell_R {
-      width: 110rpx;
-      font-size: 20rpx;
-      color: #666;
-      text-align: center;
-      line-height: 50rpx;
+.osCell_ImgAll,
+.osCell_ImgAll image {
+  width: 690rpx;
+  height: 280rpx;
+  font-size: 0;
+  background: #eee9e9;
+  border-radius: 4rpx;
 }
-.userList .user_cell .userCell_R view {
-        width: 100rpx;
-        border-radius: 8rpx;
-        background: #EEE9E9;
+.osCell_ImgOrText {
+  width: 690rpx;
+  height: 130rpx;
+  background: #f3f3f3;
+  font-size: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4rpx;
+}
+.osCell_ImgOrText > ._logo {
+    width: 220rpx;
+    height: 130rpx;
+    border-radius: 4rpx;
+    background: lightblue;
+}
+.osCell_ImgOrText > ._text {
+    width: 460rpx;
+    height: 130rpx;
+    color: #666;
+    line-height: 42rpx;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 26rpx;
+    letter-spacing: 2rpx;
+}
+.osCell_bottom {
+  width: 690rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0;
+}
+.osCell_bottom > view {
+    font-size: 24rpx;
+    color: #999;
+    line-height: 80rpx;
+}
+.osCell_bottom > .osCell_bottom_left {
+    width: 200rpx;
+}
+.osCell_bottom > .osCell_bottom_center {
+    width: 300rpx;
+}
+.osCell_bottom > .osCell_bottom_right {
+    width: 190rpx;
+    text-align: right;
+}
+.osCell_bottom > .osCell_bottom_right > text {
+      display: inline-block;
+      vertical-align: middle;
+}
+/* end */
+.openStory_cell-title {
+  width: 80%;
+  color: #151515;
+  font-size: 30rpx;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+  padding: 20rpx 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.typestitle {
+  position: absolute;
+  right: 30rpx;
+  color: white;
+  font-size: 12px;
+  background-color: #60bc74;
+  padding: 5rpx 30rpx;
+  top: 50rpx;
+  border-radius: 20rpx  0px  0px 20rpx;
+}
+.typestitle2 {
+  position: absolute;
+  right: 30rpx;
+  color: white;
+  font-size: 12px;
+  background-color: #d85cfc;
+  padding: 5rpx 30rpx;
+  top: 50rpx;
+  border-radius: 20rpx  0px  0px 20rpx;
+}
+.typestitle3 {
+  position: absolute;
+  right: 30rpx;
+  color: white;
+  font-size: 12px;
+  background-color: #5c6ffc;
+  padding: 5rpx 30rpx;
+  top: 50rpx;
+  border-radius: 20rpx  0px  0px 20rpx;
+}
+.typestitle4 {
+  position: absolute;
+  right: 30rpx;
+  color: white;
+  font-size: 12px;
+  background-color: #34a5ec;
+  padding: 5rpx 30rpx;
+  top: 50rpx;
+  border-radius: 20rpx  0px  0px 20rpx;
+}
+.typestitle5 {
+  position: absolute;
+  right: 30rpx;
+  color: white;
+  font-size: 12px;
+  background-color: #fcbe5c;
+  padding: 5rpx 30rpx;
+  top: 50rpx;
+  border-radius: 20rpx  0px  0px 20rpx;
+}
+.typestitle6 {
+  position: absolute;
+  right: 30rpx;
+  color: white;
+  font-size: 12px;
+  background-color: #5c6ffc;
+  padding: 5rpx 30rpx;
+  top: 50rpx;
+  border-radius: 20rpx  0px  0px 20rpx;
+}
+.typestitle7 {
+  position: absolute;
+  right: 30rpx;
+  color: white;
+  font-size: 12px;
+  background-color: #cf3648;
+  padding: 5rpx 30rpx;
+  top: 50rpx;
+  border-radius: 20rpx  0px  0px 20rpx;
+}
+.ImgBoxs {
+  width: 100%;
+  white-space: nowrap;
+  margin-bottom: 20rpx;
+  overflow-x: hidden;
+}
+.ImgBoxs ._img {
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  width: 200rpx;
+  height: 150rpx;
+}
+.userInfo {
+  padding-top: 30rpx;
+}
+.userInfoLeft {
+  width: 88rpx;
+  height: 124rpx;
+  margin-right: 14rpx;
+  margin-top: 16rpx;
+}
+.userInfoLeft ._img {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.userInfoList {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.userInTop {
+  width: 516rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10rpx;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.userName {
+  width: 60%;
+  font-size: 15px;
+  font-weight: 600;
+  color: #686868;
+}
+.usertime {
+  color: #999da0;
+  font-size: 13px;
+}
+.userInfoCompy {
+  margin-top: 10rpx;
+  font-size: 12px;
+  color: #a4a4a4;
+}
+.usericonfont {
+  padding-left: 10rpx;
+  color: #259bfe;
+}
+.infoBox {
+  color: #636363;
+  border-radius: 0rpx 20rpx 20rpx 40rpx;
+  font-size: 14px;
+  font-weight: 600;
+}
+.informationBox {
+  text-align: right;
+}
+.informationBox {
+  padding: 50rpx 0;
+  position: relative;
+}
+.informationBox text {
+  font-size: 14px;
+  color: #707070;
+  font-weight: 600;
+  padding: 20rpx 15rpx;
+}
+.informationBox .iconfonts {
+  font-size: 20px;
+  padding-right: 5rpx;
+  vertical-align: middle;
+  font-weight: 400;
+}
+.informatio {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 20rpx;
+}
+.informatioLine {
+  position: absolute;
+  right: 96rpx;
+  height: 30rpx;
+  width: 1px;
+  background: #dfdfdf;
+  top: 34rpx;
+}
+uni-swiper .uni-swiper-dot {
+  width: 20px;
+}
+.Line {
+  height: 2rpx;
+  background-color: #eeeeee;
+  width: 688rpx;
+  position: absolute;
+  top: 120rpx;
+}
+.LineBOX {
+  height: 20rpx;
+  background-color: #eeeeee;
+  width: 750rpx;
+  position: absolute;
+  left: 0rpx;
+  bottom: -10rpx;
 }
 

@@ -107,7 +107,7 @@
 										</view>
 									</view>
 							</view>
-							<view class="questionRight" @click="submitCrad(item.id,item.type,item.name,item.position,item.company,item.mainbusiness,item.portrait)" v-if="item.id != user.id && item.readstatus != '002' " >
+							<view class="questionRight" @click.stop="submitCrad(item.id,item.type,item.name,item.position,item.company,item.mainbusiness,item.portrait)" v-if="item.id != user.id && item.readstatus != '002' " >
 								递交名片
 							</view>
 							<view class="questionRight" v-if="item.id != user.id && item.readstatus == '002' ">
@@ -135,7 +135,7 @@
 									</view>
 								</view>
 						</view>
-						<view class="questionRight" @click="submitCrad(itemed.id,itemed.type,itemed.name,itemed.position,itemed.company,itemed.mainbusiness,itemed.portrait)" v-if="itemed.readstatus ==null ">
+						<view class="questionRight" @click.stop="submitCrad(itemed.id,itemed.type,itemed.name,itemed.position,itemed.company,itemed.mainbusiness,itemed.portrait)" v-if="itemed.readstatus ==null ">
 							递交名片
 						</view>
 						<view class="questionRight" v-if="itemed.readstatus == '002' ">
@@ -153,10 +153,12 @@
 
 <script>
 		import shoppublic from '@/common/shoppublic'; //服务器地址
+		import getLocation from '@/common/getLocation.js'; //获取地理位置
 	export default{
 	
 		data(){
 			return{
+					location_city:'',//地址选择
 				allContactsList:"",
 				contactsInfoList:"",//我的人脉
 				localContactsList:"",
@@ -184,7 +186,7 @@
 				list2:"",
 				commentlist:[],
 				pinglunnull:true,
-				token:3605,
+				token:17099,
 				imglist:[],
 				imageUrl:shoppublic.getImageUrl(),
 				shareTitle:"",
@@ -208,9 +210,38 @@
 			}
 		},
 		onLoad(option) {
-			
+		uni.getStorage({
+			key: 'location',
+			success: res => {
+				console.log('getStorage', JSON.stringify(res));
+				_this.location = {
+					province_id: res.data.province_id,
+					province_name: res.data.province_name,
+					city_id: res.data.city_id,
+					city_name: res.data.city_name
+				};
+				_this.location_city = res.data.city_name;
+				// console.info('_location_city',_this.location_city);
+			},
+			fail: res => {
+				if (
+					(_this.location.province_name ||
+						_this.location.province_id ||
+						_this.location.city_name ||
+						_this.location.city_id) == ''
+				) {
+					getLocation.getLocation(function(res_p, res_c) {
+						// _this.setLocation(res_p, res_c);
+						// console.log('省', JSON.stringify(res_p));
+						// console.log('市', JSON.stringify(res_c));
+						_this.location_city = res_c[0].name;
+						console.log()
+					});
+				}
+			}
+		});
 			var that=this
-			 that.onloadUserInfo(3605) 
+			 that.onloadUserInfo(17099) 
 			setTimeout(()=>{
 				if(that.commentlist.length>0){
 					that.isshowBox=true
@@ -247,7 +278,7 @@
 					  url: shoppublic.getUrl() + 'mine/qryPeopleLocal',
 					  data: {
 						city_id: '',
-						uid: 3605
+						uid: 17099
 					  },
 					  success: res => {
 						  console.log(res)
@@ -262,7 +293,7 @@
 					uni.request({
 					  url: shoppublic.getUrl() + '/chat/qryNeedHouse',
 					  data: {
-						uid: 3605
+						uid: 17099
 					  },
 					  success: res => {
 						  console.log(res)
@@ -274,22 +305,22 @@
 			  submitCrad(id,type,name,position,company,mainbusiness,tokenid,portrait) {
 				  var that=this
 						let data = {
-						  name: name,
-						  position: position,
-						  company: company,
-						  mainbusiness:mainbusiness
+						  name: that.UserInfor.user.name,
+						  position:that.UserInfor.user.position,
+						  company:that.UserInfor.user.company,
+						  mainbusiness:that.UserInfor.user.mainbusiness
 						}
-						if (type === '1' || type === '2') {
+						if (that.UserInfor.user.type == 1 || that.UserInfor.user.type == 2) {
 						  uni.request({
 							url: shoppublic.getUrl() + '/chat/createHouse',
 							data: {
-							  uid: 3605, //自己id
+							  uid: 17112, //自己id
 							  touid: id, //对方id
 							  tocradinfo: JSON.stringify(data) + '_cardInfo' //名片信息
 							},
 							success: res => {
-								console.log(id)
-							  console.log(res);
+								
+							 console.log(res)
 							  if (res.data.responseBody) {
 								  var res=res.data.responseBody
 								that.gotalk(res,id,portrait,name,type,that.user.portrait,that.token)
@@ -321,7 +352,7 @@
 					url: shoppublic.getUrl() + 'mine/qryPeopleLocal',
 					data: {
 					  city_id:610100,
-					  uid: 3605
+					  uid: 1
 					},
 					success: res => {
 					

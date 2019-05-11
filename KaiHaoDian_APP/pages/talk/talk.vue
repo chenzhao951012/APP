@@ -49,6 +49,7 @@
 	var socketOpen = false;
 	var frameBuffer_Data, session, SocketTask;
 	import shoppublic from '@/common/shoppublic'; //服务器地址
+	import cityData from '@/common/city.data.js';
 	var SocketTask;
 	export default {
 		components: {
@@ -110,7 +111,6 @@
 			   // 发送消息
 			  sendMsg() {
 				let _this = this;
-				console.log('socketOpen:', socketOpen);
 				// 如果打开了socket就发送数据给服务器
 				if (socketOpen) {
 				  if (_this.talk!=''){
@@ -206,7 +206,7 @@
 						uid: _this.touid,
 						message: onMessage.data
 					  });
-						  console.log( _this.allContentList)
+						
 					  
 					})
 				  },

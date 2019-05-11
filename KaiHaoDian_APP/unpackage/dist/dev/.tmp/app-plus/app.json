@@ -112,7 +112,8 @@
     "pages/homePageModule/Newpreparation/SelectIndustry/SelectIndustry",
     "pages/homePageModule/Newpreparation/NewpreparationRelease/showcase/GreenflowersReleased/particularCommodity/particularCommodity",
     "pages/homePageModule/Newpreparation/NewpreparationRelease/showcase/GreenflowersReleased/MoregoodsRelease/MoregoodsRelease",
-    "pages/homePageModule/openStoreSeekSite/shopLocation/shopLocation"
+    "pages/homePageModule/openStoreSeekSite/shopLocation/shopLocation",
+    "pages/mineIndex/mineExtend/mineExtend"
   ],
   "subPackages": [],
   "window": {

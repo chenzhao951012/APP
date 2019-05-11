@@ -1,8 +1,4 @@
 <template>
-	
-
-
-
 <view>
 	<view class="" style="height:20upx;background-color:#f3f3f3;"></view>
   <view class='extendTop'>

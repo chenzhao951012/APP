@@ -31,6 +31,15 @@ position: relative;
 }
 .banner{
 	position: relative;
+	.swiper-box{
+			height: 530upx;
+			.swiper-item{
+				img{
+					width: 750upx;
+					height: 530upx;
+				}
+			}
+		}
 }
 .swiperbutton{
 	position: absolute;
@@ -294,11 +303,15 @@ position: relative;
 			border-radius: 10px;
 		    box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
 			.question{
+				width: 100%;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
 				font-size: 28upx;
 				font-weight: 600;
 				letter-spacing: 5upx;
-				padding: 44upx 0;
-				color: #000000;
+				padding: 26upx 0;
+				color: #333333;
 			}
 			.userMassage{
 				display: flex;
@@ -317,17 +330,17 @@ position: relative;
 						width: 100%;
 						justify-content: space-between;
 						.R-name{
-							font-size: 30upx;
+							font-size: 28upx;
 							font-weight: 600;
 							letter-spacing: 5upx;
 						}
 						.R-number{
-							font-size: 28upx;
+							font-size: 24upx;
 							color: #686868;
 							.iconecodes{
 								padding-right: 10upx;
 								font-weight: 600;
-								font-size: 32upx;
+								font-size: 28upx;
 							}
 						}
 					
@@ -344,24 +357,24 @@ position: relative;
 						}
 						.R-induce{
 							display: inline-block;
-							
-							font-size: 28upx;
+							font-size: 24upx;
 							color: #808080;
 							overflow: hidden;
 							text-overflow: ellipsis;
 							white-space: nowrap;
+							margin-top: 14upx;
 						}
 						.iconed{
 							display: inline-block;
 							color: #299dff;
 							padding-left: 10upx;
-							font-size: 28upx;
+							font-size: 24upx;
 							margin-top: 6upx;
 						}
 						.iconfontes{
 							font-weight: 600;
 							font-size: 60upx;
-							color: #ffecc7;
+							color: #ffbd38;
 						}
 					}
 				}
@@ -375,13 +388,13 @@ position: relative;
 			border-radius: 10upx;
 			box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
 				.infoTitle{
-					font-size: 28upx;
+					font-size: 24upx;
 					font-weight: 600;
 					padding: 20upx 40upx;
 				}
 				
 				.InfoNumber{
-					font-size: 28upx;
+					font-size: 24upx;
 					padding: 10upx 0;
 					color: #787878;
 					border-right: 1px solid #a0a0a0;
@@ -397,13 +410,13 @@ position: relative;
 			}
 			.industryList{
 				
-				font-size: 28upx;
+				font-size: 24upx;
 				color: #6b6b6b;
 				view{
 					padding: 20upx 0;
 				}
 				text{
-					color: #000000;
+					color: #333333;
 					padding-left: 15upx;
 					font-weight: 600;
 					
@@ -412,10 +425,10 @@ position: relative;
 			.industryLiSt{
 				
 				padding: 20upx 0;
-				font-size: 28upx;
+				font-size: 24upx;
 				color: #6b6b6b;
 				text{
-					color: #000000;
+					color: #333333;
 					padding-left: 15upx;
 					font-weight: 600;
 					line-height: 2;
@@ -453,7 +466,7 @@ position: relative;
 						color: #666;
 						text-align: center;
 						line-height: 50upx;
-						font-size: 28upx;
+						font-size: 24upx;
 					}
 				}
 				._R {
@@ -492,7 +505,7 @@ position: relative;
 		padding: 25upx 0;
 		padding-bottom: 0;
 		text-align: center;
-		font-size: 30upx;
+		font-size: 28upx;
 		font-weight: 600;
 		letter-spacing: 5upx;
 	}
@@ -527,10 +540,11 @@ position: relative;
 				padding-left: 10upx;
 			}
 			.position{
-				font-size: 28upx;
+				font-size: 24upx;
 				color: #747474;
 				line-height: 2;
 				font-weight: 600;
+				margin-bottom: 10upx;
 			}
 			.userMassage{
 				box-sizing: border-box;
@@ -543,19 +557,18 @@ position: relative;
 			}
 			display: flex;
 			.userImg{
-				width: 100upx;
-				height: 100upx;
-				
+				width: 90upx;
+				height: 90upx;
 				 img{
-					width: 100upx;
-					height: 100upx;
+					width: 90upx;
+					height: 90upx;
 					 border-radius:50%;
 				 }
 			}
 		}
 		.commentContent{
 			margin-top: 30upx;
-			font-size: 28upx;
+			font-size: 24upx;
 			letter-spacing: 5upx;
 			color: #000;
 			
@@ -565,9 +578,15 @@ position: relative;
 			right: 12upx;
 			top: 50upx;
 		}
+		.icond2{
+			color: #ffbd38;
+		}
+		.icond3{
+			color: #989898;
+		}
 		.commentNumber{
 			color: #666666;
-			font-size: 28upx;
+			font-size: 24upx;
 			padding-left: 20upx;
 		}
 		.introduction{
@@ -576,9 +595,9 @@ position: relative;
 		.iconecodes{
 			position: absolute;
 			right: 112upx;
-			top: 168upx;
-			font-size: 28upx;
-			color: #686868;
+			top: 94upx;
+			font-size: 30upx;
+			color: #909090;
 			font-weight: 600;
 		}
 		.iconecoded{
@@ -637,7 +656,7 @@ position: relative;
 	}
 		.subreply{
 			color: #ffc760;
-			font-size: 28upx;
+			font-size: 24upx;
 			padding: 20upx 0;
 			font-weight:lighter;
 		}
@@ -654,5 +673,5 @@ position: relative;
 				padding: 20upx 0;
 				text-align: center;
 				font-weight: 600;
-				font-size: 32upx;
+				font-size: 28upx;
 			}

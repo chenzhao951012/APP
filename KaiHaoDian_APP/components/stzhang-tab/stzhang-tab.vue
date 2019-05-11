@@ -53,7 +53,7 @@
 <style lang='scss'>
 	.my-tabs {
 		height: 110upx;
-		font-size: 28upx;
+		font-size: 24upx;
 		display: flex;
 		justify-content: space-around;
 		box-sizing: border-box;
@@ -70,14 +70,14 @@
 			min-width: 100upx;
 			text-align: center;
 			color:#3d3d3d;
-			font-size: 32upx;
+			font-size: 28upx;
 			font-weight: bold;
 			letter-spacing:5upx;
 			
 		}
 		.tab-item.active{
 			font-weight: bold;
-			font-size: 32upx;
+			font-size: 28upx;
 			position: relative;
 			color: #3d3d3d;
 			letter-spacing:5upx;

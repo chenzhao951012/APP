@@ -10,10 +10,10 @@
 			<!-- 企业信息 -->
 			<view class="" style="position: relative;">
 					<view class="companyInfo">
-					<view class="_top">
+					<view class="_top" v-if="items.sysuser">
 						<view class="company_L"> <image :src="items.sysuser.portrait" mode=""></image></view>
 						<view class="company_R">
-							<view class="R_name">{{items.sysuser.company}}</view><text class="iconfont iconed">&#xe730;</text><text class="iconfont iconeds">&#xe65c;</text><text class="iconfont iconecodes">&#xe64c;{{items.projectJoin.read_num}}</text>
+							<view class="R_name">{{items.sysuser.company}}</view><text class="iconfont iconed">&#xe730;</text><text class="iconfont iconeds">&#xe6bc;</text><text class="iconfont iconecodes">&#xe64c;  {{items.projectJoin.read_num}}</text>
 							<view class="R_intro">
 								<text>{{items.projectJoin.title}}</text>
 							</view>
@@ -34,7 +34,7 @@
 				<view class="userInfo">
 					<text class="userInfoNuber">门店数量:<text class="userInfoMsg">{{items.projectJoin.storecount}}家</text></text>
 					<text class="userInfoNuber">品牌年龄:<text class="userInfoMsg">{{items.projectJoin.storeage}}年</text></text>
-					<text class="userInfoNuber">加盟费:<text class="userInfoMsg">{{items.projectJoin.initialfee}}元</text></text>
+					<text class="userInfoNuber">加盟费:<text class="userInfoMsg">{{items.projectJoin.initialfee/10000}}万</text></text>
 					</view>
 					<!-- //地址 -->
 					<view class="address">
@@ -44,7 +44,7 @@
 						<view class="visitor" @click="toVisitor">
 							<text>访   &nbsp;&nbsp;&nbsp;&nbsp; 客&nbsp;:</text>
 						</view>
-						<view class="_L">
+						<view class="_L" >
 							<image v-for="(item,index) in visitorList" :src="item.portrait" :key='index' v-if="index < 5"></image>
 							<view class="_more iconfont">&#xe6c3;</view>
 						</view>
@@ -125,7 +125,7 @@
 					<!-- 用户评论 -->
 					<view class="commentBox" v-if="commentBox" >
 						<view class="commentList">
-							<view class="introduction" v-for="(itemd,index) in commentList" :key='index' v-if="commentList" @click="subReply(index)">
+							<view class="introduction" v-for="(itemd,index) in commentList" :key='index'  @click="subReply(index)" v-if="itemd.sysuser">
 								<view class="commentListTop">
 									<view class="userImg">
 										<img :src="itemd.sysuser.portrait" alt="" v-if="itemd.sysuser.portrait">
@@ -140,8 +140,11 @@
 										<view class="commentContent">
 											{{itemd.content}}
 										</view>
-										<view class="" @touchend="clickZanImg(index,itemd.id)">
-											<text class="iconfont icond" >&#xe872;<text class="commentNumber">{{itemd.praisecount}}</text></text>
+										<view class="" @click.stop="clickZanImg(index,itemd.id)">
+										<text :class="commentList[index].praisestate == true ? 'icond2' :'icond3' ">
+											<text class="iconfont icond" >&#xe872;<text class="commentNumber">{{itemd.praisecount}}</text>
+											</text>
+										</text>
 										</view>
 										<view class="subreply" v-if="itemd.comment_list.length!=0">
 											{{itemd.comment_list.length}}条回复 >
@@ -302,7 +305,6 @@ export default {
 		},
 		//点赞
 				clickZanImg(index,id) {
-				
 								var that=this
 									var index = index;
 									var id =id

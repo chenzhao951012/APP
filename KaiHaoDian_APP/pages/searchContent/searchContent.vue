@@ -13,7 +13,8 @@
 						</view>
 						<view class="userRight">
 							<view class="company">{{item.nickname}}<text class="iconfont" v-if="item.company">&#xe61c;</text></view>
-							<view :class="item.attentionstate==1 ? 'attention' : 'attentio2' " @click="attention(item.id,idx)"><text class="iconfont" v-if="item.attentionstate==1">&#xe6df;</text>{{item.attentionstate==1 ? title='关注':title='已关注'}}</view>
+							<view :class="item.attentionstate==1 ? 'attention' : 'attentio2' " @click="attention(item.id,idx)"><text class="iconfont" v-if="item.attentionstate==1">&#xe6df;</text><text v-if="item.attentionstate==1">关
+注</text></text><text v-if="item.attentionstate!=1">已关注</text></view>
 						</view>
 					</view>
 					<view class="user" v-if="item.authenticate  ==3 && item.type == 1" @click="toUserDateils(item.id)">
@@ -22,7 +23,8 @@
 						</view>
 						<view class="userRight">
 							<view class="company">{{item.company}}<text class="iconfont">&#xe61c;</text></view>
-							<view :class="item.attentionstate==1 ? 'attention' : 'attentio2' " @click="attention(item.id,idx)"><text class="iconfont" v-if="item.attentionstate==1">&#xe6df;</text>{{item.attentionstate==1 ? title='关注':title='已关注'}}</view>
+							<view :class="item.attentionstate==1 ? 'attention' : 'attentio2' " @click="attention(item.id,idx)"><text class="iconfont" v-if="item.attentionstate==1">&#xe6df;</text><text v-if="item.attentionstate==1">关
+注</text></text><text v-if="item.attentionstate!=1">已关注</text></view>
 						</view>
 					</view>
 						<view class="user" v-if="item.authenticate  ==3 && item.type == 2" @click="toUserDateils(item.id)">
@@ -31,7 +33,8 @@
 						</view>
 						<view class="userRight">
 							<view class="company">{{item.company}}<text class="iconfont">&#xe61c;</text></view>
-							<view :class="item.attentionstate==1 ? 'attention' : 'attentio2' " @click="attention(item.id,idx)"><text class="iconfont" v-if="item.attentionstate==1">&#xe6df;</text>{{item.attentionstate==1 ? title='关注':title='已关注'}}</view>
+							<view :class="item.attentionstate==1 ? 'attention' : 'attentio2' " @click="attention(item.id,idx)"><text class="iconfont" v-if="item.attentionstate==1">&#xe6df;</text><text v-if="item.attentionstate==1">关
+注</text></text><text v-if="item.attentionstate!=1">已关注</text></view>
 						</view>
 					</view>
 				</view>

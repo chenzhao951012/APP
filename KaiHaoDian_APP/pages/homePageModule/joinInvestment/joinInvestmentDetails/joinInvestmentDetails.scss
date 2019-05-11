@@ -73,14 +73,14 @@ $color_ff8100: #ff8100; //标记文字颜色
 				.iconeds{
 					position:absolute;
 					right: -40upx;
-					top: 8upx;
+					top: 2upx;
 					color: #299dff;
-					font-size: 24upx;				
+					font-size: 36upx;				
 					}
 			.R_name {
 				
 				width: 300upx;
-				font-size: 30upx;
+				font-size: 28upx;
 				color:#000000;
 				margin-bottom: 5upx;
 				@include widthHidden;
@@ -550,6 +550,12 @@ $color_ff8100: #ff8100; //标记文字颜色
 			right: 12upx;
 			top: 50upx;
 		}
+		.icond2{
+			color: #ffbd38;
+		}
+		.icond3{
+			color: #989898;
+		}
 		.commentNumber{
 			color: #666666;
 			font-size: 28upx;
@@ -561,8 +567,8 @@ $color_ff8100: #ff8100; //标记文字颜色
 		.iconecodes{
 			position: absolute;
 			right: -218upx;
-			top: -6upx;
-			font-size: 28upx;
+			top: 4upx;
+			font-size: 24upx;
 			color: #686868;
 			font-weight: 600;
 		}

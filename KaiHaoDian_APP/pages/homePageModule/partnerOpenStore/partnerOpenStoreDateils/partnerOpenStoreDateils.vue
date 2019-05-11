@@ -3,16 +3,15 @@
 		<view v-for="(item,index) in pageInfo" :key="index" class="userBox">
 			<!-- 顶部图片 -->
 			<view class="banner">
-					<swiper class="_swiper"  :autoplay="true" :duration="1000" :circular="true"  indicator-active-color="#3285ff" @change="ChangeSwiper">
-					<swiper-item class="_swiper" v-for="(srcs,key) in item.srcs" :key="key">
-						<image class="_swiper" :src="srcs"></image>
-					</swiper-item>
-				</swiper>
-					<view class="swiperbutton">
-					<view :class="{'balltas':true,'active':activeIndex==indexe}" v-for="(items,indexe) in item.srcs" :key="indexe">
-						
-				</view>
-				</view>
+					<Swiperdot :info="item.srcs" :current="current" field="content" :mode="mode" :bottom="70">
+						<swiper class="swiper-box" @change="change" :autoplay="true" :duration="1000" :circular="true">
+				        <swiper-item v-for="(items,idx) in item.srcs" :key='idx'>
+				            <view class="swiper-item">
+				                <img :src="items" alt="">
+				            </view>
+				        </swiper-item>
+				    </swiper>
+				</Swiperdot>
 			</view>
 			<!-- 用户信息 -->
 			<view class="UserInfo">
@@ -40,7 +39,7 @@
 									<view class="" style="display: flex;">
 										<view class="R-induce">发布时间: {{item.partnershipShop.addtime}}</view>
 									</view>
-									<text class="iconfont iconfontes">&#xe7e2;</text>
+									<text class="iconfont iconfontes">&#xe6ea;</text>
 								</view>
 							</view>
 						</view>
@@ -108,7 +107,7 @@
 						<view class="CommentImg" v-if="shows">
 							<img src="../../../../static/ComentImg.png" alt="">
 						</view>
-						<view class="introduction" v-for="(itemd,idex) in commentList" :key='idex'  @click="subReply(idex)">
+						<view class="introduction" v-for="(itemd,idex) in commentList" :key='idex'  @click="subReply(idex)" v-if="itemd.sysuser">
 							<view class="commentListTop">
 								<view class="userImg">
 									<img :src="itemd.sysuser.portrait" alt="" v-if="itemd.sysuser.portrait">
@@ -123,10 +122,13 @@
 									<view class="commentContent">
 										{{itemd.content}}
 									</view>
-									<view class="" @touchend="clickZanImg(idex,itemd.id)">
-										<text class="iconfont icond" >&#xe872;<text class="commentNumber">{{itemd.praisecount}}</text></text>
+										<view class="" @click.stop="clickZanImg(idex,itemd.id)">
+									<text :class="commentList[idex].praisestate == true ? 'icond2' :'icond3' ">
+										<text class="iconfont icond" >&#xe872;<text class="commentNumber">{{itemd.praisecount}}</text>
+										</text>
+									</text>
 									</view>
-									<view class="subreply" v-if="itemd.comment_list.length>0">
+									<view class="subreply" v-if=" itemd.comment_list && itemd.comment_list.length>0">
 										{{itemd.comment_list.length}}条回复 >
 									</view>
 								</view>
@@ -160,14 +162,19 @@
 	// 评论模块组件
 	import NoComment from '@/components/noComment/noComment.vue'
 	import commentModule from '@/components/commentModule/commentModule.vue';
+	import Swiperdot from '@/components/swipers/uni-swiper-dot.vue';
 	import shoppublic from '@/common/shoppublic.js';
 	export default{
 		components:{
+			
 			commentModule:commentModule,
-			NoComment:NoComment
+			NoComment:NoComment,
+			Swiperdot
 		},
 		data(){
 			return{
+				 current: 0,
+				mode: 'long',
 				shows:true,
 				commentstate:0,
 				connect:"",
@@ -186,7 +193,7 @@
 				id:"",
 				url:shoppublic.getUrl() + '/comment/addComment',
 				pktype:4,
-				token:14651,
+				token:17099,
 				isShowsubConment:true,
 				isShowConment:true,
 				commentList:"",
@@ -213,7 +220,48 @@
 			},200)
 		},
 		methods:{
-		
+		//点赞
+				clickZanImg(index,id) {
+								var that=this
+									var index = index;
+									var id =id
+									var commentlist = this.commentList;
+									// 点完赞之后的请求
+									console.log(commentlist)
+									var _this = this;
+									uni.request({
+									  url: shoppublic.getUrl() + '/comment/addCommentPraise', //, //仅为示例，并非真实的接口地址
+									  data: {
+										cid: id,
+										token: _this.token
+									  },
+									  header: {
+										'content-type': 'application/json' // 默认值
+									  },
+									  success: function(res) {
+										var flag = res.data.msgCode;
+										if (flag == '1') {
+											// that.changecolor="changecolored"
+										  commentlist[index].praisestate = true;
+										  commentlist[index].praisecount = commentlist[index].praisecount + 1;
+										} else {
+											// that.changecolor="changecolore"
+										  commentlist[index].praisestate = false;
+										  var praisecount = commentlist[index].praisecount - 1;
+										  if (praisecount >= 0) {
+											commentlist[index].praisecount = praisecount;
+										  } else {
+											commentlist[index].praisecount = 0;
+										  }
+										}
+												
+										  _this.commentList=commentlist
+									
+			
+									  },
+									  fail: function(res) {}
+									})
+			},
 			//发送评论
 				subReply(index){
 				var that=this
