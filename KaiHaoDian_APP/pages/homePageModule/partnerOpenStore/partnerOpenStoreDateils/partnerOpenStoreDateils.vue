@@ -3,11 +3,11 @@
 		<view v-for="(item,index) in pageInfo" :key="index" class="userBox">
 			<!-- 顶部图片 -->
 			<view class="banner">
-					<Swiperdot :info="item.srcs" :current="current" field="content" :mode="mode" :bottom="70">
+					<Swiperdot :info="pageInfo[0].srcs" :current="current" field="content" :mode="mode" :bottom="80">
 						<swiper class="swiper-box" @change="change" :autoplay="true" :duration="1000" :circular="true">
-				        <swiper-item v-for="(items,idx) in item.srcs" :key='idx'>
+				        <swiper-item v-for="(src,idx) in pageInfo[0].srcs" :key='idx'>
 				            <view class="swiper-item">
-				                <img :src="items" alt="">
+				                <img :src="src" alt="">
 				            </view>
 				        </swiper-item>
 				    </swiper>
@@ -214,9 +214,6 @@
 			this.getPageInfo(option.id);
 			setTimeout(()=>{
 				 _this.commentNum()
-
-// 			}
-			
 			},200)
 		},
 		methods:{
@@ -227,7 +224,7 @@
 									var id =id
 									var commentlist = this.commentList;
 									// 点完赞之后的请求
-									console.log(commentlist)
+								
 									var _this = this;
 									uni.request({
 									  url: shoppublic.getUrl() + '/comment/addCommentPraise', //, //仅为示例，并非真实的接口地址
@@ -362,8 +359,7 @@
 							pagesize: 0
 						},
 						success: res => {
-							// console.log(res)
-							// console.log(res.data.responseBody);
+						
 							_this.visitorList = res.data.responseBody;
 						}
 					})
@@ -409,17 +405,15 @@
 						id:id
 					},
 					success: (res) => {
-						console.log(res),
-						
-						console.log(id,_this.token)
-							_this.thePhone=res.data.responseBody.sysuser.phone
+					
+						_this.thePhone=res.data.responseBody.sysuser.phone
 						_this.commentList=res.data.responseBody.commentlist
 						if(_this.commentList!=undefined){
 							_this.shows=false
 						}
 						_this.pageInfo.push(res.data.responseBody);
 						var supporting =res.data.responseBody.value;
-						console.log(supporting)
+					
 						// 钱转换为万的方法
 						
 						// _this.FuckMe(_this.supportingChanges, supporting);// 循环添加至商铺配套新数组

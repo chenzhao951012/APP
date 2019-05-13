@@ -59,13 +59,17 @@ page {
 .userBox {
   position: relative;
 }
-._swiper {
+.swiper-box {
   width: 750rpx;
   height: 530rpx;
   font-size: 0;
   background: #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+.swiper-box ._img {
+    width: 750rpx;
+    height: 530rpx;
 }
 .banner {
   position: relative;
@@ -708,6 +712,12 @@ page {
   right: 12rpx;
   top: 50rpx;
 }
+.icond2 {
+  color: #ffbd38;
+}
+.icond3 {
+  color: #989898;
+}
 .commentNumber {
   color: #666666;
   font-size: 28rpx;
@@ -753,7 +763,7 @@ page {
   background-color: #fff;
 }
 .ComentInput ._input {
-    padding-top: 10rpx;
+    padding-top: 18rpx;
     padding-left: 40rpx;
     font-size: 14px;
 }

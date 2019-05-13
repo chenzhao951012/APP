@@ -92,7 +92,6 @@
   z-index: 98;
 }
 .topMask ._top {
-    margin-top: 88rpx;
     height: 500rpx;
     background: #fff;
 }

@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
 		<!-- 发布按钮 -->
-		<view class="_release_button_right" @click="toPartnershipStoreRelease">发布</view>
+<!-- 		<view class="_release_button_right" @click="toPartnershipStoreRelease">发布</view> -->
 		<!-- 顶部选项卡 -->
 		<view class="top_tab">
 			<view class="_tab" @click="tabsChanges(0)">
@@ -191,7 +191,7 @@ export default {
 		};
 	},
 	onReachBottom() {
-		this.getPartnerList('onReach');
+		this.getPartnerList('onReach',this.countryid);
 	},
 	onLoad() {
 		
@@ -200,7 +200,7 @@ export default {
 			uni.getStorage({
 			key: 'location',
 			success: res => {
-				console.log('getStorage', JSON.stringify(res));
+			
 				_this.location = {
 					province_id: res.data.province_id,
 					province_name: res.data.province_name,
@@ -221,15 +221,17 @@ export default {
 						// _this.setLocation(res_p, res_c);
 						// console.log('省', JSON.stringify(res_p));
 						// console.log('市', JSON.stringify(res_c));
+					
 						_this.countryid=res_c[0].id
+						
 					});
 				}
 			}
 		});
 				
 				setTimeout(()=>{
-					 _this.getAderss(610100)
-					  _this.getPartnerList(610100)
+					 _this.getAderss(_this.countryid)
+					  _this.getPartnerList('',_this.countryid)
 					 	
 				},500)
 	
@@ -273,11 +275,11 @@ export default {
 					  },
 					  success: function(res) {
 					
-						console.log(res.data.responseBody);
+						console.log(id);
 						var county = res.data.responseBody;
 						var aa = {
 						  name: "全部",
-						  pid: "id",
+						  pid: id,
 						  id: ''
 						};
 						if (county != null) {
@@ -326,21 +328,22 @@ export default {
 						  },
 		
 			// 获取合伙人列表
-			getPartnerList(page = '0') {
+			getPartnerList(page = '0',id) {
 			var _this = this;
 			var oldPartnerList = _this.partnerList;
+			
 			if(page === 'onReach'){
 				uni.request({
 					url: shoppublic.getUrl() + "/partnershipShop/findPartnershipShopList",
 					data:{
 						index:_this.index,
-						city:610100,
+						city:id,
 						county:_this.countyIds,
 						partner:_this.typeid,
 						type:_this.xiangmuId
 					},
 					success: (res) => {
-						console.log(res);
+							console.log(id)
 						if(page === 'onReach' && res.data.responseBody){
 							oldPartnerList = oldPartnerList.concat(res.data.responseBody);
 							_this.index += 7;
@@ -357,13 +360,12 @@ export default {
 					url: shoppublic.getUrl() + "/partnershipShop/findPartnershipShopList",
 					data:{
 						index:_this.pagesize,
-						city:610100,
+						city:id,
 						county:_this.countyIds,
 						partner:_this.typeid,
 						type:_this.xiangmuId
 					},
 					success: (res) => {
-						console.log(_this.countryid,_this.countyIds,_this.typeid,_this.xiangmuId)
 						console.log(res)
 						_this.partnerList = res.data.responseBody;
 						if(_this.partnerList==null){

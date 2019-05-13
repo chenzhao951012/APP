@@ -39,7 +39,7 @@
 				<swiper class="_swiper"  :current="swiperIndex" @change="swiperChangs">
 						<swiper-item class="_swiper_item" >
 						<scroll-view scroll-y class="_scroll">
-							<view :class="{'_scroll_cell':true,'active':activeIndex==indexs}" v-for="(item,indexs) in synthesize" :key="indexs" @click="clickScrollCell">{{item.value}} <text :class="{'iconfont':true,'active':activeIndex==indexs}">&#xe721;</text></view>
+							<view :class="{'_scroll_cell':true,'active':activeIndex==indexs}" v-for="(item,indexs) in synthesize" :key="indexs" @click="synthesizes(indexs)">{{item.value}} <text :class="{'iconfont':true,'active':activeIndex==indexs}">&#xe721;</text></view>
 						</scroll-view>
 					</swiper-item>
 						<swiper-item class="_swiper_item">
@@ -101,10 +101,12 @@
 </template>
 
 <script>
+	var getLocation = require('../../../common/getLocation.js');
 	import shoppublic from '@/common/shoppublic'; //服务器地址
 	export default {
 		data() {
 						return {
+								order:0,
 								synthesize:[
 											{
 												id: "0",
@@ -192,16 +194,62 @@
 						activeIndex:0,
 						cityList:[],
 						countyIds:"",
+						
 			};
 		},
 		onLoad() {
-			this.getPartnerList()
-			this.getAderss(610100)
+				var that=this
+				uni.getStorage({
+				key: 'location',
+				success: res => {
+				
+					_this.location = {
+						province_id: res.data.province_id,
+						province_name: res.data.province_name,
+						city_id: res.data.city_id,
+						city_name: res.data.city_name
+					};
+					that.countryid = res.data.city_id;
+				;
+				},
+				fail: res => {
+					if (
+						(that.location.province_name ||
+							that.location.province_id ||
+							that.location.city_name ||
+							that.location.city_id) == ''
+							
+					) {
+						getLocation.getLocation(function(res_p, res_c) {
+							that.countryid=res_c[0].id
+							console.log(that.countryid)
+						});
+					}
+				}
+			});		
+			setTimeout(()=>{
+				that.getAderss(that.countryid)
+				that.getPartnerList()
+			},1000)
+					 
 		},
 		onReachBottom() {
 			this.getPartnerList('onReach');
 		},
 		methods:{
+			//综合排序
+			synthesizes(index){
+					console.log(index)
+				this.activeIndex=index;
+				this.order=index
+				this.getPartnerList(); 
+				},
+				tabsChangesd(state){
+			this.activeIndex=index;
+				this.tabsState = state;
+				this.swiperIndex = state;
+				this.tabsMaskState = 'true';
+			},
 				// 地址排序
 				  selenav(id,index) {
 					  console.log(id,index)
@@ -252,8 +300,6 @@
 					let that = this;
 					that.activeIndex=index;
 					  that.type=id,
-					
-						
 					that.getPartnerList();
 
 
@@ -285,6 +331,7 @@
 						url:shoppublic.getUrl() + 'newShopRent/findlistnewShopRent',
 						data:{
 							index:_this.index,
+							// city:_this.countryid,
 							city:610100,
 							county:_this.countyIds,
 							type:_this.type,
@@ -310,6 +357,7 @@
 						url:shoppublic.getUrl() + 'newShopRent/findlistnewShopRent',
 						data:{
 							index:_this.pagesize,
+							// city:_this.countryid,
 							city:610100,
 							county:_this.countyIds,
 							type:_this.type,

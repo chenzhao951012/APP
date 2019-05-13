@@ -1,19 +1,21 @@
 <template>
 	<view class="content">
-		<view v-for="(item,index) in pageInfo" :key="index" class="userBox">
-			<!-- 顶部图片 -->
-			<view class="banner">
-					<swiper class="_swiper"  :autoplay="true" :duration="1000" :circular="true"  indicator-active-color="#3285ff" @change="ChangeSwiper">
-					<swiper-item class="_swiper" v-for="(srcs,key) in item.srcs" :key="key">
-						<image class="_swiper" :src="srcs"></image>
-					</swiper-item>
-				</swiper>
-					<view class="swiperbutton">
-					<view :class="{'balltas':true,'active':activeIndex==indexe}" v-for="(items,indexe) in item.srcs" :key="indexe">
-						
-				</view>
-				</view>
+		<view class="userBox">
+				<view class="banner">
+					<Swiperdot :info="swiperList" :current="current" field="content" :mode="mode" :bottom="80">
+						<swiper class="swiper-box" @change="change" :autoplay="true" :duration="1000" :circular="true">
+				        <swiper-item v-for="(item,idx) in swiperList" :key='idx'>
+				            <view class="swiper-item">
+				                <img class="_swiper" :src="item">
+				            </view>
+				        </swiper-item>
+				    </swiper>
+				</Swiperdot>
+					
 			</view>
+		<view v-for="(item,index) in pageInfo" :key="index" >
+			<!-- 顶部图片 -->
+		
 			<!-- 用户信息 -->
 			<view class="UserInfo">
 				<view class="Massage-top">
@@ -131,7 +133,7 @@
 								<view class="userImg">
 									<img :src="itemd.sysuser.portrait" alt="" v-if="itemd.sysuser.portrait">
 								</view>
-								<view class="userMassage" @touchend="subReply(indexs)">
+								<view class="userMassage" @click="subReply(indexs)">
 									
 									<view class="position">
 										{{itemd.sysuser.name}}<text v-if="itemd.sysuser.position">·</text>{{itemd.sysuser.position}}
@@ -142,10 +144,13 @@
 									<view class="commentContent">
 										{{itemd.content}}
 									</view>
-									<view class="" @touchend="clickZanImg(indexs,itemd.id)">
-										<text class="iconfont icond"><text>&#xe872;</text><text class="commentNumber">{{itemd.praisecount}}</text></text>
-									</view>
-									<view class="subreply" v-if="itemd.comment_list.length!=0">
+										<view class="" @click.stop="clickZanImg(indexs,itemd.id)">
+										<text :class="commentList[indexs].praisestate == true ? 'icond2' :'icond3' ">
+											<text class="iconfont icond" >&#xe872;<text class="commentNumber">{{itemd.praisecount}}</text>
+											</text>
+										</text>
+										</view>
+									<view class="subreply" v-if="itemd.comment_list && itemd.comment_list.length!=0">
 												
 										{{itemd.comment_list.length}}条回复 >
 									</view>
@@ -165,19 +170,20 @@
 				</view>
 				<view class="ComentImgList" v-if="Show">
 					<img src="../../../../static/talk.png" alt="" >
-					<img src="../../../../static/playPhone.png" alt="" @touchend="PlayPhone">
+					<img src="../../../../static/playPhone.png" alt="" @click="PlayPhone">
 				</view>
-				<view class="ComentImgList2" v-if="isShow" @touchend="comment">
+				<view class="ComentImgList2" v-if="isShow" @click="comment">
 					<img src="../../../../static/conmented.png" alt="">
 				</view>
 			</view>
 
 		</view>
-		
+		</view>
 	</view>
 </template>
 
 <script>
+	import Swiperdot from '@/components/swipers/uni-swiper-dot.vue';
 	// 评论模块组件
 	import NoComment from '@/components/noComment/noComment.vue'
 	import commentModule from '@/components/commentModule/commentModule.vue';
@@ -185,10 +191,14 @@
 	export default{
 		components:{
 			commentModule:commentModule,
-			NoComment:NoComment
+			NoComment:NoComment,
+			Swiperdot
 		},
 		data(){
 			return{
+				current: 0,
+				mode:'long',
+				swiperList:[],
 				shows:true,
 				commentstate:0,
 				connect:"",
@@ -240,6 +250,11 @@
 			},200)
 		},
 		methods:{
+			
+			 change(e) {
+			    this.current = e.detail.current;
+				
+			},
 				// 点赞
 				clickZanImg(index,id) {
 				
@@ -306,7 +321,6 @@
 														},
 					//拨打电话
 			PlayPhone(){
-				event.preventDefault()
 				var that=this
 				uni.showModal({
 				title: '提示',
@@ -368,12 +382,7 @@
 										  },
 										  success: function(res) {
 											  
-											 setTimeout(()=>{
-														uni.navigateTo({
-														url:"./newStoreRentalDateils?id=" + _this.id
-																										 
-																													})
-											},1000)
+									
 											 uni.showToast({
 												title: '评论成功',
 												icon: 'success',
@@ -477,6 +486,7 @@
 					},
 					success: (res) => {
 						console.log(res)
+						_this.swiperList=res.data.responseBody.srcs
 							_this.thePhone=res.data.responseBody.sysuser.phone
 						_this.commentList=res.data.responseBody.commentlist
 						if(_this.commentList!=undefined){

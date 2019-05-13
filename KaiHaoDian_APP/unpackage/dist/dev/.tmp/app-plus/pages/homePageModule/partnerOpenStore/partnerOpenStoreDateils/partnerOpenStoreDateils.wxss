@@ -70,6 +70,13 @@ page {
 .banner {
   position: relative;
 }
+.banner .swiper-box {
+    height: 530rpx;
+}
+.banner .swiper-box .swiper-item ._img {
+      width: 750rpx;
+      height: 530rpx;
+}
 .swiperbutton {
   position: absolute;
   bottom: 160rpx;
@@ -409,11 +416,16 @@ page {
               box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
 }
 .UserInfo .Massage-top .UserHeader .question {
+        width: 100%;
+        white-space: nowrap;
+        -o-text-overflow: ellipsis;
+           text-overflow: ellipsis;
+        overflow: hidden;
         font-size: 28rpx;
         font-weight: 600;
         letter-spacing: 5rpx;
-        padding: 44rpx 0;
-        color: #000000;
+        padding: 26rpx 0;
+        color: #333333;
 }
 .UserInfo .Massage-top .UserHeader .userMassage {
         display: -webkit-box;
@@ -442,18 +454,18 @@ page {
                     justify-content: space-between;
 }
 .UserInfo .Massage-top .UserHeader .userMassage .userMassage-Right .R-top .R-name {
-              font-size: 30rpx;
+              font-size: 28rpx;
               font-weight: 600;
               letter-spacing: 5rpx;
 }
 .UserInfo .Massage-top .UserHeader .userMassage .userMassage-Right .R-top .R-number {
-              font-size: 28rpx;
+              font-size: 24rpx;
               color: #686868;
 }
 .UserInfo .Massage-top .UserHeader .userMassage .userMassage-Right .R-top .R-number .iconecodes {
                 padding-right: 10rpx;
                 font-weight: 600;
-                font-size: 32rpx;
+                font-size: 28rpx;
 }
 .UserInfo .Massage-top .UserHeader .userMassage .userMassage-Right .R-bottom {
             position: relative;
@@ -473,24 +485,25 @@ page {
 }
 .UserInfo .Massage-top .UserHeader .userMassage .userMassage-Right .R-bottom .R-induce {
               display: inline-block;
-              font-size: 28rpx;
+              font-size: 24rpx;
               color: #808080;
               overflow: hidden;
               -o-text-overflow: ellipsis;
                  text-overflow: ellipsis;
               white-space: nowrap;
+              margin-top: 14rpx;
 }
 .UserInfo .Massage-top .UserHeader .userMassage .userMassage-Right .R-bottom .iconed {
               display: inline-block;
               color: #299dff;
               padding-left: 10rpx;
-              font-size: 28rpx;
+              font-size: 24rpx;
               margin-top: 6rpx;
 }
 .UserInfo .Massage-top .UserHeader .userMassage .userMassage-Right .R-bottom .iconfontes {
               font-weight: 600;
               font-size: 60rpx;
-              color: #ffecc7;
+              color: #ffbd38;
 }
 .UserInfo .Massage-top .UserHeader .shopInfo {
         display: -webkit-box;
@@ -505,12 +518,12 @@ page {
                 box-shadow: 0 1px 10px rgba(155, 155, 155, 0.6);
 }
 .UserInfo .Massage-top .UserHeader .shopInfo .infoTitle {
-          font-size: 28rpx;
+          font-size: 24rpx;
           font-weight: 600;
           padding: 20rpx 40rpx;
 }
 .UserInfo .Massage-top .UserHeader .shopInfo .InfoNumber {
-          font-size: 28rpx;
+          font-size: 24rpx;
           padding: 10rpx 0;
           color: #787878;
           border-right: 1px solid #a0a0a0;
@@ -524,24 +537,24 @@ page {
         border-bottom: 1px solid #eeeeee;
 }
 .UserInfo .Massage-top .UserHeader .industryList {
-        font-size: 28rpx;
+        font-size: 24rpx;
         color: #6b6b6b;
 }
 .UserInfo .Massage-top .UserHeader .industryList view {
           padding: 20rpx 0;
 }
 .UserInfo .Massage-top .UserHeader .industryList text {
-          color: #000000;
+          color: #333333;
           padding-left: 15rpx;
           font-weight: 600;
 }
 .UserInfo .Massage-top .UserHeader .industryLiSt {
         padding: 20rpx 0;
-        font-size: 28rpx;
+        font-size: 24rpx;
         color: #6b6b6b;
 }
 .UserInfo .Massage-top .UserHeader .industryLiSt text {
-          color: #000000;
+          color: #333333;
           padding-left: 15rpx;
           font-weight: 600;
           line-height: 2;
@@ -590,7 +603,7 @@ page {
             color: #666;
             text-align: center;
             line-height: 50rpx;
-            font-size: 28rpx;
+            font-size: 24rpx;
 }
 .UserInfo .Massage-top .UserHeader ._caller ._R {
           text-align: right;
@@ -627,7 +640,7 @@ page {
     padding: 25rpx 0;
     padding-bottom: 0;
     text-align: center;
-    font-size: 30rpx;
+    font-size: 28rpx;
     font-weight: 600;
     letter-spacing: 5rpx;
 }
@@ -669,10 +682,11 @@ page {
     padding-left: 10rpx;
 }
 .commentListTop .position {
-    font-size: 28rpx;
+    font-size: 24rpx;
     color: #747474;
     line-height: 2;
     font-weight: 600;
+    margin-bottom: 10rpx;
 }
 .commentListTop .userMassage {
     -webkit-box-sizing: border-box;
@@ -685,17 +699,17 @@ page {
     font-weight: lighter;
 }
 .commentListTop .userImg {
-    width: 100rpx;
-    height: 100rpx;
+    width: 90rpx;
+    height: 90rpx;
 }
 .commentListTop .userImg ._img {
-      width: 100rpx;
-      height: 100rpx;
+      width: 90rpx;
+      height: 90rpx;
       border-radius: 50%;
 }
 .commentContent {
   margin-top: 30rpx;
-  font-size: 28rpx;
+  font-size: 24rpx;
   letter-spacing: 5rpx;
   color: #000;
 }
@@ -704,9 +718,15 @@ page {
   right: 12rpx;
   top: 50rpx;
 }
+.icond2 {
+  color: #ffbd38;
+}
+.icond3 {
+  color: #989898;
+}
 .commentNumber {
   color: #666666;
-  font-size: 28rpx;
+  font-size: 24rpx;
   padding-left: 20rpx;
 }
 .introduction {
@@ -715,9 +735,9 @@ page {
 .iconecodes {
   position: absolute;
   right: 112rpx;
-  top: 168rpx;
-  font-size: 28rpx;
-  color: #686868;
+  top: 94rpx;
+  font-size: 30rpx;
+  color: #909090;
   font-weight: 600;
 }
 .iconecoded {
@@ -786,7 +806,7 @@ page {
 }
 .subreply {
   color: #ffc760;
-  font-size: 28rpx;
+  font-size: 24rpx;
   padding: 20rpx 0;
   font-weight: lighter;
 }
@@ -802,6 +822,6 @@ page {
   padding: 20rpx 0;
   text-align: center;
   font-weight: 600;
-  font-size: 32rpx;
+  font-size: 28rpx;
 }
 

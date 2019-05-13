@@ -22,12 +22,16 @@ page{
 position: relative;
 }
 // 顶部图片
-._swiper {
+.swiper-box {
 	width: 750upx;
 	height:530upx;
 	font-size: 0;
 	background: #fff;
 	box-sizing: border-box;
+	img{
+		width: 750upx;
+		height:530upx;
+	}
 }
 .banner{
 	position: relative;
@@ -565,6 +569,12 @@ position: relative;
 			position: absolute;
 			right: 12upx;
 			top: 50upx;
+		}
+			.icond2{
+			color: #ffbd38;
+		}
+		.icond3{
+			color: #989898;
 		}
 		.commentNumber{
 			color: #666666;

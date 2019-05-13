@@ -17,7 +17,7 @@
 					</view>
 				
 			</view>
-			<view class="_tab" @click="tabsChanges(3)" style="">
+			<view class="_tab" @click="tabsChanges(2)" style="">
 				<view :class="{_activeColor:tabsState === 2 ? '_activeColor' : ''}">
 				
 				类型
@@ -25,14 +25,14 @@
 					</view>
 				
 			</view>
-			<view class="_tab" @click="tabsChanges(4)">
+			<view class="_tab" @click="tabsChanges(3)">
 				<view :class="{_activeColor:tabsState === 3 ? '_activeColor' : ''}">
 					地址
 					<text :class="totop4"></text>
 					</view>
 				
 			</view>
-			<view class="_tab" @click="tabsChanges(2)">
+			<view class="_tab" @click="tabsChanges(4)">
 				<view :class="{_activeColor:tabsState === 4 ? '_activeColor' : ''}">
 				转让费
 					<text :class="totop5"></text>
@@ -45,36 +45,37 @@
 			<view class="_top">
 				
 				<swiper class="_swiper" :current="swiperIndex" @change="swiperChangs">
-						<!-- <swiper-item class="_swiper_item">
+						<swiper-item class="_swiper_item">
 						<scroll-view scroll-y class="_scroll">
-							<view :class="{'_scroll_cell':true,'active':activeIndex==index}" v-for="(item,index) in synthesize" :key="index">
+							<view :class="{'_scroll_cell':true,'active':activeIndex==index}" v-for="(item,index) in synthesize" :key="index" @click="sorting(index)">
 								{{item.value}}
 							<text :class="{'iconfont':true,'active':activeIndex==index}">&#xe721;</text>
 							</view>
-						</scroll-view> -->
+						</scroll-view>
 					</swiper-item>
 					<swiper-item class="_swiper_item" >
 						<scroll-view scroll-y class="_scroll">
-							<view :class="{'_scroll_cell':true,'active':activeIndex==index}" v-for="(item,index) in cityList" :key="index" @click="selenav(item.id,index)">{{item.name}}<text :class="{'iconfont':true,'active':activeIndex==index}">&#xe721;</text></view>
+							<view :class="{'_scroll_cell':true,'active':activeIndex==index}" v-for="(item,index) in area" :key="index" @click="subarea(index,item.id)">{{item.minarea}}-{{item.maxarea }}  ㎡ <text :class="{'iconfont':true,'active':activeIndex==index}">&#xe721;</text></view>
+							
 								
 						</scroll-view>
 					</swiper-item>
 					<swiper-item class="_swiper_item">
 						<scroll-view scroll-y class="_scroll">
-							<view :class="{'_scroll_cell':true,'active':activeIndex==index}" v-for="(item,index) in area" :key="index" @click="subarea(index)">{{item.minarea}}-{{item.maxarea }}  ㎡ <text :class="{'iconfont':true,'active':activeIndex==index}">&#xe721;</text></view>
+							<view :class="{'_scroll_cell':true,'active':activeIndex==index}" v-for="(item,index) in paixu" :key="index" @click="leibien(index,item.id)">{{item.value}} <text :class="{'iconfont':true,'active':activeIndex==index}">&#xe721;</text></view>
 							
 						</scroll-view>
 					</swiper-item>
 					<swiper-item class="_swiper_item">
 						<scroll-view scroll-y class="_scroll">
-							<view :class="{'_scroll_cell':true,'active':activeIndex==index}" v-for="(item,index) in fee" :key="index" @click="feeFetching(index)">人民币{{item.minFee}}-{{item.maxFee}}
+							<view :class="{'_scroll_cell':true,'active':activeIndex==index}" v-for="(item,index) in cityList" :key="index" @click="selenav(item.id,index)">{{item.name}}
 							<text :class="{'iconfont':true,'active':activeIndex==index}">&#xe721;</text>
 							</view>
 						</scroll-view>
 					</swiper-item>
 					<swiper-item class="_swiper_item">
 						<scroll-view scroll-y class="_scroll">
-							<view :class="{'_scroll_cell':true,'active':activeIndex==index}" v-for="(item,index) in paixu" :key="index" @click="leibien(item.id,item.value)">{{item.value}}
+				<view :class="{'_scroll_cell':true,'active':activeIndex==index}" v-for="(item,index) in fee" :key="index" @click="feeFetching(index)">人民币{{item.minFee}}-{{item.maxFee}}
 							<text :class="{'iconfont':true,'active':activeIndex==index}">&#xe721;</text>
 							</view>
 						</scroll-view>
@@ -89,7 +90,7 @@
 
 		<view class='transfer'>
 		  <view class='transfer_list' v-for="(item, index) in partnerList" :key="index" @click="toStoreMakeOverDateils(item.id)">
-		   <view class="transfers">
+		<!--   <view class="transfers">
 		   	<view class="transfer-left">
 		   	 <img src="https://wx.qlogo.cn/mmopen/vi_32/clsym6uibo36OHsmO9WmJDZue7QHa0cNiciajjcngAVQfc80RHmutzMwMkyg0ibwYpTRhOA9ZbyXuUh1EKJic7rRbFA/132" alt="">
 		   	</view>
@@ -107,7 +108,7 @@
 					<view class="see"><text class="iconfont texts">&#xe64c;</text>{{item.readnum}}</view>
 				</view>
 			</view>
-		   </view>
+		   </view> -->
 		   <view class="transferImg">
 			   <img :src="item.src" mode=""></image>
 		   </view>
@@ -134,28 +135,24 @@
 				</view>
 			</view>
 		   </view>
-		   
 		  </view>
 		</view>
 		<!-- #end -->
-		  <view style="text-align:center;margin:30rpx 0;font-size: 14px;">{{no}}</view>
+		  <view style="text-align:center;margin:30rpx 0; font-size: 14upx; color: #000;font-weight: 600;">{{no}}</view>
 	</view>
 </template>
 
 <script>
 	import shoppublic from '@/common/shoppublic'; //服务器地址
-	var mta = require('../../../common/mta_analysis.js');
-	// var app = getApp()
 		var getLocation = require('../../../common/getLocation.js');
-		var app = getApp();
-		var appLocation = app.globalData.location;
-
 		var imageUrl = shoppublic.getImageUrl();
 		var imageUrl1 = shoppublic.getUpImgUrl();
 		var index;
 	export default {
+
 		data() {
 			return { 
+						order:0,
 						activeIndex:0,
 						countryid:"",
 						countyvalue:"",
@@ -278,43 +275,44 @@
 			};
 		},
 		
-		created() {
+		onLoad() {
 			
 		var that=this
-		that.getPartnerList()
-		let _this = this;
+		
+		
 			uni.getStorage({
 			key: 'location',
 			success: res => {
-				console.log('getStorage', JSON.stringify(res));
+			
 				_this.location = {
 					province_id: res.data.province_id,
 					province_name: res.data.province_name,
 					city_id: res.data.city_id,
 					city_name: res.data.city_name
 				};
-				_this.countryid = res.data.city_id;
-				// console.info('_location_city',_this.location_city);
+				that.countryid = res.data.city_id;
+			;
 			},
 			fail: res => {
 				if (
-					(_this.location.province_name ||
-						_this.location.province_id ||
-						_this.location.city_name ||
-						_this.location.city_id) == ''
+					(that.location.province_name ||
+						that.location.province_id ||
+						that.location.city_name ||
+						that.location.city_id) == ''
+						
 				) {
 					getLocation.getLocation(function(res_p, res_c) {
-						// _this.setLocation(res_p, res_c);
-						// console.log('省', JSON.stringify(res_p));
-						// console.log('市', JSON.stringify(res_c));
-						_this.countryid=res_c[0].id
+						that.countryid=res_c[0].id
+						console.log(that.countryid)
 					});
 				}
 			}
-		});
-					setTimeout(()=>{
-					 that.getAderss(that.countryid)
-					},500)
+		});		
+		setTimeout(()=>{
+			that.getAderss(that.countryid)
+			that.getPartnerList()
+		},1000)
+				 
 					
 					},
 		onReachBottom() {
@@ -324,12 +322,19 @@
 		
 		},
 		methods:{
+			//综合排序
+			sorting(index){
+				console.log(index)
+				this.activeIndex=index;
+				this.order=index
+				this.getPartnerList(); 
+				},
 			//定位选择
 			//区域排行
 			  selenav(id,index) {
 					let that = this;
 					this.activeIndex=index;
-							that.adress=value,
+					
 							that.countyid=id,
 							that.countyvalue=id,
 						
@@ -343,14 +348,13 @@
 						   uni.request({
 					  url: shoppublic.getUrl() + '/common/findRegionListByPid',
 					  data: {
-						id: id
+						id:id
 					  },
 					  header: {
 						'content-type': 'application/json' // 默认值
 					  },
 					  success: function(res) {
-						console.log(res.data.responseBody)
-						
+						  console.log(25)
 						var county = res.data.responseBody;
 						var aa = {
 						  name: "全部",
@@ -373,11 +377,9 @@
 					  }
 					})
 					},
-			leibien(id,value) {
+			leibien(index,id) {
 				this.activeIndex=index;
-				  this.type=id,
-				  this.renzText=value     
-				
+				  this.type=id,    
 					this.getPartnerList()
 			  },
 			//转让费排序
@@ -403,17 +405,11 @@
 					  },
 				//面积排序
 				  subarea(index) {
+					  
 					  this.activeIndex=index;
 						let that = this
-						// that.clickScrollCell();
-						
-						var areaText = that.area[index].minarea + "-" + that.area[index].maxarea
-
-						
 						   that.minarea=that.area[index].minarea,
 						   that.maxarea=that.area[index].maxarea,
-							 that.areaText=areaText,
-						 // that.tabsMaskState = 'false';
 							that.getPartnerList()
 					  },
 			   //三角形切换
@@ -429,17 +425,17 @@
 				   }else{
 						that.totop2="tobott"
 				   }
-				    if(index==3){
+				    if(index==2){
 				   		that.totop3="totop"
 				   }else{
 				   		that.totop3="tobott"
 				   }
-				    if(index==4){
+				    if(index==3){
 				   		that.totop4="totop"
 				   }else{
 				   		that.totop4="tobott"
 				   }
-				    if(index==2){
+				    if(index==4){
 				   		that.totop5="totop"
 				   }else{
 				   		that.totop5="tobott"
@@ -459,19 +455,20 @@
 						url:shoppublic.getUrl() + 'oldShopTransfer/findlistOldShopTransfer',
 						data:{
 							index:_this.index,
-							city:_this.countryid,
-							county:'',
+							city:that.countryid,
+							county:that.countyvalue,
 							partner:'',
-							type:'',
+							type:that.type,
 							statuslist:'状态',// 经营状态
-							minarea: '',
-							maxarea: '',
-							minloadingfee: '',
-							maxloadingfee: '',
-							
+							minarea:_this.minarea,
+							maxarea: _this.maxarea,
+							minloadingfee: _this.minloadingfee.indexOf('万') != -1 ? that.minloadingfee.substr(0, that.minloadingfee.indexOf('万'))*10000:that.minloadingfee,
+							maxloadingfee: _this.maxloadingfee.indexOf('万') != -1 ? that.maxloadingfee.substr(0, that.maxloadingfee.indexOf('万')) * 10000 : that.maxloadingfee,
+							statuslist:_this.statuslist,
+							 type:_this.type,
+							 order:_this.order,
 						},
 						success: (res) => {
-						
 							if(page === 'onReach' && res.data.responseBody){
 								_this.index += 7;
 							}else{
@@ -486,10 +483,10 @@
 						url:shoppublic.getUrl() + 'oldShopTransfer/findlistOldShopTransfer',
 						data:{
 							index:_this.pagesize,
-							city:610100,
+							city:that.countryid,
 							county:that.countyvalue,
 							partner:'',
-							type:'',
+							type:that.type,
 							statuslist:'状态',// 经营状态
 							minarea:_this.minarea,
 							maxarea: _this.maxarea,
@@ -497,9 +494,10 @@
 							maxloadingfee: _this.maxloadingfee.indexOf('万') != -1 ? that.maxloadingfee.substr(0, that.maxloadingfee.indexOf('万')) * 10000 : that.maxloadingfee,
 							statuslist:_this.statuslist,
 							 type:_this.type,
+							 order:_this.order,
 						},
 						success: (res) => {
-					console.log(res.data.responseBody)
+							
 							var list=_this.partnerList
 							   let listBody = res.data.responseBody
 							if (listBody) {

@@ -42,7 +42,7 @@
 					<swiper class="_swiper" :current="swiperIndex" @change="swiperChangs">
 						<swiper-item class="_swiper_item">
 							<scroll-view scroll-y class="_scroll">
-								<view class="_scroll_cell" v-for="(item,indexs) in 15" :key="indexs" @click="clickScrollCell">毛毛虫</view>
+								<view class="_scroll_cell" v-for="(item,indexs) in synthesize" :key="indexs" @click="clickScrollCell">{{item.value}}</view>
 							</scroll-view>
 						</swiper-item>
 							<swiper-item class="_swiper_item">
@@ -144,7 +144,20 @@
 				pagesize: 0,
 				index:7,
 				status:1,
-				
+				synthesize:[
+					{
+					id:0,
+					value:'综合'
+					},
+					{
+					id:1,
+					value:'信用'
+					},
+					{
+					id:0,
+					value:'最新发布'
+					},
+				],
 				   paixu: [
 						  { id: "", value: "不限" },
 						  { id: "0", value: "餐饮美食" },

@@ -74,6 +74,7 @@
 			};
 		},
 		created() {
+			
 			if (this.mode === 'indexes') {
 				this.dots.width = 20
 				this.dots.height = 20
@@ -94,7 +95,8 @@
 				}
 			}
 
-		}
+		},
+		
 	}
 </script>
 

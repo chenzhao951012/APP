@@ -165,6 +165,13 @@
   position: relative;
   background: #f6f6f6;
 }
+.banner .swiper-box {
+    height: 400rpx;
+}
+.banner .swiper-box .swiper-item ._img {
+      width: 750rpx;
+      height: 400rpx;
+}
 .banner ._search {
     width: 620rpx;
     height: 70rpx;
@@ -207,7 +214,7 @@
       width: 50rpx;
       text-align: right;
       line-height: 50rpx;
-      font-size: 30rpx;
+      font-size: 24rpx;
       color: #666;
 }
 .banner ._swiper {
@@ -285,7 +292,7 @@
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    font-size: 32rpx;
+    font-size: 28rpx;
     font-weight: 600;
     color: #181818;
     line-height: 50rpx;
@@ -333,7 +340,7 @@
         text-indent: 22rpx;
         line-height: 80rpx;
         color: #fff;
-        font-size: 32rpx;
+        font-size: 28rpx;
         font-weight: 600;
         letter-spacing: 5rpx;
         padding-left: 20rpx;
@@ -375,7 +382,7 @@
 .project_cell .cell_bottom ._left ._name {
         width: 450rpx;
         line-height: 50rpx;
-        font-size: 30rpx;
+        font-size: 24rpx;
         color: #333;
         overflow: hidden;
         -o-text-overflow: ellipsis;
@@ -408,7 +415,7 @@
 }
 .project_cell .cell_bottom ._lineCss {
       padding: 10rpx 20rpx;
-      font-size: 28rpx;
+      font-size: 24rpx;
       color: #191919;
       border: 1px solid #e5e5e5;
       margin-right: 30rpx;
@@ -424,7 +431,7 @@
         line-height: 50rpx;
 }
 .project_cell .cell_bottom ._priceParent ._priceTop {
-        font-size: 30rpx;
+        font-size: 24rpx;
         color: #333;
 }
 .project_cell .cell_bottom ._priceParent ._price {
@@ -454,13 +461,13 @@
 }
 .tese {
   color: #a7a7a7;
-  font-size: 28rpx;
+  font-size: 24rpx;
   letter-spacing: 5rpx;
 }
 .times {
   padding-left: 10rpx;
-  font-size: 28rpx;
-  color: #000000;
+  font-size: 24rpx;
+  color: #333333;
   letter-spacing: 5rpx;
   font-weight: 500;
 }

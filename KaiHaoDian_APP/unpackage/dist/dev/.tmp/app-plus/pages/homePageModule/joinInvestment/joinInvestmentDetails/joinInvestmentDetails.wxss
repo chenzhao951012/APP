@@ -212,13 +212,13 @@
 .companyInfo ._top .company_R .iconeds {
         position: absolute;
         right: -40rpx;
-        top: 8rpx;
+        top: 2rpx;
         color: #299dff;
-        font-size: 24rpx;
+        font-size: 36rpx;
 }
 .companyInfo ._top .company_R .R_name {
         width: 300rpx;
-        font-size: 30rpx;
+        font-size: 28rpx;
         color: #000000;
         margin-bottom: 5rpx;
         overflow: hidden;
@@ -750,6 +750,12 @@
   right: 12rpx;
   top: 50rpx;
 }
+.icond2 {
+  color: #ffbd38;
+}
+.icond3 {
+  color: #989898;
+}
 .commentNumber {
   color: #666666;
   font-size: 28rpx;
@@ -761,8 +767,8 @@
 .iconecodes {
   position: absolute;
   right: -218rpx;
-  top: -6rpx;
-  font-size: 28rpx;
+  top: 4rpx;
+  font-size: 24rpx;
   color: #686868;
   font-weight: 600;
 }

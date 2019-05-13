@@ -104,7 +104,7 @@ page {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 30rpx;
+  font-size: 28rpx;
   color: #b2b3b3;
   background: #fff;
   padding: 15rpx 20rpx;
@@ -298,7 +298,7 @@ page {
 ._contacts ._contacts_name {
     color: #333333;
     font-weight: 600;
-    font-size: 30rpx;
+    font-size: 28rpx;
 }
 ._contacts ._contacts_company {
     color: #20201e;
@@ -368,6 +368,7 @@ page {
     margin-top: 20rpx;
 }
 .openStory .openStory_cell {
+    font-size: 28rpx;
     width: 90%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -377,6 +378,7 @@ page {
     margin-bottom: 40rpx;
     position: relative;
     border-radius: 10rpx;
+    color: #333333;
 }
 .osCell_title {
   width: 690rpx;
@@ -439,7 +441,7 @@ page {
         font-size: 28rpx;
 }
 .osCell_content {
-  font-size: 30rpx;
+  font-size: 28rpx;
   color: #333;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -535,7 +537,7 @@ page {
 .openStory_cell-title {
   width: 80%;
   color: #333333;
-  font-size: 30rpx;
+  font-size: 28rpx;
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
@@ -660,7 +662,7 @@ page {
 }
 .userName {
   width: 60%;
-  font-size: 15px;
+  font-size: 28rpx;
   font-weight: 600;
   color: #686868;
 }
@@ -669,16 +671,16 @@ page {
   font-size: 13px;
 }
 .userInfoCompy {
-  margin-top: 10rpx;
-  font-size: 14px;
-  color: #a4a4a4;
+  margin-top: 16rpx;
+  font-size: 24rpx;
+  color: #7f7f7f;
 }
 .usericonfont {
   padding-left: 10rpx;
   color: #259bfe;
 }
 .infoBox {
-  color: #636363;
+  color: #666666;
   border-radius: 0rpx 20rpx 20rpx 40rpx;
   font-size: 14px;
   font-weight: 600;

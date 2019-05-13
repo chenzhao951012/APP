@@ -42,9 +42,9 @@ page {
   overflow: hidden;
 }
 .TopBox {
-  height: 60rpx;
+  height: 30rpx;
   width: 100%;
-  background-color: #eeeeee;
+  background-color: #f3f3f3;
 }
 ._business_card {
   width: 690rpx;

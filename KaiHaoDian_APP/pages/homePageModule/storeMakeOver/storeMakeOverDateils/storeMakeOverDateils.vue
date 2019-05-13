@@ -1,19 +1,21 @@
 <template>
 	<view class="content">
-		<view v-for="(item,index) in pageInfo" :key="index" class="userBox">
-			<!-- 顶部图片 -->
-			<view class="banner">
-					<swiper class="_swiper"  :autoplay="true" :duration="1000" :circular="true"  indicator-active-color="#3285ff" @change="ChangeSwiper">
-					<swiper-item class="_swiper" v-for="(srcs,key) in item.srcs" :key="key">
-						<image class="_swiper" :src="srcs"></image>
-					</swiper-item>
-				</swiper>
-					<view class="swiperbutton">
-					<view :class="{'balltas':true,'active':activeIndex==indexe}" v-for="(items,indexe) in item.srcs" :key="indexe">
-						
-				</view>
-				</view>
+		<view class="userBox">
+				<view class="banner">
+					<Swiperdot :info="swiperList" :current="current" field="content" :mode="mode" :bottom="80">
+						<swiper class="swiper-box" @change="change" :autoplay="true" :duration="1000" :circular="true">
+				        <swiper-item v-for="(item,idx) in swiperList" :key='idx'>
+				            <view class="swiper-item">
+				                <img class="_swiper" :src="item">
+				            </view>
+				        </swiper-item>
+				    </swiper>
+				</Swiperdot>
+					
 			</view>
+		<view v-for="(item,index) in pageInfo" :key="index" >
+			<!-- 顶部图片 -->
+		
 			<!-- 用户信息 -->
 			<view class="UserInfo">
 				<view class="Massage-top">
@@ -134,7 +136,7 @@
 						<view class="CommentImg" v-if="shows">
 							<img src="../../../../static/ComentImg.png" alt="">
 						</view>
-						<view class="introduction" v-for="(itemd,indexs) in commentList" :key='indexs' @touchend="subReply(indexs)">
+						<view class="introduction" v-for="(itemd,indexs) in commentList" :key='indexs' @click="subReply(indexs)">
 							<view class="commentListTop" v-if="itemd.sysuser">
 								<view class="userImg">
 									<img :src="itemd.sysuser.portrait" alt="" v-if="itemd.sysuser.portrait">
@@ -149,10 +151,13 @@
 									<view class="commentContent">
 										{{itemd.content}}
 									</view>
-									<view class="" @touchend="clickZanImg(indexs,itemd.id)">
-										<text class="iconfont icond" >&#xe872;<text class="commentNumber">{{itemd.praisecount}}</text></text>
+								<view class="" @click.stop="clickZanImg(indexs,itemd.id)">
+									<text :class="commentList[indexs].praisestate == true ? 'icond2' :'icond3' ">
+										<text class="iconfont icond" >&#xe872;<text class="commentNumber">{{itemd.praisecount}}</text>
+										</text>
+									</text>
 									</view>
-									<view class="subreply" v-if="itemd.comment_list.length!=0">
+									<view class="subreply" v-if="itemd.comment_list && itemd.comment_list.length!=0">
 										{{itemd.comment_list.length}}条回复 >
 									</view>
 								</view>
@@ -179,7 +184,7 @@
 			</view>
 
 		</view>
-		
+		</view>
 	</view>
 </template>
 
@@ -188,20 +193,25 @@
 	import NoComment from '@/components/noComment/noComment.vue'
 	import commentModule from '@/components/commentModule/commentModule.vue';
 	import shoppublic from '@/common/shoppublic.js';
+	import Swiperdot from '@/components/swipers/uni-swiper-dot.vue';
 	export default{
 		components:{
 			commentModule:commentModule,
-			NoComment:NoComment
+			NoComment:NoComment,
+			Swiperdot:Swiperdot
 		},
 		data(){
 			return{
+				swiperList:[],
+				current: 0,
+				mode: 'long',
+				activeIndex:0,
 				shows:true,
 				commentstate:0,
 				connect:"",
 				isShow:false,
 				Show:true,
 				visitorList:[], 
-				activeIndex:0,
 				pktype2:8,
 				Twocomment:shoppublic.getUrl() + '/comment/addLevelComment',
 				thePhone:"",
@@ -213,7 +223,7 @@
 				id:"",
 				url:shoppublic.getUrl() + '/comment/addComment',
 				pktype:1,
-				token:14651,
+				token:17099,
 				isShowsubConment:true,
 				isShowConment:true,
 				commentList:"",
@@ -230,7 +240,7 @@
 			var _this=this
 			_this.getvisitor()
 			_this.id=option.id
-		
+			console.log(_this.pageInfo)
 			this.getPageInfo(option.id);
 			setTimeout(()=>{
 				 _this.commentNum()
@@ -246,6 +256,7 @@
 			},200)
 		},
 		methods:{
+			
 			//发送评论
 				subReply(index){
 				var that=this
@@ -275,6 +286,10 @@
 									
 									},
 			//评论
+			 change(e) {
+			    this.current = e.detail.current;
+				console.log(e.detail.current)
+			},
 			 addReplyOfHuiFu: function(content) {
 										var _this = this;
 										//评论列表
@@ -394,6 +409,7 @@
 						id:id
 					},
 					success: (res) => {
+						_this.swiperList=res.data.responseBody.srcs.slice(0,-1)
 						console.log(res)
 							_this.thePhone=res.data.responseBody.sysuser.phone
 						_this.commentList=res.data.responseBody.commentlist
@@ -412,6 +428,48 @@
 					}
 				})
 			},
+			//点赞
+					clickZanImg(index,id) {
+									var that=this
+										var index = index;
+										var id =id
+										var commentlist = this.commentList;
+										// 点完赞之后的请求
+									
+										var _this = this;
+										uni.request({
+										  url: shoppublic.getUrl() + '/comment/addCommentPraise', //, //仅为示例，并非真实的接口地址
+										  data: {
+											cid: id,
+											token: _this.token
+										  },
+										  header: {
+											'content-type': 'application/json' // 默认值
+										  },
+										  success: function(res) {
+											var flag = res.data.msgCode;
+											if (flag == '1') {
+												// that.changecolor="changecolored"
+											  commentlist[index].praisestate = true;
+											  commentlist[index].praisecount = commentlist[index].praisecount + 1;
+											} else {
+												// that.changecolor="changecolore"
+											  commentlist[index].praisestate = false;
+											  var praisecount = commentlist[index].praisecount - 1;
+											  if (praisecount >= 0) {
+												commentlist[index].praisecount = praisecount;
+											  } else {
+												commentlist[index].praisecount = 0;
+											  }
+											}
+													
+											  _this.commentList=commentlist
+										
+				
+										  },
+										  fail: function(res) {}
+										})
+				},
 			// 钱切割
 			moneyIncise(value){
 				var _this = this;
@@ -427,6 +485,7 @@
 					value.oldShopTransfer.loadingfee = '面议'
 				}
 				_this.pageInfo.push(value);
+				
 			},
 			 // 循环添加至数组进行排序 以下3个函数给商铺配套和周边排序
 			FuckMe(data, dataList) {
