@@ -8,10 +8,10 @@
 }
 /* 钱数量 */
 ._money_number{
-	font-size:40upx;
+	font-size:88upx;
 	text-align:center;
 	color: #fffeff;
-	margin-bottom: 40upx;
+	margin-bottom: 20upx;
 }
 /* 提现按钮 */
 ._withdrawal_button{
@@ -71,13 +71,18 @@
 		border-radius: 20upx;
 		margin-bottom: 40upx;
 		letter-spacing: 5upx;
+		color:#000;
+		background-color: #eeeeee;
 	}
 	.btns2{
+		height: 80upx;
 		font-size: 28upx;
-		background-color: #eeeeee;
 		border-radius: 20upx;
-		color: #333333;
-			letter-spacing: 5upx;
+		margin-bottom: 40upx;
+		color: #fff;
+		letter-spacing: 5upx;
+		background-color: #f6b32e;
+
 	}
 	uni-button:after{
 		border: 0;

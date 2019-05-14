@@ -6,8 +6,9 @@
 				<view class="_money_number _money_numbers">(账户余额/元)</view>
 			</view>
 			<view class="btnBox">
+				<button type="primary" class="btns2"  @touchend="jumpToMineWithdrawal">充值</button>
 				<button type="primary" class="btns1"  @touchend="jumpToMineWithdrawal">提现</button>
-				
+
 			</view>
 			
 		<!-- 	<view class="_bottom_content _display_flex" @click="jumpToMarginBalance">

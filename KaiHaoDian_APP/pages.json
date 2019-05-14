@@ -1082,6 +1082,12 @@
 				"navigationBarTitleText":"我的推广"
 			}
         }
+        ,{
+            "path" : "pages/mineIndex/Investment/Investment",
+            "style" : {
+				"navigationBarTitleText":"招商管理"
+			}
+        }
     ],
     /*------------------------------------------添加认证相关页面  End------------------------------------------*/
     "globalStyle" : {

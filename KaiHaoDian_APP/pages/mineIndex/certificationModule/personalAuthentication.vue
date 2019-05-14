@@ -28,6 +28,18 @@
 				<textarea type="text" value="" placeholder="请输入你的简介" v-model="introduced"/>
 			</view>
 		</view>
+		
+		<!-- 弹窗 -->
+		<view class="auditBox" v-if="audit">
+			<view class="auditBox_t">
+				<view class="auditBox_text">恭喜您完成认证</view>
+				<view class="auditBox_text">我们需在3-5个工作日进行审核</view>
+				<view class="auditBox_text">请注意查看系统消息</view>
+			</view>
+			<view class="auditBox_b" @click="determine">
+				确定
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -118,7 +130,7 @@
 				businesscard:"",
 				jobcertification:"",
 				workers:"",
-				
+				audit:false,
 			};
 		},
 		 
@@ -349,15 +361,26 @@
 
 
   },
+	//确定认证
+	determine(){
+		this.audit = false,
+		uni.reLaunch({
+				url: '../../index/index',
+		})
+		
+	}
 		},
-		 onNavigationBarButtonTap() {  
-							uni.showModal({
-							  title: '提示',
-							  content: '完成',
-							  showCancel: false,
-							  success: function() {}
-							})
-					}, 
+		 onNavigationBarButtonTap() {
+				this.audit = true
+			 
+							// uni.showModal({
+							//   title: '提示',
+							//   content: '完成',
+							//   showCancel: false,
+							//   success: function() {}
+							// })
+		}
+		
 	}
 </script>
 

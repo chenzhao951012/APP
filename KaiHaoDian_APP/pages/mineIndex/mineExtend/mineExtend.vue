@@ -5,7 +5,7 @@
     <view class="extendTop1">
       <view class='extendTop_l'>
         <img class="cImg" :src='avatar' /> 
-        <view class="extendTop_l_name">{{userInfo.name}}</view>
+        <view class="extendTop_l_name">{{name}}</view>
         <view class="A_information">认证信息</view>
       </view>
       <view class='extendTop_r'>
@@ -27,7 +27,7 @@
   <view style='height:20upx;background-color:#f3f3f3;'></view>
 
   <!-- 有人关注 -->
-  <view class='extendBottom' v-if="userInfo.list.length!=0" v-for='(item,index) in userInfoList' :key="index">
+  <view class='extendBottom' v-if="list.length!=0" v-for='(item,index) in userInfoList' :key="index">
     <view class='extendBottom1'>
       <!-- 左 -->
       <view class="extendBottom1_l">
@@ -45,7 +45,7 @@
   </view>
 
   <!-- 没人关注 -->
-  <view class="zanWuPingLunBox" v-if="userInfo.list.length==0">
+  <view class="zanWuPingLunBox" v-if="list.length==0">
     <img src="../../../static/bear.png" class='zanWuPingLunImg' /> 
     <view class='zanWuPingLunText'>暂无更多</view>
   </view>  
@@ -69,6 +69,8 @@
 				  sysuser: {},
 				  money:'',
 				  avatar:'',
+				  name:'',
+				  list:''
 			};
 		},
 		methods:{
@@ -77,10 +79,10 @@
 				uni.request({
 				  url:shoppublic.getUrl() + '/personalcenter/sharecode/'+17112,
 				  success: function (res) {
-					
 						_this.imgurls= "data:image/jpeg;base64," + res.data.responseBody.img,
 						_this.avatar =res.data.responseBody.avatar,
-						_this.userInfo=res.data.responseBody,
+						_this.name =res.data.responseBody.name,
+						_this.list=res.data.responseBody.list,
 						_this.userInfoList=res.data.responseBody.list,
 						// money: res.data.responseBody.list.money.toFixed(2),
 					console.log(res.data.responseBody)

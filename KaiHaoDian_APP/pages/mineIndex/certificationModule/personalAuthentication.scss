@@ -45,3 +45,34 @@
 		line-height:2;
 	}
 }
+
+.auditBox{
+	width: 78%;
+	height: 26%;
+	position: fixed;
+	left: 11%;
+	top: 50%;
+	z-index: 100;
+	background-color: #fff;
+	font-size: 28upx;
+	text-align: center;
+	border: 2px solid #eee;
+    border-radius: 20upx;
+	
+	.auditBox_t{
+		padding: 50upx 100upx;
+		
+		.auditBox_text{
+			margin-bottom: 10upx;
+		}
+	}
+	
+	.auditBox_b{
+		height: 100upx;
+		line-height: 100upx;
+		background-color: #ffbd38;
+		color: #fff;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+}
