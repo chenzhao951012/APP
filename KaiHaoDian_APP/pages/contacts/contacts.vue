@@ -33,7 +33,7 @@
 				<view class="_contact_way iconfont">&#xe61e;<text @touchend="userphone(user.id)">{{user.phone}}</text></view>
 
 			</view>
-			<view class="shares"><img src="../../static/shares.png" alt=""></view>
+			<view class="shares"><img style="width: 64upx;height: 64upx;" src="../../static/shares.jpg" alt=""></view>
 		</view>
 		<view class="attentionBox">
 			<view class="attentionBox2">

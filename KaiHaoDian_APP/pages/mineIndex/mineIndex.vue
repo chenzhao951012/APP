@@ -9,7 +9,7 @@
 					<view class="userBanner">
 						
 					</view>
-					<view class="_header_card" @touchend="jumpToContacts">
+					<view class="_header_card" @click="jumpToContacts">
 						<!-- 用户信息图片 -->
 						<image class="_card_left_image" :src="userInfo.portrait"></image>
 						<view class="_card_right">
@@ -21,17 +21,17 @@
 					</view>
 					<!-- 关注、提问、粉丝 -->
 					<view class="_mine_menu">
-						<view class="_menu_item"  @touchend="jumpToMenu(0)">
+						<view class="_menu_item"  @click="jumpToMenu(0)">
 							
 							<view class="_mine_focus">我的关注</view>
 							<view class="_focus_number">{{attentionCount}}</view>
 						</view>
-						<view class="_menu_item"  @touchend="jumpToMenu(1)">
+						<view class="_menu_item"  @click="jumpToMenu(1)">
 								<view class="_mine_focus">我的粉丝</view>
 							<view class="_focus_number">{{fanscount}}</view>
 						
 						</view>
-						<view class="_menu_item" @touchend="jumpToMenu(2)">
+						<view class="_menu_item" @click="jumpToMenu(2)">
 							
 							<view class="_mine_focus">我的提问</view>
 						<view class="_focus_number">{{questionCount}}</view>
@@ -47,7 +47,7 @@
 					</view>
 					<!-- 我的钱包 -->
 					<view class="massageBox">
-						<view class="_mine_menu_center" @touchend="jumpToInfoPage(0)">
+						<view class="_mine_menu_center" @click="jumpToInfoPage(0)">
 							<view class="_mine_menu_left">
 								<text class="_arrow iconfont">&#xe674;</text>
 								<text class="_mine_wallet">我的钱包</text>
@@ -57,7 +57,7 @@
 								<text class="_arrow iconfont">&#xe616;</text>
 							</view>
 						</view>
-							<view class="_mine_menu_center" @touchend="jumpToInfoPage(2)">
+							<view class="_mine_menu_center" @click="jumpToInfoPage(2)">
 							<view class="_mine_menu_left">
 								<text class="_arrow iconfont">&#xe67b;</text>
 								<text class="_mine_wallet">我的积分</text>
@@ -67,7 +67,7 @@
 								<text class="_arrow iconfont">&#xe616;</text>
 							</view>
 						</view>
-						<view class="_mine_menu_center" @touchend="jumpToInfoPage(1)">
+						<view class="_mine_menu_center" @click="jumpToInfoPage(1)">
 							<view class="_mine_menu_left">
 								<text class="_arrow iconfont">&#xe675;</text>
 								<text class="_mine_wallet">我的发布</text>
@@ -77,7 +77,7 @@
 								<text class="_arrow iconfont">&#xe616;</text>
 							</view>
 						</view>
-							<view class="_mine_menu_center" @touchend="jumpToMenu(2)" style="border-bottom: 0;">
+							<view class="_mine_menu_center" @click="jumpToMenu(2)" style="border-bottom: 0;">
 							<view class="_mine_menu_left">
 								<text class="_arrow iconfont">&#xe678;</text>
 								<text class="_mine_wallet">我的问答</text>
@@ -90,7 +90,7 @@
 						<view class="lines">
 							
 						</view>
-						<view class="_mine_menu_center" @touchend="jumpToInfoPage(3)">
+						<view class="_mine_menu_center" @click="jumpToInfoPage(3)">
 							<view class="_mine_menu_left">
 								<text class="_arrow iconfont">&#xe679;</text>
 								<text class="_mine_wallet">我的订单</text>
@@ -100,7 +100,7 @@
 								<text class="_arrow iconfont">&#xe616;</text>
 							</view>
 						</view>
-						<view class="_mine_menu_center" @touchend="jumpToInfoPage(4)" style="border-bottom: 0;">
+						<view class="_mine_menu_center" @click="jumpToInfoPage(4)" style="border-bottom: 0;">
 							<view class="_mine_menu_left">
 								<text class="_arrow iconfont">&#xe620;</text>
 								<text class="_mine_wallet">消息通知</text>
@@ -113,7 +113,7 @@
 						<view class="lines">
 							
 						</view>
-						<view class="_mine_menu_center" @touchend="jumpToInfoPage(5)">
+						<view class="_mine_menu_center" @click="jumpToInfoPage(5)">
 							<view class="_mine_menu_left">
 								<text class="_arrow iconfont">&#xe623;</text>
 								<text class="_mine_wallet">个人/企业认证</text>
@@ -123,7 +123,7 @@
 								<text class="_arrow iconfont">&#xe616;</text>
 							</view>
 						</view>
-						<view class="_mine_menu_center" @touchend="jumpToInfoPage(4)">
+						<view class="_mine_menu_center" @click="jumpToInfoPage(4)">
 							<view class="_mine_menu_left">
 								<text class="_arrow iconfont">&#xe67a;</text>
 								<text class="_mine_wallet">申请交换联系方式</text>
@@ -133,7 +133,7 @@
 								<text class="_arrow iconfont">&#xe616;</text>
 							</view>
 						</view>
-						<view class="_mine_menu_center" @touchend="jumpToInfoPage(5)">
+						<view class="_mine_menu_center" @click="jumpToInfoPage(10)">
 							<view class="_mine_menu_left">
 								<text class="_arrow iconfont">&#xe67c;</text>
 								<text class="_mine_wallet">招商管理</text>
@@ -143,7 +143,7 @@
 								<text class="_arrow iconfont">&#xe616;</text>
 							</view>
 						</view>
-						<view class="_mine_menu_center" @touchend="jumpToInfoPage(6)"  style="border-bottom: 0;">
+						<view class="_mine_menu_center" @click="jumpToInfoPage(6)"  style="border-bottom: 0;">
 							<view class="_mine_menu_left">
 								<text class="_arrow iconfont _arrows">&#xeb16;</text>
 								<text class="_mine_wallet">认证入驻</text>
@@ -156,7 +156,7 @@
 						<view class="lines">
 							
 						</view>
-						<view class="_mine_menu_center" @touchend="settingUp(userInfo.name,userInfo.portrait)" style="border-bottom: 0;">
+						<view class="_mine_menu_center" @click="settingUp(userInfo.name,userInfo.portrait)" style="">
 							<view class="_mine_menu_left">
 								<text class="_arrow iconfont">&#xe719;</text>
 								<text class="_mine_wallet">设置</text>
@@ -166,16 +166,16 @@
 								<text class="_arrow iconfont">&#xe616;</text>
 							</view>
 						</view>
-						<!-- <view class="_mine_menu_center" @touchend="jumpToInfoPage(8)">
+						<view class="_mine_menu_center" @click="jumpToInfoPage(9)" style="border-bottom: 0;">
 							<view class="_mine_menu_left">
 								<text class="_arrow iconfont">&#xe703;</text>
-								<text class="_mine_wallet">关于我们</text>
+								<text class="_mine_wallet">我的推广</text>
 							</view>
 							<view class="_mine_menu_right">
 								<text class="_mine_number"></text>
 								<text class="_arrow iconfont">&#xe616;</text>
 							</view>
-						</view> -->
+						</view>
 					</view>
 					
 				</view>
@@ -480,6 +480,26 @@
 					//申请交换联系
 					uni.navigateTo({
 						url: 'AboutUs/AboutUs',
+						success: res => {
+							console.log(res);
+						},
+						fail: () => {},
+						complete: () => {}
+					});
+				}else if(index == "9"){
+					//申请交换联系
+					uni.navigateTo({
+						url: 'mineExtend/mineExtend',
+						success: res => {
+							console.log(res);
+						},
+						fail: () => {},
+						complete: () => {}
+					});
+				}else if(index == "10"){
+					//申请交换联系
+					uni.navigateTo({
+						url: 'Investment/Investment',
 						success: res => {
 							console.log(res);
 						},

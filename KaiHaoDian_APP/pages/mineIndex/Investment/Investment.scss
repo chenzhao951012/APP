@@ -1,0 +1,117 @@
+
+
+	.InvestmentTop{
+		height: 284upx;
+		// background-color: aqua;
+		margin: 40upx;
+		border: 1px solid #eee;
+		border-radius: 10upx;
+		.InvestmentTop1{
+			padding: 30upx;
+			display: flex;
+			justify-content: space-between;
+			.InvestmentTop1_l{
+				font-size: 28upx;
+				.InvestmentOne{
+					margin-bottom: 24upx
+				}
+			}
+			.InvestmentTop1_r{
+				font-size: 28upx;
+				.cImg{
+				  width: 100upx;
+				  height: 100upx;
+				  border-radius: 50%;
+				  margin-bottom: 20upx;
+				}
+				
+				.extendTop_l_name{
+					margin-bottom: 20upx;
+					font-size: 32upx;
+					text-align: center;
+					color: #000;
+					font-weight: bold;
+				}
+				.A_information{
+					font-size: 24upx;
+					color: #ccc;
+					text-align: center;
+				}
+			}
+
+		}
+	}
+	
+	//线
+	.line{
+		height:20upx;
+		background-color:#f3f3f3;
+	}
+	
+	.InvestmentCenter{
+		padding: 0 40upx;
+		.InvestmentCenter_t{
+			display: flex;
+			align-items: center;
+			height: 110upx;
+			line-height: 110upx;
+			
+			.height_line{
+				width:10upx;
+				color: #fcaa06; 
+				margin-right: 20upx
+			}
+
+		}
+		
+		.InvestmentCenter_c{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 78upx;
+			line-height: 78upx;
+			background-color: #fcf3e1;
+			border:1px solid #fcaa06;
+			border-radius: 10upx;
+			
+			.year{
+				padding-left: 20upx;
+			}
+			
+			.price{
+				padding-right: 20upx;
+				color:#fdbd37;
+			}
+		}
+		
+		.Withdrawal{
+			width: 95%;
+			height: 120upx;
+			line-height: 120upx;
+			margin: 0 auto;
+			
+			border-bottom: 2upx solid #ededed;
+			display: flex;
+			justify-content: space-between;
+			
+			.iconfont1{
+				color: #ffbd38;
+			}
+			.iconfont2{
+				color: #4bb46f;
+			}
+		}
+			
+	}
+	
+	.payBox{
+		width: 100%;
+		height: 100upx;
+		background-color: #fdbd37;
+		line-height: 100upx;
+		text-align: center;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		color:#fff;
+	}
